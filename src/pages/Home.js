@@ -1,16 +1,32 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
-import Header from '../components/Header';
+import Navbar from '../components/Navbar';
+import Banner from '../components/Banner';
+import FeaturedVehicles from '../components/FeaturedVehicles';
 import Footer from '../components/Footer';
+
+const link = {
+  label: 'See our catalog',
+  url: '/vehicles'
+};
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <Hero />
-      <Services />
-      <Footer />
+      <div className='app-wrapper'>
+        <Hero className='hero-section'>
+          <Navbar />
+          <Banner
+            title='Looking for a vehicle?'
+            subtitle='We have everything you need'
+            link={link}
+          />
+        </Hero>
+        <Services className='services-section' />
+        <FeaturedVehicles className='featured-section' />
+        <Footer className='footer' />
+      </div>
     </>
   );
 }

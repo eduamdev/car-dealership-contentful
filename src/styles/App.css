@@ -1,1 +1,65 @@
 @import-normalize; /* bring in normalize.css styles */
+@import url('https://fonts.googleapis.com/css?family=Hepta+Slab|Noto+Serif&display=swap');
+/* Variables */
+/* End Variables */
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Serif', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Hepta Slab', serif;
+}
+
+a {
+  text-decoration: none;
+}
+/* End General Styles */
+
+/* Main Layout */
+.app-wrapper {
+  overflow: hidden;
+  display: grid;
+  align-items: start;
+  justify-content: start;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'hero'
+    'services'
+    'featured'
+    'footer';
+}
+
+.hero-section {
+  grid-area: hero;
+}
+
+.services-section {
+  grid-area: services;
+}
+
+.featured-section {
+  grid-area: featured;
+}
+
+.footer-section {
+  grid-area: footer;
+}
+/* End Main Layout */

@@ -1,13 +1,13 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
-import Header from '../components/Header';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const Vehicles = () => {
   return (
     <>
-      <Header />
+      <Navbar />
       <h1>Vehicles</h1>
       <Hero />
       <Services />
