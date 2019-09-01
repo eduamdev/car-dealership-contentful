@@ -19,7 +19,7 @@ export default function Home() {
           <Navbar />
           <Banner
             title='Looking for a vehicle?'
-            subtitle='We have everything you need'
+            subtitle='We have you covered!'
             link={link}
           />
         </Hero>

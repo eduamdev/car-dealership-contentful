@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import logo from '../assets/images/logo.svg';
 import Wrapper from '../components/Wrapper';
 import viewport from '../styles/media';
+import Link from '../components/Link';
 
 const StyledHeader = styled.header`
   display: grid;
@@ -30,6 +31,8 @@ const Logo = styled.div`
   & .logoText {
     color: #fff;
     font-size: 1.5em;
+    font-weight: 300;
+    letter-spacing: 0.04em;
     display: none;
 
     @media ${viewport[7]} {
@@ -43,12 +46,10 @@ const StyledList = styled.ul`
   align-items: center;
   justify-content: space-around;
   flex-direction: row;
-  color: #fff;
 `;
 
 const StyledListItem = styled.li`
   padding: 0 2em;
-  color: #fff;
 `;
 
 export default function Navbar() {
@@ -57,13 +58,23 @@ export default function Navbar() {
       <StyledHeader>
         <Logo>
           <img src={logo} alt='Vehicle Dealership' />
-          <span className='logoText'>Vehicle Dealership</span>
+          <span className='logoText'>
+            <strong>V</strong>ehicle <strong>D</strong>ealership
+          </span>
         </Logo>
         <span></span>
         <nav>
           <StyledList>
-            <StyledListItem>Home</StyledListItem>
-            <StyledListItem>Vehicles</StyledListItem>
+            <StyledListItem>
+              <Link linkClass='nav-link' url='/'>
+                Home
+              </Link>
+            </StyledListItem>
+            <StyledListItem>
+              <Link linkClass='nav-link' url='/vehicles'>
+                Vehicles
+              </Link>
+            </StyledListItem>
           </StyledList>
         </nav>
       </StyledHeader>

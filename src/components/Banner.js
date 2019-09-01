@@ -29,6 +29,7 @@ const Title = styled.h1`
 const Subtitle = styled.p`
   color: white;
   font-size: 1.8em;
+  letter-spacing: 0.03em;
 `;
 
 const LinkContainer = styled.div`
@@ -47,7 +48,7 @@ export default function Banner({ children, title, subtitle, link }) {
         <Subtitle>{subtitle}</Subtitle>
         {link && (
           <LinkContainer className='center'>
-            <Link linkClass='heroLink' url={link.url}>
+            <Link linkClass='heroLink fs-lg' url={link.url}>
               {link.label}
             </Link>
           </LinkContainer>
