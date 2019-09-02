@@ -4,6 +4,7 @@ import logo from '../assets/images/logo.svg';
 import Wrapper from '../components/Wrapper';
 import viewport from '../styles/media';
 import Link from '../components/Link';
+import theme from '../styles/theme';
 
 const StyledHeader = styled.header`
   display: grid;
@@ -29,11 +30,12 @@ const Logo = styled.div`
   grid-column-gap: 1em;
 
   & .logoText {
-    color: #fff;
-    font-size: 1.5em;
-    font-weight: 300;
-    letter-spacing: 0.04em;
+    color: ${theme.colors.lightGrey};
+    font-size: 1.3em;
+    font-weight: 400;
     display: none;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
 
     @media ${viewport[7]} {
       display: block;
@@ -42,14 +44,11 @@ const Logo = styled.div`
 `;
 
 const StyledList = styled.ul`
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: space-around;
-  flex-direction: row;
-`;
-
-const StyledListItem = styled.li`
-  padding: 0 2em;
+  grid-column-gap: 1em;
+  grid-template-columns: 1fr 1fr;
 `;
 
 export default function Navbar() {
@@ -58,23 +57,21 @@ export default function Navbar() {
       <StyledHeader>
         <Logo>
           <img src={logo} alt='Vehicle Dealership' />
-          <span className='logoText'>
-            <strong>V</strong>ehicle <strong>D</strong>ealership
-          </span>
+          <span className='logoText'>Vehicle Dealership</span>
         </Logo>
         <span></span>
         <nav>
           <StyledList>
-            <StyledListItem>
+            <li>
               <Link linkClass='nav-link' url='/'>
                 Home
               </Link>
-            </StyledListItem>
-            <StyledListItem>
+            </li>
+            <li>
               <Link linkClass='nav-link' url='/vehicles'>
                 Vehicles
               </Link>
-            </StyledListItem>
+            </li>
           </StyledList>
         </nav>
       </StyledHeader>

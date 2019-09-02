@@ -3,33 +3,46 @@ import styled from 'styled-components';
 import Wrapper from '../components/Wrapper';
 import Link from '../components/Link';
 import viewport from '../styles/media';
+import theme from '../styles/theme';
 
-const StyledBanner = styled.section`
+const StyledBanner = styled.div`
   display: grid;
   align-items: center;
   justify-content: start;
   text-align: left;
-  grid-row-gap: 3em;
-  margin-top: 2em;
+  height: 600px;
 
   @media ${viewport[7]} {
-    margin-top: 4.5em;
+    /* margin-top: 4.5em; */
   }
 `;
 
+const GridContainer = styled.div`
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-row-gap: 3em;
+`;
+
 const Title = styled.h1`
-  color: white;
-  font-weight: 300;
-  line-height: 1.2em;
-  font-size: 4em;
+  color: #fff;
+  font-weight: 700;
+  font-size: 4.2em;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
   margin: 0;
-  /* letter-spacing: 0.05em; */
+
+  @media ${viewport[7]} {
+    font-size: 6em;
+  }
 `;
 
 const Subtitle = styled.p`
-  color: white;
-  font-size: 1.8em;
-  letter-spacing: 0.03em;
+  color: ${theme.colors.lightGrey};
+  font-size: 1.55em;
+  font-weight: 200;
+  letter-spacing: -0.1px;
 `;
 
 const LinkContainer = styled.div`
@@ -44,16 +57,18 @@ export default function Banner({ children, title, subtitle, link }) {
   return (
     <Wrapper>
       <StyledBanner className='banner'>
-        <Title>{title}</Title>
-        <Subtitle>{subtitle}</Subtitle>
-        {link && (
-          <LinkContainer className='center'>
-            <Link linkClass='heroLink fs-lg' url={link.url}>
-              {link.label}
-            </Link>
-          </LinkContainer>
-        )}
-        {children}
+        <GridContainer>
+          <Title>{title}</Title>
+          <Subtitle>{subtitle}</Subtitle>
+          {link && (
+            <LinkContainer className='center'>
+              <Link linkClass='heroLink' url={link.url}>
+                {link.label}
+              </Link>
+            </LinkContainer>
+          )}
+          {children}
+        </GridContainer>
       </StyledBanner>
     </Wrapper>
   );
