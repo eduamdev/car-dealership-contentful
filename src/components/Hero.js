@@ -20,7 +20,7 @@ const StyledHero = styled.section`
     background: #000;
     background: radial-gradient(
         circle,
-        rgba(35, 35, 0, 0.35) 0%,
+        rgba(35, 0, 35, 0.35) 0%,
         rgba(0, 0, 0, 1) 50%
       ),
       url(${city}) center/cover no-repeat;
@@ -32,8 +32,9 @@ const StyledHero = styled.section`
       color: #fff;
       font-size: 1.3em;
       font-weight: 200;
-      letter-spacing: -0.3px;
-      line-height: 1.4;
+      letter-spacing: -0.2px;
+      line-height: 1.5;
+      text-align: right;
     }
   }
 `;

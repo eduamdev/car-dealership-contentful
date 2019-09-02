@@ -4,7 +4,13 @@ import theme from '../styles/theme';
 import Wrapper from '../components/Wrapper';
 
 const StyledSection = styled.section`
-  background: ${theme.colors.blackMatte};
+  background: #000;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(35, 35, 35, 0.9) 100%
+    )
+    center/cover no-repeat;
   height: 800px;
 `;
 
@@ -25,7 +31,7 @@ const Title = styled.h2`
     width: 5rem;
     height: 5px;
     /* margin: 1em auto; */
-    background: ${theme.colors.smokyTopaz};
+    background: ${theme.colors.brightRed};
     display: block;
     margin-top: 1.5em;
     margin-bottom: 3em;
@@ -36,7 +42,7 @@ const Subtitle = styled.p`
   margin-top: 1em;
   font-size: 1.6em;
   line-height: 1.3;
-  color: #fff;
+  color: ${theme.colors.lightGrey};
   text-align: left;
 `;
 
