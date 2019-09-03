@@ -25,6 +25,8 @@
 /* Variables */
 :root {
   --font-size: 16px;
+  --main-black: '#000';
+  --main-white: '#fff';
 }
 /* End Variables */
 
@@ -53,6 +55,8 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--main-white);
+  background: var(--main-black);
 }
 
 h1,

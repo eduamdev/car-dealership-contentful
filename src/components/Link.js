@@ -20,14 +20,16 @@ const StyledLink = styled(Link)`
   }
   &.heroLink {
     padding: 0.75em 1.5em;
-    border: 2px solid #fff;
+    border: 2px solid ${theme.colors.brightRed};
+    background: ${theme.colors.brightRed};
     color: #fff;
     font-size: 1.175em;
     text-transform: uppercase;
 
     &:hover {
-      color: #000;
-      background: #fff;
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
     }
 
     @media ${viewport[7]} {

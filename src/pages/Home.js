@@ -25,10 +25,13 @@ export default function Home() {
           />
         </Hero>
         <Quote>
-          <span>
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Consectetur"
-          </span>
+          <blockquote>
+            <p>
+              " Vehicles are one of the best modes of transportation.
+              Relationships are one of the best vehicles of transformation "
+            </p>
+            <footer>- Kate McGahan</footer>
+          </blockquote>
         </Quote>
         <Services className='services-section' />
         <FeaturedVehicles className='featured-section' />

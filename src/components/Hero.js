@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import data from '../content/data';
 import city from '../assets/images/services-1.jpg';
+import theme from '../styles/theme';
 
 const StyledHero = styled.section`
   &.defaultHero {
@@ -28,13 +29,17 @@ const StyledHero = styled.section`
     align-items: center;
     justify-content: end;
 
-    & span {
-      color: #fff;
+    & blockquote {
+      color: ${theme.colors.lightGrey};
       font-size: 1.3em;
       font-weight: 200;
       letter-spacing: -0.2px;
       line-height: 1.5;
       text-align: right;
+
+      & footer {
+        font-style: italic;
+      }
     }
   }
 `;
