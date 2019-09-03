@@ -30,16 +30,7 @@ const Title = styled.h2`
   background: #fff;
   display: inline;
   text-align: left;
-
-  & + .line-center {
-    width: 5rem;
-    height: 4px;
-    /* margin: 1em auto; */
-    background: ${theme.colors.brightRed};
-    border: 1px solid ${theme.colors.smokyTopaz};
-    display: block;
-    margin: 3em 0;
-  }
+  border-bottom: 15px solid ${theme.colors.brightRed};
 
   @media ${viewport[7]} {
     font-size: 4em;
@@ -109,7 +100,6 @@ export default function FeaturedVehicles() {
       <Wrapper>
         <FlexContainer>
           <Title>Featured Vehicles</Title>
-          <span className='line-center'></span>
         </FlexContainer>
       </Wrapper>
       <GridContainer>

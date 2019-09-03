@@ -20,11 +20,18 @@ const StyledLink = styled(Link)`
   }
   &.heroLink {
     padding: 0.75em 1.5em;
-    border: 2px solid ${theme.colors.brightRed};
+    border: 2px solid transparent;
     background: ${theme.colors.brightRed};
     color: #fff;
     font-size: 1.175em;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    &:hover .icon {
+      transform: translateX(25%);
+    }
 
     &:hover {
       background: transparent;

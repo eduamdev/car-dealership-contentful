@@ -4,6 +4,7 @@ import Wrapper from '../components/Wrapper';
 import Link from '../components/Link';
 import viewport from '../styles/media';
 import theme from '../styles/theme';
+import Icon from '../components/Icon';
 
 const StyledBanner = styled.div`
   display: grid;
@@ -11,10 +12,6 @@ const StyledBanner = styled.div`
   justify-content: start;
   text-align: left;
   height: 600px;
-
-  @media ${viewport[7]} {
-    /* margin-top: 4.5em; */
-  }
 `;
 
 const GridContainer = styled.div`
@@ -50,10 +47,17 @@ const LinkContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: start;
+    flex-direction: row;
+
+    & .icon {
+      margin-left: 0.4em;
+      fill: #fff;
+      transition: 0.2s ease-in;
+    }
   }
 `;
 
-export default function Banner({ children, title, subtitle, link }) {
+export default function Banner({ children, title, subtitle, link, icon }) {
   return (
     <Wrapper>
       <StyledBanner className='banner'>
@@ -63,7 +67,8 @@ export default function Banner({ children, title, subtitle, link }) {
           {link && (
             <LinkContainer className='center'>
               <Link linkClass='heroLink' url={link.url}>
-                {link.label}
+                <span>{link.label}</span>
+                {icon && <Icon className='icon'>{icon}</Icon>}
               </Link>
             </LinkContainer>
           )}

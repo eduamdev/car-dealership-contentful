@@ -3,6 +3,15 @@ import styled from 'styled-components';
 import theme from '../styles/theme';
 import Wrapper from '../components/Wrapper';
 import viewport from '../styles/media';
+import {
+  car,
+  bicycle,
+  ribbon,
+  help,
+  speedometer,
+  colorPalette
+} from '../components/svg';
+import Icon from '../components/Icon';
 
 const StyledSection = styled.section`
   background: #000;
@@ -25,15 +34,7 @@ const Title = styled.h2`
   background: #fff;
   display: inline;
   text-align: left;
-
-  & + .line-center {
-    width: 5rem;
-    height: 4px;
-    /* margin: 1em auto; */
-    background: ${theme.colors.brightRed};
-    display: block;
-    margin: 3em 0;
-  }
+  border-bottom: 15px solid ${theme.colors.brightRed};
 
   @media ${viewport[7]} {
     font-size: 4em;
@@ -41,7 +42,7 @@ const Title = styled.h2`
 `;
 
 const Subtitle = styled.p`
-  margin-top: 1em;
+  margin-top: 4em;
   font-size: 1.2em;
   color: ${theme.colors.lightGrey};
   text-align: left;
@@ -73,15 +74,17 @@ const Item = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     'icon'
     'text';
 
   @media ${viewport[7]} {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: max-content 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 'icon text';
+    grid-column-gap: 3.5em;
 
     &:nth-child(even) {
       border-left: none;
@@ -90,12 +93,20 @@ const Item = styled.div`
 
   & .image-container {
     grid-area: icon;
+    align-self: center;
+    justify-self: center;
+    width: 70px;
+
+    @media ${viewport[7]} {
+      align-self: start;
+      justify-self: start;
+    }
   }
 
   & .text-container {
     grid-area: text;
     text-align: left;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.1px;
 
     & .title {
       font-size: 1.5em;
@@ -104,22 +115,32 @@ const Item = styled.div`
       color: #fff;
       line-height: 1.2;
       margin-bottom: 0.5em;
+      text-align: center;
 
       @media ${viewport[7]} {
         font-size: 2em;
+        text-align: left;
       }
     }
 
     & .subtitle {
       color: ${theme.colors.lightGrey};
-      font-size: 1.05em;
+      font-size: 1.1em;
+      line-height: 1.2;
+      font-weight: 200;
+      text-align: center;
 
       @media ${viewport[7]} {
         font-size: 1.2em;
         line-height: 1.2;
+        text-align: left;
       }
     }
   }
+`;
+
+const ItemIcon = styled(Icon)`
+  fill: ${theme.colors.lightGrey};
 `;
 
 export default function services() {
@@ -128,7 +149,6 @@ export default function services() {
       <Wrapper>
         <FlexContainer>
           <Title>Services</Title>
-          <span className='line-center'></span>
           <Subtitle>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
             porro quod? Eaque!
@@ -137,10 +157,10 @@ export default function services() {
         <GridContainer>
           <Item>
             <div className='image-container'>
-              <img src='' alt='service 1' />
+              <ItemIcon>{car}</ItemIcon>
             </div>
             <div className='text-container'>
-              <h3 className='title'>Service ere erererere er</h3>
+              <h3 className='title'>Service 1</h3>
               <p className='subtitle'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Officia consectetur quia quisquam repudiandae.
@@ -149,7 +169,7 @@ export default function services() {
           </Item>
           <Item>
             <div className='image-container'>
-              <img src='' alt='service 2' />
+              <ItemIcon>{bicycle}</ItemIcon>
             </div>
             <div className='text-container'>
               <h3 className='title'>Service 2</h3>
@@ -161,10 +181,46 @@ export default function services() {
           </Item>
           <Item>
             <div className='image-container'>
-              <img src='' alt='service 3' />
+              <ItemIcon>{ribbon}</ItemIcon>
             </div>
             <div className='text-container'>
               <h3 className='title'>Service 3</h3>
+              <p className='subtitle'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Officia consectetur quia quisquam repudiandae.
+              </p>
+            </div>
+          </Item>
+          <Item>
+            <div className='image-container'>
+              <ItemIcon>{speedometer}</ItemIcon>
+            </div>
+            <div className='text-container'>
+              <h3 className='title'>Service 4</h3>
+              <p className='subtitle'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Officia consectetur quia quisquam repudiandae.
+              </p>
+            </div>
+          </Item>
+          <Item>
+            <div className='image-container'>
+              <ItemIcon>{colorPalette}</ItemIcon>
+            </div>
+            <div className='text-container'>
+              <h3 className='title'>Service 5</h3>
+              <p className='subtitle'>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Officia consectetur quia quisquam repudiandae.
+              </p>
+            </div>
+          </Item>
+          <Item>
+            <div className='image-container'>
+              <ItemIcon>{help}</ItemIcon>
+            </div>
+            <div className='text-container'>
+              <h3 className='title'>Service 6</h3>
               <p className='subtitle'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Officia consectetur quia quisquam repudiandae.
