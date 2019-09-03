@@ -23,7 +23,7 @@ const FlexContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 4em;
+  font-size: 3em;
   /* line-height: 2; */
   color: #000;
   padding: 0.1em 0.5em;
@@ -39,6 +39,10 @@ const Title = styled.h2`
     border: 1px solid ${theme.colors.smokyTopaz};
     display: block;
     margin: 3em 0;
+  }
+
+  @media ${viewport[7]} {
+    font-size: 4em;
   }
 `;
 

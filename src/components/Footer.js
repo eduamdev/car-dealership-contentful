@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import theme from '../styles/theme';
+import viewport from '../styles/media';
 
 const StyledFooter = styled.footer`
   background: #fff;
@@ -16,6 +17,11 @@ const GridContainer = styled.div`
 
   & p {
     color: #000;
+    text-align: center;
+
+    @media ${viewport[7]} {
+      font-size: 1.1em;
+    }
   }
 `;
 

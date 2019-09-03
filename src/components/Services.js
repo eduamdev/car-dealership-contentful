@@ -18,7 +18,7 @@ const FlexContainer = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 4em;
+  font-size: 3em;
   /* line-height: 2; */
   color: #000;
   padding: 0.1em 0.5em;
@@ -34,20 +34,28 @@ const Title = styled.h2`
     display: block;
     margin: 3em 0;
   }
+
+  @media ${viewport[7]} {
+    font-size: 4em;
+  }
 `;
 
 const Subtitle = styled.p`
   margin-top: 1em;
-  font-size: 1.6em;
-  line-height: 1.3;
+  font-size: 1.2em;
   color: ${theme.colors.lightGrey};
   text-align: left;
+
+  @media ${viewport[7]} {
+    font-size: 1.6em;
+    line-height: 1.3;
+  }
 `;
 
 const GridContainer = styled.div`
   margin: 7em 0;
   display: grid;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   grid-template-columns: 1fr;
 
@@ -90,17 +98,26 @@ const Item = styled.div`
     letter-spacing: -0.2px;
 
     & .title {
-      font-size: 2em;
-      font-weight: 900;
+      font-size: 1.5em;
+      font-weight: 700;
       text-transform: uppercase;
-      line-height: 2.2;
       color: #fff;
+      line-height: 1.2;
+      margin-bottom: 0.5em;
+
+      @media ${viewport[7]} {
+        font-size: 2em;
+      }
     }
 
     & .subtitle {
       color: ${theme.colors.lightGrey};
-      font-size: 1.2em;
-      line-height: 1.2;
+      font-size: 1.05em;
+
+      @media ${viewport[7]} {
+        font-size: 1.2em;
+        line-height: 1.2;
+      }
     }
   }
 `;
@@ -123,7 +140,7 @@ export default function services() {
               <img src='' alt='service 1' />
             </div>
             <div className='text-container'>
-              <h3 className='title'>Service 1</h3>
+              <h3 className='title'>Service ere erererere er</h3>
               <p className='subtitle'>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Officia consectetur quia quisquam repudiandae.
