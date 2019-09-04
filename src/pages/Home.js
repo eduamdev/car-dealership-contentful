@@ -12,7 +12,7 @@ import styled from 'styled-components';
 
 const link = {
   label: 'See Our Catalog',
-  url: '/vehicles'
+  url: '/catalog'
 };
 
 const StyledIcon = styled(Icon)`

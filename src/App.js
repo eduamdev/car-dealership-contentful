@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/App.css';
 
 import Home from './pages/Home';
-import Vehicles from './pages/Vehicles';
+import Catalog from './pages/Catalog';
 import Error from './pages/Error';
 
 import { Route, Switch } from 'react-router-dom';
@@ -12,7 +12,7 @@ function App() {
     <>
       <Switch>
         <Route exact path='/' component={Home}></Route>
-        <Route exact path='/vehicles' component={Vehicles} />
+        <Route exact path='/catalog' component={Catalog} />
         <Route component={Error}></Route>
       </Switch>
     </>

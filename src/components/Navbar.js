@@ -132,8 +132,8 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link linkClass='nav-link' url='/vehicles'>
-                Vehicles
+              <Link linkClass='nav-link' url='/catalog'>
+                Catalog
               </Link>
             </li>
           </StyledList>

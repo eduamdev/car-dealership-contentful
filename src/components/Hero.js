@@ -3,10 +3,11 @@ import styled from 'styled-components';
 import data from '../content/data';
 import city from '../assets/images/services-1.jpg';
 import theme from '../styles/theme';
+import catalog from '../assets/images/catalog-1.jpg';
 
 const StyledHero = styled.section`
+  min-height: calc(100vh - 66px);
   &.defaultHero {
-    min-height: calc(100vh - 66px);
     background: #000;
     background: linear-gradient(
         90deg,
@@ -14,6 +15,15 @@ const StyledHero = styled.section`
         rgba(225, 225, 225, 0.1) 80%
       ),
       url(${data[0].fields.images[0].fields.file.url}) center/cover no-repeat;
+  }
+  &.catalogHero {
+    background: #000;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 125, 0.1) 80%
+      ),
+      url(${catalog}) center/cover no-repeat;
   }
 
   &.quote {
