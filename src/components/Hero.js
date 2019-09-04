@@ -17,7 +17,6 @@ const StyledHero = styled.section`
   }
 
   &.quote {
-    min-height: 450px;
     background: #000;
     background: radial-gradient(
         circle,
@@ -25,9 +24,6 @@ const StyledHero = styled.section`
         rgba(0, 0, 0, 1) 50%
       ),
       url(${city}) center/cover no-repeat;
-    display: grid;
-    align-items: center;
-    justify-content: end;
 
     & blockquote {
       color: ${theme.colors.lightGrey};
