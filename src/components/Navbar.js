@@ -74,11 +74,20 @@ const MenuButton = styled.button`
 `;
 
 const Nav = styled.nav`
-  /* display: none; */
+  opacity: 0;
   grid-area: nav;
+  transition: all 0.3s ease;
+  visibility: hidden;
+
+  &.show-nav {
+    opacity: 1;
+    visibility: visible;
+  }
 
   @media ${viewport[7]} {
+    opacity: 1;
     margin: 0;
+    visibility: visible;
   }
 `;
 
@@ -115,7 +124,7 @@ export default function Navbar() {
           {menu}
           <span>menu</span>
         </MenuButton>
-        <Nav>
+        <Nav className={isOpen && 'show-nav'}>
           <StyledList>
             <li>
               <Link linkClass='nav-link' url='/'>
