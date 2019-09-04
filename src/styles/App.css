@@ -83,7 +83,8 @@ strong {
 }
 
 a:active,
-a:hover {
+a:hover,
+button {
   outline-width: 0;
 }
 /* End General Styles */

@@ -10,12 +10,18 @@ const StyledLink = styled(Link)`
 
   &.nav-link {
     color: #fff;
-    padding: 0.7em 1em;
     font-size: 1.05em;
     font-weight: 200;
     text-transform: uppercase;
+    display: block;
+    text-align: center;
+    padding: 0.7em 0;
 
     &:hover {
+    }
+
+    @media ${viewport[7]} {
+      padding: 0.7em 1em;
     }
   }
   &.heroLink {

@@ -1,23 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../assets/images/logo.svg';
 import Wrapper from '../components/Wrapper';
 import viewport from '../styles/media';
 import Link from '../components/Link';
 import theme from '../styles/theme';
+import { menu } from '../components/svg';
 
 const StyledHeader = styled.header`
   display: grid;
-  grid-template-areas: 'logo empty-space nav';
+  grid-template-areas:
+    'logo empty-space menu'
+    'nav nav nav';
   align-items: center;
   justify-content: center;
   grid-template-rows: 1fr;
   grid-gap: 1em;
   grid-template-columns: max-content 1fr max-content;
-  height: 100px;
+  min-height: 100px;
 
-  &nav {
-    grid-area: nav;
+  @media ${viewport[7]} {
+    grid-template-areas: 'logo empty-space nav';
   }
 `;
 
@@ -43,15 +46,63 @@ const Logo = styled.div`
   }
 `;
 
+const MenuButton = styled.button`
+  grid-area: menu;
+  color: #fff;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  & span {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-left: 1em;
+  }
+
+  & svg {
+    width: 34px;
+    fill: #fff;
+  }
+
+  @media ${viewport[7]} {
+    display: none;
+  }
+`;
+
+const Nav = styled.nav`
+  /* display: none; */
+  grid-area: nav;
+
+  @media ${viewport[7]} {
+    margin: 0;
+  }
+`;
+
 const StyledList = styled.ul`
   display: grid;
   align-items: center;
-  justify-content: space-around;
-  grid-column-gap: 1em;
-  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1em;
+  grid-column-gap: 0;
+
+  @media ${viewport[7]} {
+    padding: 0;
+    justify-content: space-around;
+    grid-column-gap: 1em;
+    grid-row-gap: 0;
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 export default function Navbar() {
+  const [isOpen, toggle] = useState(false);
+  console.log(isOpen);
+
   return (
     <Wrapper>
       <StyledHeader>
@@ -60,7 +111,11 @@ export default function Navbar() {
           <span className='logoText'>Vehicle Dealership</span>
         </Logo>
         <span></span>
-        <nav>
+        <MenuButton type='button' onClick={() => toggle(!isOpen)}>
+          {menu}
+          <span>menu</span>
+        </MenuButton>
+        <Nav>
           <StyledList>
             <li>
               <Link linkClass='nav-link' url='/'>
@@ -73,7 +128,7 @@ export default function Navbar() {
               </Link>
             </li>
           </StyledList>
-        </nav>
+        </Nav>
       </StyledHeader>
     </Wrapper>
   );
