@@ -76,11 +76,11 @@ const MenuButton = styled.button`
 const Nav = styled.nav`
   opacity: 0;
   grid-area: nav;
-  transition: all 0.3s ease;
   visibility: hidden;
 
   &.show-nav {
     opacity: 1;
+    transition: all 0.3s ease-in-out;
     visibility: visible;
   }
 

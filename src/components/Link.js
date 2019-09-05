@@ -12,7 +12,7 @@ const StyledLink = styled(Link)`
     letter-spacing: 1.75px;
     color: #fff;
     font-size: 1.15em;
-    font-weight: 400;
+    font-weight: 200;
     text-transform: uppercase;
     display: block;
     text-align: center;
@@ -23,6 +23,8 @@ const StyledLink = styled(Link)`
 
     @media ${viewport[7]} {
       padding: 0.7em 1em;
+      font-size: 1.05em;
+      letter-spacing: 0.3px;
     }
   }
   &.heroLink {
