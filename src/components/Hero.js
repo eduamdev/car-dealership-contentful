@@ -28,10 +28,11 @@ const StyledHero = styled.section`
 
   &.quote {
     background: #000;
+    min-height: 12em;
     background: radial-gradient(
         circle,
         rgba(35, 0, 35, 0.35) 0%,
-        rgba(0, 0, 0, 1) 50%
+        rgba(0, 0, 0, 0.98) 40%
       ),
       url(${city}) center/cover no-repeat;
 

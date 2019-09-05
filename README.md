@@ -2,9 +2,9 @@
 
 # Vehicle Dealership
 
-One Paragraph of project description goes here
-
 ![Vehicle Dealership](./src/assets/images/og.png)
+
+One Paragraph of project description goes here
 
 ## Getting Started
 
