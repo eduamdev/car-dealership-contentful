@@ -4,9 +4,11 @@ import Wrapper from './Wrapper';
 import viewport from '../styles/media';
 import { twitter, github } from '../components/svg';
 import Icon from '../components/Icon';
+import theme from '../styles/theme';
 
 const StyledFooter = styled.footer`
-  background: #fff;
+  background: ${theme.colors.blackMatte};
+  color: ${theme.colors.lightGrey};
 `;
 
 const GridContainer = styled.div`
@@ -14,11 +16,11 @@ const GridContainer = styled.div`
   align-items: center;
   justify-content: center;
   grid-template-columns: 1fr;
-  border-top: 2px solid #000;
+  border-top: 2px solid #fff;
   padding-top: 1em;
 
   & p {
-    color: #000;
+    color: inherit;
     text-align: center;
     /* margin-top: 1em; */
 
@@ -29,7 +31,6 @@ const GridContainer = styled.div`
 `;
 
 const IconContainer = styled.div`
-  fill: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,6 +39,7 @@ const IconContainer = styled.div`
     display: inherit;
     transition: all 0.2s ease;
     padding: 2em;
+    fill: ${theme.colors.lightGrey};
 
     &:hover {
       transform: translatey(-5%);
@@ -45,7 +47,7 @@ const IconContainer = styled.div`
   }
 `;
 
-export default function footer() {
+export default function Footer() {
   return (
     <StyledFooter>
       <Wrapper>

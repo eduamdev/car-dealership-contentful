@@ -1,9 +1,9 @@
 import React from 'react';
 import Hero from '../components/Hero';
-import Services from '../components/Services';
 import Navbar from '../components/Navbar';
 import VehicleContainer from '../components/VehicleContainer';
 import Footer from '../components/Footer';
+import Loading from '../components/Loading';
 
 const Catalog = () => {
   return (
@@ -13,6 +13,7 @@ const Catalog = () => {
           <Navbar />
         </Hero>
         <VehicleContainer></VehicleContainer>
+        {/* <Loading></Loading> */}
         <Footer />
       </div>
     </>

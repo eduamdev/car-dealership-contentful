@@ -9,13 +9,14 @@ const StyledLink = styled(Link)`
   transition: 0.3s;
 
   &.nav-link {
+    letter-spacing: 1.75px;
     color: #fff;
-    font-size: 1.05em;
-    font-weight: 200;
+    font-size: 1.15em;
+    font-weight: 400;
     text-transform: uppercase;
     display: block;
     text-align: center;
-    padding: 0.7em 0;
+    padding: 0.5em 0;
 
     &:hover {
     }

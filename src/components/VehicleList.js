@@ -1,5 +1,20 @@
 import React from 'react';
+import Wrapper from './Wrapper';
+import styled from 'styled-components';
+import theme from '../styles/theme';
+import Vehicle from '../components/Vehicle';
+
+const StyledSection = styled.section`
+  background-color: ${theme.colors.blackMatte};
+  color: ${theme.colors.lightGrey};
+`;
 
 export default function VehicleList() {
-  return <div>hello from vehicle list</div>;
+  return (
+    <StyledSection>
+      <Wrapper>
+        <Vehicle></Vehicle>
+      </Wrapper>
+    </StyledSection>
+  );
 }

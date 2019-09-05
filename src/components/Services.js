@@ -66,7 +66,7 @@ const GridContainer = styled.div`
 `;
 
 const Item = styled.div`
-  border: 1px solid ${theme.colors.lightGrey};
+  border: 1px solid #444;
   margin: 0;
   color: #fff;
   text-align: center;

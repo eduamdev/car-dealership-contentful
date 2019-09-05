@@ -56,6 +56,89 @@ const menu = (
     <path d='M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z' />
   </svg>
 );
+const loading = (
+  <svg
+    version='1.1'
+    id='Layer_1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlnsXlink='http://www.w3.org/1999/xlink'
+    x='0px'
+    y='0px'
+    viewBox='0 0 100 100'
+    enable-background='new 0 0 100 100'
+    xmlSpace='preserve'
+  >
+    <rect width='3' height='100' transform='translate(0) rotate(180 3 50)'>
+      <animate
+        attributeName='height'
+        attributeType='XML'
+        dur='1s'
+        values='30; 100; 30'
+        repeatCount='indefinite'
+      />
+    </rect>
+    <rect
+      x='17'
+      width='3'
+      height='100'
+      transform='translate(0) rotate(180 20 50)'
+    >
+      <animate
+        attributeName='height'
+        attributeType='XML'
+        dur='1s'
+        values='30; 100; 30'
+        repeatCount='indefinite'
+        begin='0.1s'
+      />
+    </rect>
+    <rect
+      x='40'
+      width='3'
+      height='100'
+      transform='translate(0) rotate(180 40 50)'
+    >
+      <animate
+        attributeName='height'
+        attributeType='XML'
+        dur='1s'
+        values='30; 100; 30'
+        repeatCount='indefinite'
+        begin='0.3s'
+      />
+    </rect>
+    <rect
+      x='60'
+      width='3'
+      height='100'
+      transform='translate(0) rotate(180 58 50)'
+    >
+      <animate
+        attributeName='height'
+        attributeType='XML'
+        dur='1s'
+        values='30; 100; 30'
+        repeatCount='indefinite'
+        begin='0.5s'
+      />
+    </rect>
+    <rect
+      x='80'
+      width='3'
+      height='100'
+      transform='translate(0) rotate(180 76 50)'
+    >
+      <animate
+        attributeName='height'
+        attributeType='XML'
+        dur='1s'
+        values='30; 100; 30'
+        repeatCount='indefinite'
+        begin='0.1s'
+      />
+    </rect>
+  </svg>
+);
 
 export {
   twitter,
@@ -68,5 +151,6 @@ export {
   speedometer,
   help,
   colorPalette,
-  menu
+  menu,
+  loading
 };
