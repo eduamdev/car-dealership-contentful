@@ -4,7 +4,7 @@
 
 One Paragraph of project description goes here
 
-![Vehicle Dealership](./src/assets/og.png)
+![Vehicle Dealership](./src/assets/images/og.png)
 
 ## Getting Started
 
