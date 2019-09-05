@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/248c30e8-eb88-4b67-a332-b427da25bd1b/deploy-status)](https://app.netlify.com/sites/vehicle-dealership/deploys)
+
 # Vehicle Dealership
 
 One Paragraph of project description goes here
