@@ -22,6 +22,10 @@ const GridContainer = styled.div`
   & p {
     color: inherit;
     text-align: center;
+    letter-spacing: 0.5px;
+    font-size: 0.85em;
+    padding: 1em 0 0 0;
+    font-weight: 200;
     /* margin-top: 1em; */
 
     @media ${viewport[7]} {
@@ -38,7 +42,7 @@ const IconContainer = styled.div`
   & a {
     display: inherit;
     transition: all 0.2s ease;
-    padding: 2em;
+    padding: 1em 1em 2.5em 0;
     fill: ${theme.colors.lightGrey};
 
     &:hover {

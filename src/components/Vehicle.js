@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import viewport from '../styles/media';
 
 const GridContainer = styled.div`
-  margin: 5em auto 10em auto;
+  margin: 5em auto;
   display: grid;
   width: 80vw;
   align-items: center;
