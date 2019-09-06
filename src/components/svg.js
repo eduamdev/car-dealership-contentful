@@ -59,84 +59,42 @@ const menu = (
 const loading = (
   <svg
     version='1.1'
-    id='Layer_1'
+    id='L4'
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
     x='0px'
     y='0px'
     viewBox='0 0 100 100'
-    enable-background='new 0 0 100 100'
+    enable-background='new 0 0 0 0'
     xmlSpace='preserve'
   >
-    <rect width='3' height='100' transform='translate(0) rotate(180 3 50)'>
+    <circle fill='#fff' stroke='none' cx='6' cy='50' r='6'>
       <animate
-        attributeName='height'
-        attributeType='XML'
+        attributeName='opacity'
         dur='1s'
-        values='30; 100; 30'
+        values='0;1;0'
         repeatCount='indefinite'
+        begin='0.1'
       />
-    </rect>
-    <rect
-      x='17'
-      width='3'
-      height='100'
-      transform='translate(0) rotate(180 20 50)'
-    >
+    </circle>
+    <circle fill='#fff' stroke='none' cx='26' cy='50' r='6'>
       <animate
-        attributeName='height'
-        attributeType='XML'
+        attributeName='opacity'
         dur='1s'
-        values='30; 100; 30'
+        values='0;1;0'
         repeatCount='indefinite'
-        begin='0.1s'
+        begin='0.2'
       />
-    </rect>
-    <rect
-      x='40'
-      width='3'
-      height='100'
-      transform='translate(0) rotate(180 40 50)'
-    >
+    </circle>
+    <circle fill='#fff' stroke='none' cx='46' cy='50' r='6'>
       <animate
-        attributeName='height'
-        attributeType='XML'
+        attributeName='opacity'
         dur='1s'
-        values='30; 100; 30'
+        values='0;1;0'
         repeatCount='indefinite'
-        begin='0.3s'
+        begin='0.3'
       />
-    </rect>
-    <rect
-      x='60'
-      width='3'
-      height='100'
-      transform='translate(0) rotate(180 58 50)'
-    >
-      <animate
-        attributeName='height'
-        attributeType='XML'
-        dur='1s'
-        values='30; 100; 30'
-        repeatCount='indefinite'
-        begin='0.5s'
-      />
-    </rect>
-    <rect
-      x='80'
-      width='3'
-      height='100'
-      transform='translate(0) rotate(180 76 50)'
-    >
-      <animate
-        attributeName='height'
-        attributeType='XML'
-        dur='1s'
-        values='30; 100; 30'
-        repeatCount='indefinite'
-        begin='0.1s'
-      />
-    </rect>
+    </circle>
   </svg>
 );
 

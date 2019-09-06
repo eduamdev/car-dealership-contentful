@@ -110,7 +110,6 @@ const StyledList = styled.ul`
 
 export default function Navbar() {
   const [isOpen, toggle] = useState(false);
-  console.log(isOpen);
 
   return (
     <Wrapper>
