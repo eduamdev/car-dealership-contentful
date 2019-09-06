@@ -9,9 +9,9 @@ const StyledLink = styled(Link)`
   transition: 0.3s;
 
   &.nav-link {
-    letter-spacing: 1.75px;
+    letter-spacing: 1px;
     color: #fff;
-    font-size: 1.15em;
+    font-size: 1.1em;
     font-weight: 200;
     text-transform: uppercase;
     display: block;
@@ -23,7 +23,7 @@ const StyledLink = styled(Link)`
 
     @media ${viewport[7]} {
       padding: 0.7em 1em;
-      font-size: 1.05em;
+      font-size: 1.2em;
       letter-spacing: 0.3px;
     }
   }

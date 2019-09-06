@@ -52,15 +52,16 @@ const MenuButton = styled.button`
   background: transparent;
   cursor: pointer;
   border: none;
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
+  grid-column-gap: 1em;
+  grid-template-columns: max-content max-content;
 
   & span {
     text-transform: uppercase;
-    font-size: 1.2em;
-    margin-left: 1em;
+    font-size: 1.4em;
+    letter-spacing: 1.7px;
   }
 
   & svg {
@@ -96,15 +97,38 @@ const StyledList = styled.ul`
   align-items: center;
   justify-content: center;
   grid-template-columns: 1fr;
-  grid-row-gap: 1em;
+  /* grid-row-gap: 1em; */
   grid-column-gap: 0;
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 2px;
 
   @media ${viewport[7]} {
+    background: transparent;
+    border: none;
     padding: 0;
     justify-content: space-around;
     grid-column-gap: 1em;
     grid-row-gap: 0;
     grid-template-columns: 1fr 1fr;
+  }
+
+  & li {
+    border-bottom: 1px solid #444;
+    padding: 0.5em 0;
+
+    &:hover {
+      background: #333;
+    }
+
+    @media ${viewport[7]} {
+      padding: 0;
+      border: none;
+
+      &:hover {
+        background: transparent;
+      }
+    }
   }
 `;
 
