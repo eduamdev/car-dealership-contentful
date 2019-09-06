@@ -22,7 +22,7 @@ const ModalWrapper = styled.div`
   justify-content: center;
   background: black;
 
-  @media (${viewport[7]}) {
+  @media ${viewport[7]} {
     width: 400px;
     height: 400px;
     padding: 24px;
@@ -41,7 +41,7 @@ const ModalHeader = styled.div`
   border-bottom: 1px solid #444;
   grid-area: header;
 
-  @media (${viewport[7]}) {
+  @media ${viewport[7]} {
     display: none;
   }
 `;
@@ -63,7 +63,7 @@ const ModalFooter = styled.div`
     display: table;
   }
 
-  @media (${viewport[7]}) {
+  @media ${viewport[7]} {
     border: 0;
   }
 `;
@@ -93,7 +93,7 @@ const BtnSave = styled.button`
   text-align: center;
   color: #fff;
 
-  @media (${viewport[7]}) {
+  @media ${viewport[7]} {
     color: teal;
     font-weight: 200;
     background: transparent;
