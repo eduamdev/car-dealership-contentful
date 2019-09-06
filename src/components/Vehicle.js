@@ -35,6 +35,7 @@ const Item = styled.div`
     width: 100%;
     display: block;
     cursor: pointer;
+    border-radius: 4px;
 
     @media ${viewport[7]} {
       height: 330px;
@@ -42,12 +43,14 @@ const Item = styled.div`
   }
 
   & .label {
+    position: absolute;
+    bottom: 0;
     padding: 0.5em 1em;
     font-size: 1.3em;
     display: block;
     letter-spacing: -0.2px;
     font-weight: 200;
-    background: ${theme.colors.darkGrey};
+    background: rgba(68, 68, 68, 0.7);
     color: ${theme.colors.lightGrey};
   }
 
@@ -71,7 +74,7 @@ export default function Vehicle() {
             alt='service 1'
           />
           <span className='price-tag'>$55, 000</span>
-          <p className='label'>Lobo Lariat</p>
+          <span className='label'>Lobo Lariat</span>
         </Item>
         <Item>
           <img

@@ -89,7 +89,7 @@ const StyledList = styled.ul`
   grid-template-columns: 1fr;
   /* grid-row-gap: 1em; */
   grid-column-gap: 0;
-  background: ${theme.colors.matteBlack};
+  /* background: ${theme.colors.matteBlack}; */
   border: 1px solid ${theme.colors.darkGrey};
   border-radius: 2px;
 
