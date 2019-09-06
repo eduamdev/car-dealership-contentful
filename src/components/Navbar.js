@@ -46,7 +46,7 @@ const Logo = styled.div`
   }
 `;
 
-const MenuButton = styled.button`
+const MenuButton = styled.span`
   grid-area: menu;
   color: #fff;
   background: transparent;
@@ -60,8 +60,8 @@ const MenuButton = styled.button`
 
   & span {
     text-transform: uppercase;
-    font-size: 1.4em;
-    letter-spacing: 1.7px;
+    font-size: 1.3em;
+    letter-spacing: 1px;
   }
 
   & svg {
@@ -143,7 +143,7 @@ export default function Navbar() {
           <span className='logoText'>Vehicle Dealership</span>
         </Logo>
         <span></span>
-        <MenuButton type='button' onClick={() => toggle(!isOpen)}>
+        <MenuButton onClick={() => toggle(!isOpen)}>
           {menu}
           <span>menu</span>
         </MenuButton>
