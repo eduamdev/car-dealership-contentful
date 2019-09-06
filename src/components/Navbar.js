@@ -52,21 +52,11 @@ const MenuButton = styled.span`
   background: transparent;
   cursor: pointer;
   border: none;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-column-gap: 1em;
-  grid-template-columns: max-content max-content;
-
-  & span {
-    text-transform: uppercase;
-    font-size: 1.3em;
-    letter-spacing: 1px;
-  }
 
   & svg {
-    width: 34px;
+    width: 50px;
     fill: #fff;
+    padding: 0.3em;
   }
 
   @media ${viewport[7]} {
@@ -143,10 +133,7 @@ export default function Navbar() {
           <span className='logoText'>Vehicle Dealership</span>
         </Logo>
         <span></span>
-        <MenuButton onClick={() => toggle(!isOpen)}>
-          {menu}
-          <span>menu</span>
-        </MenuButton>
+        <MenuButton onClick={() => toggle(!isOpen)}>{menu}</MenuButton>
         <Nav className={isOpen && 'show-nav'}>
           <StyledList>
             <li>

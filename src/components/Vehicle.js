@@ -31,10 +31,14 @@ const Item = styled.div`
   position: relative;
 
   & img {
-    height: 330px;
+    height: 270px;
     width: 100%;
     display: block;
     cursor: pointer;
+
+    @media ${viewport[7]} {
+      height: 330px;
+    }
   }
 
   & .label {

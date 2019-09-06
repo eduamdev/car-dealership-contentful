@@ -57,7 +57,7 @@ const ModalFooter = styled.div`
   padding: 1.5em 3em;
   overflow: auto;
   grid-area: footer;
-  border: 1px solid ${theme.colors.darkGrey};
+  border-top: 1px solid ${theme.colors.darkGrey};
 
   &::after {
     content: '';
