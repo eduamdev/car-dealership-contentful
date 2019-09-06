@@ -29,20 +29,93 @@ const Item = styled.div`
   text-align: center;
   border-radius: 2px;
   position: relative;
+  height: 270px;
+  overflow: hidden;
 
-  & img {
-    height: 270px;
-    width: 100%;
+  @media ${viewport[7]} {
+    height: 330px;
+  }
+
+  &:hover .photo,
+  &:focus .photo {
+    transform: scale(1.2);
+    transition: all 0.75s;
+  }
+
+  &:hover .photo:before,
+  &:focus .photo:before {
     display: block;
-    cursor: pointer;
-    border-radius: 4px;
+  }
 
-    @media ${viewport[7]} {
-      height: 330px;
+  & .photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background-color: black; /* fallback color */
+    background-image: url('https://images.unsplash.com/photo-1520608760-eff2c44afa2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-position: center;
+    background-size: cover;
+
+    &:before {
+      content: '';
+      display: none;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(42, 26, 31, 0.4);
     }
   }
 
-  & .label {
+  & .link {
+    visibility: hidden;
+    color: ${theme.colors.lightGrey};
+    border: 1px solid ${theme.colors.lightGrey};
+    padding: 0.8em 1.6em;
+    background: ${theme.colors.coralRed};
+    font-size: 1em;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%;
+    /* transform: scale(0); */
+
+    &:hover {
+      background: ${theme.colors.redBrown};
+    }
+
+    @media ${viewport[7]} {
+      padding: 1em 2em;
+      font-size: 1.1em;
+    }
+  }
+
+  &:focus .link,
+  &:hover .link {
+    visibility: visible;
+    transition: all 0.3s;
+  }
+
+  & .price-tag {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: ${theme.colors.coralRed};
+    color: #fff;
+    padding: 0.5em 1.5em;
+    visibility: visible;
+  }
+
+  &:hover .price-tag,
+  &:focus .price-tag {
+    visibility: hidden;
+  }
+
+  & .name {
     position: absolute;
     bottom: 0;
     padding: 0.5em 1em;
@@ -53,15 +126,6 @@ const Item = styled.div`
     background: ${theme.colors.warmBlack};
     color: ${theme.colors.lightGrey};
   }
-
-  & .price-tag {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: ${theme.colors.coralRed};
-    color: #fff;
-    padding: 0.5em 1.5em;
-  }
 `;
 
 export default function Vehicle() {
@@ -69,28 +133,28 @@ export default function Vehicle() {
     <>
       <GridContainer>
         <Item>
-          <img
-            src='https://images.unsplash.com/photo-1520608760-eff2c44afa2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-            alt='service 1'
-          />
+          <div className='photo'></div>
+          <a className='link' href='/'>
+            Learn more
+          </a>
           <span className='price-tag'>$55, 000</span>
-          <span className='label'>Lobo Lariat</span>
+          <span className='name'>Lobo Lariat</span>
         </Item>
         <Item>
-          <img
-            src='https://images.unsplash.com/photo-1520608760-eff2c44afa2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-            alt='service 2'
-          />
+          <div className='photo'></div>
+          <a className='link' href='/'>
+            Learn more
+          </a>
           <span className='price-tag'>$55, 000</span>
-          <p className='label'>Focus Fiesta</p>
+          <span className='name'>Focus Fiesta</span>
         </Item>
         <Item>
-          <img
-            src='https://images.unsplash.com/photo-1520608760-eff2c44afa2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-            alt='service 3'
-          />
+          <div className='photo'></div>
+          <a className='link' href='/'>
+            Learn more
+          </a>
           <span className='price-tag'>$55, 000</span>
-          <p className='label'>LB-3456</p>
+          <span className='name'>LB-3456</span>
         </Item>
       </GridContainer>
     </>

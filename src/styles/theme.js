@@ -5,6 +5,7 @@ module.exports = {
     raisinBlack: '#2A1A1F',
     warmBlack: '#0E3B43',
     coralRed: '#FB3640',
+    redBrown: '#A02329',
     myrtleGreen: '#357266',
     babyPowder: '#fffffA',
     lightGrey: '#d1d2d8',
