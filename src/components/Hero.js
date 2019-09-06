@@ -32,7 +32,7 @@ const StyledHero = styled.section`
     background: radial-gradient(
         circle,
         rgba(35, 0, 35, 0.35) 0%,
-        rgba(0, 0, 0, 0.98) 40%
+        rgb(5, 5, 5) 60%
       ),
       url(${city}) center/cover no-repeat;
 

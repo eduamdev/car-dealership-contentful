@@ -5,7 +5,7 @@ import theme from '../styles/theme';
 import Modal from './Modal';
 
 const StyledSection = styled.section`
-  background: #000;
+  background: rgb(5, 5, 5);
   color: #fff;
   border-bottom: 1px solid ${theme.colors.mediumGrey};
 `;
@@ -38,7 +38,7 @@ const FilterButton = styled.span`
 `;
 
 const BackDrop = styled.div`
-  background-color: rgba(35, 35, 35, 0.5);
+  background-color: rgba(195, 195, 195, 0.3);
   height: 100%;
   position: fixed;
   top: 0;

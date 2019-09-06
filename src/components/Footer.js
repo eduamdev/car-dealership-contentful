@@ -7,7 +7,7 @@ import Icon from '../components/Icon';
 import theme from '../styles/theme';
 
 const StyledFooter = styled.footer`
-  background: #000;
+  background: rgb(5, 5, 5);
   color: ${theme.colors.lightGrey};
 `;
 

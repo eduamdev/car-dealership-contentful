@@ -6,7 +6,7 @@ import Vehicle from './Vehicle';
 import Title from './Title';
 
 const StyledSection = styled.section`
-  background: #000;
+  background: rgb(5, 5, 5);
 `;
 
 const FlexContainer = styled.div`

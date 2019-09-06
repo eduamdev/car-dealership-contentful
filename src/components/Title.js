@@ -7,6 +7,7 @@ const Container = styled.div`
   display: grid;
   align-items: center;
   margin: 8em 0 4em 0;
+  grid-template-columns: 1fr;
 
   &.left {
     justify-content: start;
@@ -15,14 +16,17 @@ const Container = styled.div`
   &.right {
     justify-content: end;
   }
+
+  @media ${viewport[7]} {
+    grid-template-columns: auto;
+  }
 `;
 
 const StyledTitle = styled.h2`
-  color: #000;
+  color: ${theme.colors.babyPowder};
   padding: 0.1em 0.5em;
-  background: ${theme.colors.babyPowder};
   display: inline;
-  border-bottom: 7px solid ${theme.colors.brightRed};
+  border-bottom: 4px solid ${theme.colors.brightRed};
   font-size: 3em;
 
   @media ${viewport[7]} {

@@ -21,7 +21,7 @@ const ModalWrapper = styled.div`
     'footer';
   align-items: center;
   justify-content: center;
-  background: ${theme.colors.richBlack};
+  background: #111;
   color: ${theme.colors.lightGrey};
 
   @media ${viewport[7]} {
