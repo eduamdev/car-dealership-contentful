@@ -50,7 +50,7 @@ const Item = styled.div`
     display: block;
     letter-spacing: -0.2px;
     font-weight: 200;
-    background: rgba(68, 68, 68, 0.7);
+    background: ${theme.colors.warmBlack};
     color: ${theme.colors.lightGrey};
   }
 
@@ -58,7 +58,7 @@ const Item = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    background: rgba(255, 37, 1, 0.7);
+    background: ${theme.colors.coralRed};
     color: #fff;
     padding: 0.5em 1.5em;
   }

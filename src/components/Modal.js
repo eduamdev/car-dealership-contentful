@@ -21,7 +21,7 @@ const ModalWrapper = styled.div`
     'footer';
   align-items: center;
   justify-content: center;
-  background: #111;
+  background: ${theme.colors.raisinBlack};
   color: ${theme.colors.lightGrey};
 
   @media ${viewport[7]} {
@@ -34,7 +34,8 @@ const ModalWrapper = styled.div`
     grid-template-rows: 1fr max-content;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     top: auto;
-    bottom: 0;
+    bottom: 1em;
+    left: 1em;
   }
 `;
 
@@ -77,12 +78,12 @@ const CloseModalBtn = styled.span`
   margin: 0;
 
   &:hover {
-    color: teal;
+    color: ${theme.colors.myrtleGreen};
   }
 `;
 
 const BtnSave = styled.button`
-  background: teal;
+  background: ${theme.colors.myrtleGreen};
   padding: 0.9em;
   border-radius: 4px;
   border: none;
@@ -96,7 +97,7 @@ const BtnSave = styled.button`
   color: #fff;
 
   @media ${viewport[7]} {
-    color: teal;
+    color: ${theme.colors.myrtleGreen};
     font-weight: 200;
     background: transparent;
     text-align: left;

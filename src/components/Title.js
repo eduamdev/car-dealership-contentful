@@ -24,9 +24,9 @@ const Container = styled.div`
 
 const StyledTitle = styled.h2`
   color: ${theme.colors.babyPowder};
-  padding: 0.1em 0.5em;
+  padding: 0.15em 0;
   display: inline;
-  border-bottom: 4px solid ${theme.colors.brightRed};
+  border-bottom: 3px solid ${theme.colors.coralRed};
   font-size: 3em;
 
   @media ${viewport[7]} {
