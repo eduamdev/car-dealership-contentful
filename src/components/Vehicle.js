@@ -24,7 +24,7 @@ const GridContainer = styled.div`
 `;
 
 const Item = styled.div`
-  background: ${theme.colors.darkGrey};
+  background: ${theme.colors.darkGreyAlt};
   margin: 0;
   text-align: center;
   border-radius: 2px;

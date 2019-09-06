@@ -9,11 +9,6 @@ import Icon from './Icon';
 
 const StyledSection = styled.section`
   background: #000;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(35, 35, 35, 0.9) 100%
-  );
 `;
 
 const Subtitle = styled.p`

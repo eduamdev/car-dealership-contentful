@@ -5,7 +5,7 @@ import theme from '../styles/theme';
 import Modal from './Modal';
 
 const StyledSection = styled.section`
-  background: ${theme.colors.matteBlack};
+  background: #000;
   color: #fff;
   border-bottom: 1px solid ${theme.colors.mediumGrey};
 `;
@@ -33,7 +33,7 @@ const FilterButton = styled.span`
   }
 
   &:hover {
-    background-color: ${theme.colors.darkGrey};
+    background-color: ${theme.colors.darkGreyAlt};
   }
 `;
 

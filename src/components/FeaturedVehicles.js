@@ -6,12 +6,7 @@ import Vehicle from './Vehicle';
 import Title from './Title';
 
 const StyledSection = styled.section`
-  background: ${theme.colors.matteBlack};
-  background: linear-gradient(
-    180deg,
-    rgba(35, 35, 35, 0.9) 0%,
-    rgba(35, 35, 35, 1) 100%
-  );
+  background: #000;
 `;
 
 const FlexContainer = styled.div`
