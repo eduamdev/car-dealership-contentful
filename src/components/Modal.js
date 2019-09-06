@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import viewport from '../styles/media';
+import theme from '../styles/theme';
 
 const ModalWrapper = styled.div`
   margin: 0 auto;
@@ -20,7 +21,8 @@ const ModalWrapper = styled.div`
     'footer';
   align-items: center;
   justify-content: center;
-  background: black;
+  background: ${theme.colors.richBlack};
+  color: ${theme.colors.lightGrey};
 
   @media ${viewport[7]} {
     width: 400px;
@@ -38,7 +40,7 @@ const ModalWrapper = styled.div`
 
 const ModalHeader = styled.div`
   padding: 1.5em 3em;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid ${theme.colors.darkGrey};
   grid-area: header;
 
   @media ${viewport[7]} {
@@ -55,7 +57,7 @@ const ModalFooter = styled.div`
   padding: 1.5em 3em;
   overflow: auto;
   grid-area: footer;
-  border: 1px solid #444;
+  border: 1px solid ${theme.colors.darkGrey};
 
   &::after {
     content: '';
@@ -68,7 +70,7 @@ const ModalFooter = styled.div`
   }
 `;
 const CloseModalBtn = styled.span`
-  color: white;
+  color: ${theme.colors.lightGrey};
   cursor: pointer;
   float: right;
   font-size: 30px;

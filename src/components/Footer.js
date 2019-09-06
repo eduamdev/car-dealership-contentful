@@ -7,7 +7,7 @@ import Icon from '../components/Icon';
 import theme from '../styles/theme';
 
 const StyledFooter = styled.footer`
-  background: ${theme.colors.blackMatte};
+  background: ${theme.colors.matteBlack};
   color: ${theme.colors.lightGrey};
 `;
 
@@ -16,7 +16,7 @@ const GridContainer = styled.div`
   align-items: center;
   justify-content: center;
   grid-template-columns: 1fr;
-  border-top: 2px solid #444;
+  border-top: 2px solid ${theme.colors.darkGrey};
   padding-top: 1em;
 
   & p {

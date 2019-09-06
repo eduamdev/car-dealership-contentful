@@ -99,8 +99,8 @@ const StyledList = styled.ul`
   grid-template-columns: 1fr;
   /* grid-row-gap: 1em; */
   grid-column-gap: 0;
-  background: #222;
-  border: 1px solid #444;
+  background: ${theme.colors.matteBlack};
+  border: 1px solid ${theme.colors.darkGrey};
   border-radius: 2px;
 
   @media ${viewport[7]} {
@@ -114,11 +114,11 @@ const StyledList = styled.ul`
   }
 
   & li {
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid ${theme.colors.darkGrey};
     padding: 0.5em 0;
 
     &:hover {
-      background: #333;
+      background: ${theme.colors.darkGreyAlt};
     }
 
     @media ${viewport[7]} {

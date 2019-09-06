@@ -6,7 +6,7 @@ import Vehicle from './Vehicle';
 import Title from './Title';
 
 const StyledSection = styled.section`
-  background: ${theme.colors.blackMatte};
+  background: ${theme.colors.matteBlack};
   background: linear-gradient(
     180deg,
     rgba(35, 35, 35, 0.9) 0%,

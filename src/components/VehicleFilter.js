@@ -5,9 +5,9 @@ import theme from '../styles/theme';
 import Modal from './Modal';
 
 const StyledSection = styled.section`
-  background: ${theme.colors.blackMatte};
+  background: ${theme.colors.matteBlack};
   color: #fff;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid ${theme.colors.mediumGrey};
 `;
 
 const FlexContainer = styled.div`
@@ -23,7 +23,7 @@ const FilterButton = styled.span`
   font-size: 1.05em;
   font-weight: 200;
   letter-spacing: 0.5px;
-  border: 1px solid #777;
+  border: 1px solid ${theme.colors.mediumGrey};
   color: ${theme.colors.lightGrey};
   background: transparent;
   cursor: pointer;
@@ -33,7 +33,7 @@ const FilterButton = styled.span`
   }
 
   &:hover {
-    background-color: #444;
+    background-color: ${theme.colors.darkGrey};
   }
 `;
 

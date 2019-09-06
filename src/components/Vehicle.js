@@ -24,7 +24,7 @@ const GridContainer = styled.div`
 `;
 
 const Item = styled.div`
-  background: #444;
+  background: ${theme.colors.darkGrey};
   margin: 0;
   text-align: center;
   border-radius: 2px;
@@ -43,7 +43,7 @@ const Item = styled.div`
     display: block;
     letter-spacing: -0.2px;
     font-weight: 200;
-    background: #444;
+    background: ${theme.colors.darkGrey};
     color: ${theme.colors.lightGrey};
   }
 
