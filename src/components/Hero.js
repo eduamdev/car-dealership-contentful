@@ -9,18 +9,19 @@ const StyledHero = styled.section`
   min-height: calc(100vh - 66px);
   &.defaultHero {
     background: #000;
-    background: linear-gradient(
+    /* background: linear-gradient(
         90deg,
         rgba(0, 0, 0, 0.2) 0%,
         rgba(225, 225, 225, 0.1) 80%
       ),
-      url(${data[0].fields.images[0].fields.file.url}) center/cover no-repeat;
+      url(${data[0].fields.images[0].fields.file.url}) center/cover no-repeat; */
+      background: url(${data[0].fields.images[0].fields.file.url}) center/cover no-repeat;
   }
   &.catalogHero {
     background: #000;
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.7) 0%,
         rgba(0, 0, 125, 0.1) 100%
       ),
       url(${catalog}) center/cover no-repeat;
@@ -32,7 +33,7 @@ const StyledHero = styled.section`
     background: radial-gradient(
         circle,
         rgba(35, 0, 35, 0.35) 0%,
-        rgb(5, 5, 5) 60%
+        rgb(5, 5, 5) 50%
       ),
       url(${city}) center/cover no-repeat;
 

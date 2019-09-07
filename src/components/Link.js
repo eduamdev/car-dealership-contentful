@@ -18,13 +18,15 @@ const StyledLink = styled(Link)`
     text-align: center;
     padding: 0.5em 0;
 
-    &:hover {
-    }
-
     @media ${viewport[7]} {
       padding: 0.7em 1em;
       font-size: 1.2em;
       letter-spacing: 0.3px;
+
+      &:hover,
+      &:focus {
+        color: ${theme.colors.grey};
+      }
     }
   }
   &.heroLink {
@@ -38,14 +40,16 @@ const StyledLink = styled(Link)`
     align-items: center;
     justify-content: space-around;
 
-    &:hover .icon {
-      transform: translateX(25%);
-    }
-
-    &:hover {
+    &:hover,
+    &:focus {
       background: transparent;
       border: 2px solid #fff;
       color: #fff;
+    }
+
+    &:hover .icon,
+    &:focus .icon {
+      transform: translateX(25%);
     }
 
     @media ${viewport[7]} {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import theme from '../styles/theme';
-import Modal from './Modal';
+import { Modal, BackDrop } from './Modal';
 
 const StyledSection = styled.section`
   background: rgb(5, 5, 5);
@@ -32,27 +32,18 @@ const FilterButton = styled.span`
     margin-left: 0.75em;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: ${theme.colors.darkGreyAlt};
   }
 `;
 
-const BackDrop = styled.div`
-  background-color: rgba(195, 195, 195, 0.3);
-  height: 100%;
-  position: fixed;
-  top: 0;
-  transition: all 1.3s;
-  width: 100%;
-  z-index: 100;
-`;
-
 export default function VehicleFilter() {
-  const [isShowing, openModal] = useState(false);
+  const [modalIsShowing, openModal] = useState(false);
 
   return (
     <StyledSection>
-      {isShowing ? (
+      {modalIsShowing ? (
         <BackDrop onClick={() => openModal(false)}></BackDrop>
       ) : null}
       <Wrapper>
@@ -62,7 +53,11 @@ export default function VehicleFilter() {
           <FilterButton>Color</FilterButton>
         </FlexContainer>
       </Wrapper>
-      <Modal className='modal' show={isShowing} close={() => openModal(false)}>
+      <Modal
+        className='modal'
+        show={modalIsShowing}
+        close={() => openModal(false)}
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odit
         amet aliquam.
       </Modal>

@@ -5,12 +5,12 @@ import Wrapper from '../components/Wrapper';
 import viewport from '../styles/media';
 import Link from '../components/Link';
 import theme from '../styles/theme';
-import { menu } from '../components/svg';
+import { menu, close } from '../components/svg';
 
 const StyledHeader = styled.header`
   display: grid;
   grid-template-areas:
-    'logo empty-space menu'
+    'logo empty menu'
     'nav nav nav';
   align-items: center;
   justify-content: center;
@@ -19,8 +19,12 @@ const StyledHeader = styled.header`
   grid-template-columns: max-content 1fr max-content;
   min-height: 100px;
 
+  & .empty {
+    grid-area: empty;
+  }
+
   @media ${viewport[7]} {
-    grid-template-areas: 'logo empty-space nav';
+    grid-template-areas: 'logo empty nav';
   }
 `;
 
@@ -36,12 +40,14 @@ const Logo = styled.div`
     color: ${theme.colors.lightGrey};
     font-size: 1.3em;
     font-weight: 400;
-    display: none;
+    /* display: none; */
+    visibility: hidden;
     letter-spacing: 0.1px;
     text-transform: uppercase;
 
     @media ${viewport[7]} {
-      display: block;
+      /* display: block; */
+      visibility: visible;
     }
   }
 `;
@@ -54,9 +60,14 @@ const MenuButton = styled.span`
   border: none;
 
   & svg {
-    width: 50px;
+    width: 46px;
     fill: #fff;
     padding: 0.3em;
+
+    &:hover,
+    &:focus {
+      fill: ${theme.colors.grey};
+    }
   }
 
   @media ${viewport[7]} {
@@ -107,7 +118,7 @@ const StyledList = styled.ul`
     border-bottom: 1px solid ${theme.colors.darkGrey};
     padding: 0.5em 0;
 
-    &:hover {
+    &:hover, &:focus {
       background: ${theme.colors.darkGreyAlt};
     }
 
@@ -115,7 +126,7 @@ const StyledList = styled.ul`
       padding: 0;
       border: none;
 
-      &:hover {
+      &:hover, &:focus {
         background: transparent;
       }
     }
@@ -123,7 +134,7 @@ const StyledList = styled.ul`
 `;
 
 export default function Navbar() {
-  const [isOpen, toggle] = useState(false);
+  const [menuIsOpen, toggleMenu] = useState(false);
 
   return (
     <Wrapper>
@@ -132,9 +143,11 @@ export default function Navbar() {
           <img src={logo} alt='Vehicle Dealership' />
           <span className='logoText'>Vehicle Dealership</span>
         </Logo>
-        <span></span>
-        <MenuButton onClick={() => toggle(!isOpen)}>{menu}</MenuButton>
-        <Nav className={isOpen && 'show-nav'}>
+        <span className='empty'></span>
+        <MenuButton onClick={() => toggleMenu(!menuIsOpen)}>
+          {!menuIsOpen ? menu : close}
+        </MenuButton>
+        <Nav className={menuIsOpen && 'show-nav'}>
           <StyledList>
             <li>
               <Link linkClass='nav-link' url='/'>

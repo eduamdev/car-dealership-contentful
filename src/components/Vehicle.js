@@ -70,10 +70,11 @@ const Item = styled.div`
 
   & .link {
     visibility: hidden;
-    color: ${theme.colors.lightGrey};
-    border: 1px solid ${theme.colors.lightGrey};
+    color: ${theme.colors.richBlack};
+    background: ${theme.colors.lightGrey};
+    border: 1px solid;
+    border-color: transparent;
     padding: 0.8em 1.6em;
-    background: ${theme.colors.coralRed};
     font-size: 1em;
     text-align: center;
     margin: auto;
@@ -84,8 +85,11 @@ const Item = styled.div`
     max-width: 60%;
     /* transform: scale(0); */
 
-    &:hover {
-      background: ${theme.colors.redBrown};
+    &:hover,
+    &:focus {
+      color: ${theme.colors.lightGrey};
+      border-color: ${theme.colors.lightGrey};
+      background: ${theme.colors.coralRed};
     }
 
     @media ${viewport[7]} {
@@ -104,7 +108,7 @@ const Item = styled.div`
     position: absolute;
     top: 0;
     right: 0;
-    background: ${theme.colors.coralRed};
+    background: ${theme.colors.myrtleGreen};
     color: #fff;
     padding: 0.5em 1.5em;
     visibility: visible;
@@ -134,7 +138,7 @@ export default function Vehicle() {
       <GridContainer>
         <Item>
           <div className='photo'></div>
-          <a className='link' href='/'>
+          <a className='link box-shadow' href='/'>
             Learn more
           </a>
           <span className='price-tag'>$55, 000</span>
@@ -142,7 +146,7 @@ export default function Vehicle() {
         </Item>
         <Item>
           <div className='photo'></div>
-          <a className='link' href='/'>
+          <a className='link box-shadow' href='/'>
             Learn more
           </a>
           <span className='price-tag'>$55, 000</span>
@@ -150,7 +154,7 @@ export default function Vehicle() {
         </Item>
         <Item>
           <div className='photo'></div>
-          <a className='link' href='/'>
+          <a className='link box-shadow' href='/'>
             Learn more
           </a>
           <span className='price-tag'>$55, 000</span>

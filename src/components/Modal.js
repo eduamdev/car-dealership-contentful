@@ -77,7 +77,8 @@ const CloseModalBtn = styled.span`
   font-size: 30px;
   margin: 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: ${theme.colors.myrtleGreen};
   }
 `;
@@ -104,13 +105,24 @@ const BtnSave = styled.button`
     width: auto;
     float: right;
 
-    &:hover {
+    &:hover,
+    &:focus {
       text-decoration: underline;
     }
   }
 `;
 
-const modal = ({ show, children, close }) => {
+const BackDrop = styled.div`
+  background-color: rgba(195, 195, 195, 0.3);
+  height: 100%;
+  position: fixed;
+  top: 0;
+  transition: all 1.3s;
+  width: 100%;
+  z-index: 100;
+`;
+
+const Modal = ({ show, children, close }) => {
   return (
     <div>
       <ModalWrapper
@@ -135,4 +147,4 @@ const modal = ({ show, children, close }) => {
   );
 };
 
-export default modal;
+export { Modal, BackDrop };
