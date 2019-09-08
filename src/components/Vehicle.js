@@ -2,6 +2,7 @@ import React from 'react';
 import theme from '../styles/theme';
 import styled from 'styled-components';
 import viewport from '../styles/media';
+import Link from '../components/Link';
 
 const GridContainer = styled.div`
   margin: 5em auto;
@@ -68,40 +69,15 @@ const Item = styled.div`
     }
   }
 
-  & .link {
+  & a {
     visibility: hidden;
-    color: ${theme.colors.richBlack};
-    background: ${theme.colors.lightGrey};
-    border: 1px solid;
-    border-color: transparent;
-    padding: 0.8em 1.6em;
-    font-size: 1em;
-    text-align: center;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 60%;
-    /* transform: scale(0); */
-
-    &:hover,
-    &:focus {
-      color: ${theme.colors.lightGrey};
-      border-color: ${theme.colors.lightGrey};
-      background: ${theme.colors.coralRed};
-    }
-
-    @media ${viewport[7]} {
-      padding: 1em 2em;
-      font-size: 1.1em;
-    }
+    transition: none;
   }
 
-  &:focus .link,
-  &:hover .link {
+  &:focus a,
+  &:hover a {
     visibility: visible;
-    transition: all 0.3s;
+    transition: all 0.1s;
   }
 
   & .price-tag {
@@ -138,25 +114,25 @@ export default function Vehicle() {
       <GridContainer>
         <Item>
           <div className='photo'></div>
-          <a className='link box-shadow' href='/'>
+          <Link linkClass='vehicleLink box-shadow' url='/'>
             Learn more
-          </a>
+          </Link>
           <span className='price-tag'>$55, 000</span>
           <span className='name'>Lobo Lariat</span>
         </Item>
         <Item>
           <div className='photo'></div>
-          <a className='link box-shadow' href='/'>
+          <Link linkClass='vehicleLink box-shadow' url='/'>
             Learn more
-          </a>
+          </Link>
           <span className='price-tag'>$55, 000</span>
           <span className='name'>Focus Fiesta</span>
         </Item>
         <Item>
           <div className='photo'></div>
-          <a className='link box-shadow' href='/'>
+          <Link linkClass='vehicleLink box-shadow' url='/'>
             Learn more
-          </a>
+          </Link>
           <span className='price-tag'>$55, 000</span>
           <span className='name'>LB-3456</span>
         </Item>

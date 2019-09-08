@@ -40,14 +40,14 @@ const Logo = styled.div`
     color: ${theme.colors.lightGrey};
     font-size: 1.3em;
     font-weight: 400;
-    /* display: none; */
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden; */
     letter-spacing: 0.1px;
     text-transform: uppercase;
 
     @media ${viewport[7]} {
-      /* display: block; */
-      visibility: visible;
+      display: block;
+      /* visibility: visible; */
     }
   }
 `;

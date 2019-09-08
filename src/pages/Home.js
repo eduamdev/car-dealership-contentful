@@ -12,6 +12,7 @@ import styled from 'styled-components';
 
 const link = {
   label: 'See Our Catalog',
+  linkClass: 'heroLink ripple',
   url: '/catalog'
 };
 

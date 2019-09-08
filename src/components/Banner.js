@@ -66,7 +66,7 @@ export default function Banner({ children, title, subtitle, link, icon }) {
           <Subtitle>{subtitle}</Subtitle>
           {link && (
             <LinkContainer className='center'>
-              <Link linkClass='heroLink' url={link.url}>
+              <Link linkClass={link.linkClass} url={link.url}>
                 <span>{link.label}</span>
                 {icon && <Icon className='icon'>{icon}</Icon>}
               </Link>
