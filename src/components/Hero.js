@@ -26,7 +26,7 @@ const StyledHero = styled.section`
     background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.9) 0%,
-        rgba(0, 0, 35, 0.1) 70%
+        rgba(0, 0, 35, 0.2) 70%
       ),
       url(${catalog}) center/cover no-repeat;
   }

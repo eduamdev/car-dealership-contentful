@@ -6,10 +6,12 @@ import theme from '../styles/theme';
 const ModalWrapper = styled.div`
   margin: 0 auto;
   transition: all 0.4s;
-  width: 60%;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  max-height: 100vh;
   position: fixed;
   top: 0;
   z-index: 1000000000000000;
