@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import Vehicle from './Vehicle';
 import Title from './Title';
+import theme from '../styles/theme';
 
 const StyledSection = styled.section`
-  background: rgb(5, 5, 5);
+  background: ${theme.colors.mainBlack};
 `;
 
 export default function FeaturedVehicles() {

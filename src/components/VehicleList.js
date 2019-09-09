@@ -5,7 +5,7 @@ import theme from '../styles/theme';
 import Vehicle from '../components/Vehicle';
 
 const StyledSection = styled.section`
-  background-color: rgb(5, 5, 5);
+  background-color: ${theme.colors.mainBlack};
   color: ${theme.colors.lightGrey};
 `;
 

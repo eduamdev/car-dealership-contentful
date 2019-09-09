@@ -91,6 +91,7 @@ button {
 
 /* Main Layout */
 .app-wrapper {
+  background: rgb(5, 5, 5);
   overflow: hidden;
   display: grid;
   align-items: start;

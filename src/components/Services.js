@@ -8,7 +8,7 @@ import { car, bicycle, ribbon, help, speedometer, colorPalette } from './svg';
 import Icon from './Icon';
 
 const StyledSection = styled.section`
-  background: rgb(5, 5, 5);
+  background: ${theme.colors.mainBlack};
 `;
 
 const Subtitle = styled.p`

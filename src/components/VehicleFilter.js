@@ -5,7 +5,7 @@ import theme from '../styles/theme';
 import { Modal, BackDrop } from './Modal';
 
 const StyledSection = styled.section`
-  background: rgb(5, 5, 5);
+  background: ${theme.colors.mainBlack};
   color: #fff;
   border-bottom: 1px solid ${theme.colors.mediumGrey};
 `;

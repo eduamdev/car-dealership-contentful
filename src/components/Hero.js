@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import data from '../content/data';
-import city from '../assets/images/services-1.jpg';
 import theme from '../styles/theme';
 import catalog from '../assets/images/catalog-1.jpg';
+import viewport from '../styles/media';
 
 const StyledHero = styled.section`
   min-height: calc(100vh - 66px);
@@ -14,11 +14,15 @@ const StyledHero = styled.section`
         rgba(0, 0, 0, 0.2) 0%,
         rgba(225, 225, 225, 0.1) 80%
       ),
-      url(${data[0].fields.images[0].fields.file.url}) center/cover no-repeat; */
-      background: url(${data[0].fields.images[0].fields.file.url}) center/cover no-repeat;
+      url(${
+        data[0].fields.images[0].fields.file.url
+      }) center/cover no-repeat; */
+      background: url(${
+        data[0].fields.images[0].fields.file.url
+      }) center/cover no-repeat;
   }
   &.catalogHero {
-    background: #000;
+    background: ${theme.colors.mainBlack};
     background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.9) 0%,
@@ -28,14 +32,17 @@ const StyledHero = styled.section`
   }
 
   &.quote {
-    background: #000;
+    background: ${theme.colors.mainBlack};
     min-height: 12em;
-    background: radial-gradient(
-        circle,
-        rgba(35, 0, 35, 0.35) 0%,
-        rgb(5, 5, 5) 50%
-      ),
-      url(${city}) center/cover no-repeat;
+    background: radial-gradient( circle, rgba(95,30,15,0.95) 0%, ${
+      theme.colors.mainBlack
+    } 50% );
+
+    @media ${viewport[7]}{
+      background: linear-gradient( 125deg, ${
+        theme.colors.mainBlack
+      } 70%, rgba(95,30,15,0.95) 98% );
+    }
 
     & blockquote {
       color: ${theme.colors.lightGrey};
