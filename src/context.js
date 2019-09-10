@@ -5,14 +5,34 @@ const VehicleContext = React.createContext();
 
 class VehicleProvider extends Component {
   state = {
-    vehicles: []
+    vehicles: [],
+    sortedVehicles: [],
+    featuredVehicles: [],
+    loading: true,
+    modalIsOpen: false
+  };
+
+  handleModal = () => {
+    this.setState(prevState => ({
+      modalIsOpen: !prevState.modalIsOpen
+    }));
+  };
+
+  handleBodyClass = className => {
+    if (this.state.modalIsOpen) {
+      document.body.classList.add(className);
+    } else {
+      document.body.classList.remove(className);
+    }
   };
 
   render() {
     return (
       <VehicleContext.Provider
         value={{
-          ...this.state
+          ...this.state,
+          handleBodyClass: this.handleBodyClass,
+          handleModal: this.handleModal
         }}
       >
         {this.props.children}

@@ -3,8 +3,8 @@ import VehicleFilter from './VehicleFilter';
 import VehicleList from './VehicleList';
 import styled from 'styled-components';
 import Wrapper from './Wrapper';
-import theme from '../styles/theme';
 import viewport from '../styles/media';
+import { withVehicleConsumer } from '../context';
 
 const Container = styled.div`
   display: grid;
@@ -43,7 +43,11 @@ const StyledList = styled(VehicleList)`
   padding: 1em;
 `;
 
-export default function VehicleContainer() {
+function VehicleContainer({ context }) {
+  const { handleBodyClass } = context;
+
+  handleBodyClass('modal-open');
+
   return (
     <Wrapper>
       <Container>
@@ -53,3 +57,5 @@ export default function VehicleContainer() {
     </Wrapper>
   );
 }
+
+export default withVehicleConsumer(VehicleContainer);

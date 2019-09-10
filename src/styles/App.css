@@ -59,6 +59,10 @@ body {
   background: var(--main-black);
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,

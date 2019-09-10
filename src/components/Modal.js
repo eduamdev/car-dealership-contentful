@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import viewport from '../styles/media';
 import theme from '../styles/theme';
+import { close as closeSvg } from './svg';
 
 const ModalWrapper = styled.div`
   margin: 0 auto;
@@ -43,9 +44,13 @@ const ModalWrapper = styled.div`
 `;
 
 const ModalHeader = styled.div`
-  padding: 1.5em 3em;
+  padding: 0.75em 3em;
   border-bottom: 1px solid ${theme.colors.darkGrey};
   grid-area: header;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-areas: 'clear space close';
+  align-items: center;
 
   @media ${viewport[7]} {
     display: none;
@@ -73,16 +78,28 @@ const ModalFooter = styled.div`
     border: 0;
   }
 `;
-const CloseModalBtn = styled.span`
-  color: ${theme.colors.lightGrey};
+const ClearBtn = styled.span`
+  grid-area: clear;
+  padding: 1em;
   cursor: pointer;
-  float: right;
-  font-size: 30px;
+  color: ${theme.colors.winterGreen};
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+`;
+
+const CloseModalBtn = styled.span`
+  grid-area: close;
+  width: 36px;
+  fill: ${theme.colors.lightGrey};
+  cursor: pointer;
   margin: 0;
 
   &:hover,
   &:focus {
-    color: ${theme.colors.myrtleGreen};
+    fill: ${theme.colors.winterGreen};
   }
 `;
 
@@ -137,12 +154,11 @@ const Modal = ({ show, children, close }) => {
         }}
       >
         <ModalHeader>
-          <span>Clear</span>
-          <CloseModalBtn onClick={close}>×</CloseModalBtn>
+          <ClearBtn>Clear</ClearBtn>
+          <span></span>
+          <CloseModalBtn onClick={close}>{closeSvg}</CloseModalBtn>
         </ModalHeader>
-        <ModalBody>
-          <p>{children}</p>
-        </ModalBody>
+        <ModalBody>{children}</ModalBody>
         <ModalFooter>
           <BtnSave>Save</BtnSave>
         </ModalFooter>

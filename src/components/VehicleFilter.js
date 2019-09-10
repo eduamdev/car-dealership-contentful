@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { VehicleContext } from '../context';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 import { Modal, BackDrop } from './Modal';
@@ -62,8 +63,11 @@ const FilterButton = styled.span`
     justify-content: center;
     grid-template-columns: 1fr;
     grid-gap: 0.3em 0;
-    margin-bottom: 2em;
     letter-spacing: -0.15px;
+
+    &:not(:last-child) {
+      margin-bottom: 2em;
+    }
 
     & .filter-label {
       color: ${theme.colors.lightGrey};
@@ -74,6 +78,9 @@ const FilterButton = styled.span`
       /* cursor: pointer; */
       padding: 0.25em 0.75em;
       font-size: 0.95em;
+      background: ${theme.colors.warmBlack};
+      color: ${theme.colors.lightGrey};
+      outline-color: ${theme.colors.mediumGrey};
     }
 
     & .checkbox input[type='checkbox'] {
@@ -84,7 +91,7 @@ const FilterButton = styled.span`
     & .checkbox label {
       position: relative;
       display: inline-block;
-
+      cursor: pointer;
       /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
       padding-left: 28px;
     }
@@ -137,19 +144,20 @@ const FilterButton = styled.span`
 
     /*Adding focus styles on the outer-box of the fake checkbox*/
     & .checkbox input[type='checkbox']:focus + label::before {
-      outline: rgb(59, 153, 252) auto 5px;
+      outline: ${theme.colors.mediumGrey} auto 5px;
     }
   }
 `;
 
 export default function VehicleFilter() {
-  const [modalIsShowing, openModal] = useState(false);
+  const context = useContext(VehicleContext);
+  const { modalIsOpen, handleModal } = context;
 
   return (
     <StyledSection>
-      {modalIsShowing && <BackDrop onClick={() => openModal(false)}></BackDrop>}
+      {modalIsOpen && <BackDrop onClick={handleModal}></BackDrop>}
       <GridContainer>
-        <FilterButton className='allFilters' onClick={() => openModal(true)}>
+        <FilterButton className='allFilters' onClick={handleModal}>
           Filters
         </FilterButton>
         <FilterButton>
@@ -164,7 +172,7 @@ export default function VehicleFilter() {
         </FilterButton>
         <FilterButton>
           <label className='filter-label' htmlFor='lol'>
-            Type
+            Color
           </label>
           <select className='filter-select' name='' id='lol'>
             <option value=''>Lorem, ipsum.</option>
@@ -174,7 +182,7 @@ export default function VehicleFilter() {
         </FilterButton>
         <FilterButton>
           <label className='filter-label' htmlFor='lol'>
-            Type
+            Capacity
           </label>
           <select className='filter-select' name='' id='lol'>
             <option value=''>Lorem, ipsum.</option>
@@ -185,17 +193,15 @@ export default function VehicleFilter() {
         <FilterButton>
           <div className='checkbox'>
             <input type='checkbox' id='checkbox_1' />
-            <label for='checkbox_1'>Pure CSS Checkbox</label>
+            <label htmlFor='checkbox_1'>Air Conditioner</label>
           </div>
         </FilterButton>
       </GridContainer>
-      <Modal
-        className='modal'
-        show={modalIsShowing}
-        close={() => openModal(false)}
-      >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odit
-        amet aliquam.
+      <Modal className='modal' show={modalIsOpen} close={handleModal}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odit
+          amet aliquam.
+        </p>
       </Modal>
     </StyledSection>
   );

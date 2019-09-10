@@ -11,7 +11,7 @@ const logo = (
     width='70px'
     height='70px'
     viewBox='0 0 70 70'
-    enable-background='new 0 0 70 70'
+    enableBackground='new 0 0 70 70'
     xmlSpace='preserve'
   >
     <g id='bg'>
@@ -22,8 +22,8 @@ const logo = (
       <text
         transform='matrix(1 0 0 1 13.4443 44.9961)'
         fill='#FFFFFF'
-        font-family="'Rockwell'"
-        font-size='30'
+        fontFamily="'Rockwell'"
+        fontSize='30'
       >
         VD
       </text>
@@ -73,7 +73,7 @@ const colorPalette = (
 );
 const github = (
   <svg
-    class='drop-shadow'
+    className='drop-shadow'
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 512 512'
   >
@@ -82,7 +82,7 @@ const github = (
 );
 const twitter = (
   <svg
-    class='drop-shadow'
+    className='drop-shadow'
     xmlns='http://www.w3.org/2000/svg'
     viewBox='0 0 512 512'
   >
@@ -108,7 +108,7 @@ const loading = (
     x='0px'
     y='0px'
     viewBox='0 0 100 100'
-    enable-background='new 0 0 0 0'
+    enableBackground='new 0 0 0 0'
     xmlSpace='preserve'
   >
     <circle fill='#fff' stroke='none' cx='6' cy='50' r='6'>
