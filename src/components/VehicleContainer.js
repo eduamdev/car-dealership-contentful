@@ -17,8 +17,8 @@ const Container = styled.div`
   overflow: hidden;
   width: 100%;
   height: 100%;
-  max-width: 100vw;
-  max-height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
   grid-gap: 2em 0;
 
   @media ${viewport[9]} {
