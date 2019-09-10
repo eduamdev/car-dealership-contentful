@@ -14,7 +14,8 @@ const ModalWrapper = styled.div`
   max-height: 100vh;
   position: fixed;
   top: 0;
-  z-index: 1000000000000000;
+  left: 0;
+  z-index: 100000;
   display: grid;
   grid-template-rows: max-content 1fr max-content;
   grid-template-areas:
@@ -119,6 +120,7 @@ const BackDrop = styled.div`
   height: 100%;
   position: fixed;
   top: 0;
+  left: 0;
   transition: all 1.3s;
   width: 100%;
   z-index: 100;

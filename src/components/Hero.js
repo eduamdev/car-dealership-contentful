@@ -25,8 +25,8 @@ const StyledHero = styled.section`
     background: ${theme.colors.mainBlack};
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.9) 0%,
-        rgba(0, 0, 35, 0.2) 70%
+        rgba(0, 0, 0, 0.95) 15%,
+        rgba(0, 0, 15, 0.15) 70%
       ),
       url(${catalog}) center/cover no-repeat;
   }

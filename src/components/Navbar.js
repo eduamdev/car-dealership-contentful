@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import logo from '../assets/images/logo.svg';
 import Wrapper from '../components/Wrapper';
 import viewport from '../styles/media';
 import Link from '../components/Link';
 import theme from '../styles/theme';
-import { menu, close } from '../components/svg';
+import { menu, close, logo } from '../components/svg';
 
 const StyledHeader = styled.header`
   display: grid;
@@ -140,7 +139,7 @@ export default function Navbar() {
     <Wrapper>
       <StyledHeader>
         <Logo>
-          <img src={logo} alt='Vehicle Dealership' />
+          {logo}
           <span className='logoText'>Vehicle Dealership</span>
         </Logo>
         <span className='empty'></span>

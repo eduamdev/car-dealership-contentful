@@ -5,23 +5,23 @@ import viewport from '../styles/media';
 import Link from '../components/Link';
 
 const GridContainer = styled.div`
-  margin: 5em auto;
+  /* margin: 5em auto; */
   display: grid;
-  width: 80vw;
+  /* width: 80vw; */
   align-items: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-gap: 1rem;
 
   @media ${viewport[7]} {
-    width: 85vw;
+    /* width: 85vw; */
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   }
 
-  @media ${viewport[9]} {
+  /* @media ${viewport[9]} {
     width: 90vw;
     max-width: 1170px;
-  }
+  } */
 `;
 
 const Item = styled.div`

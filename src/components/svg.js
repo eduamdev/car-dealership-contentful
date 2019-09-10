@@ -1,5 +1,35 @@
 import React from 'react';
 
+const logo = (
+  <svg
+    version='1.1'
+    id='Capa_1'
+    xmlns='http://www.w3.org/2000/svg'
+    xmlnsXlink='http://www.w3.org/1999/xlink'
+    x='0px'
+    y='0px'
+    width='70px'
+    height='70px'
+    viewBox='0 0 70 70'
+    enable-background='new 0 0 70 70'
+    xmlSpace='preserve'
+  >
+    <g id='bg'>
+      <rect fill='#FF2501' width='70' height='70' />
+    </g>
+    <g id='Capa_1_1_'>
+      <rect x='6.57' y='24.626' fill='none' width='56.86' height='20.747' />
+      <text
+        transform='matrix(1 0 0 1 13.4443 44.9961)'
+        fill='#FFFFFF'
+        font-family="'Rockwell'"
+        font-size='30'
+      >
+        VD
+      </text>
+    </g>
+  </svg>
+);
 const arrowR = (
   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
     <path d='M85 277.375h259.704L225.002 397.077 256 427l171-171L256 85l-29.922 29.924 118.626 119.701H85v42.75z' />
@@ -112,6 +142,7 @@ const loading = (
 );
 
 export {
+  logo,
   twitter,
   github,
   arrowR,

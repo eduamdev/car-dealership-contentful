@@ -1,40 +1,144 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import Wrapper from './Wrapper';
 import theme from '../styles/theme';
 import { Modal, BackDrop } from './Modal';
+import viewport from '../styles/media';
 
 const StyledSection = styled.section`
-  background: ${theme.colors.mainBlack};
   color: #fff;
-  border-bottom: 1px solid ${theme.colors.mediumGrey};
+  width: 100%;
+
+  @media ${viewport[9]} {
+    padding: 0.1em;
+    align-self: stretch;
+    margin-top: 3em;
+  }
 `;
 
-const FlexContainer = styled.div`
-  display: flex;
+const GridContainer = styled.div`
+  display: grid;
   align-items: center;
-  justify-content: flex-start;
-  margin: 0.75em auto;
+  justify-content: start;
+  border-bottom: 1px solid ${theme.colors.mediumGrey};
+  padding: 1em 0;
+  border-radius: 2px;
+
+  @media ${viewport[9]} {
+    padding: 2em;
+    justify-content: stretch;
+    border: 1px solid ${theme.colors.mediumGrey};
+  }
 `;
 
 const FilterButton = styled.span`
-  padding: 0.4em 1.4em;
-  border-radius: 3px;
-  font-size: 1.05em;
-  font-weight: 200;
-  letter-spacing: 0.5px;
-  border: 1px solid ${theme.colors.mediumGrey};
-  color: ${theme.colors.lightGrey};
-  background: transparent;
-  cursor: pointer;
+  display: none;
 
-  &:not(:first-child) {
-    margin-left: 0.75em;
+  &.allFilters {
+    cursor: pointer;
+    padding: 0.4em 1.4em;
+    border-radius: 2px;
+    font-size: 1.05em;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    color: ${theme.colors.lightGrey};
+    background: transparent;
+    border: 1px solid ${theme.colors.mediumGrey};
+    border-radius: 4px;
+    display: block;
+
+    @media ${viewport[9]} {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: ${theme.colors.darkGreyAlt};
+    }
   }
 
-  &:hover,
-  &:focus {
-    background-color: ${theme.colors.darkGreyAlt};
+  @media ${viewport[9]} {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-gap: 0.3em 0;
+    margin-bottom: 2em;
+    letter-spacing: -0.15px;
+
+    & .filter-label {
+      color: ${theme.colors.lightGrey};
+      font-size: 1em;
+    }
+
+    & .filter-select {
+      /* cursor: pointer; */
+      padding: 0.25em 0.75em;
+      font-size: 0.95em;
+    }
+
+    & .checkbox input[type='checkbox'] {
+      opacity: 0;
+      display: none;
+    }
+
+    & .checkbox label {
+      position: relative;
+      display: inline-block;
+
+      /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+      padding-left: 28px;
+    }
+
+    & .checkbox label::before,
+    & .checkbox label::after {
+      position: absolute;
+      content: '';
+
+      /*Needed for the line-height to take effect*/
+      display: inline-block;
+    }
+
+    /*Outer box of the fake checkbox*/
+    & .checkbox label::before {
+      height: 16px;
+      width: 16px;
+
+      border: 1px solid;
+      left: 0px;
+
+      /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+     *to vertically center it.
+     */
+      /* top: 3px; */
+    }
+
+    /*Checkmark of the fake checkbox*/
+    & .checkbox label::after {
+      height: 5px;
+      width: 9px;
+      border-left: 2px solid;
+      border-bottom: 2px solid;
+
+      transform: rotate(-45deg);
+
+      left: 4px;
+      top: 4px;
+    }
+
+    /*Hide the checkmark by default*/
+    & .checkbox input[type='checkbox'] + label::after {
+      content: none;
+    }
+
+    /*Unhide on the checked state*/
+    & .checkbox input[type='checkbox']:checked + label::after {
+      content: '';
+    }
+
+    /*Adding focus styles on the outer-box of the fake checkbox*/
+    & .checkbox input[type='checkbox']:focus + label::before {
+      outline: rgb(59, 153, 252) auto 5px;
+    }
   }
 `;
 
@@ -43,16 +147,48 @@ export default function VehicleFilter() {
 
   return (
     <StyledSection>
-      {modalIsShowing ? (
-        <BackDrop onClick={() => openModal(false)}></BackDrop>
-      ) : null}
-      <Wrapper>
-        <FlexContainer>
-          <FilterButton onClick={() => openModal(true)}>Type</FilterButton>
-          <FilterButton>Price</FilterButton>
-          <FilterButton>Color</FilterButton>
-        </FlexContainer>
-      </Wrapper>
+      {modalIsShowing && <BackDrop onClick={() => openModal(false)}></BackDrop>}
+      <GridContainer>
+        <FilterButton className='allFilters' onClick={() => openModal(true)}>
+          Filters
+        </FilterButton>
+        <FilterButton>
+          <label className='filter-label' htmlFor='lol'>
+            Type
+          </label>
+          <select className='filter-select' name='' id='lol'>
+            <option value=''>Lorem, ipsum.</option>
+            <option value=''>Lorem, ipsum.</option>
+            <option value=''>Lorem, ipsum.</option>
+          </select>
+        </FilterButton>
+        <FilterButton>
+          <label className='filter-label' htmlFor='lol'>
+            Type
+          </label>
+          <select className='filter-select' name='' id='lol'>
+            <option value=''>Lorem, ipsum.</option>
+            <option value=''>Lorem, ipsum.</option>
+            <option value=''>Lorem, ipsum.</option>
+          </select>
+        </FilterButton>
+        <FilterButton>
+          <label className='filter-label' htmlFor='lol'>
+            Type
+          </label>
+          <select className='filter-select' name='' id='lol'>
+            <option value=''>Lorem, ipsum.</option>
+            <option value=''>Lorem, ipsum.</option>
+            <option value=''>Lorem, ipsum.</option>
+          </select>
+        </FilterButton>
+        <FilterButton>
+          <div className='checkbox'>
+            <input type='checkbox' id='checkbox_1' />
+            <label for='checkbox_1'>Pure CSS Checkbox</label>
+          </div>
+        </FilterButton>
+      </GridContainer>
       <Modal
         className='modal'
         show={modalIsShowing}

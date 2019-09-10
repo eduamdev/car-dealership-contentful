@@ -14,8 +14,8 @@ export default function FeaturedVehicles() {
     <StyledSection>
       <Wrapper>
         <Title title='Featured Vehicles' placement='right' />
+        <Vehicle></Vehicle>
       </Wrapper>
-      <Vehicle></Vehicle>
     </StyledSection>
   );
 }
