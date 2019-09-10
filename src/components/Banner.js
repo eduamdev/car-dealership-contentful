@@ -30,6 +30,12 @@ const Title = styled.h1`
   text-transform: uppercase;
   margin: 0;
 
+  &.catalog {
+    background: rgba(255, 255, 250, 0.85);
+    color: ${theme.colors.richBlack};
+    padding: 0.1em 0.3em;
+  }
+
   @media ${viewport[7]} {
     font-size: 6em;
   }
@@ -57,12 +63,19 @@ const LinkContainer = styled.div`
   }
 `;
 
-export default function Banner({ children, title, subtitle, link, icon }) {
+export default function Banner({
+  children,
+  title,
+  titleClass,
+  subtitle,
+  link,
+  icon
+}) {
   return (
     <Wrapper>
       <StyledBanner className='banner'>
         <GridContainer>
-          <Title>{title}</Title>
+          <Title className={titleClass}>{title}</Title>
           <Subtitle>{subtitle}</Subtitle>
           {link && (
             <LinkContainer className='center'>

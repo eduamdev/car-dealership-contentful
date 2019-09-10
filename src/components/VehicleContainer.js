@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import viewport from '../styles/media';
 import { withVehicleConsumer } from '../context';
+import Title from './Title';
 
 const Container = styled.div`
   display: grid;
@@ -50,6 +51,7 @@ function VehicleContainer({ context }) {
 
   return (
     <Wrapper>
+      <Title title='Search Vehicles' placement='right' />
       <Container>
         <StyledFilter></StyledFilter>
         <StyledList></StyledList>
