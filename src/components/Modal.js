@@ -44,7 +44,7 @@ const ModalWrapper = styled.div`
 `;
 
 const ModalHeader = styled.div`
-  padding: 0.75em 3em;
+  padding: 0.75em 1em;
   border-bottom: 1px solid ${theme.colors.darkGrey};
   grid-area: header;
   display: grid;
@@ -58,12 +58,12 @@ const ModalHeader = styled.div`
 `;
 
 const ModalBody = styled.div`
-  padding: 1.5em 3em;
+  padding: 1.5em 1em;
   align-self: start;
   grid-area: body;
 `;
 const ModalFooter = styled.div`
-  padding: 1.5em 3em;
+  padding: 1.5em 1em;
   overflow: auto;
   grid-area: footer;
   border-top: 1px solid ${theme.colors.darkGrey};
