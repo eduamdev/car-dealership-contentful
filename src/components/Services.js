@@ -13,12 +13,13 @@ const StyledSection = styled.section`
 
 const Subtitle = styled.p`
   font-size: 1.2em;
+  line-height: 1.3;
   color: ${theme.colors.lightGrey};
   text-align: left;
 
   @media ${viewport[7]} {
-    font-size: 1.6em;
-    line-height: 1.3;
+    font-size: 1.3em;
+    line-height: 1.4;
   }
 `;
 
@@ -39,7 +40,7 @@ const Item = styled.div`
   margin: 0;
   color: #fff;
   text-align: center;
-  padding: 2em 3em;
+  padding: 2em 1em;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -64,11 +65,15 @@ const Item = styled.div`
     grid-area: icon;
     align-self: center;
     justify-self: center;
-    width: 70px;
+    width: 55px;
 
     @media ${viewport[7]} {
       align-self: start;
       justify-self: start;
+    }
+
+    @media ${viewport[9]} {
+      width: 70px;
     }
   }
 
@@ -78,7 +83,7 @@ const Item = styled.div`
     letter-spacing: -0.1px;
 
     & .title {
-      font-size: 1.5em;
+      font-size: 1.4em;
       font-weight: 700;
       text-transform: uppercase;
       color: #fff;
@@ -87,7 +92,7 @@ const Item = styled.div`
       text-align: center;
 
       @media ${viewport[7]} {
-        font-size: 2em;
+        font-size: 1.7em;
         text-align: left;
       }
     }

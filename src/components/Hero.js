@@ -6,20 +6,16 @@ import catalog from '../assets/images/catalog-1.jpg';
 import viewport from '../styles/media';
 
 const StyledHero = styled.section`
-  min-height: calc(100vh - 66px);
+  min-height: 50vh;
+
+  @media ${viewport[7]} {
+    min-height: 100vh;
+  }
+
   &.defaultHero {
     background: #000;
-    /* background: linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(225, 225, 225, 0.1) 80%
-      ),
-      url(${
-        data[0].fields.images[0].fields.file.url
-      }) center/cover no-repeat; */
-      background: url(${
-        data[0].fields.images[0].fields.file.url
-      }) center/cover no-repeat;
+    background: url(${data[0].fields.images[0].fields.file.url}) center/cover
+      no-repeat;
   }
   &.catalogHero {
     background: ${theme.colors.mainBlack};
@@ -33,27 +29,36 @@ const StyledHero = styled.section`
 
   &.quote {
     background: ${theme.colors.mainBlack};
-    min-height: 12em;
-    background: radial-gradient( circle, rgba(95,30,15,0.95) 0%, ${
-      theme.colors.mainBlack
-    } 50% );
+    min-height: 10em;
+    background: radial-gradient(
+      circle,
+      rgba(95, 30, 15, 0.95) 0%,
+      ${theme.colors.mainBlack} 50%
+    );
 
-    @media ${viewport[7]}{
-      background: linear-gradient( 125deg, ${
-        theme.colors.mainBlack
-      } 70%, rgba(95,30,15,0.95) 98% );
+    @media ${viewport[7]} {
+      background: linear-gradient(
+        125deg,
+        ${theme.colors.mainBlack} 70%,
+        rgba(95, 30, 15, 0.95) 98%
+      );
     }
 
     & blockquote {
       color: ${theme.colors.lightGrey};
-      font-size: 1.3em;
+      font-size: 1.1em;
       font-weight: 200;
       letter-spacing: -0.2px;
       line-height: 1.5;
       text-align: right;
+      /* font-style: italic; */
 
       & footer {
-        font-style: italic;
+        /* font-style: italic; */
+      }
+
+      @media ${viewport[7]} {
+        font-size: 1.2em;
       }
     }
   }

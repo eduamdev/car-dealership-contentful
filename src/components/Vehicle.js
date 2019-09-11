@@ -99,12 +99,16 @@ const Item = styled.div`
     position: absolute;
     bottom: 0;
     padding: 0.5em 1em;
-    font-size: 1.3em;
+    font-size: 1.1em;
     display: block;
     letter-spacing: -0.2px;
     font-weight: 200;
     background: ${theme.colors.warmBlack};
     color: ${theme.colors.lightGrey};
+
+    @media ${viewport[7]} {
+      font-size: 1.3em;
+    }
   }
 `;
 

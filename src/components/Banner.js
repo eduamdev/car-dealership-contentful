@@ -25,19 +25,24 @@ const GridContainer = styled.div`
 const Title = styled.h1`
   color: #fff;
   font-weight: 700;
-  font-size: 4.2em;
+  font-size: 4em;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   margin: 0;
+
+  @media ${viewport[7]} {
+    font-size: 6em;
+  }
 
   &.catalog {
     background: rgba(255, 255, 250, 0.85);
     color: ${theme.colors.richBlack};
     padding: 0.1em 0.3em;
-  }
+    font-size: 3.8em;
 
-  @media ${viewport[7]} {
-    font-size: 6em;
+    @media ${viewport[7]} {
+      font-size: 5em;
+    }
   }
 `;
 
