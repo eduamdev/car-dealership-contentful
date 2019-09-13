@@ -7,11 +7,26 @@ import viewport from '../styles/media';
 const GridContainer = styled.div`
   min-height: 250px;
   display: grid;
+  grid-template-areas: 'quote';
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: end;
 
   @media ${viewport[7]} {
-    min-height: 370px;
+    min-height: 350px;
+    grid-template-areas: '. quote';
+    grid-template-columns: 1fr 3fr;
+  }
+
+  & blockquote {
+    grid-area: quote;
+    padding: 0.5em 1em;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 2px;
+
+    @media ${viewport[7]} {
+      padding: 1em 2.5em;
+    }
   }
 `;
 

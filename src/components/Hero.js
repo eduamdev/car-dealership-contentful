@@ -2,8 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import data from '../content/data';
 import theme from '../styles/theme';
-import catalog from '../assets/images/catalog-1.jpg';
+import catalogImg from '../assets/images/catalog-1.jpg';
 import viewport from '../styles/media';
+import quoteImg from '../assets/images/quote-1.jpg';
 
 const StyledHero = styled.section`
   min-height: 50vh;
@@ -24,7 +25,7 @@ const StyledHero = styled.section`
         rgba(0, 0, 0, 0.95) 15%,
         rgba(0, 0, 15, 0.15) 70%
       ),
-      url(${catalog}) center/cover no-repeat;
+      url(${catalogImg}) center/cover no-repeat;
   }
 
   &.vehicleHero {
@@ -43,18 +44,21 @@ const StyledHero = styled.section`
   &.quote {
     background: ${theme.colors.mainBlack};
     min-height: 10em;
-    background: radial-gradient(
+    /* background: radial-gradient(
       circle,
       rgba(95, 30, 15, 0.95) 0%,
       ${theme.colors.mainBlack} 50%
-    );
+    ); */
+
+    background: linear-gradient( 180deg, rgb(0, 0, 0) 5%, rgba(0,0,0,0.55) 70% ), url(${quoteImg}) center/cover no-repeat;
 
     @media ${viewport[7]} {
-      background: linear-gradient(
+      /* background: linear-gradient(
         125deg,
         ${theme.colors.mainBlack} 70%,
         rgba(95, 30, 15, 0.95) 98%
-      );
+      ); */
+      
     }
 
     & blockquote {
@@ -72,6 +76,7 @@ const StyledHero = styled.section`
 
       @media ${viewport[7]} {
         font-size: 1.2em;
+
       }
     }
   }
