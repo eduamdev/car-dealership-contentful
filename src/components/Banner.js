@@ -81,7 +81,7 @@ export default function Banner({
       <StyledBanner className='banner'>
         <GridContainer>
           <Title className={titleClass}>{title}</Title>
-          <Subtitle>{subtitle}</Subtitle>
+          {subtitle && <Subtitle>{subtitle}</Subtitle>}
           {link && (
             <LinkContainer className='center'>
               <Link linkClass={link.linkClass} url={link.url}>

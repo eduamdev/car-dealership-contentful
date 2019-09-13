@@ -5,12 +5,13 @@ import theme from '../styles/theme';
 import catalogImg from '../assets/images/catalog-1.jpg';
 import viewport from '../styles/media';
 import quoteImg from '../assets/images/quote-1.jpg';
+import vehicleImg from '../assets/images/vehicle-2.jpg';
 
 const StyledHero = styled.section`
   min-height: 50vh;
 
   @media ${viewport[7]} {
-    min-height: 100vh;
+    max-height: 100vh;
   }
 
   &.defaultHero {
@@ -29,6 +30,7 @@ const StyledHero = styled.section`
   }
 
   &.vehicleHero {
+    background: linear-gradient( 180deg, rgb(0, 0, 0) 5%, rgba(0,0,0,0.45) 70% ), url(${vehicleImg}) center/cover no-repeat;
   }
 
   &.errorHero {

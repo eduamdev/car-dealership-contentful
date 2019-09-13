@@ -1,7 +1,12 @@
 import styled from 'styled-components';
+import viewport from '../styles/media';
 
 const Icon = styled.span`
-  width: 34px;
+  width: 26px;
+
+  @media ${viewport[7]} {
+    width: 30px;
+  }
 
   &.xs {
     width: 20px;
