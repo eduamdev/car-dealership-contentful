@@ -12,7 +12,7 @@ const StyledSection = styled.section`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.2em;
+  font-size: 1.15em;
   line-height: 1.3;
   color: ${theme.colors.lightGrey};
   text-align: left;
@@ -40,7 +40,7 @@ const Item = styled.div`
   margin: 0;
   color: #fff;
   text-align: center;
-  padding: 2em 1em;
+  padding: 0.75em 1em;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -55,6 +55,7 @@ const Item = styled.div`
     grid-template-rows: 1fr;
     grid-template-areas: 'icon text';
     grid-column-gap: 3.5em;
+    padding: 1.2em 1em;
 
     &:nth-child(even) {
       border-left: none;
@@ -92,21 +93,21 @@ const Item = styled.div`
       text-align: center;
 
       @media ${viewport[7]} {
-        font-size: 1.7em;
+        font-size: 1.5em;
         text-align: left;
       }
     }
 
     & .subtitle {
       color: ${theme.colors.lightGrey};
-      font-size: 1.1em;
-      line-height: 1.2;
+      font-size: 0.98em;
+      line-height: 1.3;
       font-weight: 200;
       text-align: center;
 
       @media ${viewport[7]} {
-        font-size: 1.2em;
-        line-height: 1.2;
+        font-size: 1em;
+        line-height: 1.35;
         text-align: left;
       }
     }

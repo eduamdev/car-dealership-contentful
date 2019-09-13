@@ -66,7 +66,7 @@ const FilterButton = styled.span`
     letter-spacing: -0.15px;
 
     &:not(:last-child) {
-      margin-bottom: 2em;
+      margin-bottom: 1em;
     }
 
     & .filter-label {
@@ -76,7 +76,7 @@ const FilterButton = styled.span`
 
     & .filter-select {
       /* cursor: pointer; */
-      padding: 0.25em 0.75em;
+      padding: 0.1em 0.5em;
       font-size: 0.95em;
       background: ${theme.colors.warmBlack};
       color: ${theme.colors.lightGrey};

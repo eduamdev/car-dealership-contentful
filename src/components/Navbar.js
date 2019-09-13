@@ -37,7 +37,7 @@ const Logo = styled.div`
 
   & .logoText {
     color: ${theme.colors.lightGrey};
-    font-size: 1.3em;
+    font-size: 1.25em;
     font-weight: 400;
     display: none;
     /* visibility: hidden; */
