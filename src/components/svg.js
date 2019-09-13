@@ -35,6 +35,13 @@ const arrowR = (
     <path d='M85 277.375h259.704L225.002 397.077 256 427l171-171L256 85l-29.922 29.924 118.626 119.701H85v42.75z' />
   </svg>
 );
+
+const arrowL = (
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+    <path d='M427 234.625H167.296l119.702-119.702L256 85 85 256l171 171 29.922-29.924-118.626-119.701H427v-42.75z' />
+  </svg>
+);
+
 const quote = (
   <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
     <path d='M96.4 416h77.1l50.9-96.6V96h-160v223.4h77.1L96.4 416zm224 0h77.1l50-96.6V96H288.4v223.4h82l-50 96.6z' />
@@ -146,6 +153,7 @@ export {
   twitter,
   github,
   arrowR,
+  arrowL,
   car,
   bicycle,
   ribbon,

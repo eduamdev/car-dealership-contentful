@@ -9,15 +9,13 @@ import Loading from '../components/Loading';
 const Catalog = () => {
   return (
     <>
-      <div className='app-wrapper'>
-        <Hero className='hero-section' hero='catalogHero'>
-          <Navbar />
-          <Banner title='Catalog' titleClass='catalog' />
-        </Hero>
-        <VehicleContainer></VehicleContainer>
-        {/* <Loading></Loading> */}
-        <Footer />
-      </div>
+      <Hero hero='catalogHero'>
+        <Navbar />
+        <Banner title='Catalog' titleClass='catalog' />
+      </Hero>
+      <VehicleContainer></VehicleContainer>
+      {/* <Loading></Loading> */}
+      <Footer />
     </>
   );
 };

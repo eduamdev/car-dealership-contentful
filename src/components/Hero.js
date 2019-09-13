@@ -27,6 +27,19 @@ const StyledHero = styled.section`
       url(${catalog}) center/cover no-repeat;
   }
 
+  &.vehicleHero {
+  }
+
+  &.errorHero {
+    background: url(${data[0].fields.images[0].fields.file.url}) center/cover
+      no-repeat;
+
+    @media ${viewport[7]} {
+      max-width: 100vw;
+      max-height: 100vh;
+    }
+  }
+
   &.quote {
     background: ${theme.colors.mainBlack};
     min-height: 10em;

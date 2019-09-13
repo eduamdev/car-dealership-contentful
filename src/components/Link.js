@@ -54,7 +54,8 @@ const StyledLink = styled(Link)`
       }
     }
   }
-  &.heroLink {
+  &.heroLink,
+  &.heroLinkReverse {
     padding: 0.75em 1.5em;
     border: 2px solid transparent;
     background: ${theme.colors.coralRed};
@@ -72,6 +73,17 @@ const StyledLink = styled(Link)`
 
     @media ${viewport[7]} {
       font-size: 1.4em;
+    }
+  }
+
+  &.heroLinkReverse {
+    border-color: ${theme.colors.lightGrey};
+    background-color: transparent;
+    flex-direction: row-reverse;
+
+    &:hover .icon,
+    &:focus .icon {
+      transform: translateX(-25%);
     }
   }
 

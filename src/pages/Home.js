@@ -24,30 +24,28 @@ const StyledIcon = styled(Icon)`
 export default function Home() {
   return (
     <>
-      <div className='app-wrapper'>
-        <Hero className='hero-section'>
-          <Navbar />
-          <Banner
-            title='Looking for a vehicle?'
-            subtitle='Look no further, we have you covered!'
-            link={link}
-            icon={arrowR}
-          />
-        </Hero>
-        <Quote>
-          <blockquote>
-            <p>
-              Vehicles are one of the best modes of transportation.
-              Relationships are one of the best vehicles of transformation
-            </p>
-            <footer>- Kate McGahan</footer>
-            <StyledIcon>{quote}</StyledIcon>
-          </blockquote>
-        </Quote>
-        <Services className='services-section' />
-        <FeaturedVehicles className='featured-section' />
-        <Footer className='footer' />
-      </div>
+      <Hero>
+        <Navbar />
+        <Banner
+          title='Looking for a vehicle?'
+          subtitle='Look no further, we have you covered!'
+          link={link}
+          icon={arrowR}
+        />
+      </Hero>
+      <Quote>
+        <blockquote>
+          <p>
+            Vehicles are one of the best modes of transportation. Relationships
+            are one of the best vehicles of transformation
+          </p>
+          <footer>- Kate McGahan</footer>
+          <StyledIcon>{quote}</StyledIcon>
+        </blockquote>
+      </Quote>
+      <Services className='services-section' />
+      <FeaturedVehicles className='featured-section' />
+      <Footer className='footer' />
     </>
   );
 }

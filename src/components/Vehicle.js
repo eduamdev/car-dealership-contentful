@@ -3,6 +3,7 @@ import theme from '../styles/theme';
 import styled from 'styled-components';
 import viewport from '../styles/media';
 import Link from '../components/Link';
+import imgTemp from '../assets/images/vehicle-2.jpg';
 
 const GridContainer = styled.div`
   /* margin: 5em auto; */
@@ -53,7 +54,7 @@ const Item = styled.div`
     height: 100%;
     border-radius: 4px;
     background-color: black; /* fallback color */
-    background-image: url('https://images.unsplash.com/photo-1520608760-eff2c44afa2b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-image: url("${imgTemp}");
     background-position: center;
     background-size: cover;
 
