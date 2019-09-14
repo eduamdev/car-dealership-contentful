@@ -24,14 +24,14 @@ const GridContainer = styled.div`
     color: inherit;
     text-align: center;
     letter-spacing: 0.5px;
-    font-size: 0.9em;
+    font-size: 0.85em;
     padding: 0.75em 0 0 0;
     font-weight: 200;
     line-height: 1.3;
     /* margin-top: 1em; */
 
     @media ${viewport[7]} {
-      font-size: 1em;
+      font-size: 0.9em;
     }
   }
 `;

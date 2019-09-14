@@ -35,8 +35,8 @@ const Title = styled.h1`
   }
 
   &.catalog {
-    background: rgba(255, 255, 250, 0.85);
-    color: ${theme.colors.richBlack};
+    background: rgba(0, 0, 0, 0.85);
+    color: ${theme.colors.babyPowder};
     padding: 0.1em 0.3em;
     font-size: 3.8em;
 

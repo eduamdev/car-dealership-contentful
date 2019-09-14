@@ -78,7 +78,7 @@ const StyledLink = styled(Link)`
 
   &.heroLinkReverse {
     border-color: ${theme.colors.lightGrey};
-    background-color: transparent;
+    background-color: ${theme.colors.warmBlack};
     flex-direction: row-reverse;
 
     &:hover .icon,
