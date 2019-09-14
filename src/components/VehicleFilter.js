@@ -161,6 +161,18 @@ export default function VehicleFilter() {
           Filters
         </FilterButton>
         <FilterButton>
+          <label className='filter-label' htmlFor='price'>
+            Price
+          </label>
+          <input
+            type='range'
+            name='price'
+            min='0'
+            max='750000'
+            id='price'
+          ></input>
+        </FilterButton>
+        <FilterButton>
           <label className='filter-label' htmlFor='lol'>
             Type
           </label>
@@ -172,7 +184,7 @@ export default function VehicleFilter() {
         </FilterButton>
         <FilterButton>
           <label className='filter-label' htmlFor='lol'>
-            Color
+            Model
           </label>
           <select className='filter-select' name='' id='lol'>
             <option value=''>Lorem, ipsum.</option>
@@ -191,9 +203,19 @@ export default function VehicleFilter() {
           </select>
         </FilterButton>
         <FilterButton>
+          <label className='filter-label' htmlFor='lol'>
+            Color
+          </label>
+          <select className='filter-select' name='' id='lol'>
+            <option value=''>Lorem, ipsum.</option>
+            <option value=''>Lorem, ipsum.</option>
+            <option value=''>Lorem, ipsum.</option>
+          </select>
+        </FilterButton>
+        <FilterButton>
           <div className='checkbox'>
             <input type='checkbox' id='checkbox_1' />
-            <label htmlFor='checkbox_1'>Air Conditioner</label>
+            <label htmlFor='checkbox_1'>Engine</label>
           </div>
         </FilterButton>
       </GridContainer>

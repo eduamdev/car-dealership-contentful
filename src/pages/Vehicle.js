@@ -184,10 +184,12 @@ export default class Home extends Component {
             <Info>
               <h3>Info</h3>
               <ul>
-                <li>Price: 2000</li>
-                <li>Size: 400 SQFT</li>
-                <li>Max Capacity: 3 People</li>
-                <li>Pets Allowed</li>
+                <li>Price: $40,000</li>
+                <li>Type: Car</li>
+                <li>Model: 2015</li>
+                <li>Max Capacity: 4 People</li>
+                <li>Color: Silver</li>
+                <li>Has Engine</li>
               </ul>
             </Info>
             <Extras>
