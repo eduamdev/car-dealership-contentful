@@ -3,29 +3,38 @@ import theme from '../styles/theme';
 import styled from 'styled-components';
 import viewport from '../styles/media';
 import Link from '../components/Link';
-import imgTemp from '../assets/images/vehicle-2.jpg';
+import defaultImg from '../assets/images/vehicle-2.jpg';
+import PropTypes from 'prop-types';
 
-const GridContainer = styled.div`
-  /* margin: 5em auto; */
-  display: grid;
-  /* width: 80vw; */
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  grid-gap: 1rem;
+function formatMoney(amount, decimalCount = 2, decimal = '.', thousands = ',') {
+  try {
+    decimalCount = Math.abs(decimalCount);
+    decimalCount = isNaN(decimalCount) ? 2 : decimalCount;
 
-  @media ${viewport[7]} {
-    /* width: 85vw; */
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    const negativeSign = amount < 0 ? '-' : '';
+
+    let i = parseInt(
+      (amount = Math.abs(Number(amount) || 0).toFixed(decimalCount))
+    ).toString();
+    let j = i.length > 3 ? i.length % 3 : 0;
+
+    return (
+      negativeSign +
+      (j ? i.substr(0, j) + thousands : '') +
+      i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + thousands) +
+      (decimalCount
+        ? decimal +
+          Math.abs(amount - i)
+            .toFixed(decimalCount)
+            .slice(2)
+        : '')
+    );
+  } catch (e) {
+    // console.log(e);
   }
+}
 
-  /* @media ${viewport[9]} {
-    width: 90vw;
-    max-width: 1170px;
-  } */
-`;
-
-const Item = styled.div`
+const Item = styled.article`
   background: ${theme.colors.darkGreyAlt};
   margin: 0;
   text-align: center;
@@ -33,6 +42,7 @@ const Item = styled.div`
   position: relative;
   height: 270px;
   overflow: hidden;
+  border: 1px solid ${theme.colors.mediumGrey};
 
   @media ${viewport[7]} {
     height: 330px;
@@ -52,9 +62,9 @@ const Item = styled.div`
   & .photo {
     width: 100%;
     height: 100%;
-    border-radius: 4px;
+    border-radius: 2px;
     background-color: black; /* fallback color */
-    background-image: url("${imgTemp}");
+    /* background-image: url("${defaultImg}"); */
     background-position: center;
     background-size: cover;
 
@@ -106,6 +116,7 @@ const Item = styled.div`
     font-weight: 200;
     background: ${theme.colors.warmBlack};
     color: ${theme.colors.lightGrey};
+    text-transform: capitalize;
 
     @media ${viewport[7]} {
       font-size: 1.3em;
@@ -113,35 +124,28 @@ const Item = styled.div`
   }
 `;
 
-export default function Vehicle() {
+export default function Vehicle({ vehicle }) {
+  const { name, slug, images, price } = vehicle;
+
   return (
     <>
-      <GridContainer>
-        <Item>
-          <div className='photo'></div>
-          <Link linkClass='vehicleLink box-shadow' url='/'>
-            Learn more
-          </Link>
-          <span className='price-tag'>$55, 000</span>
-          <span className='name'>Lobo Lariat</span>
-        </Item>
-        <Item>
-          <div className='photo'></div>
-          <Link linkClass='vehicleLink box-shadow' url='/'>
-            Learn more
-          </Link>
-          <span className='price-tag'>$55, 000</span>
-          <span className='name'>Focus Fiesta</span>
-        </Item>
-        <Item>
-          <div className='photo'></div>
-          <Link linkClass='vehicleLink box-shadow' url='/'>
-            Learn more
-          </Link>
-          <span className='price-tag'>$55, 000</span>
-          <span className='name'>LB-3456</span>
-        </Item>
-      </GridContainer>
+      <Item>
+        <img className='photo' src={images[0] || defaultImg} />
+        <Link linkClass='vehicleLink box-shadow' url={`/catalog/${slug}`}>
+          Learn more
+        </Link>
+        <span className='price-tag'>$ {formatMoney(price)}</span>
+        <span className='name'>{name}</span>
+      </Item>
     </>
   );
 }
+
+Vehicle.propTypes = {
+  vehicle: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    price: PropTypes.number.isRequired
+  })
+};

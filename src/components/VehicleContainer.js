@@ -45,7 +45,7 @@ const StyledList = styled(VehicleList)`
 `;
 
 function VehicleContainer({ context }) {
-  const { handleBodyClass } = context;
+  const { handleBodyClass, sortedVehicles } = context;
 
   handleBodyClass('modal-open');
 
@@ -54,7 +54,7 @@ function VehicleContainer({ context }) {
       <Title title='Search Vehicles' placement='right' />
       <Container>
         <StyledFilter></StyledFilter>
-        <StyledList></StyledList>
+        <StyledList vehicles={sortedVehicles}></StyledList>
       </Container>
     </Wrapper>
   );
