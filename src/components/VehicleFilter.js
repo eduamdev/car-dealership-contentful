@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import theme from '../styles/theme';
 import { Modal, BackDrop } from './Modal';
 import viewport from '../styles/media';
+import { formatMoney, getUnique } from '../utils/utils';
 
 const StyledSection = styled.section`
   color: #fff;
@@ -149,9 +150,39 @@ const FilterButton = styled.span`
   }
 `;
 
-export default function VehicleFilter() {
+export default function VehicleFilter({ vehicles }) {
   const context = useContext(VehicleContext);
-  const { modalIsOpen, handleModal } = context;
+  const {
+    modalIsOpen,
+    handleModal,
+    handleChange,
+    type,
+    capacity,
+    price,
+    minPrice,
+    maxPrice,
+    engine,
+    color
+  } = context;
+
+  let types = getUnique(vehicles, 'type');
+  types = ['all', ...types];
+  types = types.map((item, index) => {
+    return (
+      <option key={index} value={item}>
+        {item}
+      </option>
+    );
+  });
+
+  let people = getUnique(vehicles, 'capacity');
+  people = people.map((item, index) => {
+    return (
+      <option key={index} value={item}>
+        {item}
+      </option>
+    );
+  });
 
   return (
     <StyledSection>
@@ -160,64 +191,92 @@ export default function VehicleFilter() {
         <FilterButton className='allFilters' onClick={handleModal}>
           Filters
         </FilterButton>
+        {/* price */}
         <FilterButton>
           <label className='filter-label' htmlFor='price'>
-            Price
+            Price ${formatMoney(price)}
           </label>
           <input
             type='range'
             name='price'
-            min='0'
-            max='750000'
+            min={minPrice}
+            max={maxPrice}
             id='price'
+            value={price}
+            onChange={handleChange}
           ></input>
         </FilterButton>
+        {/* end price */}
+        {/* select type */}
         <FilterButton>
-          <label className='filter-label' htmlFor='lol'>
+          <label className='filter-label' htmlFor='type'>
             Type
           </label>
-          <select className='filter-select' name='' id='lol'>
-            <option value=''>Lorem, ipsum.</option>
-            <option value=''>Lorem, ipsum.</option>
-            <option value=''>Lorem, ipsum.</option>
+          <select
+            className='filter-select'
+            name='type'
+            id='type'
+            value={type}
+            onChange={handleChange}
+          >
+            {types}
           </select>
         </FilterButton>
+        {/* end select type */}
+        {/* model */}
         <FilterButton>
-          <label className='filter-label' htmlFor='lol'>
+          <label className='filter-label' htmlFor='model'>
             Model
           </label>
-          <select className='filter-select' name='' id='lol'>
+          <select className='filter-select' name='model' id='model'>
             <option value=''>Lorem, ipsum.</option>
             <option value=''>Lorem, ipsum.</option>
             <option value=''>Lorem, ipsum.</option>
           </select>
         </FilterButton>
+        {/* end model */}
+        {/* capacity */}
         <FilterButton>
-          <label className='filter-label' htmlFor='lol'>
+          <label className='filter-label' htmlFor='capacity'>
             Capacity
           </label>
-          <select className='filter-select' name='' id='lol'>
-            <option value=''>Lorem, ipsum.</option>
-            <option value=''>Lorem, ipsum.</option>
-            <option value=''>Lorem, ipsum.</option>
+          <select
+            className='filter-select'
+            name='capacity'
+            id='capacity'
+            value={capacity}
+            onChange={handleChange}
+          >
+            {people}
           </select>
         </FilterButton>
+        {/* end capacity */}
+        {/* color */}
         <FilterButton>
-          <label className='filter-label' htmlFor='lol'>
+          <label className='filter-label' htmlFor='color'>
             Color
           </label>
-          <select className='filter-select' name='' id='lol'>
+          <select className='filter-select' name='color' id='color'>
             <option value=''>Lorem, ipsum.</option>
             <option value=''>Lorem, ipsum.</option>
             <option value=''>Lorem, ipsum.</option>
           </select>
         </FilterButton>
+        {/* end color */}
+        {/* engine */}
         <FilterButton>
           <div className='checkbox'>
-            <input type='checkbox' id='checkbox_1' />
-            <label htmlFor='checkbox_1'>Engine</label>
+            <input
+              type='checkbox'
+              id='engine'
+              name='engine'
+              checked={engine}
+              onChange={handleChange}
+            />
+            <label htmlFor='engine'>Engine</label>
           </div>
         </FilterButton>
+        {/* end engine */}
       </GridContainer>
       <Modal className='modal' show={modalIsOpen} close={handleModal}>
         <p>

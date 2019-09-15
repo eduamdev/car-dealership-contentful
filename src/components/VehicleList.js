@@ -17,7 +17,7 @@ const StyledSection = styled.section`
 
   @media ${viewport[7]} {
     /* width: 85vw; */
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   }
 
   @media ${viewport[9]} {

@@ -58,6 +58,52 @@ class VehicleProvider extends Component {
     return vehicle;
   };
 
+  handleChange = event => {
+    const target = event.target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+    const name = event.target.name;
+
+    this.setState(
+      {
+        [name]: value
+      },
+      this.filterVehicles
+    );
+  };
+
+  filterVehicles = () => {
+    let { vehicles, type, capacity, price, engine } = this.state;
+
+    let tempVehicles = [...vehicles];
+    capacity = parseInt(capacity);
+    price = parseInt(price);
+
+    // filter by type
+    if (type !== 'all') {
+      tempVehicles = tempVehicles.filter(vehicle => vehicle.type === type);
+    }
+
+    // filter by capacity
+    if (capacity !== 1) {
+      tempVehicles = tempVehicles.filter(
+        vehicle => vehicle.capacity >= capacity
+      );
+    }
+
+    // filter by price
+    tempVehicles = tempVehicles.filter(vehicle => vehicle.price <= price);
+
+    // filter by engine
+    if (engine) {
+      tempVehicles = tempVehicles.filter(vehicle => vehicle.engine === true);
+    }
+
+    // change state
+    this.setState({
+      sortedVehicles: tempVehicles
+    });
+  };
+
   handleModal = () => {
     this.setState(prevState => ({
       modalIsOpen: !prevState.modalIsOpen
@@ -77,6 +123,7 @@ class VehicleProvider extends Component {
       <VehicleContext.Provider
         value={{
           ...this.state,
+          handleChange: this.handleChange,
           handleBodyClass: this.handleBodyClass,
           handleModal: this.handleModal
         }}
