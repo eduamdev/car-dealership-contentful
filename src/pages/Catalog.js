@@ -11,7 +11,7 @@ const Catalog = () => {
     <>
       <Hero hero='catalogHero'>
         <Navbar />
-        <Banner title='Catalog' titleClass='catalog' />
+        <Banner title='Catalog' subtitle='See what we have for you!' />
       </Hero>
       <VehicleContainer></VehicleContainer>
       {/* <Loading></Loading> */}

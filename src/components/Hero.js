@@ -21,11 +21,7 @@ const StyledHero = styled.section`
   }
   &.catalogHero {
     background: ${theme.colors.mainBlack};
-    background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.95) 15%,
-        rgba(0, 0, 15, 0.15) 70%
-      ),
+    background: linear-gradient( 145deg,rgb(0,0,0) 45%,rgba(0,10,15,.35) 60%, rgba(0,0,0,.9) 95% ),
       url(${catalogImg}) center/cover no-repeat;
   }
 

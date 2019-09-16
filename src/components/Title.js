@@ -6,7 +6,7 @@ import viewport from '../styles/media';
 const Container = styled.div`
   display: grid;
   align-items: center;
-  margin: 3em 0 1.8em 0;
+  margin: 4em 0 2em 0;
   grid-template-columns: 1fr;
 
   &.left {
@@ -19,20 +19,21 @@ const Container = styled.div`
 
   @media ${viewport[7]} {
     grid-template-columns: auto;
-    margin: 5em 0 2.75em 0;
+    margin: 6em 0 3em 0;
   }
 `;
 
 const StyledTitle = styled.h2`
   color: ${theme.colors.babyPowder};
-  padding: 0.15em 0;
+  padding: 0.3em 0;
   display: inline;
-  border-bottom: 3px solid ${theme.colors.coralRed};
-  font-size: 2.75em;
+  border-bottom: 2px solid ${theme.colors.coralRed};
+  font-size: 2em;
   letter-spacing: 0.3px;
 
   @media ${viewport[7]} {
-    font-size: 3.5em;
+    padding: 0.5em 0;
+    font-size: 2.5em;
   }
 
   &.left {

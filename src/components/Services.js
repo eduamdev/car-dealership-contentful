@@ -12,13 +12,13 @@ const StyledSection = styled.section`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.15em;
+  font-size: 1.1em;
   line-height: 1.3;
   color: ${theme.colors.lightGrey};
   text-align: left;
 
   @media ${viewport[7]} {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.4;
   }
 `;

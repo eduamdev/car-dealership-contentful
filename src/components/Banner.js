@@ -33,17 +33,6 @@ const Title = styled.h1`
   @media ${viewport[7]} {
     font-size: 6em;
   }
-
-  &.catalog {
-    background: rgba(0, 0, 0, 0.85);
-    color: ${theme.colors.babyPowder};
-    padding: 0.1em 0.3em;
-    font-size: 3.8em;
-
-    @media ${viewport[7]} {
-      font-size: 5em;
-    }
-  }
 `;
 
 const Subtitle = styled.p`

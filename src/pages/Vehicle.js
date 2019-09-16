@@ -47,24 +47,29 @@ const GridContainer = styled.div`
   }
 `;
 
+const Title = styled.h3`
+  font-size: 2.5em;
+  padding: 0.3em 0;
+  border-bottom: 2px solid ${theme.colors.darkGrey};
+`;
+
 const Details = styled.section`
   grid-area: details;
   color: ${theme.colors.lightGrey};
   padding: 2em 1em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1em;
+  grid-template-rows: max-content 1fr;
 
   @media ${viewport[7]} {
     padding: 2em 0em 2em 3em;
   }
 
-  & h3 {
-    font-size: 2.5em;
-    margin-bottom: 1em;
-    border-bottom: 2px solid ${theme.colors.coralRed};
-  }
-
   & p {
     line-height: 1.45;
     font-weight: 200;
+    padding: 2em 0;
 
     @media ${viewport[7]} {
       font-size: 1.05em;
@@ -79,11 +84,10 @@ const Info = styled.section`
   color: ${theme.colors.lightGrey};
   padding: 2em;
   border-radius: 2px;
-
-  & h3 {
-    font-size: 2.5em;
-    border-bottom: 2px solid ${theme.colors.coralRed};
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1em;
+  grid-template-rows: max-content 1fr;
 
   & ul {
     display: grid;
@@ -112,19 +116,17 @@ const Extras = styled.section`
   grid-area: extras;
   color: ${theme.colors.lightGrey};
   padding: 2em 1em;
-
-  & h3 {
-    font-size: 2.5em;
-    margin-bottom: 1em;
-    border-bottom: 1px solid ${theme.colors.lightGrey};
-    border-bottom: 2px solid ${theme.colors.coralRed};
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-column-gap: 1em;
+  grid-template-rows: max-content 1fr;
 
   & ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
     grid-column-gap: 2rem;
     grid-row-gap: 1rem;
+    padding: 2em 0;
 
     & li {
       margin: 0 2em;
@@ -167,7 +169,7 @@ export default class Home extends Component {
           </ImageContainer>
           <GridContainer>
             <Details>
-              <h3>Details</h3>
+              <Title>Details</Title>
               <p>
                 Street art edison bulb gluten-free, tofu try-hard lumbersexual
                 brooklyn tattooed pickled chambray. Actually humblebrag next
@@ -182,7 +184,7 @@ export default class Home extends Component {
               </p>
             </Details>
             <Info>
-              <h3>Info</h3>
+              <Title>Info</Title>
               <ul>
                 <li>Price: $40,000</li>
                 <li>Type: Car</li>
@@ -193,7 +195,7 @@ export default class Home extends Component {
               </ul>
             </Info>
             <Extras>
-              <h3>Extras</h3>
+              <Title>Extras</Title>
               <ul>
                 <li>Lorem ipsum dolor sit amet.</li>
                 <li>Lorem, ipsum.</li>
