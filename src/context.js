@@ -12,12 +12,12 @@ class VehicleProvider extends Component {
     modalIsOpen: false,
     type: 'all',
     model: 'all',
-    color: 'all',
+    brand: 'all',
     capacity: 1,
     price: 0,
     minPrice: 0,
     maxPrice: 0,
-    engine: false
+    rental: false
   };
 
   componentWillMount() {
@@ -72,7 +72,7 @@ class VehicleProvider extends Component {
   };
 
   filterVehicles = () => {
-    let { vehicles, type, capacity, price, engine } = this.state;
+    let { vehicles, type, brand, model, capacity, price, rental } = this.state;
 
     let tempVehicles = [...vehicles];
     capacity = parseInt(capacity);
@@ -81,6 +81,16 @@ class VehicleProvider extends Component {
     // filter by type
     if (type !== 'all') {
       tempVehicles = tempVehicles.filter(vehicle => vehicle.type === type);
+    }
+
+    // filter by brand
+    if (brand !== 'all') {
+      tempVehicles = tempVehicles.filter(vehicle => vehicle.brand === brand);
+    }
+
+    // filter by model
+    if (model !== 'all') {
+      tempVehicles = tempVehicles.filter(vehicle => vehicle.model === model);
     }
 
     // filter by capacity
@@ -93,9 +103,9 @@ class VehicleProvider extends Component {
     // filter by price
     tempVehicles = tempVehicles.filter(vehicle => vehicle.price <= price);
 
-    // filter by engine
-    if (engine) {
-      tempVehicles = tempVehicles.filter(vehicle => vehicle.engine === true);
+    // filter by rental
+    if (rental) {
+      tempVehicles = tempVehicles.filter(vehicle => vehicle.rental === true);
     }
 
     // change state

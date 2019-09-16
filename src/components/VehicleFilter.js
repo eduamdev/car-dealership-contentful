@@ -11,9 +11,7 @@ const StyledSection = styled.section`
   width: 100%;
 
   @media ${viewport[9]} {
-    padding: 0.1em;
     align-self: stretch;
-    margin-top: 3em;
   }
 `;
 
@@ -157,17 +155,38 @@ export default function VehicleFilter({ vehicles }) {
     handleModal,
     handleChange,
     type,
+    brand,
+    model,
     capacity,
     price,
     minPrice,
     maxPrice,
-    engine,
-    color
+    rental
   } = context;
 
   let types = getUnique(vehicles, 'type');
   types = ['all', ...types];
   types = types.map((item, index) => {
+    return (
+      <option key={index} value={item}>
+        {item}
+      </option>
+    );
+  });
+
+  let brands = getUnique(vehicles, 'brand');
+  brands = ['all', ...brands];
+  brands = brands.map((item, index) => {
+    return (
+      <option key={index} value={item}>
+        {item}
+      </option>
+    );
+  });
+
+  let models = getUnique(vehicles, 'model');
+  models = ['all', ...models];
+  models = models.map((item, index) => {
     return (
       <option key={index} value={item}>
         {item}
@@ -223,18 +242,38 @@ export default function VehicleFilter({ vehicles }) {
           </select>
         </FilterButton>
         {/* end select type */}
+        {/* brand */}
+        <FilterButton>
+          <label className='filter-label' htmlFor='brand'>
+            Brand
+          </label>
+          <select
+            className='filter-select'
+            name='brand'
+            id='brand'
+            value={brand}
+            onChange={handleChange}
+          >
+            {brands}
+          </select>
+        </FilterButton>
+        {/* end brand */}
         {/* model */}
         <FilterButton>
           <label className='filter-label' htmlFor='model'>
             Model
           </label>
-          <select className='filter-select' name='model' id='model'>
-            <option value=''>Lorem, ipsum.</option>
-            <option value=''>Lorem, ipsum.</option>
-            <option value=''>Lorem, ipsum.</option>
+          <select
+            className='filter-select'
+            name='model'
+            id='model'
+            value={model}
+            onChange={handleChange}
+          >
+            {models}
           </select>
         </FilterButton>
-        {/* end model */}
+        {/* end color */}
         {/* capacity */}
         <FilterButton>
           <label className='filter-label' htmlFor='capacity'>
@@ -251,32 +290,20 @@ export default function VehicleFilter({ vehicles }) {
           </select>
         </FilterButton>
         {/* end capacity */}
-        {/* color */}
-        <FilterButton>
-          <label className='filter-label' htmlFor='color'>
-            Color
-          </label>
-          <select className='filter-select' name='color' id='color'>
-            <option value=''>Lorem, ipsum.</option>
-            <option value=''>Lorem, ipsum.</option>
-            <option value=''>Lorem, ipsum.</option>
-          </select>
-        </FilterButton>
-        {/* end color */}
-        {/* engine */}
+        {/* rental */}
         <FilterButton>
           <div className='checkbox'>
             <input
               type='checkbox'
-              id='engine'
-              name='engine'
-              checked={engine}
+              id='rental'
+              name='rental'
+              checked={rental}
               onChange={handleChange}
             />
-            <label htmlFor='engine'>Engine</label>
+            <label htmlFor='rental'>Rental</label>
           </div>
         </FilterButton>
-        {/* end engine */}
+        {/* end rental */}
       </GridContainer>
       <Modal className='modal' show={modalIsOpen} close={handleModal}>
         <p>
