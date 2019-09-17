@@ -23,6 +23,8 @@ const ImageContainer = styled.div`
   & img {
     width: 100%;
     height: 240px;
+    border: 1px solid ${theme.colors.darkGrey};
+    border-radius: 2px;
   }
 `;
 
