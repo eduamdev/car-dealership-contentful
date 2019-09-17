@@ -7,9 +7,10 @@ import styled from 'styled-components';
 import { VehicleContext } from '../context';
 import { arrowL } from '../components/svg';
 import Wrapper from '../components/Wrapper';
-import vehicleImg from '../assets/images/vehicle-3.jpg';
+import defaultBcg from '../assets/images/vehicle-3.jpg';
 import viewport from '../styles/media';
 import theme from '../styles/theme';
+import { formatMoney } from '../utils/utils';
 
 const ImageContainer = styled.div`
   display: grid;
@@ -31,12 +32,12 @@ const GridContainer = styled.div`
   align-items: stretch;
   justify-content: center;
   grid-template-areas:
-    'details'
     'info'
+    'details'
     'extras';
 
   @media ${viewport[7]} {
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1.3fr;
     grid-template-areas:
       'info details'
       'extras extras';
@@ -50,7 +51,7 @@ const GridContainer = styled.div`
 const Title = styled.h3`
   font-size: 2.5em;
   padding: 0.3em 0;
-  border-bottom: 2px solid ${theme.colors.darkGrey};
+  border-bottom: 2px solid ${theme.colors.myrtleGreen};
 `;
 
 const Details = styled.section`
@@ -72,8 +73,8 @@ const Details = styled.section`
     padding: 2em 0;
 
     @media ${viewport[7]} {
-      font-size: 1.05em;
-      line-height: 1.3;
+      font-size: 1.1em;
+      line-height: 1.4;
     }
   }
 `;
@@ -82,6 +83,7 @@ const Info = styled.section`
   grid-area: info;
   background: ${theme.colors.matteBlack};
   color: ${theme.colors.lightGrey};
+  font-weight: 200;
   padding: 2em;
   border-radius: 2px;
   display: grid;
@@ -100,13 +102,21 @@ const Info = styled.section`
 
     & li {
       border-bottom: 1px solid ${theme.colors.darkGrey};
-      font-size: 1.02em;
+      font-size: 1.05em;
       letter-spacing: 0.5px;
 
       @media ${viewport[7]} {
-        font-size: 1.075em;
-        letter-spacing: 1px;
+        font-size: 1.1em;
+        letter-spacing: 0.3px;
         grid-gap: 0;
+      }
+
+      & span {
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.175em;
+        letter-spacing: 0.3px;
+        padding-left: 8px;
       }
     }
   }
@@ -130,7 +140,8 @@ const Extras = styled.section`
 
     & li {
       margin: 0 2em;
-      list-style: '- ';
+      font-size: 1.1em;
+      font-weight: 200;
     }
   }
 `;
@@ -140,15 +151,36 @@ export default class Home extends Component {
     super(props);
 
     this.state = {
-      slug: this.props.match.params.slug
+      slug: this.props.match.params.slug,
+      defaultBcg
     };
   }
 
   static contextType = VehicleContext;
 
   render() {
-    // const { getVehicle } = this.context;
-    // const vehicle = getVehicle(this.state.slug);
+    const { getVehicle } = this.context;
+    const vehicle = getVehicle(this.state.slug);
+
+    if (!vehicle) {
+      return <h3>No such vehicle could be found...</h3>;
+    }
+
+    const {
+      name,
+      description,
+      type,
+      brand,
+      model,
+      capacity,
+      price,
+      extras,
+      rental,
+      images
+    } = vehicle;
+
+    const [mainImg, ...defaultImg] = images;
+
     const link = {
       label: 'Back to Catalog',
       linkClass: 'heroLinkReverse ripple',
@@ -159,57 +191,53 @@ export default class Home extends Component {
       <>
         <Hero hero='vehicleHero'>
           <Navbar />
-          <Banner title='Vehicle' link={link} icon={arrowL} />
+          <Banner title={`${name}`} link={link} icon={arrowL} />
         </Hero>
         <Wrapper>
           <ImageContainer>
-            <img src={vehicleImg} alt='image' />
-            <img src={vehicleImg} alt='image' />
-            <img src={vehicleImg} alt='image' />
+            {defaultImg.map((item, index) => {
+              return <img key={index} src={item} alt={name} />;
+            })}
           </ImageContainer>
           <GridContainer>
             <Details>
               <Title>Details</Title>
-              <p>
-                Street art edison bulb gluten-free, tofu try-hard lumbersexual
-                brooklyn tattooed pickled chambray. Actually humblebrag next
-                level, deep v art party wolf tofu direct trade readymade
-                sustainable hell of banjo. Organic authentic subway tile cliche
-                palo santo, street art XOXO dreamcatcher retro sriracha portland
-                air plant kitsch stumptown. Austin small batch squid gastropub.
-                Pabst pug tumblr gochujang offal retro cloud bread bushwick
-                semiotics before they sold out sartorial literally mlkshk.
-                Vaporware hashtag vice, sartorial before they sold out pok pok
-                health goth trust fund cray.
-              </p>
+              <p>{description}</p>
             </Details>
             <Info>
               <Title>Info</Title>
               <ul>
-                <li>Price: $40,000</li>
-                <li>Type: Car</li>
-                <li>Model: 2015</li>
-                <li>Max Capacity: 4 People</li>
-                <li>Color: Silver</li>
-                <li>Has Engine</li>
+                <li>
+                  Price: <span>${formatMoney(price)}</span>
+                </li>
+                <li>
+                  Type: <span>{type}</span>
+                </li>
+                <li>
+                  Brand: <span>{brand}</span>
+                </li>
+                <li>
+                  Model: <span>{model}</span>
+                </li>
+                <li>
+                  Max Capacity:{' '}
+                  <span>
+                    {capacity > 1 ? `${capacity} people` : `${capacity} person`}
+                  </span>
+                </li>
+                {rental && (
+                  <li>
+                    <span>Rental allowed</span>
+                  </li>
+                )}
               </ul>
             </Info>
             <Extras>
               <Title>Extras</Title>
               <ul>
-                <li>Lorem ipsum dolor sit amet.</li>
-                <li>Lorem, ipsum.</li>
-                <li>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                </li>
-                <li>Lorem ipsum dolor sit.</li>
-                <li>Lorem, ipsum dolor.</li>
-                <li>Lorem, ipsum.</li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Obcaecati molestias fugiat sit.
-                </li>
-                <li>Lorem ipsum dolor sit.</li>
+                {extras.map((item, index) => {
+                  return <li key={index}>- {item}</li>;
+                })}
               </ul>
             </Extras>
           </GridContainer>

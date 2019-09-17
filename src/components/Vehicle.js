@@ -104,7 +104,7 @@ export default function Vehicle({ vehicle }) {
   return (
     <>
       <Item>
-        <img className='photo' src={images[0] || defaultImg} />
+        <img className='photo' src={images[0] || defaultImg} alt='img' />
         <Link linkClass='vehicleLink box-shadow' url={`/catalog/${slug}`}>
           Learn more
         </Link>

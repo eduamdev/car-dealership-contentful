@@ -8,6 +8,7 @@ module.exports = {
     coralRed: '#FB3640',
     myrtleGreen: '#357266',
     winterGreen: '#598B81',
+    lightGreen: '#86AAA3',
     babyPowder: '#fffffA',
     lightGrey: '#eaeaea',
     grey: '#a5a7b4',

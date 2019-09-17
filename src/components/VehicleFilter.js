@@ -71,6 +71,10 @@ const FilterButton = styled.span`
     & .filter-label {
       color: ${theme.colors.lightGrey};
       font-size: 1em;
+
+      & .price {
+        color: ${theme.colors.lightGreen};
+      }
     }
 
     & .filter-select {
@@ -213,7 +217,7 @@ export default function VehicleFilter({ vehicles }) {
         {/* price */}
         <FilterButton>
           <label className='filter-label' htmlFor='price'>
-            Price ${formatMoney(price)}
+            Price <span className='price'>$ {formatMoney(price)}</span>
           </label>
           <input
             type='range'

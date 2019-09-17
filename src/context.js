@@ -133,6 +133,7 @@ class VehicleProvider extends Component {
       <VehicleContext.Provider
         value={{
           ...this.state,
+          getVehicle: this.getVehicle,
           handleChange: this.handleChange,
           handleBodyClass: this.handleBodyClass,
           handleModal: this.handleModal
