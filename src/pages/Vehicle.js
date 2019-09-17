@@ -161,9 +161,23 @@ export default class Home extends Component {
   render() {
     const { getVehicle } = this.context;
     const vehicle = getVehicle(this.state.slug);
+    const link = {
+      label: 'Back to Catalog',
+      linkClass: 'heroLinkReverse ripple',
+      url: '/catalog'
+    };
 
     if (!vehicle) {
-      return <h3>No such vehicle could be found...</h3>;
+      return (
+        <Hero hero='vehicleHeroNotFound'>
+          <Navbar />
+          <Banner
+            title='No such vehicle could be found...'
+            link={link}
+            icon={arrowL}
+          />
+        </Hero>
+      );
     }
 
     const {
@@ -181,15 +195,9 @@ export default class Home extends Component {
 
     const [mainImg, ...defaultImg] = images;
 
-    const link = {
-      label: 'Back to Catalog',
-      linkClass: 'heroLinkReverse ripple',
-      url: '/catalog'
-    };
-
     return (
       <>
-        <Hero hero='vehicleHero'>
+        <Hero hero='vehicleHero' img={mainImg}>
           <Navbar />
           <Banner title={`${name}`} link={link} icon={arrowL} />
         </Hero>
@@ -227,7 +235,7 @@ export default class Home extends Component {
                 </li>
                 {rental && (
                   <li>
-                    <span>Rental allowed</span>
+                    <span>Can be rented</span>
                   </li>
                 )}
               </ul>

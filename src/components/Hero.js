@@ -26,16 +26,20 @@ const StyledHero = styled.section`
   }
 
   &.vehicleHero {
-    background: linear-gradient( 180deg, rgb(0, 0, 0) 5%, rgba(0,0,0,0.45) 70% ), url(${vehicleImg}) center/cover no-repeat;
+    background: linear-gradient( 180deg, rgb(0, 0, 0) 5%, rgba(0,0,0,0.45) 70% ), url(${props =>
+      props.img ? props.img : vehicleImg}) center/cover
+    no-repeat;
   }
 
-  &.errorHero {
-    background: url(${data[0].fields.images[0].fields.file.url}) center/cover
-      no-repeat;
-
+  &.vehicleHeroNotFound, &.errorHero{
+    background: ${theme.colors.mainBlack};
+    
     @media ${viewport[7]} {
-      max-width: 100vw;
+      min-height: 100vh;
+      /* max-width: 100vw;
       max-height: 100vh;
+      width: 100vw;
+      height: 100vh; */
     }
   }
 
@@ -80,8 +84,12 @@ const StyledHero = styled.section`
   }
 `;
 
-export default function Hero({ children, hero }) {
-  return <StyledHero className={hero}>{children}</StyledHero>;
+export default function Hero({ children, hero, img }) {
+  return (
+    <StyledHero className={hero} img={img}>
+      {children}
+    </StyledHero>
+  );
 }
 
 Hero.defaultProps = {

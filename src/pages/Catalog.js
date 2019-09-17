@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar';
 import Banner from '../components/Banner';
 import VehicleContainer from '../components/VehicleContainer';
 import Footer from '../components/Footer';
-import Loading from '../components/Loading';
 
 const Catalog = () => {
   return (
@@ -14,7 +13,6 @@ const Catalog = () => {
         <Banner title='Catalog' subtitle='See what we have for you!' />
       </Hero>
       <VehicleContainer></VehicleContainer>
-      {/* <Loading></Loading> */}
       <Footer />
     </>
   );

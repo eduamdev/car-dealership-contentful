@@ -6,6 +6,7 @@ import Wrapper from './Wrapper';
 import viewport from '../styles/media';
 import { withVehicleConsumer } from '../context';
 import Title from './Title';
+import Loading from './Loading';
 
 const Container = styled.div`
   display: grid;
@@ -45,9 +46,13 @@ const StyledList = styled(VehicleList)`
 `;
 
 function VehicleContainer({ context }) {
-  const { handleBodyClass, sortedVehicles, vehicles } = context;
+  const { loading, handleBodyClass, sortedVehicles, vehicles } = context;
 
   handleBodyClass('modal-open');
+
+  if (loading) {
+    return <Loading />;
+  }
 
   return (
     <Wrapper>
