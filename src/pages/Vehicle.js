@@ -22,9 +22,13 @@ const ImageContainer = styled.div`
 
   & img {
     width: 100%;
-    height: 340px;
+    height: 17em;
     border: 1px solid ${theme.colors.darkGrey};
     border-radius: 2px;
+
+    @media ${viewport[7]} {
+      height: 25em;
+    }
   }
 `;
 
