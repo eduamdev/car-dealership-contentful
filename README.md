@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/248c30e8-eb88-4b67-a332-b427da25bd1b/deploy-status)](https://app.netlify.com/sites/vehicle-dealership/deploys)
 
-# 🚗 Vehicle Dealership Site with React, Contentful and Netlify
+# 🚗 Vehicle Dealership with Contentful and Netlify
 
 Demo site is here: [Vehicle Dealership](https://vehicle-dealership.netlify.com/)
 
