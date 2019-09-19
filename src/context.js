@@ -11,9 +11,9 @@ class VehicleProvider extends Component {
     featuredVehicles: [],
     loading: true,
     modalIsOpen: false,
-    type: 'all',
-    model: 'all',
-    brand: 'all',
+    type: 'All',
+    model: 'All',
+    brand: 'All',
     capacity: 1,
     price: 0,
     minPrice: 0,
@@ -106,17 +106,17 @@ class VehicleProvider extends Component {
     price = parseInt(price);
 
     // filter by type
-    if (type !== 'all') {
+    if (type !== 'All') {
       tempVehicles = tempVehicles.filter(vehicle => vehicle.type === type);
     }
 
     // filter by brand
-    if (brand !== 'all') {
+    if (brand !== 'All') {
       tempVehicles = tempVehicles.filter(vehicle => vehicle.brand === brand);
     }
 
     // filter by model
-    if (model !== 'all') {
+    if (model !== 'All') {
       tempVehicles = tempVehicles.filter(vehicle => vehicle.model === model);
     }
 
