@@ -25,7 +25,7 @@ const Item = styled.article`
   &:focus .photo {
     transform: scale(1.2);
     transition: all 0.75s;
-    opacity: 0.3;
+    opacity: 0.25;
   }
 
   &:hover .photo:before,

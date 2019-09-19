@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import items from './content/data';
+// import items from './content/data';
+import Client from './content/Contentful';
 
 const VehicleContext = React.createContext();
 
@@ -20,21 +21,47 @@ class VehicleProvider extends Component {
     rental: false
   };
 
-  componentWillMount() {
-    let vehicles = this.formatData(items);
-    let featuredVehicles = vehicles.filter(
-      vehicle => vehicle.featured === true
-    );
-    let maxPrice = Math.max(...vehicles.map(item => item.price));
+  getData = async () => {
+    try {
+      let response = await Client.getEntries({
+        content_type: 'vehicleDealership',
+        order: 'fields.price'
+      });
+      let vehicles = this.formatData(response.items);
+      let featuredVehicles = vehicles.filter(
+        vehicle => vehicle.featured === true
+      );
+      let maxPrice = Math.max(...vehicles.map(item => item.price));
 
-    this.setState({
-      vehicles,
-      featuredVehicles,
-      sortedVehicles: vehicles,
-      loading: false,
-      price: maxPrice,
-      maxPrice
-    });
+      this.setState({
+        vehicles,
+        featuredVehicles,
+        sortedVehicles: vehicles,
+        loading: false,
+        price: maxPrice,
+        maxPrice
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  componentWillMount() {
+    this.getData();
+    // let vehicles = this.formatData(items);
+    // let featuredVehicles = vehicles.filter(
+    //   vehicle => vehicle.featured === true
+    // );
+    // let maxPrice = Math.max(...vehicles.map(item => item.price));
+
+    // this.setState({
+    //   vehicles,
+    //   featuredVehicles,
+    //   sortedVehicles: vehicles,
+    //   loading: false,
+    //   price: maxPrice,
+    //   maxPrice
+    // });
   }
 
   formatData(items) {

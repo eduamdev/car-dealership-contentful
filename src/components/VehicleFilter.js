@@ -169,7 +169,7 @@ export default function VehicleFilter({ vehicles }) {
   } = context;
 
   let types = getUnique(vehicles, 'type');
-  types = ['all', ...types];
+  types = ['All', ...types];
   types = types.map((item, index) => {
     return (
       <option key={index} value={item}>
@@ -179,7 +179,7 @@ export default function VehicleFilter({ vehicles }) {
   });
 
   let brands = getUnique(vehicles, 'brand');
-  brands = ['all', ...brands];
+  brands = ['All', ...brands];
   brands = brands.map((item, index) => {
     return (
       <option key={index} value={item}>
@@ -189,7 +189,7 @@ export default function VehicleFilter({ vehicles }) {
   });
 
   let models = getUnique(vehicles, 'model');
-  models = ['all', ...models];
+  models = ['All', ...models];
   models = models.map((item, index) => {
     return (
       <option key={index} value={item}>
