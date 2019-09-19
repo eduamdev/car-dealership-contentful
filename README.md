@@ -1,8 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/248c30e8-eb88-4b67-a332-b427da25bd1b/deploy-status)](https://app.netlify.com/sites/vehicle-dealership/deploys)
 
-# 🚗 Vehicle Dealership
-
-> One Paragraph of project description goes here
+# 🚗 Vehicle Dealership Site with React, Contentful and Netlify
 
 Demo site is here: [Vehicle Dealership](https://vehicle-dealership.netlify.com/)
 
@@ -23,8 +21,9 @@ $ yarn build or npm run
 
 ## Built With
 
-- [create-react-app](https://github.com/facebook/create-react-app) - The Toolchain used
-- [Hooks API](https://reactjs.org/docs/hooks-intro.html) - State Management
+- [create-react-app](https://github.com/facebook/create-react-app) - React Toolchain
+- [Hooks API](https://reactjs.org/docs/hooks-intro.html) - App State Management
+- [Contentful](https://www.contentful.com/) - Storage & Data Management
 
 ## License
 
