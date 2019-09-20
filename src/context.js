@@ -46,7 +46,7 @@ class VehicleProvider extends Component {
     }
   };
 
-  componentWillMount() {
+  componentDidMount() {
     this.getData();
     // let vehicles = this.formatData(items);
     // let featuredVehicles = vehicles.filter(
