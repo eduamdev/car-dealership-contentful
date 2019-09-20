@@ -19,6 +19,7 @@ const link = {
 const StyledIcon = styled(Icon)`
   display: inline-block;
   fill: #fff;
+  width: 3.25em !important;
 `;
 
 export default function Home() {
