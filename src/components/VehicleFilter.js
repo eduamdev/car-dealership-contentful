@@ -33,6 +33,13 @@ const GridContainer = styled.div`
 const FilterButton = styled.span`
   display: none;
 
+  &.modal {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    grid-row-gap: 0.5em;
+  }
+
   &.allFilters {
     cursor: pointer;
     padding: 0.4em 1.4em;
@@ -207,13 +214,10 @@ export default function VehicleFilter({ vehicles }) {
     );
   });
 
-  const filters = () => (
+  const filters = (mode = '') => (
     <>
-      <FilterButton className='allFilters' onClick={handleModal}>
-        Filters
-      </FilterButton>
       {/* price */}
-      <FilterButton>
+      <FilterButton className={mode}>
         <label className='filter-label' htmlFor='price'>
           Price <span className='price'>$ {formatMoney(price)}</span>
         </label>
@@ -229,7 +233,7 @@ export default function VehicleFilter({ vehicles }) {
       </FilterButton>
       {/* end price */}
       {/* select type */}
-      <FilterButton>
+      <FilterButton className={mode}>
         <label className='filter-label' htmlFor='type'>
           Type
         </label>
@@ -245,7 +249,7 @@ export default function VehicleFilter({ vehicles }) {
       </FilterButton>
       {/* end select type */}
       {/* brand */}
-      <FilterButton>
+      <FilterButton className={mode}>
         <label className='filter-label' htmlFor='brand'>
           Brand
         </label>
@@ -261,7 +265,7 @@ export default function VehicleFilter({ vehicles }) {
       </FilterButton>
       {/* end brand */}
       {/* model */}
-      <FilterButton>
+      <FilterButton className={mode}>
         <label className='filter-label' htmlFor='model'>
           Model
         </label>
@@ -277,7 +281,7 @@ export default function VehicleFilter({ vehicles }) {
       </FilterButton>
       {/* end color */}
       {/* capacity */}
-      <FilterButton>
+      <FilterButton className={mode}>
         <label className='filter-label' htmlFor='capacity'>
           Capacity
         </label>
@@ -293,7 +297,7 @@ export default function VehicleFilter({ vehicles }) {
       </FilterButton>
       {/* end capacity */}
       {/* rental */}
-      <FilterButton>
+      <FilterButton className={mode}>
         <div className='checkbox'>
           <input
             type='checkbox'
@@ -312,13 +316,19 @@ export default function VehicleFilter({ vehicles }) {
   return (
     <StyledSection>
       {modalIsOpen && <BackDrop onClick={handleModal}></BackDrop>}
-      <GridContainer>{filters()}</GridContainer>
+      <GridContainer>
+        <FilterButton className='allFilters' onClick={handleModal}>
+          Filters
+        </FilterButton>
+        {filters()}
+      </GridContainer>
 
       <Modal className='modal' show={modalIsOpen} close={handleModal}>
-        <p>
+        {/* <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odit
           amet aliquam.
-        </p>
+        </p> */}
+        {filters('modal')}
       </Modal>
     </StyledSection>
   );

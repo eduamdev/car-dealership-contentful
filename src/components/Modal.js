@@ -7,7 +7,8 @@ import theme from '../styles/theme';
 const ModalWrapper = styled.div`
   margin: 0 auto;
   transition: all 0.4s;
-  padding: 0;
+  /* padding: 0; */
+  padding: 2em 1em;
   overflow: hidden;
   width: 100%;
   height: 70%;
@@ -18,54 +19,67 @@ const ModalWrapper = styled.div`
   left: 0;
   z-index: 100000;
   display: grid;
-  grid-template-rows: max-content 1fr max-content;
+  /* grid-template-rows: max-content 1fr max-content;
   grid-template-areas:
     'header'
     'body'
-    'footer';
+    'footer'; */
+  grid-template-rows: 1fr;
+  grid-template-areas: 'body';
   align-items: center;
-  justify-content: center;
+  justify-content: stretch;
   background: ${theme.colors.raisinBlack};
   color: ${theme.colors.lightGrey};
 
   @media ${viewport[7]} {
     width: 400px;
     height: 400px;
-    padding: 24px;
-    grid-template-areas:
+    /* grid-template-areas:
       'body'
       'footer';
-    grid-template-rows: 1fr max-content;
+    grid-template-rows: 1fr max-content; */
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     top: auto;
     bottom: 1em;
     left: 1em;
   }
-`;
 
-const ModalHeader = styled.div`
-  padding: 0.75em 1em;
-  /* border-bottom: 1px solid ${theme.colors.darkGrey}; */
-  grid-area: header;
-  display: grid;
-  grid-template-columns: max-content 1fr max-content;
-  grid-template-areas: 'clear space close';
-  align-items: center;
-
-  @media ${viewport[7]} {
+  @media ${viewport[9]} {
     display: none;
   }
 `;
 
+const ModalHeader = styled.div`
+  display: none;
+  /* padding: 0.75em 1em;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-areas: 'clear space close';
+  align-items: center; */
+  /* border-bottom: 1px solid ${theme.colors.darkGrey}; */
+
+  /* @media ${viewport[7]} {
+    display: none;
+  } */
+`;
+
 const ModalBody = styled.div`
-  padding: 1.5em 1em;
-  align-self: start;
+  /* padding: 1.5em 1em; */
+  align-self: stretch;
+  justify-self: center;
   grid-area: body;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1em;
 `;
 const ModalFooter = styled.div`
+display: none;
+  grid-area: footer;
   padding: 1.5em 1em;
   overflow: auto;
-  grid-area: footer;
   /* border-top: 1px solid ${theme.colors.darkGrey}; */
 
   &::after {
@@ -78,6 +92,7 @@ const ModalFooter = styled.div`
     border: 0;
   }
 `;
+
 // const ClearBtn = styled.span`
 //   grid-area: clear;
 //   padding: 1em;
@@ -141,6 +156,10 @@ const BackDrop = styled.div`
   transition: all 1.3s;
   width: 100%;
   z-index: 100;
+
+  @media ${viewport[9]} {
+    display: none;
+  }
 `;
 
 const Modal = ({ show, children, close }) => {
