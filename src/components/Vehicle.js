@@ -104,7 +104,10 @@ export default function Vehicle({ vehicle }) {
   return (
     <>
       <Item>
-        <img className='photo' src={images[0] || defaultImg} alt='img' />
+        <div
+          className='photo'
+          style={{ backgroundImage: `url(${images[0] || defaultImg})` }}
+        />
         <Link linkClass='vehicleLink box-shadow' url={`/catalog/${slug}`}>
           Learn more
         </Link>

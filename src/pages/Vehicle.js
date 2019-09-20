@@ -20,11 +20,14 @@ const ImageContainer = styled.div`
   grid-row-gap: 0.75em;
   padding: 5em 0 3em 0;
 
-  & img {
+  & .image {
     width: 100%;
     height: 17em;
     border: 1px solid ${theme.colors.darkGrey};
     border-radius: 2px;
+    background-color: black; /* fallback color */
+    background-position: center;
+    background-size: cover;
 
     @media ${viewport[7]} {
       height: 25em;
@@ -210,7 +213,13 @@ export default class Home extends Component {
         <Wrapper>
           <ImageContainer>
             {defaultImg.map((item, index) => {
-              return <img key={index} src={item} alt={name} />;
+              return (
+                <div
+                  className='image'
+                  key={index}
+                  style={{ backgroundImage: `url(${item || defaultBcg})` }}
+                />
+              );
             })}
           </ImageContainer>
           <GridContainer>

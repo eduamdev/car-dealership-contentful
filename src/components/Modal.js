@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import viewport from '../styles/media';
 import theme from '../styles/theme';
-import { close as closeSvg } from './svg';
+// import { close as closeSvg } from './svg';
 
 const ModalWrapper = styled.div`
   margin: 0 auto;
@@ -10,11 +10,11 @@ const ModalWrapper = styled.div`
   padding: 0;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  height: 70%;
   max-width: 100vw;
   max-height: 100vh;
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: 100000;
   display: grid;
@@ -45,7 +45,7 @@ const ModalWrapper = styled.div`
 
 const ModalHeader = styled.div`
   padding: 0.75em 1em;
-  border-bottom: 1px solid ${theme.colors.darkGrey};
+  /* border-bottom: 1px solid ${theme.colors.darkGrey}; */
   grid-area: header;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
@@ -66,7 +66,7 @@ const ModalFooter = styled.div`
   padding: 1.5em 1em;
   overflow: auto;
   grid-area: footer;
-  border-top: 1px solid ${theme.colors.darkGrey};
+  /* border-top: 1px solid ${theme.colors.darkGrey}; */
 
   &::after {
     content: '';
@@ -78,59 +78,59 @@ const ModalFooter = styled.div`
     border: 0;
   }
 `;
-const ClearBtn = styled.span`
-  grid-area: clear;
-  padding: 1em;
-  cursor: pointer;
-  color: ${theme.colors.winterGreen};
+// const ClearBtn = styled.span`
+//   grid-area: clear;
+//   padding: 1em;
+//   cursor: pointer;
+//   color: ${theme.colors.winterGreen};
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-`;
+//   &:hover,
+//   &:focus {
+//     text-decoration: underline;
+//   }
+// `;
 
-const CloseModalBtn = styled.span`
-  grid-area: close;
-  width: 36px;
-  fill: ${theme.colors.lightGrey};
-  cursor: pointer;
-  margin: 0;
+// const CloseModalBtn = styled.span`
+//   grid-area: close;
+//   width: 36px;
+//   fill: ${theme.colors.lightGrey};
+//   cursor: pointer;
+//   margin: 0;
 
-  &:hover,
-  &:focus {
-    fill: ${theme.colors.winterGreen};
-  }
-`;
+//   &:hover,
+//   &:focus {
+//     fill: ${theme.colors.winterGreen};
+//   }
+// `;
 
-const BtnSave = styled.button`
-  background: ${theme.colors.myrtleGreen};
-  padding: 0.9em;
-  border-radius: 4px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  font-size: 1em;
-  letter-spacing: 0.8px;
-  width: 100%;
-  text-align: center;
-  color: #fff;
+// const BtnSave = styled.button`
+//   background: ${theme.colors.myrtleGreen};
+//   padding: 0.9em;
+//   border-radius: 4px;
+//   border: none;
+//   font-weight: bold;
+//   cursor: pointer;
+//   outline: none;
+//   font-size: 1em;
+//   letter-spacing: 0.8px;
+//   width: 100%;
+//   text-align: center;
+//   color: #fff;
 
-  @media ${viewport[7]} {
-    color: ${theme.colors.myrtleGreen};
-    font-weight: 200;
-    background: transparent;
-    text-align: left;
-    width: auto;
-    float: right;
+//   @media ${viewport[7]} {
+//     color: ${theme.colors.myrtleGreen};
+//     font-weight: 200;
+//     background: transparent;
+//     text-align: left;
+//     width: auto;
+//     float: right;
 
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-`;
+//     &:hover,
+//     &:focus {
+//       text-decoration: underline;
+//     }
+//   }
+// `;
 
 const BackDrop = styled.div`
   background-color: rgba(195, 195, 195, 0.3);
@@ -154,14 +154,12 @@ const Modal = ({ show, children, close }) => {
         }}
       >
         <ModalHeader>
-          <ClearBtn>Clear</ClearBtn>
+          {/* <ClearBtn>Clear</ClearBtn>
           <span></span>
-          <CloseModalBtn onClick={close}>{closeSvg}</CloseModalBtn>
+          <CloseModalBtn onClick={close}>{closeSvg}</CloseModalBtn> */}
         </ModalHeader>
         <ModalBody>{children}</ModalBody>
-        <ModalFooter>
-          <BtnSave>Save</BtnSave>
-        </ModalFooter>
+        <ModalFooter>{/* <BtnSave>Save</BtnSave> */}</ModalFooter>
       </ModalWrapper>
     </div>
   );

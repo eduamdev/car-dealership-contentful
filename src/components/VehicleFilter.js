@@ -207,108 +207,113 @@ export default function VehicleFilter({ vehicles }) {
     );
   });
 
+  const filters = () => (
+    <>
+      <FilterButton className='allFilters' onClick={handleModal}>
+        Filters
+      </FilterButton>
+      {/* price */}
+      <FilterButton>
+        <label className='filter-label' htmlFor='price'>
+          Price <span className='price'>$ {formatMoney(price)}</span>
+        </label>
+        <input
+          type='range'
+          name='price'
+          min={minPrice}
+          max={maxPrice}
+          id='price'
+          value={price}
+          onChange={handleChange}
+        ></input>
+      </FilterButton>
+      {/* end price */}
+      {/* select type */}
+      <FilterButton>
+        <label className='filter-label' htmlFor='type'>
+          Type
+        </label>
+        <select
+          className='filter-select'
+          name='type'
+          id='type'
+          value={type}
+          onChange={handleChange}
+        >
+          {types}
+        </select>
+      </FilterButton>
+      {/* end select type */}
+      {/* brand */}
+      <FilterButton>
+        <label className='filter-label' htmlFor='brand'>
+          Brand
+        </label>
+        <select
+          className='filter-select'
+          name='brand'
+          id='brand'
+          value={brand}
+          onChange={handleChange}
+        >
+          {brands}
+        </select>
+      </FilterButton>
+      {/* end brand */}
+      {/* model */}
+      <FilterButton>
+        <label className='filter-label' htmlFor='model'>
+          Model
+        </label>
+        <select
+          className='filter-select'
+          name='model'
+          id='model'
+          value={model}
+          onChange={handleChange}
+        >
+          {models}
+        </select>
+      </FilterButton>
+      {/* end color */}
+      {/* capacity */}
+      <FilterButton>
+        <label className='filter-label' htmlFor='capacity'>
+          Capacity
+        </label>
+        <select
+          className='filter-select'
+          name='capacity'
+          id='capacity'
+          value={capacity}
+          onChange={handleChange}
+        >
+          {people}
+        </select>
+      </FilterButton>
+      {/* end capacity */}
+      {/* rental */}
+      <FilterButton>
+        <div className='checkbox'>
+          <input
+            type='checkbox'
+            id='rental'
+            name='rental'
+            checked={rental}
+            onChange={handleChange}
+          />
+          <label htmlFor='rental'>Rental</label>
+        </div>
+      </FilterButton>
+      {/* end rental */}
+    </>
+  );
+
   return (
     <StyledSection>
       {modalIsOpen && <BackDrop onClick={handleModal}></BackDrop>}
-      <GridContainer>
-        <FilterButton className='allFilters' onClick={handleModal}>
-          Filters
-        </FilterButton>
-        {/* price */}
-        <FilterButton>
-          <label className='filter-label' htmlFor='price'>
-            Price <span className='price'>$ {formatMoney(price)}</span>
-          </label>
-          <input
-            type='range'
-            name='price'
-            min={minPrice}
-            max={maxPrice}
-            id='price'
-            value={price}
-            onChange={handleChange}
-          ></input>
-        </FilterButton>
-        {/* end price */}
-        {/* select type */}
-        <FilterButton>
-          <label className='filter-label' htmlFor='type'>
-            Type
-          </label>
-          <select
-            className='filter-select'
-            name='type'
-            id='type'
-            value={type}
-            onChange={handleChange}
-          >
-            {types}
-          </select>
-        </FilterButton>
-        {/* end select type */}
-        {/* brand */}
-        <FilterButton>
-          <label className='filter-label' htmlFor='brand'>
-            Brand
-          </label>
-          <select
-            className='filter-select'
-            name='brand'
-            id='brand'
-            value={brand}
-            onChange={handleChange}
-          >
-            {brands}
-          </select>
-        </FilterButton>
-        {/* end brand */}
-        {/* model */}
-        <FilterButton>
-          <label className='filter-label' htmlFor='model'>
-            Model
-          </label>
-          <select
-            className='filter-select'
-            name='model'
-            id='model'
-            value={model}
-            onChange={handleChange}
-          >
-            {models}
-          </select>
-        </FilterButton>
-        {/* end color */}
-        {/* capacity */}
-        <FilterButton>
-          <label className='filter-label' htmlFor='capacity'>
-            Capacity
-          </label>
-          <select
-            className='filter-select'
-            name='capacity'
-            id='capacity'
-            value={capacity}
-            onChange={handleChange}
-          >
-            {people}
-          </select>
-        </FilterButton>
-        {/* end capacity */}
-        {/* rental */}
-        <FilterButton>
-          <div className='checkbox'>
-            <input
-              type='checkbox'
-              id='rental'
-              name='rental'
-              checked={rental}
-              onChange={handleChange}
-            />
-            <label htmlFor='rental'>Rental</label>
-          </div>
-        </FilterButton>
-        {/* end rental */}
-      </GridContainer>
+      <GridContainer>{filters()}</GridContainer>
+
       <Modal className='modal' show={modalIsOpen} close={handleModal}>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odit
