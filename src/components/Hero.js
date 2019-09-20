@@ -23,6 +23,7 @@ const StyledHero = styled.section`
     background: ${theme.colors.mainBlack};
     background: linear-gradient( 145deg,rgb(0,0,0) 45%,rgba(0,10,15,.35) 60%, rgba(0,0,0,.9) 95% ),
       url(${catalogImg}) center/cover no-repeat;
+      margin-bottom: 4em;
   }
 
   &.vehicleHero {
@@ -46,6 +47,7 @@ const StyledHero = styled.section`
   &.quote {
     background: ${theme.colors.mainBlack};
     min-height: 10em;
+    margin-bottom: 4em;
     /* background: radial-gradient(
       circle,
       rgba(95, 30, 15, 0.95) 0%,
