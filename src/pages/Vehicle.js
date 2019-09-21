@@ -18,7 +18,7 @@ const ImageContainer = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   grid-column-gap: 1em;
   grid-row-gap: 0.75em;
-  padding: 5em 0 3em 0;
+  padding: 3em 0 1.5em 0;
 
   & .image {
     width: 100%;
@@ -58,9 +58,13 @@ const GridContainer = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 2.5em;
+  font-size: 1.5em;
   padding: 0.3em 0;
   border-bottom: 2px solid ${theme.colors.myrtleGreen};
+
+  @media ${viewport[7]} {
+    font-size: 2em;
+  }
 `;
 
 const Details = styled.section`
@@ -80,9 +84,10 @@ const Details = styled.section`
     line-height: 1.45;
     font-weight: 200;
     padding: 2em 0;
+    font-size: 0.95em;
 
     @media ${viewport[7]} {
-      font-size: 1.1em;
+      font-size: 1.05em;
       line-height: 1.4;
     }
   }
@@ -111,11 +116,11 @@ const Info = styled.section`
 
     & li {
       border-bottom: 1px solid ${theme.colors.darkGrey};
-      font-size: 1.05em;
+      font-size: 0.95em;
       letter-spacing: 0.5px;
 
       @media ${viewport[7]} {
-        font-size: 1.1em;
+        font-size: 1em;
         letter-spacing: 0.3px;
         grid-gap: 0;
       }
@@ -123,9 +128,12 @@ const Info = styled.section`
       & span {
         color: #fff;
         font-weight: 400;
-        font-size: 1.175em;
+        font-size: 1.05em;
         letter-spacing: 0.3px;
-        padding-left: 8px;
+
+        @media ${viewport[7]} {
+          font-weight: 700;
+        }
       }
     }
   }
@@ -149,7 +157,7 @@ const Extras = styled.section`
 
     & li {
       margin: 0 2em;
-      font-size: 1.1em;
+      font-size: 1.05em;
       font-weight: 200;
     }
   }
