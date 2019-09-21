@@ -12,19 +12,19 @@ const StyledSection = styled.section`
 `;
 
 const Subtitle = styled.p`
-  font-size: 1.1em;
+  font-size: 0.95em;
   line-height: 1.3;
   color: ${theme.colors.lightGrey};
   text-align: left;
 
   @media ${viewport[7]} {
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.4;
   }
 `;
 
 const GridContainer = styled.div`
-  margin: 4em 0;
+  margin: 2em 0;
   display: grid;
   align-items: stretch;
   justify-content: center;
@@ -39,22 +39,23 @@ const Item = styled.div`
   border: 1px solid ${theme.colors.darkGrey};
   margin: 0;
   color: #fff;
-  text-align: center;
+  text-align: left;
   padding: 0.75em 1em;
   display: grid;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
-  grid-template-columns: 1fr;
-  grid-template-rows: max-content 1fr;
-  grid-template-areas:
-    'icon'
-    'text';
+  /* grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr; */
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 'icon text';
+  grid-column-gap: 1em;
 
   @media ${viewport[7]} {
     grid-template-columns: max-content 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: 'icon text';
-    grid-column-gap: 3.5em;
+    grid-column-gap: 1.5em;
     padding: 1.2em 1em;
 
     &:nth-child(even) {
@@ -66,7 +67,7 @@ const Item = styled.div`
     grid-area: icon;
     align-self: center;
     justify-self: center;
-    width: 55px;
+    width: 45px;
 
     @media ${viewport[7]} {
       align-self: start;
@@ -74,7 +75,7 @@ const Item = styled.div`
     }
 
     @media ${viewport[9]} {
-      width: 70px;
+      width: 60px;
     }
   }
 
@@ -84,26 +85,26 @@ const Item = styled.div`
     letter-spacing: -0.1px;
 
     & .title {
-      font-size: 1.4em;
+      font-size: 1.2em;
       font-weight: 700;
       text-transform: uppercase;
       color: #fff;
       line-height: 1.2;
       margin-bottom: 0.5em;
-      text-align: center;
+      text-align: left;
 
       @media ${viewport[7]} {
-        font-size: 1.5em;
+        font-size: 1.4em;
         text-align: left;
       }
     }
 
     & .subtitle {
       color: ${theme.colors.lightGrey};
-      font-size: 0.98em;
+      font-size: 0.9em;
       line-height: 1.3;
       font-weight: 200;
-      text-align: center;
+      text-align: left;
 
       @media ${viewport[7]} {
         font-size: 1em;

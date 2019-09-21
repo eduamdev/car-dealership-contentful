@@ -6,7 +6,7 @@ import viewport from '../styles/media';
 const Container = styled.div`
   display: grid;
   align-items: center;
-  margin: 4em 0 2em 0;
+  margin: 2em 0 1.5em 0;
   grid-template-columns: 1fr;
 
   &.left {
@@ -19,7 +19,7 @@ const Container = styled.div`
 
   @media ${viewport[7]} {
     grid-template-columns: auto;
-    margin: 6em 0 3em 0;
+    margin: 2.5em 0 1.5em 0;
   }
 `;
 
@@ -28,7 +28,7 @@ const StyledTitle = styled.h2`
   padding: 0.3em 0;
   display: inline;
   border-bottom: 2px solid ${theme.colors.coralRed};
-  font-size: 2em;
+  font-size: 1.65em;
   letter-spacing: 0.3px;
 
   @media ${viewport[7]} {

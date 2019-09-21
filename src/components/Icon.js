@@ -8,6 +8,14 @@ const Icon = styled.span`
     width: 30px;
   }
 
+  &.social {
+    width: 20px;
+
+    @media ${viewport[7]} {
+      width: 22px;
+    }
+  }
+
   &.xs {
     width: 20px;
   }

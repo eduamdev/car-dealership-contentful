@@ -25,21 +25,29 @@ const GridContainer = styled.div`
 const Title = styled.h1`
   color: #fff;
   font-weight: 700;
-  font-size: 4em;
+  font-size: 3.75em;
   letter-spacing: -0.01em;
   text-transform: uppercase;
   margin: 0;
 
   @media ${viewport[7]} {
-    font-size: 6em;
+    font-size: 4.75em;
+  }
+
+  @media ${viewport[9]} {
+    font-size: 5.7em;
   }
 `;
 
 const Subtitle = styled.p`
   color: ${theme.colors.lightGrey};
-  font-size: 1.55em;
+  font-size: 1.3em;
   font-weight: 200;
   letter-spacing: -0.1px;
+
+  @media ${viewport[7]} {
+    font-size: 1.5em;
+  }
 `;
 
 const LinkContainer = styled.div`
@@ -52,7 +60,7 @@ const LinkContainer = styled.div`
     & .icon {
       margin-left: 0.4em;
       fill: #fff;
-      transition: 0.2s ease-in;
+      transition: 0.1s ease-in;
     }
   }
 `;

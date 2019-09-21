@@ -43,13 +43,8 @@ const IconContainer = styled.div`
 
   & a {
     display: inherit;
-    transition: all 0.2s ease;
     padding: 1em 1em 2em 0;
     fill: ${theme.colors.lightGrey};
-
-    &:hover {
-      transform: translatey(-5%);
-    }
   }
 `;
 
@@ -65,14 +60,14 @@ export default function Footer() {
               rel='nofollow noopener noreferrer'
               target='_blank'
             >
-              <Icon>{twitter}</Icon>
+              <Icon className='social'>{twitter}</Icon>
             </a>
             <a
               href='https://github.com/edroamz'
               rel='nofollow noopener noreferrer'
               target='_blank'
             >
-              <Icon>{github}</Icon>
+              <Icon className='social'>{github}</Icon>
             </a>
           </IconContainer>
         </GridContainer>
