@@ -3,7 +3,7 @@ import theme from '../styles/theme';
 import styled from 'styled-components';
 import viewport from '../styles/media';
 import Link from '../components/Link';
-import defaultImg from '../assets/images/vehicle-2.jpg';
+import defaultImg from '../assets/images/placeholder.jpg';
 import PropTypes from 'prop-types';
 import { formatMoney } from '../utils/utils';
 

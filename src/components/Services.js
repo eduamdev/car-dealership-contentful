@@ -4,7 +4,7 @@ import theme from '../styles/theme';
 import Wrapper from './Wrapper';
 import viewport from '../styles/media';
 import Title from './Title';
-import { car, bicycle, ribbon, help, speedometer, colorPalette } from './svg';
+import { car, bicycle, ribbon, help, speedometer, options } from './svg';
 import Icon from './Icon';
 
 const StyledSection = styled.section`
@@ -124,8 +124,7 @@ export default function services() {
       <Wrapper>
         <Title title='Services' placement='left' />
         <Subtitle>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet,
-          porro quod? Eaque!
+          Our main goal is to give you the most satisfactory experience possible
         </Subtitle>
         <GridContainer>
           <Item>
@@ -133,10 +132,9 @@ export default function services() {
               <ItemIcon>{car}</ItemIcon>
             </div>
             <div className='text-container'>
-              <h3 className='title'>Service 1</h3>
+              <h3 className='title'>Traditional options</h3>
               <p className='subtitle'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Officia consectetur quia quisquam repudiandae.
+                Vehicles based on petroleum derived fuels
               </p>
             </div>
           </Item>
@@ -145,11 +143,8 @@ export default function services() {
               <ItemIcon>{bicycle}</ItemIcon>
             </div>
             <div className='text-container'>
-              <h3 className='title'>Service 2</h3>
-              <p className='subtitle'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Officia consectetur quia quisquam repudiandae.
-              </p>
+              <h3 className='title'>Eco friendly alternatives</h3>
+              <p className='subtitle'>All-electric and fuel cell vehicles</p>
             </div>
           </Item>
           <Item>
@@ -157,10 +152,12 @@ export default function services() {
               <ItemIcon>{ribbon}</ItemIcon>
             </div>
             <div className='text-container'>
-              <h3 className='title'>Service 3</h3>
+              <h3 className='title'>Happiness Guaranteed</h3>
               <p className='subtitle'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Officia consectetur quia quisquam repudiandae.
+                Our #1 priority is your happiness. Which means we stand by our
+                vehicles 100%, no matter what, no questions asked, no holds
+                barred, no ifs, no buts. If you have a problem, we will solve
+                it.
               </p>
             </div>
           </Item>
@@ -169,22 +166,20 @@ export default function services() {
               <ItemIcon>{speedometer}</ItemIcon>
             </div>
             <div className='text-container'>
-              <h3 className='title'>Service 4</h3>
+              <h3 className='title'>Sport alternatives</h3>
               <p className='subtitle'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Officia consectetur quia quisquam repudiandae.
+                For those interested in power and speed
               </p>
             </div>
           </Item>
           <Item>
             <div className='image-container'>
-              <ItemIcon>{colorPalette}</ItemIcon>
+              <ItemIcon>{options}</ItemIcon>
             </div>
             <div className='text-container'>
-              <h3 className='title'>Service 5</h3>
+              <h3 className='title'>Multiple choices</h3>
               <p className='subtitle'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Officia consectetur quia quisquam repudiandae.
+                Sedans, vans, bikes, trucks, boats and more...
               </p>
             </div>
           </Item>
@@ -193,10 +188,9 @@ export default function services() {
               <ItemIcon>{help}</ItemIcon>
             </div>
             <div className='text-container'>
-              <h3 className='title'>Service 6</h3>
+              <h3 className='title'>24/7 Customer Support</h3>
               <p className='subtitle'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Officia consectetur quia quisquam repudiandae.
+                Do you have questions? contact us anytime!
               </p>
             </div>
           </Item>

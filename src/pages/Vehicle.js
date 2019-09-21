@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { VehicleContext } from '../context';
 import { arrowL } from '../components/svg';
 import Wrapper from '../components/Wrapper';
-import defaultBcg from '../assets/images/vehicle-3.jpg';
+import defaultBcg from '../assets/images/placeholder.jpg';
 import viewport from '../styles/media';
 import theme from '../styles/theme';
 import { formatMoney } from '../utils/utils';
