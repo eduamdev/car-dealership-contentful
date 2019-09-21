@@ -15,21 +15,18 @@ const StyledSection = styled.section`
 const GridContainer = styled.div`
   /* margin: 5em auto; */
   display: grid;
-  /* width: 80vw; */
   align-items: center;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   grid-gap: 1rem;
 
   @media ${viewport[7]} {
-    /* width: 85vw; */
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
-  /* @media ${viewport[9]} {
-    width: 90vw;
-    max-width: 1170px;
-  } */
+  @media ${viewport[9]} {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
 `;
 
 export default class FeaturedVehicles extends Component {

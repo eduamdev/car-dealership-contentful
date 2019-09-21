@@ -12,8 +12,8 @@ const StyledSection = styled.section`
 `;
 
 const Subtitle = styled.p`
-  font-size: 0.95em;
-  line-height: 1.3;
+  font-size: 0.97em;
+  line-height: 1.6;
   color: ${theme.colors.lightGrey};
   text-align: left;
 
@@ -30,7 +30,7 @@ const GridContainer = styled.div`
   justify-content: center;
   grid-template-columns: 1fr;
 
-  @media ${viewport[7]} {
+  @media ${viewport[4]} {
     grid-template-columns: 1fr 1fr;
   }
 `;
@@ -49,7 +49,7 @@ const Item = styled.div`
   grid-template-columns: max-content 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: 'icon text';
-  grid-column-gap: 1em;
+  grid-column-gap: 0.75em;
 
   @media ${viewport[7]} {
     grid-template-columns: max-content 1fr;
@@ -65,7 +65,7 @@ const Item = styled.div`
 
   & .image-container {
     grid-area: icon;
-    align-self: center;
+    align-self: start;
     justify-self: center;
     width: 45px;
 
@@ -85,29 +85,30 @@ const Item = styled.div`
     letter-spacing: -0.1px;
 
     & .title {
-      font-size: 1.2em;
+      font-size: 1.05em;
       font-weight: 700;
       text-transform: uppercase;
       color: #fff;
-      line-height: 1.2;
+      line-height: 1.4;
       margin-bottom: 0.5em;
       text-align: left;
+      letter-spacing: 0.3px;
 
       @media ${viewport[7]} {
-        font-size: 1.4em;
-        text-align: left;
+        font-size: 1.25em;
       }
     }
 
     & .subtitle {
       color: ${theme.colors.lightGrey};
-      font-size: 0.9em;
-      line-height: 1.3;
+      font-size: 0.92em;
+      line-height: 1.4;
       font-weight: 200;
+      letter-spacing: 0.3px;
       text-align: left;
 
       @media ${viewport[7]} {
-        font-size: 1em;
+        font-size: 0.98em;
         line-height: 1.35;
         text-align: left;
       }

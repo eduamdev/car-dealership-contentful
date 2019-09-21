@@ -34,19 +34,18 @@ const StyledLink = styled(Link)`
   }
 
   &.nav-link {
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     color: #fff;
-    font-size: 1em;
-    font-weight: 200;
+    font-size: 0.95em;
+    font-weight: 400;
     text-transform: uppercase;
     display: block;
     text-align: center;
     padding: 0.5em 0;
 
     @media ${viewport[7]} {
-      padding: 0.7em 1em;
-      font-size: 1.1em;
-      letter-spacing: 0.3px;
+      padding: 0.7em 1.4em;
+      font-size: 1em;
 
       &:hover,
       &:focus {
@@ -57,14 +56,16 @@ const StyledLink = styled(Link)`
   &.heroLink,
   &.heroLinkReverse {
     padding: 0.75em 1.5em;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     background: ${theme.colors.coralRed};
     color: #fff;
-    font-size: 1.175em;
+    font-size: 0.95em;
     text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    letter-spacing: 0.2px;
+    font-weight: 700;
 
     &:hover .icon,
     &:focus .icon {
@@ -72,7 +73,7 @@ const StyledLink = styled(Link)`
     }
 
     @media ${viewport[7]} {
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
   }
 
@@ -90,10 +91,8 @@ const StyledLink = styled(Link)`
   &.vehicleLink {
     color: ${theme.colors.richBlack};
     background: ${theme.colors.lightGrey};
-    border: 1px solid;
-    border-color: transparent;
-    padding: 0.8em 1.6em;
-    font-size: 1em;
+    padding: 0.8em 1.4em;
+    font-size: 0.95em;
     text-align: center;
     margin: auto;
     position: absolute;
@@ -106,13 +105,12 @@ const StyledLink = styled(Link)`
     &:hover,
     &:focus {
       color: ${theme.colors.lightGrey};
-      border-color: ${theme.colors.lightGrey};
       background: ${theme.colors.coralRed};
     }
 
     @media ${viewport[7]} {
-      padding: 1em 2em;
-      font-size: 1.1em;
+      padding: 0.8em 1.8em;
+      font-size: 1em;
     }
   }
 `;

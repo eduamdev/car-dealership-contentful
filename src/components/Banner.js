@@ -25,28 +25,29 @@ const GridContainer = styled.div`
 const Title = styled.h1`
   color: #fff;
   font-weight: 700;
-  font-size: 3.75em;
-  letter-spacing: -0.01em;
+  font-size: 2.8em;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
+  line-height: 1.4;
   margin: 0;
 
   @media ${viewport[7]} {
-    font-size: 4.75em;
+    font-size: 3.7em;
   }
 
   @media ${viewport[9]} {
-    font-size: 5.7em;
+    font-size: 4.8em;
   }
 `;
 
 const Subtitle = styled.p`
   color: ${theme.colors.lightGrey};
-  font-size: 1.3em;
+  font-size: 1.15em;
   font-weight: 200;
   letter-spacing: -0.1px;
 
   @media ${viewport[7]} {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 `;
 

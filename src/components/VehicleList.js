@@ -26,10 +26,14 @@ const StyledSection = styled.section`
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   grid-gap: 1rem;
 
   @media ${viewport[7]} {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  @media ${viewport[9]} {
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   }
 `;

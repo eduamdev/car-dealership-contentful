@@ -45,7 +45,7 @@ const StyledHero = styled.section`
 
   &.quote {
     background: ${theme.colors.mainBlack};
-    min-height: 10em;
+    min-height: 9em;
     margin-bottom: 2em;
     /* background: radial-gradient(
       circle,
@@ -65,11 +65,11 @@ const StyledHero = styled.section`
     }
 
     & blockquote {
-      color: ${theme.colors.lightGrey};
-      font-size: 1.1em;
+      color: #fff;
+      font-size: 1em;
       font-weight: 200;
-      letter-spacing: -0.2px;
-      line-height: 1.5;
+      letter-spacing: 0.2px;
+      line-height: 1.75;
       text-align: right;
       /* font-style: italic; */
 
@@ -78,8 +78,9 @@ const StyledHero = styled.section`
       }
 
       @media ${viewport[7]} {
-        font-size: 1.2em;
-
+        font-size: 1.08em;
+        letter-spacing: 0.4px;
+        line-height: 1.6;
       }
     }
   }

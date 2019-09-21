@@ -13,12 +13,16 @@ const Item = styled.article`
   text-align: center;
   border-radius: 2px;
   position: relative;
-  height: 270px;
+  height: 150px;
   overflow: hidden;
   border: 1px solid ${theme.colors.mediumGrey};
 
   @media ${viewport[7]} {
-    height: 330px;
+    height: 200px;
+  }
+
+  @media ${viewport[9]} {
+    height: 240px;
   }
 
   &:hover .photo,
@@ -71,7 +75,7 @@ const Item = styled.article`
     right: 0;
     background: ${theme.colors.myrtleGreen};
     color: #fff;
-    padding: 0.5em 1.5em;
+    padding: 0.25em 1em;
     visibility: visible;
   }
 
@@ -84,7 +88,7 @@ const Item = styled.article`
     position: absolute;
     bottom: 0;
     padding: 0.5em 1em;
-    font-size: 1.1em;
+    font-size: 1em;
     display: block;
     letter-spacing: -0.2px;
     font-weight: 200;
@@ -93,7 +97,8 @@ const Item = styled.article`
     text-transform: capitalize;
 
     @media ${viewport[7]} {
-      font-size: 1.3em;
+      font-size: 1.1em;
+      padding: 0.5em 1.2em;
     }
   }
 `;
@@ -111,7 +116,7 @@ export default function Vehicle({ vehicle }) {
         <Link linkClass='vehicleLink box-shadow' url={`/catalog/${slug}`}>
           Learn more
         </Link>
-        <span className='price-tag'>$ {formatMoney(price)}</span>
+        <span className='price-tag box-shadow'>$ {formatMoney(price)}</span>
         <span className='name'>{name}</span>
       </Item>
     </>
