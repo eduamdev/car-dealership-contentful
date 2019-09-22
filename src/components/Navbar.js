@@ -39,15 +39,15 @@ const Logo = styled.div`
     color: #fff;
     font-size: 1.25em;
     font-weight: 400;
-    display: none;
-    /* visibility: hidden; */
+    /* display: none; */
+    visibility: hidden;
     letter-spacing: 0.7px;
     text-transform: capitalize;
 
     @media ${viewport[7]} {
       font-size: 1.3em;
-      display: block;
-      /* visibility: visible; */
+      /* display: block; */
+      visibility: visible;
     }
   }
 `;
@@ -101,8 +101,8 @@ const StyledList = styled.ul`
   /* grid-row-gap: 1em; */
   grid-column-gap: 0;
   /* background: ${theme.colors.matteBlack}; */
-  border-bottom: 1px solid ${theme.colors.darkGrey};
-  border-radius: 2px;
+  /* border-bottom: 1px solid ${theme.colors.lightGrey}; */
+  /* border-radius: 2px; */
 
   @media ${viewport[7]} {
     background: transparent;
@@ -115,20 +115,16 @@ const StyledList = styled.ul`
   }
 
   & li {
-    border-bottom: 1px solid ${theme.colors.darkGrey};
+    border-bottom: 1px solid ${theme.colors.lightGrey};
     padding: 0.25em 0;
 
-    &:hover, &:focus {
-      background: ${theme.colors.darkGreyAlt};
+    &:hover a, &:focus a {
+      color: ${theme.colors.lightGreen};
     }
 
     @media ${viewport[7]} {
       padding: 0;
       border: none;
-
-      &:hover, &:focus {
-        background: transparent;
-      }
     }
   }
 `;

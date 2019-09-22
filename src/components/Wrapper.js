@@ -4,7 +4,6 @@ import viewport from '../styles/media';
 
 const StyledWrapper = styled.div`
   width: 92%;
-
   margin: 0 auto;
 
   @media ${viewport[7]} {

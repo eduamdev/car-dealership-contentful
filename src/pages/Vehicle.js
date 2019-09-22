@@ -99,14 +99,14 @@ const Details = styled.section`
   }
 
   & p {
-    line-height: 1.45;
+    line-height: 1.5;
     font-weight: 200;
     padding: 2em 0;
     font-size: 0.95em;
 
     @media ${viewport[7]} {
       font-size: 1.05em;
-      line-height: 1.4;
+      line-height: 1.65;
     }
   }
 `;
@@ -175,8 +175,12 @@ const Extras = styled.section`
 
     & li {
       margin: 0 2em;
-      font-size: 1.05em;
+      font-size: 0.95em;
       font-weight: 200;
+
+      @media ${viewport[7]} {
+        font-size: 1.05em;
+      }
     }
   }
 `;
