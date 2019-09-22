@@ -98,31 +98,11 @@ button {
   background: rgb(5, 5, 5);
   overflow: hidden;
   display: grid;
-  align-items: start;
-  justify-content: start;
+  align-items: center;
+  justify-content: center;
   grid-template-columns: 1fr;
-  grid-template-areas:
-    'hero'
-    'services'
-    'featured'
-    'footer';
 }
 
-.hero-section {
-  grid-area: hero;
-}
-
-.services-section {
-  grid-area: services;
-}
-
-.featured-section {
-  grid-area: featured;
-}
-
-.footer-section {
-  grid-area: footer;
-}
 /* End Main Layout */
 
 /* Utils */

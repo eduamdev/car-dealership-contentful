@@ -240,61 +240,65 @@ export default class Home extends Component {
           <Navbar />
           <Banner title={`${name}`} link={link} icon={arrowL} />
         </Hero>
-        <Wrapper>
-          <ImageContainer>
-            {defaultImg.map((item, index) => {
-              return (
-                <div
-                  className='image'
-                  key={index}
-                  style={{ backgroundImage: `url(${item || defaultBcg})` }}
-                />
-              );
-            })}
-          </ImageContainer>
-          <GridContainer>
-            <Details>
-              <Title>Details</Title>
-              <p>{description}</p>
-            </Details>
-            <Info>
-              <Title>Info</Title>
-              <ul>
-                <li>
-                  Price: <span>${formatMoney(price)}</span>
-                </li>
-                <li>
-                  Type: <span>{type}</span>
-                </li>
-                <li>
-                  Brand: <span>{brand}</span>
-                </li>
-                <li>
-                  Model: <span>{model}</span>
-                </li>
-                <li>
-                  Max Capacity:{' '}
-                  <span>
-                    {capacity > 1 ? `${capacity} people` : `${capacity} person`}
-                  </span>
-                </li>
-                {rental && (
+        <section>
+          <Wrapper>
+            <ImageContainer>
+              {defaultImg.map((item, index) => {
+                return (
+                  <div
+                    className='image'
+                    key={index}
+                    style={{ backgroundImage: `url(${item || defaultBcg})` }}
+                  />
+                );
+              })}
+            </ImageContainer>
+            <GridContainer>
+              <Details>
+                <Title>Details</Title>
+                <p>{description}</p>
+              </Details>
+              <Info>
+                <Title>Info</Title>
+                <ul>
                   <li>
-                    <span>Can be rented</span>
+                    Price: <span>${formatMoney(price)}</span>
                   </li>
-                )}
-              </ul>
-            </Info>
-            <Extras>
-              <Title>Extras</Title>
-              <ul>
-                {extras.map((item, index) => {
-                  return <li key={index}>- {item}</li>;
-                })}
-              </ul>
-            </Extras>
-          </GridContainer>
-        </Wrapper>
+                  <li>
+                    Type: <span>{type}</span>
+                  </li>
+                  <li>
+                    Brand: <span>{brand}</span>
+                  </li>
+                  <li>
+                    Model: <span>{model}</span>
+                  </li>
+                  <li>
+                    Max Capacity:{' '}
+                    <span>
+                      {capacity > 1
+                        ? `${capacity} people`
+                        : `${capacity} person`}
+                    </span>
+                  </li>
+                  {rental && (
+                    <li>
+                      <span>Can be rented</span>
+                    </li>
+                  )}
+                </ul>
+              </Info>
+              <Extras>
+                <Title>Extras</Title>
+                <ul>
+                  {extras.map((item, index) => {
+                    return <li key={index}>- {item}</li>;
+                  })}
+                </ul>
+              </Extras>
+            </GridContainer>
+          </Wrapper>
+        </section>
         <Footer className='footer' />
       </>
     );

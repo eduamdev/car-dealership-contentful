@@ -44,9 +44,9 @@ export default function Home() {
           <StyledIcon>{quote}</StyledIcon>
         </blockquote>
       </Quote>
-      <Services className='services-section' />
-      <FeaturedVehicles className='featured-section' />
-      <Footer className='footer' />
+      <Services />
+      <FeaturedVehicles />
+      <Footer />
     </>
   );
 }

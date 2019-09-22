@@ -8,9 +8,9 @@ import { withVehicleConsumer } from '../context';
 import Title from './Title';
 import Loading from './Loading';
 
-const Container = styled.div`
+const GridContainer = styled.div`
   display: grid;
-  align-items: start;
+  align-items: center;
   justify-content: center;
   grid-template-areas:
     'filter'
@@ -55,13 +55,15 @@ function VehicleContainer({ context }) {
   }
 
   return (
-    <Wrapper>
-      <Title title='Search Vehicles' placement='right' />
-      <Container>
-        <StyledFilter vehicles={vehicles}></StyledFilter>
-        <StyledList vehicles={sortedVehicles}></StyledList>
-      </Container>
-    </Wrapper>
+    <section>
+      <Wrapper>
+        <Title title='Search Vehicles' placement='right' />
+        <GridContainer>
+          <StyledFilter vehicles={vehicles}></StyledFilter>
+          <StyledList vehicles={sortedVehicles}></StyledList>
+        </GridContainer>
+      </Wrapper>
+    </section>
   );
 }
 
