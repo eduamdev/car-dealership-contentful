@@ -33,6 +33,7 @@ const StyledHero = styled.section`
 
   &.vehicleHeroNotFound, &.errorHero{
     background: ${theme.colors.mainBlack};
+    min-height: 100vh;
     
     @media ${viewport[7]} {
       /* min-height: 100vh; */

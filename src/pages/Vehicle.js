@@ -202,7 +202,7 @@ export default class Home extends Component {
     const vehicle = getVehicle(this.state.slug);
     const link = {
       label: 'Back to Catalog',
-      linkClass: 'heroLinkReverse ripple',
+      linkClass: 'heroLinkReverse ripple box-shadow',
       url: '/catalog'
     };
 

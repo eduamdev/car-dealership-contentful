@@ -6,7 +6,7 @@ import { arrowL } from '../components/svg';
 
 const link = {
   label: 'Return Home',
-  linkClass: 'heroLinkReverse ripple',
+  linkClass: 'heroLinkReverse ripple box-shadow',
   url: '/'
 };
 
