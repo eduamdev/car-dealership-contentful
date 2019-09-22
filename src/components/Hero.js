@@ -7,10 +7,10 @@ import viewport from '../styles/media';
 import quoteImg from '../assets/images/quote-1.jpg';
 
 const StyledHero = styled.section`
-  min-height: 50vh;
+  /* min-height: 50vh; */
 
   @media ${viewport[7]} {
-    max-height: 100vh;
+    /* max-height: 100vh; */
   }
 
   &.defaultHero {
@@ -35,7 +35,7 @@ const StyledHero = styled.section`
     background: ${theme.colors.mainBlack};
     
     @media ${viewport[7]} {
-      min-height: 100vh;
+      /* min-height: 100vh; */
       /* max-width: 100vw;
       max-height: 100vh;
       width: 100vw;

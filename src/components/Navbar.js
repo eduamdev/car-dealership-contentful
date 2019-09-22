@@ -116,7 +116,7 @@ const StyledList = styled.ul`
 
   & li {
     border-bottom: 1px solid ${theme.colors.darkGrey};
-    padding: 0.5em 0;
+    padding: 0.25em 0;
 
     &:hover, &:focus {
       background: ${theme.colors.darkGreyAlt};

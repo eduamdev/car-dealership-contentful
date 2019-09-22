@@ -76,6 +76,13 @@ const ModalBody = styled.div`
   grid-template-columns: 1fr;
   grid-row-gap: 1em;
   width: 80%;
+  max-height: 80%;
+  margin: auto;
+
+  @media ${viewport[7]} {
+    margin: 0;
+    max-height: inherit;
+  }
 `;
 const ModalFooter = styled.div`
   display: none;

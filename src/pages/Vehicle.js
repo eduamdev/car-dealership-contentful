@@ -15,23 +15,41 @@ import { formatMoney } from '../utils/utils';
 const ImageContainer = styled.div`
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
   grid-column-gap: 1em;
   grid-row-gap: 0.75em;
   padding: 3em 0 1.5em 0;
 
+  @media ${viewport[7]} {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  @media ${viewport[9]} {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  }
+
   & .image {
     width: 100%;
-    height: 17em;
+    /* height: 17em; */
+    height: 250px;
     border: 1px solid ${theme.colors.darkGrey};
     border-radius: 2px;
     background-color: black; /* fallback color */
     background-position: center;
     background-size: cover;
 
-    @media ${viewport[7]} {
+    /* @media ${viewport[7]} {
       height: 25em;
-    }
+    } */
+
+    @media ${viewport[7]} {
+    height: 300px;
+  }
+
+  @media ${viewport[9]} {
+    height: 390px;
+  }
   }
 `;
 

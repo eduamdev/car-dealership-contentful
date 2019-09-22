@@ -11,7 +11,12 @@ const StyledBanner = styled.div`
   align-items: center;
   justify-content: start;
   text-align: left;
-  height: 600px;
+  /* height: 600px; */
+  margin: 2em auto;
+
+  @media ${viewport[7]} {
+    margin: 3em auto;
+  
 `;
 
 const GridContainer = styled.div`
