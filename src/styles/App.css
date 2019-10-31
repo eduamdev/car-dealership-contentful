@@ -50,6 +50,7 @@ html {
   -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-size: var(--min-font);
+  background: #000;
 }
 
 body {
