@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import Vehicle from './Vehicle';
-import Title from './Title';
 import theme from '../styles/theme';
 import { VehicleContext } from '../context';
 import Loading from './Loading';
 import viewport from '../styles/media';
+import Heading from './Heading';
+import Section from './Section';
 
-const StyledSection = styled.section`
+const StyledSection = styled(Section)`
   background: ${theme.colors.mainBlack};
 `;
 
@@ -21,11 +22,11 @@ const GridContainer = styled.div`
   grid-gap: 1rem;
 
   @media ${viewport[7]} {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 
   @media ${viewport[9]} {
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 `;
 
@@ -41,7 +42,7 @@ export default class FeaturedVehicles extends Component {
     return (
       <StyledSection>
         <Wrapper>
-          <Title title='Featured Vehicles' placement='right' />
+          <Heading>Featured Vehicles</Heading>
           {loading ? <Loading /> : <GridContainer>{vehicles}</GridContainer>}
         </Wrapper>
       </StyledSection>

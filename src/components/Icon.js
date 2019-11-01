@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import viewport from '../styles/media';
 
 const Icon = styled.span`
-  width: 26px;
+  width: 24px;
 
   @media ${viewport[7]} {
-    width: 30px;
+    width: 26px;
   }
 
   &.social {

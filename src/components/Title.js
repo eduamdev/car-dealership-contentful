@@ -28,12 +28,12 @@ const StyledTitle = styled.h2`
   padding: 0.3em 0;
   display: inline;
   border-bottom: 2px solid ${theme.colors.coralRed};
-  font-size: 1.65em;
+  font-size: 1.55em;
   letter-spacing: 0.3px;
 
   @media ${viewport[7]} {
     padding: 0.5em 0;
-    font-size: 2.5em;
+    font-size: 1.85em;
   }
 
   &.left {

@@ -1,14 +1,14 @@
 import React from 'react';
-import Hero from '../components/Hero';
 import Quote from '../components/Quote';
 import Services from '../components/Services';
-import Navbar from '../components/Navbar';
-import Banner from '../components/Banner';
 import FeaturedVehicles from '../components/FeaturedVehicles';
 import Footer from '../components/Footer';
-import { arrowR, quote } from '../components/svg';
-import Icon from '../components/Icon';
-import styled from 'styled-components';
+import { quote } from '../components/svg';
+import Hero from '../components/Hero';
+import quoteImg from '../assets/images/quote-1.jpg';
+import Header from '../components/Header';
+import Banner from '../components/Banner';
+import { arrowR } from '../components/svg';
 
 const link = {
   label: 'See Our Catalog',
@@ -16,37 +16,31 @@ const link = {
   url: '/catalog'
 };
 
-const StyledIcon = styled(Icon)`
-  display: inline-block;
-  fill: #fff;
-  width: 3.25em !important;
-`;
-
-export default function Home() {
+const Home = () => {
   return (
     <>
-      <Hero>
-        <Navbar />
+      <Hero hero='defaultHero'>
+        <Header />
         <Banner
-          title='Looking for a vehicle?'
+          title='Looking for a Vehicle?'
           subtitle='Look no further, we have you covered!'
           link={link}
           icon={arrowR}
         />
       </Hero>
-      <Quote>
-        <blockquote>
-          <p>
-            Vehicles are one of the best modes of transportation. Relationships
-            are one of the best vehicles of transformation
-          </p>
-          <footer>- Kate McGahan</footer>
-          <StyledIcon>{quote}</StyledIcon>
-        </blockquote>
-      </Quote>
+      <Hero hero='quote' img={quoteImg}>
+        <Quote
+          text='Vehicles are one of the best modes of transportation. Relationships
+            are one of the best vehicles of transformation'
+          footer='- Kate McGahan'
+          icon={quote}
+        ></Quote>
+      </Hero>
       <Services />
       <FeaturedVehicles />
       <Footer />
     </>
   );
-}
+};
+
+export default Home;

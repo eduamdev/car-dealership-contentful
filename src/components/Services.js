@@ -2,121 +2,82 @@ import React from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
 import Wrapper from './Wrapper';
+import Section from './Section';
 import viewport from '../styles/media';
-import Title from './Title';
 import { car, bicycle, ribbon, help, speedometer, options } from './svg';
 import Icon from './Icon';
+import Heading from './Heading';
+import P from './Paragraph';
 
-const StyledSection = styled.section`
+const StyledSection = styled(Section)`
   background: ${theme.colors.mainBlack};
-`;
+  padding: 2em 0;
 
-const Subtitle = styled.p`
-  font-size: 0.97em;
-  line-height: 1.6;
-  color: ${theme.colors.lightGrey};
-  text-align: left;
-
-  @media ${viewport[7]} {
-    font-size: 1.1em;
-    line-height: 1.4;
-  }
-`;
-
-const GridContainer = styled.div`
-  margin: 2em 0;
-  display: grid;
-  align-items: stretch;
-  justify-content: center;
-  grid-template-columns: 1fr;
-
-  @media ${viewport[4]} {
-    grid-template-columns: 1fr 1fr;
-  }
-`;
-
-const Item = styled.div`
-  border: 1px solid ${theme.colors.darkGrey};
-  margin: 0;
-  color: #fff;
-  text-align: left;
-  padding: 0.75em 1em;
-  display: grid;
-  align-items: baseline;
-  justify-content: center;
-  /* grid-template-columns: 1fr;
-  grid-template-rows: max-content 1fr; */
-  grid-template-columns: max-content 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: 'icon text';
-  grid-column-gap: 0.75em;
-
-  @media ${viewport[7]} {
-    grid-template-columns: max-content 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 'icon text';
-    grid-column-gap: 1.5em;
-    padding: 1.2em 1em;
-
-    &:nth-child(even) {
-      border-left: none;
-    }
-  }
-
-  & .image-container {
-    grid-area: icon;
-    align-self: start;
-    justify-self: center;
-    width: 45px;
+  & .services-grid {
+    margin: 2em 0;
+    display: grid;
+    align-items: stretch;
+    justify-content: center;
+    grid-template-columns: 1fr;
 
     @media ${viewport[7]} {
-      align-self: start;
-      justify-self: start;
+      grid-template-columns: 1fr 1fr;
     }
 
-    @media ${viewport[9]} {
-      width: 60px;
-    }
-  }
-
-  & .text-container {
-    grid-area: text;
-    text-align: left;
-    letter-spacing: -0.1px;
-
-    & .title {
-      font-size: 1.05em;
-      font-weight: 700;
-      text-transform: uppercase;
+    & .service {
+      border: 1px solid ${theme.colors.darkGrey};
+      margin: 0;
       color: #fff;
-      line-height: 1.4;
-      margin-bottom: 0.5em;
       text-align: left;
-      letter-spacing: 0.3px;
+      padding: 0.75em 1em;
+      display: grid;
+      align-items: baseline;
+      justify-content: center;
+      /* grid-template-columns: 1fr;
+  grid-template-rows: max-content 1fr; */
+      grid-template-columns: max-content 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: 'icon text';
+      grid-column-gap: 0.75em;
 
       @media ${viewport[7]} {
-        font-size: 1.25em;
+        grid-template-columns: max-content 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'icon text';
+        grid-column-gap: 1.5em;
+        padding: 1.2em 1em;
+
+        &:nth-child(even) {
+          border-left: none;
+        }
       }
-    }
 
-    & .subtitle {
-      color: ${theme.colors.lightGrey};
-      font-size: 0.92em;
-      line-height: 1.4;
-      font-weight: 200;
-      letter-spacing: 0.3px;
-      text-align: left;
+      & .service-icon-wrapper {
+        grid-area: icon;
+        align-self: start;
+        justify-self: center;
+        width: 40px;
 
-      @media ${viewport[7]} {
-        font-size: 0.98em;
-        line-height: 1.35;
+        @media ${viewport[7]} {
+          align-self: start;
+          justify-self: start;
+        }
+
+        @media ${viewport[9]} {
+          width: 48px;
+        }
+      }
+
+      & .service-text-wrapper {
+        grid-area: text;
         text-align: left;
+        letter-spacing: -0.1px;
       }
     }
   }
 `;
 
-const ItemIcon = styled(Icon)`
+const IconFilled = styled(Icon)`
   fill: ${theme.colors.lightGrey};
 `;
 
@@ -124,79 +85,71 @@ export default function services() {
   return (
     <StyledSection>
       <Wrapper>
-        <Title title='Services' placement='left' />
-        <Subtitle>
+        <Heading rank={2}>Services</Heading>
+        <P>
           Our main goal is to give you the most satisfactory experience possible
-        </Subtitle>
-        <GridContainer>
-          <Item>
-            <div className='image-container'>
-              <ItemIcon>{car}</ItemIcon>
+        </P>
+        <div className='services-grid'>
+          <article className='service'>
+            <div className='service-icon-wrapper'>
+              <IconFilled>{car}</IconFilled>
             </div>
-            <div className='text-container'>
-              <h3 className='title'>Traditional options</h3>
-              <p className='subtitle'>
-                Vehicles based on petroleum derived fuels
-              </p>
+            <div className='service-text-wrapper'>
+              <Heading rank={3}>Traditional options</Heading>
+              <P>Vehicles based on petroleum derived fuels</P>
             </div>
-          </Item>
-          <Item>
-            <div className='image-container'>
-              <ItemIcon>{bicycle}</ItemIcon>
+          </article>
+          <article className='service'>
+            <div className='service-icon-wrapper'>
+              <IconFilled>{bicycle}</IconFilled>
             </div>
-            <div className='text-container'>
-              <h3 className='title'>Eco friendly alternatives</h3>
-              <p className='subtitle'>All-electric and fuel cell vehicles</p>
+            <div className='service-text-wrapper'>
+              <Heading rank={3}>Eco friendly alternatives</Heading>
+              <P>All-electric and fuel cell vehicles</P>
             </div>
-          </Item>
-          <Item>
-            <div className='image-container'>
-              <ItemIcon>{ribbon}</ItemIcon>
+          </article>
+          <article className='service'>
+            <div className='service-icon-wrapper'>
+              <IconFilled>{ribbon}</IconFilled>
             </div>
-            <div className='text-container'>
-              <h3 className='title'>Happiness Guaranteed</h3>
-              <p className='subtitle'>
+            <div className='service-text-wrapper'>
+              <Heading rank={3}>Happiness Guaranteed</Heading>
+              <P>
                 Our #1 priority is your happiness. Which means we stand by our
                 vehicles 100%, no matter what, no questions asked, no holds
                 barred, no ifs, no buts. If you have a problem, we will solve
                 it.
-              </p>
+              </P>
             </div>
-          </Item>
-          <Item>
-            <div className='image-container'>
-              <ItemIcon>{speedometer}</ItemIcon>
+          </article>
+          <article className='service'>
+            <div className='service-icon-wrapper service-icon-wrapper'>
+              <IconFilled>{speedometer}</IconFilled>
             </div>
-            <div className='text-container'>
-              <h3 className='title'>Sport alternatives</h3>
-              <p className='subtitle'>
-                For those interested in power and speed
-              </p>
+            <div className='service-text-wrapper'>
+              <Heading rank={3}>Sport alternatives</Heading>
+              <P>For those interested in power and speed</P>
             </div>
-          </Item>
-          <Item>
-            <div className='image-container'>
-              <ItemIcon>{options}</ItemIcon>
+          </article>
+          <article className='service'>
+            <div className='service-icon-wrapper'>
+              <IconFilled>{options}</IconFilled>
             </div>
-            <div className='text-container'>
-              <h3 className='title'>Multiple choices</h3>
-              <p className='subtitle'>
-                Sedans, vans, bikes, trucks, boats and more...
-              </p>
+            <div className='service-text-wrapper'>
+              <Heading rank={3}>Multiple choices</Heading>
+              <P>Sedans, vans, bikes, trucks, boats and more...</P>
             </div>
-          </Item>
-          <Item>
-            <div className='image-container'>
-              <ItemIcon>{help}</ItemIcon>
+          </article>
+          <article className='service'>
+            <div className='service-icon-wrapper'>
+              <IconFilled>{help}</IconFilled>
             </div>
-            <div className='text-container'>
-              <h3 className='title'>24/7 Customer Support</h3>
-              <p className='subtitle'>
-                Do you have questions? contact us anytime!
-              </p>
+            <div className='service-text-wrapper'>
+              <Heading rank={3}>24/7 Customer Support</Heading>
+              <P>Do you have questions? contact us anytime!</P>
             </div>
-          </Item>
-        </GridContainer>
+          </article>
+        </div>
       </Wrapper>
     </StyledSection>
   );

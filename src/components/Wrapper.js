@@ -1,21 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
-import viewport from '../styles/media';
+import { viewport } from './Breakpoints';
+import PropTypes from 'prop-types';
 
 const StyledWrapper = styled.div`
-  width: 92%;
   margin: 0 auto;
+  max-width: 92.5%;
+  padding: 0 10px;
 
   @media ${viewport[7]} {
-    width: 88%;
+    max-width: 90%;
   }
 
   @media ${viewport[9]} {
-    width: 80%;
-    max-width: 1440px;
+    max-width: 87.5%;
+    padding: 0;
+  }
+
+  @media ${viewport[12]} {
+    max-width: 1376px;
+    width: 90%;
+    /* padding-left: 3rem;
+    padding-right: 3rem; */
   }
 `;
 
-export default function Wrapper({ children }) {
-  return <StyledWrapper>{children}</StyledWrapper>;
-}
+const Wrapper = ({ className, children }) => {
+  return <StyledWrapper className={className}>{children}</StyledWrapper>;
+};
+
+Wrapper.propTypes = {
+  className: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
+};
+
+export default Wrapper;

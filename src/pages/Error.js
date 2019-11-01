@@ -1,7 +1,7 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Banner from '../components/Banner';
-import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 import { arrowL } from '../components/svg';
 
 const link = {
@@ -13,7 +13,7 @@ const link = {
 export default function Error() {
   return (
     <Hero hero='errorHero'>
-      <Navbar />
+      <Header />
       <Banner
         title='Page Not Found'
         subtitle='Not the page you are looking for?'

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Hero from '../components/Hero';
-import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
@@ -209,7 +209,7 @@ export default class Home extends Component {
     if (!vehicle) {
       return (
         <Hero hero='vehicleHeroNotFound'>
-          <Navbar />
+          <Header />
           <Banner
             title='No such vehicle could be found...'
             link={link}
@@ -237,7 +237,7 @@ export default class Home extends Component {
     return (
       <>
         <Hero hero='vehicleHero' img={mainImg}>
-          <Navbar />
+          <Header />
           <Banner title={`${name}`} link={link} icon={arrowL} />
         </Hero>
         <section>

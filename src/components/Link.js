@@ -36,16 +36,15 @@ const StyledLink = styled(Link)`
   &.nav-link {
     letter-spacing: 1.2px;
     color: #fff;
-    font-size: 0.95em;
+    font-size: 1em;
     font-weight: 400;
-    text-transform: uppercase;
     display: block;
     text-align: center;
     padding: 0.5em 0;
 
     @media ${viewport[7]} {
       padding: 0.7em 1.4em;
-      font-size: 1em;
+      font-size: 1.225em;
 
       &:hover,
       &:focus {
@@ -69,7 +68,7 @@ const StyledLink = styled(Link)`
 
     &:hover .icon,
     &:focus .icon {
-      transform: translateX(25%);
+      transform: translateX(35%);
     }
 
     @media ${viewport[7]} {

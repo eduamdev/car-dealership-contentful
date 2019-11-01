@@ -1,27 +1,6 @@
 @import-normalize; /* bring in normalize.css styles */
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../assets/fonts/Sofia Pro Light.woff') format('woff'),
-    url('../assets/fonts/Sofia Pro Light.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 200;
-}
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,900&display=swap');
 
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../assets/fonts/Sofia Pro Regular.woff') format('woff'),
-    url('../assets/fonts/Sofia Pro Regular.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../assets/fonts/Sofia Pro Bold.woff') format('woff'),
-    url('../assets/fonts/Sofia Pro Bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 700;
-}
 /* Variables */
 :root {
   --font-size: 16px;
@@ -38,8 +17,8 @@
 }
 
 html {
-  font-family: Sofia Pro, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    sans-serif;
+  font-family: 'Fira Sans', sans-serif;
+
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-weight: normal;
@@ -51,6 +30,7 @@ html {
   font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   font-size: var(--min-font);
   background: #000;
+  color: rgba(255, 255, 255, 0.8) !important;
 }
 
 body {
@@ -72,6 +52,7 @@ h5,
 h6 {
   text-rendering: optimizeLegibility;
   line-height: 1.1;
+  color: #fff;
 }
 
 li {

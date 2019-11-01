@@ -1,58 +1,31 @@
 import React from 'react';
 import styled from 'styled-components';
-import Wrapper from '../components/Wrapper';
-import Link from '../components/Link';
-import viewport from '../styles/media';
-import theme from '../styles/theme';
-import Icon from '../components/Icon';
+import Wrapper from './Wrapper';
+import Link from './Link';
+import { viewport } from './Breakpoints';
+import Icon from './Icon';
+import Heading from './Heading';
+import P from './Paragraph';
+import Section from './Section';
 
-const StyledBanner = styled.div`
-  display: grid;
-  align-items: center;
-  justify-content: start;
-  text-align: left;
-  /* height: 600px; */
-  margin: 2em auto;
+const StyledSection = styled(Section)`
+  & .banner-flex {
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 
-  @media ${viewport[7]} {
-    margin: 3em auto;
-  
-`;
+    & .banner-flex__title {
+      margin-bottom: 0.35em;
+    }
 
-const GridContainer = styled.div`
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 1fr;
-  grid-row-gap: 3em;
-`;
+    & .banner-flex__subtitle {
+      margin-bottom: 3em;
+    }
 
-const Title = styled.h1`
-  color: #fff;
-  font-weight: 700;
-  font-size: 2.8em;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  line-height: 1.4;
-  margin: 0;
-
-  @media ${viewport[7]} {
-    font-size: 3.7em;
-  }
-
-  @media ${viewport[9]} {
-    font-size: 4.8em;
-  }
-`;
-
-const Subtitle = styled.p`
-  color: ${theme.colors.lightGrey};
-  font-size: 1.15em;
-  font-weight: 200;
-  letter-spacing: -0.1px;
-
-  @media ${viewport[7]} {
-    font-size: 1.3em;
+    & .banner-flex__link {
+    }
   }
 `;
 
@@ -71,31 +44,32 @@ const LinkContainer = styled.div`
   }
 `;
 
-export default function Banner({
-  children,
-  title,
-  titleClass,
-  subtitle,
-  link,
-  icon
-}) {
+function showLink(link, icon) {
+  const { linkClass, label, url } = link;
+
   return (
-    <Wrapper>
-      <StyledBanner className='banner'>
-        <GridContainer>
-          <Title className={titleClass}>{title}</Title>
-          {subtitle && <Subtitle>{subtitle}</Subtitle>}
-          {link && (
-            <LinkContainer className='center'>
-              <Link linkClass={link.linkClass} url={link.url}>
-                <span>{link.label}</span>
-                {icon && <Icon className='icon'>{icon}</Icon>}
-              </Link>
-            </LinkContainer>
-          )}
-          {children}
-        </GridContainer>
-      </StyledBanner>
-    </Wrapper>
+    <LinkContainer className='center'>
+      <Link linkClass={`banner-flex__link ${linkClass}`} url={url}>
+        <span>{label}</span>
+        {icon && <Icon className='icon'>{icon}</Icon>}
+      </Link>
+    </LinkContainer>
   );
 }
+
+const Banner = ({ children, title, titleClass, subtitle, link, icon }) => (
+  <StyledSection>
+    <Wrapper>
+      <div className='banner-flex'>
+        <Heading rank={1} className={`banner-flex__title ${titleClass}`}>
+          {title}
+        </Heading>
+        {subtitle && <P className='banner-flex__subtitle'>{subtitle}</P>}
+        {link && showLink(link, icon)}
+        {children}
+      </div>
+    </Wrapper>
+  </StyledSection>
+);
+
+export default Banner;
