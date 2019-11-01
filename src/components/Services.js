@@ -11,10 +11,15 @@ import P from './Paragraph';
 
 const StyledSection = styled(Section)`
   background: ${theme.colors.mainBlack};
-  padding: 2em 0;
+
+  & .main-heading {
+    margin-bottom: 0.25em;
+    text-align: center;
+    letter-spacing: 1.4px;
+  }
 
   & .services-grid {
-    margin: 2em 0;
+    margin: 0;
     display: grid;
     align-items: stretch;
     justify-content: center;
@@ -24,10 +29,15 @@ const StyledSection = styled(Section)`
       grid-template-columns: 1fr 1fr;
     }
 
+    @media ${viewport[12]} {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
     & .service {
-      border: 1px solid ${theme.colors.darkGrey};
+      border: 1px solid #222;
+      border-radius: 4px;
       margin: 0;
-      color: #fff;
+      /* color: #fff; */
       text-align: left;
       padding: 0.75em 1em;
       display: grid;
@@ -48,30 +58,35 @@ const StyledSection = styled(Section)`
         padding: 1.2em 1em;
 
         &:nth-child(even) {
-          border-left: none;
+          /* border-left: none; */
         }
       }
 
       & .service-icon-wrapper {
         grid-area: icon;
-        align-self: start;
+        align-self: center;
         justify-self: center;
-        width: 40px;
+        width: 38px;
 
         @media ${viewport[7]} {
-          align-self: start;
-          justify-self: start;
+          align-self: center;
+          justify-self: center;
         }
 
         @media ${viewport[9]} {
-          width: 48px;
+          width: 42px;
         }
       }
 
       & .service-text-wrapper {
         grid-area: text;
+        align-self: center;
         text-align: left;
         letter-spacing: -0.1px;
+
+        & p {
+          margin: 0;
+        }
       }
     }
   }
@@ -85,8 +100,10 @@ export default function services() {
   return (
     <StyledSection>
       <Wrapper>
-        <Heading rank={2}>Services</Heading>
-        <P>
+        <Heading rank={2} className='main-heading'>
+          Services
+        </Heading>
+        <P style={{ marginBottom: '2.5em', textAlign: 'center' }}>
           Our main goal is to give you the most satisfactory experience possible
         </P>
         <div className='services-grid'>
@@ -115,10 +132,8 @@ export default function services() {
             <div className='service-text-wrapper'>
               <Heading rank={3}>Happiness Guaranteed</Heading>
               <P>
-                Our #1 priority is your happiness. Which means we stand by our
-                vehicles 100%, no matter what, no questions asked, no holds
-                barred, no ifs, no buts. If you have a problem, we will solve
-                it.
+                Our #1 priority is your happiness. If you have a problem, we
+                will solve it.
               </P>
             </div>
           </article>

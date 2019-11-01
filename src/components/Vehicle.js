@@ -91,7 +91,7 @@ const Item = styled.article`
     font-size: 1em;
     display: block;
     letter-spacing: -0.2px;
-    font-weight: 200;
+    font-weight: 400;
     background: ${theme.colors.warmBlack};
     color: ${theme.colors.lightGrey};
     text-transform: capitalize;

@@ -18,6 +18,8 @@ const StyledSection = styled(Section)`
 
     & .banner-flex__title {
       margin-bottom: 0.35em;
+      font-weight: 900;
+      letter-spacing: 1px;
     }
 
     & .banner-flex__subtitle {
@@ -25,6 +27,13 @@ const StyledSection = styled(Section)`
     }
 
     & .banner-flex__link {
+      font-weight: 400;
+      padding: 0.8em 1.5em;
+      border-radius: 4px;
+
+      & svg {
+        vertical-align: middle;
+      }
     }
   }
 `;

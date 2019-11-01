@@ -15,16 +15,16 @@ function getHeadingFontSize(rank, minFontSize, ratio = 1) {
       return minFontSize * (ratio / 1.05);
 
     case 3:
-      return minFontSize * (ratio / 1.45);
+      return minFontSize * (ratio / 2);
 
     case 4:
-      return minFontSize * (ratio / 1.5);
+      return minFontSize * (ratio / 2.1);
 
     case 5:
-      return minFontSize * (ratio / 1.6);
+      return minFontSize * (ratio / 2.2);
 
     case 6:
-      return minFontSize * (ratio / 1.7);
+      return minFontSize * (ratio / 2.3);
 
     default:
       return minFontSize;
@@ -44,17 +44,17 @@ const StyledHeading = styled.div`
   /* Styles based on viewport size */
   @media ${viewport[7]} {
     font-size: ${({ rank }) =>
-      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 1.4, 0.75)}em;
+      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 1.7, 0.75)}em;
   }
 
   @media ${viewport[9]} {
     font-size: ${({ rank }) =>
-      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 1.7, 0.65)}em;
+      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 1.95, 0.65)}em;
   }
 
   @media ${viewport[12]} {
     font-size: ${({ rank }) =>
-      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 1.8, 0.55)}em;
+      getHeadingFontSize(rank, MIN_FONT_SIZE_EM * 2.55, 0.485)}em;
   }
 `;
 

@@ -11,6 +11,12 @@ import Section from './Section';
 
 const StyledSection = styled(Section)`
   background: ${theme.colors.mainBlack};
+
+  & .main-heading {
+    margin-bottom: 1.5em;
+    text-align: center;
+    letter-spacing: 1.4px;
+  }
 `;
 
 const GridContainer = styled.div`
@@ -42,7 +48,7 @@ export default class FeaturedVehicles extends Component {
     return (
       <StyledSection>
         <Wrapper>
-          <Heading>Featured Vehicles</Heading>
+          <Heading className='main-heading'>Featured Vehicles</Heading>
           {loading ? <Loading /> : <GridContainer>{vehicles}</GridContainer>}
         </Wrapper>
       </StyledSection>
