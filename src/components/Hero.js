@@ -50,16 +50,16 @@ const StyledHero = styled.section`
       url(${quoteImg}) center/cover no-repeat;
 
     & blockquote {
-      font-size: 1em;
+      font-size: 1.1em;
       font-weight: 200;
       letter-spacing: 0.2px;
-      line-height: 1.75;
+      line-height: 1.55;
       text-align: right;
 
       @media ${viewport[7]} {
-        font-size: 1.08em;
+        font-size: 1.15em;
         letter-spacing: 0.4px;
-        line-height: 1.6;
+        line-height: 1.45;
       }
     }
   }

@@ -4,7 +4,7 @@ import { viewport } from './Breakpoints';
 import PropTypes from 'prop-types';
 
 const StyledParagraph = styled.p`
-  font-size: 1.1em;
+  font-size: 1.175em;
   font-weight: 400;
   letter-spacing: 0.45px;
   line-height: 1.75;
@@ -16,13 +16,13 @@ const StyledParagraph = styled.p`
   }
 
   @media ${viewport[9]} {
-    font-size: 1.085em;
+    font-size: 1.125em;
     letter-spacing: 0.5px;
     line-height: 1.85;
   }
 
   @media ${viewport[12]} {
-    font-size: 1.195em;
+    font-size: 1.25em;
     letter-spacing: 0.4px;
     line-height: 1.6;
     word-spacing: 0.35px;

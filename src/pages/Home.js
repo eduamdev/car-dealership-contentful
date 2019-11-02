@@ -32,7 +32,7 @@ const Home = () => {
         <Quote
           text='Vehicles are one of the best modes of transportation. Relationships
             are one of the best vehicles of transformation'
-          footer='- Kate McGahan'
+          footer='Kate McGahan'
           icon={quote}
         ></Quote>
       </Hero>

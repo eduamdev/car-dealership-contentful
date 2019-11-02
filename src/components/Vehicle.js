@@ -11,11 +11,11 @@ const Item = styled.article`
   background: ${theme.colors.darkGreyAlt};
   margin: 0;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 4px;
   position: relative;
   height: 150px;
   overflow: hidden;
-  border: 1px solid ${theme.colors.mediumGrey};
+  border: 1px solid #333;
 
   @media ${viewport[7]} {
     height: 200px;

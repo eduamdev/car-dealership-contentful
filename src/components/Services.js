@@ -14,8 +14,22 @@ const StyledSection = styled(Section)`
 
   & .main-heading {
     margin-bottom: 0.25em;
-    text-align: center;
-    letter-spacing: 1.4px;
+    text-align: left;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+
+    @media ${viewport[7]} {
+      text-align: center;
+    }
+  }
+
+  & .subtitle-heading {
+    margin-bottom: 2.5em;
+    text-align: left;
+
+    @media ${viewport[7]} {
+      text-align: center;
+    }
   }
 
   & .services-grid {
@@ -103,7 +117,7 @@ export default function services() {
         <Heading rank={2} className='main-heading'>
           Services
         </Heading>
-        <P style={{ marginBottom: '2.5em', textAlign: 'center' }}>
+        <P className='subtitle-heading'>
           Our main goal is to give you the most satisfactory experience possible
         </P>
         <div className='services-grid'>

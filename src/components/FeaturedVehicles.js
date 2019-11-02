@@ -15,24 +15,24 @@ const StyledSection = styled(Section)`
   & .main-heading {
     margin-bottom: 1.5em;
     text-align: center;
-    letter-spacing: 1.4px;
-  }
-`;
-
-const GridContainer = styled.div`
-  /* margin: 5em auto; */
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-  grid-gap: 1rem;
-
-  @media ${viewport[7]} {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    letter-spacing: 0.4px;
+    font-weight: 400;
   }
 
-  @media ${viewport[9]} {
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  & .featured-grid {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    grid-gap: 1rem;
+
+    @media ${viewport[7]} {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    @media ${viewport[9]} {
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
   }
 `;
 
@@ -49,7 +49,11 @@ export default class FeaturedVehicles extends Component {
       <StyledSection>
         <Wrapper>
           <Heading className='main-heading'>Featured Vehicles</Heading>
-          {loading ? <Loading /> : <GridContainer>{vehicles}</GridContainer>}
+          {loading ? (
+            <Loading />
+          ) : (
+            <div className='featured-grid'>{vehicles}</div>
+          )}
         </Wrapper>
       </StyledSection>
     );

@@ -6,26 +6,25 @@ import { viewport } from './Breakpoints';
 
 const StyledIcon = styled(Icon)`
   display: inline-block;
-  fill: #fff;
-  width: 2.25em !important;
+  fill: #ddd;
+  width: 2em !important;
 `;
 
 const StyledWrapper = styled(Wrapper)`
+  padding-top: 0;
   & .quote {
     max-width: 580px;
     margin-left: auto;
     background: rgba(0, 0, 0, 0.54);
     padding: 1.5em 1.25em;
 
-    @media ${viewport[7]} {
-      margin-right: 5vh;
-    }
-
     & .quote-text {
       letter-spacing: 0.4px;
       line-height: 1.8;
       word-spacing: 0.7px;
       font-weight: 400;
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
     }
 
     & .quote-footer {
@@ -33,7 +32,7 @@ const StyledWrapper = styled(Wrapper)`
       margin-top: 0.5em;
       font-weight: 500;
       letter-spacing: 0.3px;
-      opacity: 0.75;
+      color: #fff;
     }
   }
 `;

@@ -30,6 +30,8 @@ const StyledHeader = styled.header`
         & .header-grid__logo-text {
           color: #fff;
           font-size: 1.6em;
+          font-family: 'Libre Baskerville', serif;
+          font-style: italic;
         }
       }
     }
