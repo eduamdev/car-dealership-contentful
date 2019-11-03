@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import Link from './Link';
 import logo from '../assets/images/logo.png';
+import { book } from './svg';
+import { viewport } from './Breakpoints';
 
 const StyledHeader = styled.header`
   & .header-grid {
@@ -38,6 +40,36 @@ const StyledHeader = styled.header`
 
     & .header-grid__nav {
       grid-area: nav;
+
+      & .header-grid__nav__link {
+        letter-spacing: 1.1px;
+        color: #ddd;
+        fill: #ddd;
+        font-size: 1.1em;
+        font-weight: 400;
+        display: block;
+        text-align: center;
+        padding: 0.5em 0;
+        opacity: 1;
+
+        @media ${viewport[7]} {
+          padding: 0.7em 1.4em;
+          font-size: 1.25em;
+
+          &:hover,
+          &:focus {
+            opacity: 0.75;
+          }
+        }
+
+        & .header-grid__nav__link__svg-container {
+          margin-right: 10px;
+
+          & svg {
+            vertical-align: middle;
+          }
+        }
+      }
     }
   }
 `;
@@ -56,7 +88,13 @@ const Header = () => {
           <nav className='header-grid__nav'>
             <ul>
               <li>
-                <Link linkClass='nav-link' url='/catalog'>
+                <Link
+                  linkClass='header-grid__nav__link nav-link'
+                  url='/catalog'
+                >
+                  <span className='header-grid__nav__link__svg-container'>
+                    {book}
+                  </span>
                   Catalog
                 </Link>
               </li>

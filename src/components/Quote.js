@@ -2,12 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import Icon from './Icon';
 import Wrapper from './Wrapper';
-import { viewport } from './Breakpoints';
 
 const StyledIcon = styled(Icon)`
   display: inline-block;
   fill: #ddd;
   width: 2em !important;
+  margin-right: 10px;
+
+  & svg{
+    height: 100%;
+    width: 100%;
+    vertical-align: super;
+  }
 `;
 
 const StyledWrapper = styled(Wrapper)`
@@ -20,7 +26,7 @@ const StyledWrapper = styled(Wrapper)`
 
     & .quote-text {
       letter-spacing: 0.4px;
-      line-height: 1.8;
+      line-height: 1.65;
       word-spacing: 0.7px;
       font-weight: 400;
       font-family: 'Libre Baskerville', serif;
@@ -41,9 +47,8 @@ export default function Quote({ text, footer, icon }) {
   return (
     <StyledWrapper>
       <blockquote className='quote'>
-        <p className='quote-text'>{text}</p>
+        <p className='quote-text'><StyledIcon>{icon}</StyledIcon> {text}</p>
         <footer className='quote-footer'>{footer}</footer>
-        <StyledIcon>{icon}</StyledIcon>
       </blockquote>
     </StyledWrapper>
   );

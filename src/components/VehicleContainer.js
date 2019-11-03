@@ -5,8 +5,45 @@ import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import viewport from '../styles/media';
 import { withVehicleConsumer } from '../context';
-import Title from './Title';
 import Loading from './Loading';
+import Heading from './Heading';
+import Section from './Section';
+
+const StyledSection = styled(Section)`
+  & .catalog-flex {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    & .catalog-flex__main-heading {
+      margin-bottom: 2.25em;
+      text-align: left;
+      letter-spacing: 0.4px;
+      font-weight: 400;
+      position: relative;
+      display: inline-block;
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 80px;
+        top: 45px;
+        left: 0;
+        background: #da353b;
+      }
+
+      @media ${viewport[7]} {
+        text-align: center;
+
+        &:after {
+          left: calc(50% - 40px);
+          top: 55px;
+        }
+      }
+    }
+  }
+`;
 
 const GridContainer = styled.div`
   display: grid;
@@ -33,6 +70,7 @@ const GridContainer = styled.div`
     grid-template-columns: 1fr 3fr;
   }
 `;
+
 const StyledFilter = styled(VehicleFilter)`
   grid-area: filter;
 
@@ -55,15 +93,19 @@ function VehicleContainer({ context }) {
   }
 
   return (
-    <section>
+    <StyledSection>
       <Wrapper>
-        <Title title='Search Vehicles' placement='right' />
+        <div className='catalog-flex'>
+          <Heading rank={2} className='catalog-flex__main-heading'>
+            Catalog
+          </Heading>
+        </div>
         <GridContainer>
           <StyledFilter vehicles={vehicles}></StyledFilter>
           <StyledList vehicles={sortedVehicles}></StyledList>
         </GridContainer>
       </Wrapper>
-    </section>
+    </StyledSection>
   );
 }
 

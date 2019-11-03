@@ -12,11 +12,38 @@ import Section from './Section';
 const StyledSection = styled(Section)`
   background: ${theme.colors.mainBlack};
 
-  & .main-heading {
-    margin-bottom: 1.5em;
-    text-align: center;
-    letter-spacing: 0.4px;
-    font-weight: 400;
+  & .featured-flex {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    & .featured-flex__main-heading {
+      margin-bottom: 2.25em;
+      text-align: left;
+      letter-spacing: 0.4px;
+      font-weight: 400;
+      position: relative;
+      display: inline-block;
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 80px;
+        top: 45px;
+        left: 0;
+        background: #da353b;
+      }
+
+      @media ${viewport[7]} {
+        text-align: center;
+
+        &:after {
+          left: calc(50% - 40px);
+          top: 55px;
+        }
+      }
+    }
   }
 
   & .featured-grid {
@@ -48,7 +75,11 @@ export default class FeaturedVehicles extends Component {
     return (
       <StyledSection>
         <Wrapper>
-          <Heading className='main-heading'>Featured Vehicles</Heading>
+          <div className='featured-flex'>
+            <Heading rank={2} className='featured-flex__main-heading'>
+              Featured Vehicles
+            </Heading>
+          </div>
           {loading ? (
             <Loading />
           ) : (

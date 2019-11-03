@@ -21,8 +21,6 @@ const GridSection = styled.section`
 `;
 
 const StyledSection = styled.section`
-  background-color: ${theme.colors.mainBlack};
-  color: ${theme.colors.lightGrey};
   display: grid;
   align-items: center;
   justify-content: center;

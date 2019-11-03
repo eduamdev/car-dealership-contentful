@@ -27,9 +27,10 @@ const Item = styled.article`
 
   &:hover .photo,
   &:focus .photo {
-    transform: scale(1.2);
-    transition: all 0.75s;
-    opacity: 0.25;
+    transform: scale(1.1);
+    transition: all 0.3s;
+    /* opacity: 0.25; */
+    filter: sepia(1.5) grayscale(1) saturate(0.25);
   }
 
   &:hover .photo:before,
@@ -45,6 +46,7 @@ const Item = styled.article`
     /* background-image: url("${defaultImg}"); */
     background-position: center;
     background-size: cover;
+    filter: saturate(1.25) contrast(1.05) brightness(0.8) sepia(0.25);
 
     &:before {
       content: '';

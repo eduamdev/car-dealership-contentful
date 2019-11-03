@@ -4,28 +4,27 @@ import { viewport } from './Breakpoints';
 import PropTypes from 'prop-types';
 
 const StyledParagraph = styled.p`
-  font-size: 1.175em;
+  font-size: 1.025em;
   font-weight: 400;
-  letter-spacing: 0.45px;
-  line-height: 1.75;
+  letter-spacing: normal;
+  word-spacing: normal;
+  line-height: 1.55;
   margin-bottom: 1em;
   color: hsla(255, 100%, 100%, 0.8);
 
   @media ${viewport[7]} {
-    letter-spacing: 0.6px;
+    font-size: 1.05em;
+    letter-spacing: 0.5px;
   }
 
   @media ${viewport[9]} {
-    font-size: 1.125em;
-    letter-spacing: 0.5px;
-    line-height: 1.85;
+    font-size: 1.1em;
+    line-height: 1.7;
   }
 
   @media ${viewport[12]} {
-    font-size: 1.25em;
-    letter-spacing: 0.4px;
-    line-height: 1.6;
-    word-spacing: 0.35px;
+    font-size: 1.125em;
+    line-height: 1.5;
   }
 `;
 

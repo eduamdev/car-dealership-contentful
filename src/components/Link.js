@@ -33,25 +33,6 @@ const StyledLink = styled(Link)`
     }
   }
 
-  &.nav-link {
-    letter-spacing: 1.1px;
-    color: #fff;
-    font-size: 1em;
-    font-weight: 400;
-    display: block;
-    text-align: center;
-    padding: 0.5em 0;
-
-    @media ${viewport[7]} {
-      padding: 0.7em 1.4em;
-      font-size: 1.1em;
-
-      &:hover,
-      &:focus {
-        color: ${theme.colors.grey};
-      }
-    }
-  }
   &.heroLink,
   &.heroLinkReverse {
     padding: 0.75em 1.5em;

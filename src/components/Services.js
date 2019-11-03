@@ -12,23 +12,46 @@ import P from './Paragraph';
 const StyledSection = styled(Section)`
   background: ${theme.colors.mainBlack};
 
-  & .main-heading {
-    margin-bottom: 0.25em;
-    text-align: left;
-    letter-spacing: 0.4px;
-    font-weight: 400;
+  & .services-flex {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
-    @media ${viewport[7]} {
-      text-align: center;
+    & .services-flex__main-heading {
+      margin-bottom: 1.25em;
+      text-align: left;
+      letter-spacing: 0.4px;
+      font-weight: 400;
+      position: relative;
+      display: inline-block;
+
+      &:after {
+        content: '';
+        position: absolute;
+        height: 3px;
+        width: 80px;
+        top: 45px;
+        left: 0;
+        background: #da353b;
+      }
+
+      @media ${viewport[7]} {
+        text-align: center;
+
+        &:after {
+          left: calc(50% - 40px);
+          top: 55px;
+        }
+      }
     }
-  }
 
-  & .subtitle-heading {
-    margin-bottom: 2.5em;
-    text-align: left;
+    & .services-flex__subtitle-heading {
+      margin-bottom: 2.5em;
+      text-align: left;
 
-    @media ${viewport[7]} {
-      text-align: center;
+      @media ${viewport[7]} {
+        text-align: center;
+      }
     }
   }
 
@@ -114,12 +137,15 @@ export default function services() {
   return (
     <StyledSection>
       <Wrapper>
-        <Heading rank={2} className='main-heading'>
-          Services
-        </Heading>
-        <P className='subtitle-heading'>
-          Our main goal is to give you the most satisfactory experience possible
-        </P>
+        <div className='services-flex'>
+          <Heading rank={2} className='services-flex__main-heading'>
+            Services
+          </Heading>
+          <P className='services-flex__subtitle-heading'>
+            Our main goal is to give you the most satisfactory experience
+            possible
+          </P>
+        </div>
         <div className='services-grid'>
           <article className='service'>
             <div className='service-icon-wrapper'>

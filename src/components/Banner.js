@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import Link from './Link';
-import { viewport } from './Breakpoints';
 import Icon from './Icon';
 import Heading from './Heading';
 import P from './Paragraph';
@@ -60,7 +59,7 @@ function showLink(link, icon) {
     <LinkContainer className='center'>
       <Link linkClass={`banner-flex__link ${linkClass}`} url={url}>
         <span>{label}</span>
-        {icon && <Icon className='icon'>{icon}</Icon>}
+        {icon && <Icon className='icon md'>{icon}</Icon>}
       </Link>
     </LinkContainer>
   );
