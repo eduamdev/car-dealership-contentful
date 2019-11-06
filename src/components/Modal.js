@@ -147,7 +147,7 @@ const BtnSave = styled.button`
   letter-spacing: 0.8px;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: #ddd;
 
   @media ${viewport[7]} {
     color: ${theme.colors.myrtleGreen};
@@ -165,7 +165,8 @@ const BtnSave = styled.button`
 `;
 
 const BackDrop = styled.div`
-  background-color: rgba(255, 255, 255, 0.25);
+  /* background-color: rgba(255, 255, 255, 0.25); */
+  background-color: rgba(150, 150, 150, 0.4);
   height: 100%;
   position: fixed;
   top: 0;

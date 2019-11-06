@@ -5,7 +5,6 @@ import Banner from '../components/Banner';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
 import { VehicleContext } from '../context';
-import { arrowL } from '../components/svg';
 import Wrapper from '../components/Wrapper';
 import defaultBcg from '../assets/images/placeholder.jpg';
 import viewport from '../styles/media';
@@ -144,7 +143,7 @@ const Info = styled.section`
       }
 
       & span {
-        color: #fff;
+        color: #ddd;
         font-weight: 400;
         font-size: 1.05em;
         letter-spacing: 0.3px;
@@ -200,21 +199,12 @@ export default class Home extends Component {
   render() {
     const { getVehicle } = this.context;
     const vehicle = getVehicle(this.state.slug);
-    const link = {
-      label: 'Back to Catalog',
-      linkClass: 'heroLinkReverse ripple box-shadow',
-      url: '/catalog'
-    };
 
     if (!vehicle) {
       return (
         <Hero hero='vehicleHeroNotFound'>
           <Header />
-          <Banner
-            title='No such vehicle could be found...'
-            link={link}
-            icon={arrowL}
-          />
+          <Banner title='No such vehicle could be found...' />
         </Hero>
       );
     }
@@ -238,7 +228,7 @@ export default class Home extends Component {
       <>
         <Hero hero='vehicleHero' img={mainImg}>
           <Header />
-          <Banner title={`${name}`} link={link} icon={arrowL} />
+          <Banner title={`${name}`} />
         </Hero>
         <section>
           <Wrapper>

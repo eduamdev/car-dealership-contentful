@@ -6,7 +6,7 @@
 :root {
   --font-size: 16px;
   --main-black: '#000';
-  --main-white: '#fff';
+  --main-white: '#ddd';
 }
 /* End Variables */
 
@@ -53,7 +53,7 @@ h5,
 h6 {
   text-rendering: optimizeLegibility;
   line-height: 1.1;
-  color: #fff;
+  color: #ddd;
   font-family: 'Libre Baskerville', serif;
 }
 
@@ -96,6 +96,6 @@ button {
   /* Similar syntax to box-shadow */
 }
 .box-shadow {
-  box-shadow: 0px 2px 4px rgb(0, 0, 0, 0.18);
+  box-shadow: 0px 8px 16px rgb(0, 0, 0, 0.18);
 }
 /* End Utils */

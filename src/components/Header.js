@@ -30,7 +30,7 @@ const StyledHeader = styled.header`
         }
 
         & .header-grid__logo-text {
-          color: #fff;
+          color: #ddd;
           font-size: 1.6em;
           font-family: 'Libre Baskerville', serif;
           font-style: italic;

@@ -5,7 +5,7 @@ import theme from '../styles/theme';
 import { Modal, BackDrop } from './Modal';
 import viewport from '../styles/media';
 import { formatMoney, getUnique } from '../utils/utils';
-import { filter } from './svg';
+import { filter, arrowD } from './svg';
 import Button from './Button';
 import PropTypes from 'prop-types';
 
@@ -16,29 +16,45 @@ const StyledSection = styled.section`
     }
 
     & .filter-button {
-      padding: 0.25em 1em;
-      font-size: 1.1em;
+      padding: 0.5em 1em;
+      letter-spacing: 1px;
+      font-size: 0.9em;
       line-height: 1.5;
-      color: #ddd;
+      color: #ccc;
       background: transparent;
       border-radius: 100px;
       border: none;
       cursor: pointer;
       fill: #ddd;
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
+      /* background-color: rgba(255, 255, 255, 0.1); */
+      float: right;
+
+      @media ${viewport[7]} {
+        float: unset;
+        font-size: 1.1em;
+        margin-bottom: 1em;
+      }
 
       &:focus,
       &:hover {
-        background: rgba(68, 68, 68, 0.8);
+        background-color: rgba(68, 68, 68, 0.45);
       }
 
       & .filter-button__icon {
-        width: 18px;
+        width: 16px;
         display: inline-block;
         margin-right: 10px;
 
         @media ${viewport[9]} {
-          width: 20px;
+          width: 24px;
+        }
+
+        &.icon-right {
+          margin-right: 0;
+          margin-left: 10px;
+
+          width: 12px;
         }
 
         & svg {
@@ -245,6 +261,7 @@ const VehicleFilter = ({ vehicles }) => {
       <Button className='filter-button' clickHandler={handleModal}>
         <span className='filter-button__icon'>{filter}</span>
         Filters
+        <span className='filter-button__icon icon-right'>{arrowD}</span>
       </Button>
 
       <Modal className='modal' show={modalIsOpen} close={handleModal}>

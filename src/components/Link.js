@@ -38,7 +38,7 @@ const StyledLink = styled(Link)`
     padding: 0.75em 1.5em;
     border: 1px solid transparent;
     background: ${theme.colors.coralRed};
-    color: #fff;
+    color: #ddd;
     font-size: 0.95em;
     text-transform: uppercase;
     display: flex;
@@ -80,6 +80,7 @@ const StyledLink = styled(Link)`
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 60%;
+    border-radius: 4px;
     /* transform: scale(0); */
 
     &:hover,

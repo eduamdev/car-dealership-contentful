@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from '../styles/theme';
 import Wrapper from './Wrapper';
 import Section from './Section';
-import viewport from '../styles/media';
+import { viewport } from './Breakpoints';
 import { car, bicycle, ribbon, help, speedometer, options } from './svg';
 import Icon from './Icon';
 import Heading from './Heading';
@@ -52,6 +52,8 @@ const StyledSection = styled(Section)`
     align-items: stretch;
     justify-content: center;
     grid-template-columns: 1fr;
+    max-width: 1100px;
+    margin: 0 auto;
 
     @media ${viewport[7]} {
       grid-template-columns: 1fr 1fr;
@@ -65,7 +67,7 @@ const StyledSection = styled(Section)`
       border: 1px solid #222;
       border-radius: 4px;
       margin: 0;
-      /* color: #fff; */
+      /* color: #ddd; */
       text-align: left;
       padding: 0.75em 1em;
       display: grid;
@@ -96,11 +98,6 @@ const StyledSection = styled(Section)`
         justify-self: center;
         width: 38px;
 
-        @media ${viewport[7]} {
-          align-self: center;
-          justify-self: center;
-        }
-
         @media ${viewport[9]} {
           width: 42px;
         }
@@ -111,6 +108,10 @@ const StyledSection = styled(Section)`
         align-self: center;
         text-align: left;
         letter-spacing: -0.1px;
+
+        & .service-text-wrapper__title {
+          margin-bottom: 0.2em;
+        }
 
         & p {
           margin: 0;
@@ -139,7 +140,9 @@ export default function services() {
               <IconFilled>{car}</IconFilled>
             </div>
             <div className='service-text-wrapper'>
-              <Heading rank={3}>Traditional options</Heading>
+              <Heading rank={3} className='service-text-wrapper__title'>
+                Traditional options
+              </Heading>
               <P>Vehicles based on petroleum derived fuels</P>
             </div>
           </article>
@@ -148,7 +151,9 @@ export default function services() {
               <IconFilled>{bicycle}</IconFilled>
             </div>
             <div className='service-text-wrapper'>
-              <Heading rank={3}>Eco friendly alternatives</Heading>
+              <Heading rank={3} className='service-text-wrapper__title'>
+                Eco friendly alternatives
+              </Heading>
               <P>All-electric and fuel cell vehicles</P>
             </div>
           </article>
@@ -157,7 +162,9 @@ export default function services() {
               <IconFilled>{ribbon}</IconFilled>
             </div>
             <div className='service-text-wrapper'>
-              <Heading rank={3}>Happiness Guaranteed</Heading>
+              <Heading rank={3} className='service-text-wrapper__title'>
+                Happiness Guaranteed
+              </Heading>
               <P>
                 Our #1 priority is your happiness. If you have a problem, we
                 will solve it.
@@ -169,7 +176,9 @@ export default function services() {
               <IconFilled>{speedometer}</IconFilled>
             </div>
             <div className='service-text-wrapper'>
-              <Heading rank={3}>Sport alternatives</Heading>
+              <Heading rank={3} className='service-text-wrapper__title'>
+                Sport alternatives
+              </Heading>
               <P>For those interested in power and speed</P>
             </div>
           </article>
@@ -178,7 +187,9 @@ export default function services() {
               <IconFilled>{options}</IconFilled>
             </div>
             <div className='service-text-wrapper'>
-              <Heading rank={3}>Multiple choices</Heading>
+              <Heading rank={3} className='service-text-wrapper__title'>
+                Multiple choices
+              </Heading>
               <P>Sedans, vans, bikes, trucks, boats and more...</P>
             </div>
           </article>
@@ -187,7 +198,9 @@ export default function services() {
               <IconFilled>{help}</IconFilled>
             </div>
             <div className='service-text-wrapper'>
-              <Heading rank={3}>24/7 Customer Support</Heading>
+              <Heading rank={3} className='service-text-wrapper__title'>
+                24/7 Customer Support
+              </Heading>
               <P>Do you have questions? contact us anytime!</P>
             </div>
           </article>

@@ -35,7 +35,7 @@ const StyledHeading = styled.div`
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
-  color: #fff;
+  color: #ddd;
   text-align: left;
   font-weight: bold;
   line-height: ${({ rank }) => (rank > 3 ? '1.35' : '1.15')};

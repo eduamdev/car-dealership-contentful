@@ -38,10 +38,10 @@ const StyledFooter = styled.footer`
       color: #ddd;
       fill: currentColor;
       font-weight: 400;
-      opacity: 0.7;
+      opacity: 0.54;
 
       &:hover {
-        color: #fff;
+        /* color: #ddd; */
         opacity: 1;
       }
 

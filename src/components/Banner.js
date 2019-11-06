@@ -20,8 +20,8 @@ const StyledSection = styled(Section)`
       margin-bottom: 0.75em;
       font-weight: 900;
       letter-spacing: -1px;
-      padding: 10px;
-      background: rgba(255, 255, 255, 0.85);
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #eee, rgba(255, 255, 255, 0.8));
       color: #000;
 
       @media ${viewport[9]} {
@@ -59,7 +59,7 @@ const LinkContainer = styled.div`
 
     & .icon {
       margin-left: 0.4em;
-      fill: #fff;
+      fill: #ddd;
       transition: 0.1s ease-in;
     }
   }

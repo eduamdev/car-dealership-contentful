@@ -10,7 +10,7 @@ const StyledParagraph = styled.p`
   word-spacing: normal;
   line-height: 1.55;
   margin-bottom: 1em;
-  color: hsla(255, 100%, 100%, 0.8);
+  color: #ccc;
 
   @media ${viewport[7]} {
     font-size: 1.05em;
@@ -23,7 +23,6 @@ const StyledParagraph = styled.p`
   }
 
   @media ${viewport[12]} {
-    font-size: 1.125em;
     line-height: 1.5;
   }
 `;

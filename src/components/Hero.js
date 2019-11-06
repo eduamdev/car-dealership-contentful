@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import data from '../content/data';
 import theme from '../styles/theme';
 import catalogImg from '../assets/images/catalog-1.jpg';
-import viewport from '../styles/media';
+import { viewport } from './Breakpoints';
 import quoteImg from '../assets/images/quote-1.jpg';
 
 const StyledHero = styled.section`
@@ -21,14 +21,24 @@ const StyledHero = styled.section`
         rgba(0, 0, 0, 0.9) 95%
       ),
       url(${catalogImg}) center/cover no-repeat;
-    margin-bottom: 2em;
+    min-height: 200px;
+
+    @media ${viewport[7]} {
+      min-height: 300px;
+      margin-bottom: 2em;
+    }
+
+    @media ${viewport[12]} {
+      min-height: 380px;
+    }
   }
 
   &.vehicleHero {
     background: linear-gradient(
         180deg,
         rgb(0, 0, 0) 5%,
-        rgba(0, 0, 0, 0.45) 70%
+        rgba(0, 0, 0, 0.35) 70%,
+        rgba(0, 0, 0, 0.95) 98%
       ),
       url(${props => props.img && props.img}) center/cover no-repeat;
   }

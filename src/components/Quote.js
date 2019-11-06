@@ -9,7 +9,7 @@ const StyledIcon = styled(Icon)`
   width: 2em !important;
   margin-right: 10px;
 
-  & svg{
+  & svg {
     height: 100%;
     width: 100%;
     vertical-align: super;
@@ -38,7 +38,7 @@ const StyledWrapper = styled(Wrapper)`
       margin-top: 0.5em;
       font-weight: 500;
       letter-spacing: 0.3px;
-      color: #fff;
+      color: #ddd;
     }
   }
 `;
@@ -47,7 +47,9 @@ export default function Quote({ text, footer, icon }) {
   return (
     <StyledWrapper>
       <blockquote className='quote'>
-        <p className='quote-text'><StyledIcon>{icon}</StyledIcon> {text}</p>
+        <p className='quote-text'>
+          <StyledIcon>{icon}</StyledIcon> {text}
+        </p>
         <footer className='quote-footer'>{footer}</footer>
       </blockquote>
     </StyledWrapper>

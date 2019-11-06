@@ -18,7 +18,7 @@ const StyledSection = styled(Section)`
     flex-direction: column;
 
     & .featured-flex__main-heading {
-      margin-bottom: 2.25em;
+      margin-bottom: 3em;
       text-align: left;
       letter-spacing: 0.4px;
       font-weight: 900;
@@ -58,7 +58,7 @@ const StyledSection = styled(Section)`
     }
 
     @media ${viewport[9]} {
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
   }
 `;

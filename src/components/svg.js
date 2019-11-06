@@ -136,7 +136,7 @@ const loading = (
     enableBackground='new 0 0 0 0'
     xmlSpace='preserve'
   >
-    <circle fill='#fff' stroke='none' cx='6' cy='50' r='6'>
+    <circle fill='#ddd' stroke='none' cx='6' cy='50' r='6'>
       <animate
         attributeName='opacity'
         dur='1s'
@@ -145,7 +145,7 @@ const loading = (
         begin='0.1'
       />
     </circle>
-    <circle fill='#fff' stroke='none' cx='26' cy='50' r='6'>
+    <circle fill='#ddd' stroke='none' cx='26' cy='50' r='6'>
       <animate
         attributeName='opacity'
         dur='1s'
@@ -154,7 +154,7 @@ const loading = (
         begin='0.2'
       />
     </circle>
-    <circle fill='#fff' stroke='none' cx='46' cy='50' r='6'>
+    <circle fill='#ddd' stroke='none' cx='46' cy='50' r='6'>
       <animate
         attributeName='opacity'
         dur='1s'
@@ -188,12 +188,24 @@ const filter = (
   </svg>
 );
 
+const arrowD = (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    width='24'
+    height='24'
+    viewBox='0 0 24 24'
+  >
+    <path d='M0 7.33l2.829-2.83 9.175 9.339 9.167-9.339 2.829 2.83-11.996 12.17z' />
+  </svg>
+);
+
 export {
   logo,
   twitter,
   github,
   arrowR,
   arrowL,
+  arrowD,
   car,
   bicycle,
   ribbon,

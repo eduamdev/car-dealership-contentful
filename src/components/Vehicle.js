@@ -11,11 +11,11 @@ const Item = styled.article`
   background: ${theme.colors.darkGreyAlt};
   margin: 0;
   text-align: center;
-  border-radius: 4px;
+  border-radius: 10px;
   position: relative;
   height: 150px;
   overflow: hidden;
-  border: 1px solid #333;
+  /* border: 1px solid ${theme.colors.darkGrey}; */
 
   @media ${viewport[7]} {
     height: 200px;
@@ -27,10 +27,10 @@ const Item = styled.article`
 
   &:hover .photo,
   &:focus .photo {
-    transform: scale(1.1);
-    transition: all 0.3s;
-    /* opacity: 0.25; */
-    filter: sepia(1.5) grayscale(1) saturate(0.25);
+    transform: scale(1.15);
+    transition: all 0.35s;
+    opacity: 0.2;
+    /* filter: sepia(1.5) grayscale(1) saturate(0.25); */
   }
 
   &:hover .photo:before,
@@ -39,14 +39,16 @@ const Item = styled.article`
   }
 
   & .photo {
+    border-radius:10px;
     width: 100%;
     height: 100%;
-    border-radius: 2px;
+    overflow: hidden;
     background-color: black; /* fallback color */
     /* background-image: url("${defaultImg}"); */
     background-position: center;
     background-size: cover;
-    filter: saturate(1.25) contrast(1.05) brightness(0.8) sepia(0.25);
+    /* filter: saturate(1.25) contrast(1.05) brightness(0.8) sepia(0.25); */
+    filter: brightness(0.95);
 
     &:before {
       content: '';
@@ -75,8 +77,9 @@ const Item = styled.article`
     position: absolute;
     top: 0;
     right: 0;
-    background: ${theme.colors.myrtleGreen};
-    color: #fff;
+    /* background: ${theme.colors.myrtleGreen}; */
+    background: #37718E;
+    color: #ddd;
     padding: 0.25em 1em;
     visibility: visible;
   }
@@ -94,8 +97,9 @@ const Item = styled.article`
     display: block;
     letter-spacing: -0.2px;
     font-weight: 400;
-    background: ${theme.colors.warmBlack};
+    /* background: ${theme.colors.warmBlack}; */
     color: ${theme.colors.lightGrey};
+    background: #254E70;
     text-transform: capitalize;
 
     @media ${viewport[7]} {
