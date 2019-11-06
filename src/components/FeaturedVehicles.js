@@ -21,7 +21,7 @@ const StyledSection = styled(Section)`
       margin-bottom: 2.25em;
       text-align: left;
       letter-spacing: 0.4px;
-      font-weight: 400;
+      font-weight: 900;
       position: relative;
       display: inline-block;
 

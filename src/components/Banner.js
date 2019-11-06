@@ -6,6 +6,7 @@ import Icon from './Icon';
 import Heading from './Heading';
 import P from './Paragraph';
 import Section from './Section';
+import { viewport } from './Breakpoints';
 
 const StyledSection = styled(Section)`
   & .banner-flex {
@@ -16,13 +17,25 @@ const StyledSection = styled(Section)`
     justify-content: center;
 
     & .banner-flex__title {
-      margin-bottom: 0.35em;
+      margin-bottom: 0.75em;
       font-weight: 900;
-      letter-spacing: 1px;
+      letter-spacing: -1px;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.85);
+      color: #000;
+
+      @media ${viewport[9]} {
+        margin-bottom: 0.35em;
+      }
     }
 
     & .banner-flex__subtitle {
-      margin-bottom: 3em;
+      margin-bottom: 2em;
+      font-size: 1.2em;
+
+      @media ${viewport[9]} {
+        font-size: 1.5em;
+      }
     }
 
     & .banner-flex__link {

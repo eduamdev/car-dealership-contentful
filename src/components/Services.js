@@ -18,10 +18,10 @@ const StyledSection = styled(Section)`
     flex-direction: column;
 
     & .services-flex__main-heading {
-      margin-bottom: 1.25em;
+      margin-bottom: 2.25em;
       text-align: left;
       letter-spacing: 0.4px;
-      font-weight: 400;
+      font-weight: 900;
       position: relative;
       display: inline-block;
 
@@ -42,15 +42,6 @@ const StyledSection = styled(Section)`
           left: calc(50% - 40px);
           top: 55px;
         }
-      }
-    }
-
-    & .services-flex__subtitle-heading {
-      margin-bottom: 2.5em;
-      text-align: left;
-
-      @media ${viewport[7]} {
-        text-align: center;
       }
     }
   }
@@ -141,10 +132,6 @@ export default function services() {
           <Heading rank={2} className='services-flex__main-heading'>
             Services
           </Heading>
-          <P className='services-flex__subtitle-heading'>
-            Our main goal is to give you the most satisfactory experience
-            possible
-          </P>
         </div>
         <div className='services-grid'>
           <article className='service'>

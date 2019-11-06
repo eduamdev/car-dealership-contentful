@@ -5,147 +5,164 @@ import theme from '../styles/theme';
 import { Modal, BackDrop } from './Modal';
 import viewport from '../styles/media';
 import { formatMoney, getUnique } from '../utils/utils';
+import { filter } from './svg';
+import Button from './Button';
+import PropTypes from 'prop-types';
 
 const StyledSection = styled.section`
-  color: #fff;
-  width: 100%;
-
-  @media ${viewport[9]} {
-    align-self: stretch;
-  }
-`;
-
-const GridContainer = styled.div`
-  display: grid;
-  align-items: center;
-  justify-content: start;
-  border-bottom: 1px solid ${theme.colors.mediumGrey};
-  padding: 1em 0;
-  border-radius: 2px;
-
-  @media ${viewport[9]} {
-    padding: 2em;
-    justify-content: stretch;
-    border: 1px solid ${theme.colors.mediumGrey};
-  }
-`;
-
-const FilterButton = styled.span`
-  display: none;
-
-  &.modal {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-items: center;
-    grid-row-gap: 0.5em;
-  }
-
-  &.allFilters {
-    cursor: pointer;
-    padding: 0.4em 1.4em;
-    border-radius: 2px;
-    font-size: 1.05em;
-    font-weight: 200;
-    letter-spacing: 0.5px;
-    color: ${theme.colors.lightGrey};
-    background: transparent;
-    border: 1px solid ${theme.colors.mediumGrey};
-    border-radius: 4px;
-    display: block;
-
+  &.filter {
     @media ${viewport[9]} {
-      display: none;
+      margin-top: 1em;
     }
 
-    &:hover,
-    &:focus {
-      background-color: ${theme.colors.darkGreyAlt};
+    & .filter-button {
+      padding: 0.25em 1em;
+      font-size: 1.1em;
+      line-height: 1.5;
+      color: #ddd;
+      background: transparent;
+      border-radius: 100px;
+      border: none;
+      cursor: pointer;
+      fill: #ddd;
+      margin-bottom: 1em;
+
+      &:focus,
+      &:hover {
+        background: rgba(68, 68, 68, 0.8);
+      }
+
+      & .filter-button__icon {
+        width: 18px;
+        display: inline-block;
+        margin-right: 10px;
+
+        @media ${viewport[9]} {
+          width: 20px;
+        }
+
+        & svg {
+          vertical-align: middle;
+          height: 100%;
+          width: 100%;
+        }
+      }
     }
-  }
 
-  & .filter-label {
-    color: ${theme.colors.lightGrey};
-    font-size: 1em;
+    & .filter-grid__item {
+      &.modal {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        grid-row-gap: 0.5em;
+      }
 
-    & .price {
-      color: ${theme.colors.lightGreen};
-    }
-  }
+      &.allFilters {
+        cursor: pointer;
+        padding: 0.4em 1.4em;
+        border-radius: 2px;
+        font-size: 1.05em;
+        font-weight: 200;
+        letter-spacing: 0.5px;
+        color: ${theme.colors.lightGrey};
+        background: transparent;
+        border: 1px solid ${theme.colors.mediumGrey};
+        border-radius: 4px;
+        display: block;
 
-  & .filter-select {
-    /* cursor: pointer; */
-    padding: 0.4em 0.5em;
-    background: ${theme.colors.warmBlack};
-    color: ${theme.colors.lightGrey};
-    outline-color: ${theme.colors.mediumGrey};
-  }
+        @media ${viewport[9]} {
+          /* display: none; */
+        }
 
-  & .checkbox input[type='checkbox'] {
-    opacity: 0;
-    display: none;
-  }
+        &:hover,
+        &:focus {
+          background-color: ${theme.colors.darkGreyAlt};
+        }
+      }
 
-  & .checkbox label {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
-    padding-left: 28px;
-  }
+      & .filter-label {
+        color: ${theme.colors.lightGrey};
+        font-size: 1em;
 
-  & .checkbox label::before,
-  & .checkbox label::after {
-    position: absolute;
-    content: '';
+        & .price {
+          color: ${theme.colors.lightGreen};
+        }
+      }
 
-    /*Needed for the line-height to take effect*/
-    display: inline-block;
-  }
+      & .filter-select {
+        /* cursor: pointer; */
+        padding: 0.4em 0.5em;
+        background: ${theme.colors.warmBlack};
+        color: ${theme.colors.lightGrey};
+        outline-color: ${theme.colors.mediumGrey};
+      }
 
-  /*Outer box of the fake checkbox*/
-  & .checkbox label::before {
-    height: 16px;
-    width: 16px;
+      & .checkbox input[type='checkbox'] {
+        opacity: 0;
+        display: none;
+      }
 
-    border: 1px solid;
-    left: 0px;
+      & .checkbox label {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+        padding-left: 28px;
+      }
 
-    /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+      & .checkbox label::before,
+      & .checkbox label::after {
+        position: absolute;
+        content: '';
+
+        /*Needed for the line-height to take effect*/
+        display: inline-block;
+      }
+
+      /*Outer box of the fake checkbox*/
+      & .checkbox label::before {
+        height: 16px;
+        width: 16px;
+
+        border: 1px solid;
+        left: 0px;
+
+        /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
      *to vertically center it.
      */
-    /* top: 3px; */
-  }
+        /* top: 3px; */
+      }
 
-  /*Checkmark of the fake checkbox*/
-  & .checkbox label::after {
-    height: 5px;
-    width: 9px;
-    border-left: 2px solid;
-    border-bottom: 2px solid;
+      /*Checkmark of the fake checkbox*/
+      & .checkbox label::after {
+        height: 5px;
+        width: 9px;
+        border-left: 2px solid;
+        border-bottom: 2px solid;
 
-    transform: rotate(-45deg);
+        transform: rotate(-45deg);
 
-    left: 4px;
-    top: 4px;
-  }
+        left: 4px;
+        top: 4px;
+      }
 
-  /*Hide the checkmark by default*/
-  & .checkbox input[type='checkbox'] + label::after {
-    content: none;
-  }
+      /*Hide the checkmark by default*/
+      & .checkbox input[type='checkbox'] + label::after {
+        content: none;
+      }
 
-  /*Unhide on the checked state*/
-  & .checkbox input[type='checkbox']:checked + label::after {
-    content: '';
-  }
+      /*Unhide on the checked state*/
+      & .checkbox input[type='checkbox']:checked + label::after {
+        content: '';
+      }
 
-  /*Adding focus styles on the outer-box of the fake checkbox*/
-  & .checkbox input[type='checkbox']:focus + label::before {
-    outline: ${theme.colors.mediumGrey} auto 5px;
-  }
+      /*Adding focus styles on the outer-box of the fake checkbox*/
+      & .checkbox input[type='checkbox']:focus + label::before {
+        outline: ${theme.colors.mediumGrey} auto 5px;
+      }
 
-  @media ${viewport[9]} {
-    display: grid;
+      @media ${viewport[9]} {
+        /* display: grid;
     align-items: center;
     justify-content: center;
     grid-template-columns: 1fr;
@@ -159,12 +176,15 @@ const FilterButton = styled.span`
     & .filter-select {
       padding: 0.1em 0.5em;
       font-size: 0.95em;
+    } */
+      }
     }
   }
 `;
 
-export default function VehicleFilter({ vehicles }) {
+const VehicleFilter = ({ vehicles }) => {
   const context = useContext(VehicleContext);
+
   const {
     modalIsOpen,
     handleModal,
@@ -218,122 +238,119 @@ export default function VehicleFilter({ vehicles }) {
     );
   });
 
-  const filters = (mode = '') => (
-    <>
-      {/* price */}
-      <FilterButton className={mode}>
-        <label className='filter-label' htmlFor='price'>
-          Price <span className='price'>$ {formatMoney(price)}</span>
-        </label>
-        <input
-          type='range'
-          name='price'
-          min={minPrice}
-          max={maxPrice}
-          id='price'
-          value={price}
-          onChange={handleChange}
-        ></input>
-      </FilterButton>
-      {/* end price */}
-      {/* select type */}
-      <FilterButton className={mode}>
-        <label className='filter-label' htmlFor='type'>
-          Type
-        </label>
-        <select
-          className='filter-select'
-          name='type'
-          id='type'
-          value={type}
-          onChange={handleChange}
-        >
-          {types}
-        </select>
-      </FilterButton>
-      {/* end select type */}
-      {/* brand */}
-      <FilterButton className={mode}>
-        <label className='filter-label' htmlFor='brand'>
-          Brand
-        </label>
-        <select
-          className='filter-select'
-          name='brand'
-          id='brand'
-          value={brand}
-          onChange={handleChange}
-        >
-          {brands}
-        </select>
-      </FilterButton>
-      {/* end brand */}
-      {/* model */}
-      <FilterButton className={mode}>
-        <label className='filter-label' htmlFor='model'>
-          Model
-        </label>
-        <select
-          className='filter-select'
-          name='model'
-          id='model'
-          value={model}
-          onChange={handleChange}
-        >
-          {models}
-        </select>
-      </FilterButton>
-      {/* end color */}
-      {/* capacity */}
-      <FilterButton className={mode}>
-        <label className='filter-label' htmlFor='capacity'>
-          Capacity
-        </label>
-        <select
-          className='filter-select'
-          name='capacity'
-          id='capacity'
-          value={capacity}
-          onChange={handleChange}
-        >
-          {people}
-        </select>
-      </FilterButton>
-      {/* end capacity */}
-      {/* rental */}
-      <FilterButton className={mode}>
-        <div className='checkbox'>
-          <input
-            type='checkbox'
-            id='rental'
-            name='rental'
-            checked={rental}
-            onChange={handleChange}
-          />
-          <label htmlFor='rental'>Rental</label>
-        </div>
-      </FilterButton>
-      {/* end rental */}
-    </>
-  );
-
   return (
-    <StyledSection>
+    <StyledSection className='filter'>
       {modalIsOpen && <BackDrop onClick={handleModal}></BackDrop>}
-      <GridContainer>
-        <FilterButton className='allFilters' onClick={handleModal}>
-          Filters
-        </FilterButton>
-        {filters()}
-      </GridContainer>
+
+      <Button className='filter-button' clickHandler={handleModal}>
+        <span className='filter-button__icon'>{filter}</span>
+        Filters
+      </Button>
 
       <Modal className='modal' show={modalIsOpen} close={handleModal}>
-        {/* <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odit
-          amet aliquam.
-        </p> */}
-        {filters('modal')}
+        <>
+          {/* price */}
+          <span className={`filter-grid__item modal`}>
+            <label className='filter-label' htmlFor='price'>
+              Price <span className='price'>$ {formatMoney(price)}</span>
+            </label>
+            <input
+              type='range'
+              name='price'
+              min={minPrice}
+              max={maxPrice}
+              id='price'
+              value={price}
+              onChange={handleChange}
+            ></input>
+          </span>
+          {/* end price */}
+          {/* select type */}
+          <span className={`filter-grid__item modal`}>
+            <label className='filter-label' htmlFor='type'>
+              Type
+            </label>
+            <select
+              className='filter-select'
+              name='type'
+              id='type'
+              value={type}
+              onChange={handleChange}
+            >
+              {types}
+            </select>
+          </span>
+          {/* end select type */}
+          {/* brand */}
+          <span className={`filter-grid__item modal`}>
+            <label className='filter-label' htmlFor='brand'>
+              Brand
+            </label>
+            <select
+              className='filter-select'
+              name='brand'
+              id='brand'
+              value={brand}
+              onChange={handleChange}
+            >
+              {brands}
+            </select>
+          </span>
+          {/* end brand */}
+          {/* model */}
+          <span className={`filter-grid__item modal`}>
+            <label className='filter-label' htmlFor='model'>
+              Model
+            </label>
+            <select
+              className='filter-select'
+              name='model'
+              id='model'
+              value={model}
+              onChange={handleChange}
+            >
+              {models}
+            </select>
+          </span>
+          {/* end color */}
+          {/* capacity */}
+          <span className={`filter-grid__item modal`}>
+            <label className='filter-label' htmlFor='capacity'>
+              Capacity
+            </label>
+            <select
+              className='filter-select'
+              name='capacity'
+              id='capacity'
+              value={capacity}
+              onChange={handleChange}
+            >
+              {people}
+            </select>
+          </span>
+          {/* end capacity */}
+          {/* rental */}
+          <span className={`filter-grid__item modal`}>
+            <div className='checkbox'>
+              <input
+                type='checkbox'
+                id='rental'
+                name='rental'
+                checked={rental}
+                onChange={handleChange}
+              />
+              <label htmlFor='rental'>Rental</label>
+            </div>
+          </span>
+          {/* end rental */}
+        </>
       </Modal>
     </StyledSection>
   );
-}
+};
+
+VehicleFilter.propTypes = {
+  vehicles: PropTypes.array.isRequired
+};
+
+export default VehicleFilter;

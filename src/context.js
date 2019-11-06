@@ -147,14 +147,6 @@ class VehicleProvider extends Component {
     }));
   };
 
-  handleBodyClass = className => {
-    if (this.state.modalIsOpen) {
-      document.body.classList.add(className);
-    } else {
-      document.body.classList.remove(className);
-    }
-  };
-
   render() {
     return (
       <VehicleContext.Provider

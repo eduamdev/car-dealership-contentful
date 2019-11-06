@@ -7,12 +7,13 @@ import { close as closeSvg } from './svg';
 const ModalWrapper = styled.div`
   margin: 0 auto;
   transition: ease 0.15s;
+  border-radius: 8px;
   /* padding: 0; */
   /* padding: 2em 1em; */
   overflow: hidden;
   overflow-y: auto;
   width: 100%;
-  height: 100%;
+  height: 70%;
   max-width: 100vw;
   max-height: 100vh;
   position: fixed;
@@ -39,14 +40,11 @@ const ModalWrapper = styled.div`
       'body'
       'footer';
     grid-template-rows: 1fr max-content; */
-    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
-    top: auto;
-    bottom: 1em;
-    left: 1em;
-  }
-
-  @media ${viewport[9]} {
-    display: none;
+    box-shadow: -5px 8px 40px 22px rgba(0, 0, 0, 0.18);
+    /* top: auto; */
+    top: 12.5em;
+    left: 0;
+    position: absolute;
   }
 `;
 
@@ -167,7 +165,7 @@ const BtnSave = styled.button`
 `;
 
 const BackDrop = styled.div`
-  background-color: rgba(195, 195, 195, 0.3);
+  background-color: rgba(255, 255, 255, 0.25);
   height: 100%;
   position: fixed;
   top: 0;
@@ -175,31 +173,25 @@ const BackDrop = styled.div`
   transition: all 1.3s;
   width: 100%;
   z-index: 100;
-
-  /* @media ${viewport[9]} {
-    display: none;
-  } */
 `;
 
 const Modal = ({ show, children, close }) => {
   return (
-    <div>
-      <ModalWrapper
-        style={{
-          transform: show ? 'translateY(0vh)' : 'translateY(20vh)',
-          opacity: show ? '1' : '0',
-          visibility: show ? 'visible' : 'hidden'
-        }}
-      >
-        <ModalHeader>
-          {/* <ClearBtn>Clear</ClearBtn>
+    <ModalWrapper
+      style={{
+        transform: show ? 'translateY(0vh)' : 'translateY(-5vh)',
+        opacity: show ? '1' : '0',
+        visibility: show ? 'visible' : 'hidden'
+      }}
+    >
+      <ModalHeader>
+        {/* <ClearBtn>Clear</ClearBtn>
           <span></span> */}
-          <CloseModalBtn onClick={close}>{closeSvg}</CloseModalBtn>
-        </ModalHeader>
-        <ModalBody>{children}</ModalBody>
-        <ModalFooter>{/* <BtnSave>Save</BtnSave> */}</ModalFooter>
-      </ModalWrapper>
-    </div>
+        <CloseModalBtn onClick={close}>{closeSvg}</CloseModalBtn>
+      </ModalHeader>
+      <ModalBody>{children}</ModalBody>
+      <ModalFooter>{/* <BtnSave>Save</BtnSave> */}</ModalFooter>
+    </ModalWrapper>
   );
 };
 
