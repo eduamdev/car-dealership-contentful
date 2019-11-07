@@ -6,7 +6,6 @@ import Wrapper from './Wrapper';
 const StyledIcon = styled(Icon)`
   display: inline-block;
   fill: #ddd;
-  width: 2em !important;
   margin-right: 10px;
 
   & svg {
@@ -48,7 +47,7 @@ export default function Quote({ text, footer, icon }) {
     <StyledWrapper>
       <blockquote className='quote'>
         <p className='quote-text'>
-          <StyledIcon>{icon}</StyledIcon> {text}
+          <StyledIcon className='md'>{icon}</StyledIcon> {text}
         </p>
         <footer className='quote-footer'>{footer}</footer>
       </blockquote>

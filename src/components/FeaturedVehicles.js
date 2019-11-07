@@ -29,7 +29,7 @@ const StyledSection = styled(Section)`
         content: '';
         position: absolute;
         height: 2px;
-        width: 80px;
+        width: 50px;
         top: 45px;
         left: 0;
         background: #da353b;
@@ -39,8 +39,7 @@ const StyledSection = styled(Section)`
         text-align: center;
 
         &:after {
-          left: calc(50% - 40px);
-          top: 55px;
+          left: calc(50% - 25px);
         }
       }
     }

@@ -78,7 +78,6 @@ export default function Footer() {
         </div>
         <div className='footer-grid'>
           <p>Designed and built by Eduardo Rodriguez</p>
-          <span>&copy; {new Date().getFullYear()}</span>
         </div>
       </Wrapper>
     </StyledFooter>

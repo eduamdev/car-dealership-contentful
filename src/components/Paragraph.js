@@ -4,11 +4,11 @@ import { viewport } from './Breakpoints';
 import PropTypes from 'prop-types';
 
 const StyledParagraph = styled.p`
-  font-size: 1.025em;
+  font-size: 1em;
   font-weight: 400;
   letter-spacing: normal;
   word-spacing: normal;
-  line-height: 1.55;
+  line-height: 1.4;
   margin-bottom: 1em;
   color: #ccc;
 
@@ -18,12 +18,12 @@ const StyledParagraph = styled.p`
   }
 
   @media ${viewport[9]} {
-    font-size: 1.1em;
-    line-height: 1.7;
+    font-size: 0.975em;
+    line-height: 1.35;
   }
 
   @media ${viewport[12]} {
-    line-height: 1.5;
+    font-size: 1em;
   }
 `;
 

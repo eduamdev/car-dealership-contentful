@@ -25,12 +25,17 @@ const StyledWrapper = styled.div`
   }
 `;
 
-const Wrapper = ({ className, children }) => {
-  return <StyledWrapper className={className}>{children}</StyledWrapper>;
+const Wrapper = ({ className, children, style }) => {
+  return (
+    <StyledWrapper className={className} style={style}>
+      {children}
+    </StyledWrapper>
+  );
 };
 
 Wrapper.propTypes = {
   className: PropTypes.string.isRequired,
+  style: PropTypes.object,
   children: PropTypes.node.isRequired
 };
 

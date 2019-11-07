@@ -24,12 +24,12 @@ const StyledHero = styled.section`
     min-height: 200px;
 
     @media ${viewport[7]} {
-      min-height: 300px;
+      min-height: 230px;
       margin-bottom: 2em;
     }
 
     @media ${viewport[12]} {
-      min-height: 380px;
+      min-height: 250px;
     }
   }
 

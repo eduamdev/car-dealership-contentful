@@ -26,12 +26,18 @@ const StyledHeader = styled.header`
         justify-content: center;
 
         & .header-grid__logo-icon {
-          margin-right: 20px;
+          margin-right: 10px;
+          display: none;
+
+          @media ${viewport[7]} {
+            display: block;
+            width: 44px;
+          }
         }
 
         & .header-grid__logo-text {
           color: #ddd;
-          font-size: 1.6em;
+          font-size: 1.4em;
           font-family: 'Libre Baskerville', serif;
           font-style: italic;
         }
@@ -77,7 +83,7 @@ const StyledHeader = styled.header`
 const Header = () => {
   return (
     <StyledHeader>
-      <Wrapper>
+      <Wrapper style={{ padding: '0.5em 0' }}>
         <div className='header-grid'>
           <div className='header-grid__logo'>
             <Link linkClass='header-grid__logo-link' url='/'>

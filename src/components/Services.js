@@ -18,7 +18,7 @@ const StyledSection = styled(Section)`
     flex-direction: column;
 
     & .services-flex__main-heading {
-      margin-bottom: 2.25em;
+      margin-bottom: 3em;
       text-align: left;
       letter-spacing: 0.4px;
       font-weight: 900;
@@ -29,7 +29,7 @@ const StyledSection = styled(Section)`
         content: '';
         position: absolute;
         height: 2px;
-        width: 80px;
+        width: 50px;
         top: 45px;
         left: 0;
         background: #da353b;
@@ -39,8 +39,7 @@ const StyledSection = styled(Section)`
         text-align: center;
 
         &:after {
-          left: calc(50% - 40px);
-          top: 55px;
+          left: calc(50% - 25px);
         }
       }
     }
@@ -110,7 +109,7 @@ const StyledSection = styled(Section)`
         letter-spacing: -0.1px;
 
         & .service-text-wrapper__title {
-          margin-bottom: 0.2em;
+          margin-bottom: 0.5em;
         }
 
         & p {

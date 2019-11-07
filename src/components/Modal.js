@@ -32,7 +32,7 @@ const ModalWrapper = styled.div`
   justify-content: stretch;
   background: ${theme.colors.raisinBlack};
   color: ${theme.colors.lightGrey};
-  border: 1px solid #777;
+  border: 1px solid #444;
 
   @media ${viewport[7]} {
     width: 450px;

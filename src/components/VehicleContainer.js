@@ -22,31 +22,11 @@ const StyledSection = styled(Section)`
       flex-direction: column;
 
       & .vehicleContainer__wrapper__flex__main-heading {
-        margin-bottom: 2.25em;
-        text-align: left;
+        margin-bottom: 2em;
+        text-align: center;
         letter-spacing: 0.4px;
         font-weight: 900;
-        position: relative;
-        display: inline-block;
-
-        &:after {
-          content: '';
-          position: absolute;
-          height: 2px;
-          width: 80px;
-          top: 45px;
-          left: 0;
-          background: #da353b;
-        }
-
-        @media ${viewport[7]} {
-          text-align: center;
-
-          &:after {
-            left: calc(50% - 40px);
-            top: 55px;
-          }
-        }
+        font-size: 2.2em;
       }
     }
 
@@ -86,7 +66,7 @@ function VehicleContainer({ context }) {
       <Wrapper className='vehicleContainer__wrapper'>
         <div className='vehicleContainer__wrapper__flex'>
           <Heading
-            rank={2}
+            rank={1}
             className='vehicleContainer__wrapper__flex__main-heading'
           >
             Catalog

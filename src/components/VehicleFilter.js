@@ -25,15 +25,13 @@ const StyledSection = styled.section`
       border-radius: 2px;
       cursor: pointer;
       fill: #ddd;
-      margin-bottom: 1.5em;
+      margin: 1.5em 0;
       /* background-color: rgba(255, 255, 255, 0.1); */
-      float: right;
-      border: 1px solid #777;
+      border: 1px solid #444;
 
       @media ${viewport[7]} {
-        float: unset;
         font-size: 1em;
-        margin-bottom: 1em;
+        margin: 1em 0;
       }
 
       &:focus,
@@ -53,7 +51,7 @@ const StyledSection = styled.section`
         &.icon-right {
           margin-right: 0;
           margin-left: 10px;
-
+          fill: #777;
           width: 12px;
         }
 

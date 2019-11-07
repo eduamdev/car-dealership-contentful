@@ -21,8 +21,8 @@ const StyledSection = styled(Section)`
       font-weight: 900;
       letter-spacing: -1px;
       padding: 10px 20px;
-      background: linear-gradient(45deg, #eee, rgba(255, 255, 255, 0.8));
-      color: #000;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.25);
 
       @media ${viewport[9]} {
         margin-bottom: 0.35em;
