@@ -12,6 +12,7 @@ import { viewport } from './Breakpoints';
 const StyledSection = styled(Section)`
   /* margin: 0 0 3em; */
   margin-top: 0;
+
   & .vehicleContainer__wrapper {
     position: relative;
 
@@ -80,10 +81,6 @@ const StyledSection = styled(Section)`
 function VehicleContainer({ context }) {
   const { loading, sortedVehicles, vehicles } = context;
 
-  if (loading) {
-    return <Loading />;
-  }
-
   return (
     <StyledSection>
       <Wrapper className='vehicleContainer__wrapper'>
@@ -95,10 +92,16 @@ function VehicleContainer({ context }) {
             Catalog
           </Heading>
         </div>
-        <VehicleFilter vehicles={vehicles}></VehicleFilter>
-        <div className='vehicleContainer__wrapper__grid'>
-          <VehicleList vehicles={sortedVehicles}></VehicleList>
-        </div>
+        {loading ? (
+          <Loading />
+        ) : (
+          <>
+            <VehicleFilter vehicles={vehicles}></VehicleFilter>
+            <div className='vehicleContainer__wrapper__grid'>
+              <VehicleList vehicles={sortedVehicles}></VehicleList>
+            </div>
+          </>
+        )}
       </Wrapper>
     </StyledSection>
   );

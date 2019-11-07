@@ -7,9 +7,9 @@ const LoadingContainer = styled.div`
     align-items: center;
     justify-content: center;
 
-    & svg{
-        fill #000;
-        width: 80px;
+    & svg {
+      fill #000;
+      width: 80px;
     }
 `;
 

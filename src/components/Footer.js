@@ -6,6 +6,7 @@ import Icon from '../components/Icon';
 
 const StyledFooter = styled.footer`
   background: #0c0c0c;
+  border-top: 1px solid #333;
   margin-top: 5em;
   padding: 20px 0;
 
