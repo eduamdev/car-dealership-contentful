@@ -16,23 +16,23 @@ const StyledSection = styled.section`
     }
 
     & .filter-button {
-      padding: 0.5em 1em;
+      padding: 0.4em 0.75em;
       letter-spacing: 1px;
       font-size: 0.9em;
       line-height: 1.5;
       color: #ccc;
       background: transparent;
-      border-radius: 100px;
-      border: none;
+      border-radius: 2px;
       cursor: pointer;
       fill: #ddd;
       margin-bottom: 1.5em;
       /* background-color: rgba(255, 255, 255, 0.1); */
       float: right;
+      border: 1px solid #777;
 
       @media ${viewport[7]} {
         float: unset;
-        font-size: 1.1em;
+        font-size: 1em;
         margin-bottom: 1em;
       }
 
@@ -47,7 +47,7 @@ const StyledSection = styled.section`
         margin-right: 10px;
 
         @media ${viewport[9]} {
-          width: 24px;
+          width: 22px;
         }
 
         &.icon-right {

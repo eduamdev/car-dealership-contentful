@@ -11,11 +11,12 @@ const Item = styled.article`
   background: ${theme.colors.darkGreyAlt};
   margin: 0;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 2px;
   position: relative;
   height: 150px;
   overflow: hidden;
   /* border: 1px solid ${theme.colors.darkGrey}; */
+  border: 1px solid #777;
 
   @media ${viewport[7]} {
     height: 200px;
@@ -39,7 +40,7 @@ const Item = styled.article`
   }
 
   & .photo {
-    border-radius:10px;
+    border-radius:0;
     width: 100%;
     height: 100%;
     overflow: hidden;

@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import Wrapper from './Wrapper';
 import { twitter, github } from '../components/svg';
 import Icon from '../components/Icon';
-import theme from '../styles/theme';
 
 const StyledFooter = styled.footer`
-  background: ${theme.colors.mainBlack};
+  background: #0c0c0c;
   margin-top: 5em;
+  padding: 20px 0;
 
   & .footer-grid {
     display: grid;

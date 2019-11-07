@@ -7,7 +7,7 @@ import { close as closeSvg } from './svg';
 const ModalWrapper = styled.div`
   margin: 0 auto;
   transition: ease 0.15s;
-  border-radius: 8px;
+  border-radius: 2px;
   /* padding: 0; */
   /* padding: 2em 1em; */
   overflow: hidden;
@@ -32,6 +32,7 @@ const ModalWrapper = styled.div`
   justify-content: stretch;
   background: ${theme.colors.raisinBlack};
   color: ${theme.colors.lightGrey};
+  border: 1px solid #777;
 
   @media ${viewport[7]} {
     width: 450px;

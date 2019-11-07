@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 
 const StyledWrapper = styled.div`
   margin: 0 auto;
-  max-width: 92.5%;
+  max-width: 90%;
   padding: 2em 10px;
 
   @media ${viewport[7]} {
-    max-width: 90%;
+    max-width: 85%;
   }
 
   @media ${viewport[9]} {

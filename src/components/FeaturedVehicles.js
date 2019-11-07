@@ -28,7 +28,7 @@ const StyledSection = styled(Section)`
       &:after {
         content: '';
         position: absolute;
-        height: 3px;
+        height: 2px;
         width: 80px;
         top: 45px;
         left: 0;

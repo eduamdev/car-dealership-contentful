@@ -40,7 +40,7 @@ const StyledSection = styled(Section)`
 
     & .banner-flex__link {
       font-weight: 400;
-      padding: 0.8em 1.5em;
+      padding: 0.6em 1.25em;
       border-radius: 4px;
 
       & svg {

@@ -25,7 +25,7 @@ const StyledSection = styled.section`
   align-items: center;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-  grid-gap: 2rem 1rem;
+  grid-gap: 0.75rem 1rem;
 
   @media ${viewport[7]} {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -33,6 +33,7 @@ const StyledSection = styled.section`
 
   @media ${viewport[9]} {
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    grid-gap: 1.5rem 1rem;
   }
 `;
 
