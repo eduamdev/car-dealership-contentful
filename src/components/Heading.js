@@ -12,7 +12,7 @@ function getHeadingFontSize(rank, minFontSize, ratio = 1) {
       return minFontSize;
 
     case 2:
-      return minFontSize * (ratio / 1.85);
+      return minFontSize * (ratio / 1.55);
 
     case 3:
       return minFontSize * (ratio / 2.9);
@@ -35,7 +35,7 @@ const StyledHeading = styled.div`
   margin: 0;
   padding: 0;
   text-rendering: optimizeLegibility;
-  color: #ddd;
+  color: #fff;
   text-align: left;
   font-weight: bold;
   line-height: ${({ rank }) => (rank > 3 ? '1.35' : '1.15')};
