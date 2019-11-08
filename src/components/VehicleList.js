@@ -14,9 +14,11 @@ const GridSection = styled.section`
   & h3 {
     text-align: center;
     color: ${theme.colors.lightGrey};
-    letter-spacing: 0.3px;
-    font-size: 1.45em;
+    letter-spacing: 0.5px;
+    font-size: 1.35em;
     font-weight: 400;
+    margin-top: 3em;
+    line-height: 1.5;
   }
 `;
 

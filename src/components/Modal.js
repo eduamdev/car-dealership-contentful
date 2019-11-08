@@ -8,166 +8,71 @@ const ModalWrapper = styled.div`
   margin: 0 auto;
   transition: ease 0.15s;
   border-radius: 2px;
-  /* padding: 0; */
-  /* padding: 2em 1em; */
   overflow: hidden;
   overflow-y: auto;
   width: 100%;
-  height: 70%;
   max-width: 100vw;
   max-height: 100vh;
   position: fixed;
   bottom: 0;
   left: 0;
   z-index: 100000;
-  display: grid;
-  /* grid-template-rows: max-content 1fr max-content;
-  grid-template-areas:
-    'header'
-    'body'
-    'footer'; */
-  grid-template-rows: 1fr;
-  grid-template-areas: 'body';
-  align-items: center;
-  justify-content: stretch;
   background: ${theme.colors.raisinBlack};
   color: ${theme.colors.lightGrey};
-  border: 1px solid #444;
-
-  @media ${viewport[7]} {
-    width: 450px;
-    height: 450px;
-    /* grid-template-areas:
-      'body'
-      'footer';
-    grid-template-rows: 1fr max-content; */
-    box-shadow: -5px 8px 40px 22px rgba(0, 0, 0, 0.18);
-    /* top: auto; */
-    top: 12.5em;
-    left: 0;
-    position: absolute;
-  }
-`;
-
-const ModalHeader = styled.div`
-  /* padding: 0.75em 1em;
-  grid-area: header;
   display: grid;
-  grid-template-columns: max-content 1fr max-content;
-  grid-template-areas: 'clear space close';
-  align-items: center; */
-  /* border-bottom: 1px solid ${theme.colors.darkGrey}; */
-
-  @media ${viewport[7]} {
-    display: none;
-  }
-`;
-
-const ModalBody = styled.div`
-  /* padding: 1.5em 1em; */
-  padding: 2em 0;
-  align-self: stretch;
-  justify-self: center;
-  grid-area: body;
-  display: grid;
-  align-items: center;
-  justify-content: center;
   grid-template-columns: 1fr;
-  grid-row-gap: 1em;
-  width: 80%;
-  max-height: 80%;
-  margin: auto;
+  grid-template-rows: max-content 1fr;
+  grid-template-areas:
+    'header'
+    'body';
+  align-items: center;
+  justify-content: stretch;
+  align-items: stretch;
 
   @media ${viewport[7]} {
-    margin: 0;
-    max-height: inherit;
-  }
-`;
-const ModalFooter = styled.div`
-  display: none;
-  grid-area: footer;
-  padding: 1.5em 1em;
-  overflow: auto;
-  /* border-top: 1px solid ${theme.colors.darkGrey}; */
-
-  &::after {
-    content: '';
-    clear: both;
-    display: table;
+    box-shadow: -5px 8px 40px 22px rgba(0, 0, 0, 0.18);
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 550px;
+    margin: unset;
+    left: unset;
   }
 
-  @media ${viewport[7]} {
-    border: 0;
-  }
-`;
+  & .modal-header {
+    grid-area: header;
+    padding: 2em;
 
-const ClearBtn = styled.span`
-  grid-area: clear;
-  padding: 1em;
-  cursor: pointer;
-  color: ${theme.colors.winterGreen};
+    & .modal-header__wrapper {
+      width: 90%;
+      margin: 0 auto;
+      & .modal-header__close-btn {
+        float: right;
+        background: transparent;
+        color: #ddd;
+        fill: #ddd;
+        font-size: 1em;
+        cursor: pointer;
+        width: 28px;
 
-  &:hover,
-  &:focus {
-    text-decoration: underline;
-  }
-`;
-
-const CloseModalBtn = styled.span`
-  /* grid-area: close; */
-  /* width: 36px; */
-  fill: ${theme.colors.lightGrey};
-  cursor: pointer;
-  margin: 0;
-
-  position: absolute;
-  top: 0.5em;
-  right: 1em;
-  width: 2em;
-  visibility: visible;
-
-  &:hover,
-  &:focus {
-    fill: ${theme.colors.winterGreen};
-  }
-
-  @media ${viewport[7]} {
-    visibility: hidden;
-  }
-`;
-
-const BtnSave = styled.button`
-  background: ${theme.colors.myrtleGreen};
-  padding: 0.9em;
-  border-radius: 4px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  outline: none;
-  font-size: 1em;
-  letter-spacing: 0.8px;
-  width: 100%;
-  text-align: center;
-  color: #ddd;
-
-  @media ${viewport[7]} {
-    color: ${theme.colors.myrtleGreen};
-    font-weight: 200;
-    background: transparent;
-    text-align: left;
-    width: auto;
-    float: right;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
+        & svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
     }
+  }
+
+  & .modal-body {
+    grid-area: body;
+    padding: 1em 2em;
   }
 `;
 
 const BackDrop = styled.div`
-  /* background-color: rgba(255, 255, 255, 0.25); */
-  background-color: rgba(150, 150, 150, 0.4);
+  background-color: #000;
+  opacity: 0.8;
   height: 100%;
   position: fixed;
   top: 0;
@@ -181,18 +86,19 @@ const Modal = ({ show, children, close }) => {
   return (
     <ModalWrapper
       style={{
-        transform: show ? 'translateY(0vh)' : 'translateY(-5vh)',
+        transform: show ? 'translateX(0vw)' : 'translateX(5vw)',
         opacity: show ? '1' : '0',
         visibility: show ? 'visible' : 'hidden'
       }}
     >
-      <ModalHeader>
-        {/* <ClearBtn>Clear</ClearBtn>
-          <span></span> */}
-        <CloseModalBtn onClick={close}>{closeSvg}</CloseModalBtn>
-      </ModalHeader>
-      <ModalBody>{children}</ModalBody>
-      <ModalFooter>{/* <BtnSave>Save</BtnSave> */}</ModalFooter>
+      <div className='modal-header'>
+        <div className='modal-header__wrapper'>
+          <span className='modal-header__close-btn' onClick={close}>
+            {closeSvg}
+          </span>
+        </div>
+      </div>
+      <div className='modal-body'>{children}</div>
     </ModalWrapper>
   );
 };

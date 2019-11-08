@@ -51,8 +51,6 @@ const StyledSection = styled(Section)`
     align-items: stretch;
     justify-content: center;
     grid-template-columns: 1fr;
-    max-width: 1100px;
-    margin: 0 auto;
 
     @media ${viewport[7]} {
       grid-template-columns: 1fr 1fr;
@@ -66,14 +64,11 @@ const StyledSection = styled(Section)`
       border: 1px solid #222;
       border-radius: 4px;
       margin: 0;
-      /* color: #ddd; */
       text-align: left;
-      padding: 0.75em 1em;
+      padding: 2em;
       display: grid;
       align-items: baseline;
       justify-content: center;
-      /* grid-template-columns: 1fr;
-  grid-template-rows: max-content 1fr; */
       grid-template-columns: max-content 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: 'icon text';
@@ -84,11 +79,7 @@ const StyledSection = styled(Section)`
         grid-template-rows: 1fr;
         grid-template-areas: 'icon text';
         grid-column-gap: 1.5em;
-        padding: 1.2em 1em;
-
-        &:nth-child(even) {
-          /* border-left: none; */
-        }
+        padding: 2.25em;
       }
 
       & .service-icon-wrapper {
@@ -109,7 +100,11 @@ const StyledSection = styled(Section)`
         letter-spacing: -0.1px;
 
         & .service-text-wrapper__title {
-          margin-bottom: 0.5em;
+          margin-bottom: 0.25em;
+
+          @media ${viewport[9]} {
+            margin-bottom: 0.5em;
+          }
         }
 
         & p {

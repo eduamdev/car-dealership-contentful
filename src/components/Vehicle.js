@@ -79,7 +79,8 @@ const Item = styled.article`
     top: 0;
     right: 0;
     /* background: ${theme.colors.myrtleGreen}; */
-    background: #37718E;
+    /* background: #37718E; */
+    background-color: #254E70;
     color: #ddd;
     padding: 0.25em 1em;
     visibility: visible;
@@ -100,7 +101,8 @@ const Item = styled.article`
     font-weight: 400;
     /* background: ${theme.colors.warmBlack}; */
     color: ${theme.colors.lightGrey};
-    background: #254E70;
+    /* background: #254E70; */
+    background: #020202a1;
     text-transform: capitalize;
 
     @media ${viewport[7]} {

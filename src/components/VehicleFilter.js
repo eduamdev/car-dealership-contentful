@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { VehicleContext } from '../context';
 import styled from 'styled-components';
-import theme from '../styles/theme';
 import { Modal, BackDrop } from './Modal';
 import viewport from '../styles/media';
 import { formatMoney, getUnique } from '../utils/utils';
@@ -16,7 +15,7 @@ const StyledSection = styled.section`
     }
 
     & .filter-button {
-      padding: 0.4em 0.75em;
+      padding: 1em;
       letter-spacing: 1px;
       font-size: 0.9em;
       line-height: 1.5;
@@ -26,17 +25,15 @@ const StyledSection = styled.section`
       cursor: pointer;
       fill: #ddd;
       margin: 1.5em 0;
-      /* background-color: rgba(255, 255, 255, 0.1); */
       border: 1px solid #444;
 
       @media ${viewport[7]} {
-        font-size: 1em;
-        margin: 1em 0;
+        float: right;
       }
 
       &:focus,
       &:hover {
-        background-color: rgba(68, 68, 68, 0.45);
+        border-color: #777;
       }
 
       & .filter-button__icon {
@@ -63,134 +60,78 @@ const StyledSection = styled.section`
       }
     }
 
-    & .filter-grid__item {
-      &.modal {
+    & .filters-wrapper {
+      max-width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-row-gap: 2em;
+      justify-content: stretch;
+
+      & .filter-grid__range,
+      & .filter-grid__dropdown,
+      & .filter-grid__checkbox-container {
         display: grid;
-        grid-template-columns: 1fr;
         align-items: center;
-        grid-row-gap: 0.5em;
+        justify-content: stretch;
       }
 
-      &.allFilters {
-        cursor: pointer;
-        padding: 0.4em 1.4em;
-        border-radius: 2px;
-        font-size: 1.05em;
-        font-weight: 200;
-        letter-spacing: 0.5px;
-        color: ${theme.colors.lightGrey};
-        background: transparent;
-        border: 1px solid ${theme.colors.mediumGrey};
-        border-radius: 4px;
-        display: block;
+      & .filter-grid__range-label,
+      & .filter-grid__dropdown-label,
+      & .filter-grid__checkbox-container__checkbox-label {
+        font-size: 1.1em;
+        margin-bottom: 0.5em;
+      }
 
-        @media ${viewport[9]} {
-          /* display: none; */
+      & .filter-grid__range {
+        & .filter-grid__range-label {
+          & > .filter-grid__range-current-price {
+            color: hsla(207, 50%, 79%, 1);
+            padding: 0.3em;
+            margin-left: 10px;
+          }
         }
 
-        &:hover,
-        &:focus {
-          background-color: ${theme.colors.darkGreyAlt};
+        & .filter-grid__range-input {
+        }
+
+        & .filter-grid__range__min-max {
+          display: grid;
+          justify-content: end;
+          margin-top: 0.3em;
+
+          & .filter-grid__range-min-price,
+          & .filter-grid__range-max-price {
+            color: #ddd;
+          }
         }
       }
 
-      & .filter-label {
-        color: ${theme.colors.lightGrey};
-        font-size: 1em;
+      & .filter-grid__dropdown {
+        & .filter-grid__dropdown-label {
+        }
 
-        & .price {
-          color: ${theme.colors.lightGreen};
+        & .filter-grid__dropdown-select {
+          padding: 1.5em 1em;
+          background: #222;
+          color: #ddd;
+          border: 1px solid #444;
+          outline: none;
+          font-size: 0.925em;
+          letter-spacing: 0.5px;
+
+          &:hover,
+          &:focus {
+            border-color: #777;
+          }
         }
       }
 
-      & .filter-select {
-        /* cursor: pointer; */
-        padding: 0.4em 0.5em;
-        background: ${theme.colors.warmBlack};
-        color: ${theme.colors.lightGrey};
-        outline-color: ${theme.colors.mediumGrey};
-      }
+      & .filter-grid__checkbox-container {
+        & .filter-grid__checkbox-container__checkbox-label {
+        }
 
-      & .checkbox input[type='checkbox'] {
-        opacity: 0;
-        display: none;
-      }
-
-      & .checkbox label {
-        position: relative;
-        display: inline-block;
-        cursor: pointer;
-        /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
-        padding-left: 28px;
-      }
-
-      & .checkbox label::before,
-      & .checkbox label::after {
-        position: absolute;
-        content: '';
-
-        /*Needed for the line-height to take effect*/
-        display: inline-block;
-      }
-
-      /*Outer box of the fake checkbox*/
-      & .checkbox label::before {
-        height: 16px;
-        width: 16px;
-
-        border: 1px solid;
-        left: 0px;
-
-        /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
-     *to vertically center it.
-     */
-        /* top: 3px; */
-      }
-
-      /*Checkmark of the fake checkbox*/
-      & .checkbox label::after {
-        height: 5px;
-        width: 9px;
-        border-left: 2px solid;
-        border-bottom: 2px solid;
-
-        transform: rotate(-45deg);
-
-        left: 4px;
-        top: 4px;
-      }
-
-      /*Hide the checkmark by default*/
-      & .checkbox input[type='checkbox'] + label::after {
-        content: none;
-      }
-
-      /*Unhide on the checked state*/
-      & .checkbox input[type='checkbox']:checked + label::after {
-        content: '';
-      }
-
-      /*Adding focus styles on the outer-box of the fake checkbox*/
-      & .checkbox input[type='checkbox']:focus + label::before {
-        outline: ${theme.colors.mediumGrey} auto 5px;
-      }
-
-      @media ${viewport[9]} {
-        /* display: grid;
-    align-items: center;
-    justify-content: center;
-    grid-template-columns: 1fr;
-    grid-gap: 0.3em 0;
-    letter-spacing: -0.15px;
-
-    &:not(:last-child) {
-      margin-bottom: 1em;
-    }
-
-    & .filter-select {
-      padding: 0.1em 0.5em;
-      font-size: 0.95em;
-    } */
+        & .filter-grid__checkbox-container__checkbox-input {
+        }
       }
     }
   }
@@ -263,14 +204,18 @@ const VehicleFilter = ({ vehicles }) => {
       </Button>
 
       <Modal className='modal' show={modalIsOpen} close={handleModal}>
-        <>
+        <div className='filters-wrapper'>
           {/* price */}
-          <span className={`filter-grid__item modal`}>
-            <label className='filter-label' htmlFor='price'>
-              Price <span className='price'>$ {formatMoney(price)}</span>
+          <div className={`filter-grid__range modal`}>
+            <label className='filter-grid__range-label' htmlFor='price'>
+              Price{' '}
+              <span className='filter-grid__range-current-price'>
+                $ {formatMoney(price)}
+              </span>
             </label>
             <input
               type='range'
+              className='filter-grid__range-input'
               name='price'
               min={minPrice}
               max={maxPrice}
@@ -278,15 +223,20 @@ const VehicleFilter = ({ vehicles }) => {
               value={price}
               onChange={handleChange}
             ></input>
-          </span>
+            <div className='filter-grid__range__min-max'>
+              <span className='filter-grid__range-max-price'>
+                $ {formatMoney(maxPrice)}
+              </span>
+            </div>
+          </div>
           {/* end price */}
           {/* select type */}
-          <span className={`filter-grid__item modal`}>
-            <label className='filter-label' htmlFor='type'>
+          <div className={`filter-grid__dropdown modal`}>
+            <label className='filter-grid__dropdown-label' htmlFor='type'>
               Type
             </label>
             <select
-              className='filter-select'
+              className='filter-grid__dropdown-select'
               name='type'
               id='type'
               value={type}
@@ -294,15 +244,15 @@ const VehicleFilter = ({ vehicles }) => {
             >
               {types}
             </select>
-          </span>
+          </div>
           {/* end select type */}
           {/* brand */}
-          <span className={`filter-grid__item modal`}>
-            <label className='filter-label' htmlFor='brand'>
+          <div className={`filter-grid__dropdown modal`}>
+            <label className='filter-grid__dropdown-label' htmlFor='brand'>
               Brand
             </label>
             <select
-              className='filter-select'
+              className='filter-grid__dropdown-select'
               name='brand'
               id='brand'
               value={brand}
@@ -310,15 +260,15 @@ const VehicleFilter = ({ vehicles }) => {
             >
               {brands}
             </select>
-          </span>
+          </div>
           {/* end brand */}
           {/* model */}
-          <span className={`filter-grid__item modal`}>
-            <label className='filter-label' htmlFor='model'>
+          <div className={`filter-grid__dropdown modal`}>
+            <label className='filter-grid__dropdown-label' htmlFor='model'>
               Model
             </label>
             <select
-              className='filter-select'
+              className='filter-grid__dropdown-select'
               name='model'
               id='model'
               value={model}
@@ -326,15 +276,15 @@ const VehicleFilter = ({ vehicles }) => {
             >
               {models}
             </select>
-          </span>
+          </div>
           {/* end color */}
           {/* capacity */}
-          <span className={`filter-grid__item modal`}>
-            <label className='filter-label' htmlFor='capacity'>
+          <div className={`filter-grid__dropdown modal`}>
+            <label className='filter-grid__dropdown-label' htmlFor='capacity'>
               Capacity
             </label>
             <select
-              className='filter-select'
+              className='filter-grid__dropdown-select'
               name='capacity'
               id='capacity'
               value={capacity}
@@ -342,23 +292,29 @@ const VehicleFilter = ({ vehicles }) => {
             >
               {people}
             </select>
-          </span>
+          </div>
           {/* end capacity */}
           {/* rental */}
-          <span className={`filter-grid__item modal`}>
-            <div className='checkbox'>
+          <div className={`filter-grid__checkbox-container modal`}>
+            <div className='filter-grid__checkbox-container__checkbox'>
               <input
                 type='checkbox'
                 id='rental'
+                className='filter-grid__checkbox-container__checkbox-input'
                 name='rental'
                 checked={rental}
                 onChange={handleChange}
               />
-              <label htmlFor='rental'>Rental</label>
+              <label
+                className='filter-grid__checkbox-container__checkbox-label'
+                htmlFor='rental'
+              >
+                Rental
+              </label>
             </div>
-          </span>
+          </div>
           {/* end rental */}
-        </>
+        </div>
       </Modal>
     </StyledSection>
   );
