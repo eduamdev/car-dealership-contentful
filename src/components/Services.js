@@ -72,13 +72,13 @@ const StyledSection = styled(Section)`
       grid-template-columns: max-content 1fr;
       grid-template-rows: 1fr;
       grid-template-areas: 'icon text';
-      grid-column-gap: 0.75em;
+      grid-column-gap: 1em;
 
       @media ${viewport[7]} {
         grid-template-columns: max-content 1fr;
         grid-template-rows: 1fr;
         grid-template-areas: 'icon text';
-        grid-column-gap: 1.5em;
+        grid-column-gap: 2em;
         padding: 2.25em;
       }
 

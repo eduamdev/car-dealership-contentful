@@ -11,12 +11,11 @@ const Item = styled.article`
   background: ${theme.colors.darkGreyAlt};
   margin: 0;
   text-align: center;
-  border-radius: 2px;
+  border-radius: 4px;
   position: relative;
   height: 150px;
   overflow: hidden;
-  /* border: 1px solid ${theme.colors.darkGrey}; */
-  border: 1px solid #444;
+  display: grid;
 
   @media ${viewport[7]} {
     height: 200px;
@@ -30,8 +29,8 @@ const Item = styled.article`
   &:focus .photo {
     transform: scale(1.15);
     transition: all 0.35s;
-    opacity: 0.2;
-    /* filter: sepia(1.5) grayscale(1) saturate(0.25); */
+    /* opacity: 0.2; */
+    filter: brightness(0.5);
   }
 
   &:hover .photo:before,
@@ -40,16 +39,14 @@ const Item = styled.article`
   }
 
   & .photo {
-    border-radius:0;
+    border-radius: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
     background-color: black; /* fallback color */
-    /* background-image: url("${defaultImg}"); */
     background-position: center;
     background-size: cover;
-    /* filter: saturate(1.25) contrast(1.05) brightness(0.8) sepia(0.25); */
-    filter: brightness(0.95);
+    filter: brightness(0.9);
 
     &:before {
       content: '';
@@ -64,25 +61,23 @@ const Item = styled.article`
   }
 
   & a {
-    visibility: hidden;
+    /* visibility: hidden; */
     transition: none;
   }
 
   &:focus a,
   &:hover a {
-    visibility: visible;
+    /* visibility: visible; */
     transition: all 0.1s;
   }
 
   & .price-tag {
     position: absolute;
-    top: 0;
-    right: 0;
-    /* background: ${theme.colors.myrtleGreen}; */
-    /* background: #37718E; */
-    background-color: #254E70;
+    top: 5%;
+    left: 0;
+    background-color: #254e70;
     color: #ddd;
-    padding: 0.25em 1em;
+    padding: 0.75em 1em;
     visibility: visible;
   }
 
@@ -97,13 +92,11 @@ const Item = styled.article`
     padding: 0.5em 1em;
     font-size: 1em;
     display: block;
-    letter-spacing: -0.2px;
     font-weight: 400;
-    /* background: ${theme.colors.warmBlack}; */
     color: ${theme.colors.lightGrey};
-    /* background: #254E70; */
-    background: #020202a1;
+    background: #0000005e;
     text-transform: capitalize;
+    width: 100%;
 
     @media ${viewport[7]} {
       font-size: 1.1em;
@@ -118,15 +111,14 @@ export default function Vehicle({ vehicle }) {
   return (
     <>
       <Item>
-        <div
-          className='photo'
-          style={{ backgroundImage: `url(${images[0] || defaultImg})` }}
-        />
         <Link linkClass='vehicleLink box-shadow' url={`/catalog/${slug}`}>
-          Learn more
+          <div
+            className='photo'
+            style={{ backgroundImage: `url(${images[0] || defaultImg})` }}
+          />
+          <span className='price-tag box-shadow'>$ {formatMoney(price)}</span>
+          <span className='name'>{name}</span>
         </Link>
-        <span className='price-tag box-shadow'>$ {formatMoney(price)}</span>
-        <span className='name'>{name}</span>
       </Item>
     </>
   );

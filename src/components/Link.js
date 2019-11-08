@@ -69,30 +69,9 @@ const StyledLink = styled(Link)`
   }
 
   &.vehicleLink {
-    color: ${theme.colors.richBlack};
-    background: ${theme.colors.lightGrey};
-    padding: 0.8em 1.4em;
-    font-size: 0.95em;
-    text-align: center;
-    margin: auto;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 60%;
-    border-radius: 4px;
-    /* transform: scale(0); */
-
-    &:hover,
-    &:focus {
-      color: ${theme.colors.lightGrey};
-      background: ${theme.colors.coralRed};
-    }
-
-    @media ${viewport[7]} {
-      padding: 0.8em 1.8em;
-      font-size: 1em;
-    }
+    width: 100%;
+    height: 100%;
   }
 `;
 

@@ -11,6 +11,7 @@ const ModalWrapper = styled.div`
   overflow: hidden;
   overflow-y: auto;
   width: 100%;
+  height: 100%;
   max-width: 100vw;
   max-height: 100vh;
   position: fixed;
@@ -30,7 +31,6 @@ const ModalWrapper = styled.div`
   align-items: stretch;
 
   @media ${viewport[7]} {
-    box-shadow: -5px 8px 40px 22px rgba(0, 0, 0, 0.18);
     position: fixed;
     top: 0;
     right: 0;
