@@ -20,8 +20,6 @@ const StyledWrapper = styled.div`
   @media ${viewport[12]} {
     max-width: 1440px;
     width: 90%;
-    /* padding-left: 3rem;
-    padding-right: 3rem; */
   }
 `;
 

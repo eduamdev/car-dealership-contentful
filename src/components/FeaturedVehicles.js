@@ -5,7 +5,7 @@ import Vehicle from './Vehicle';
 import theme from '../styles/theme';
 import { VehicleContext } from '../context';
 import Loading from './Loading';
-import viewport from '../styles/media';
+import { viewport } from './Breakpoints';
 import Heading from './Heading';
 import Section from './Section';
 

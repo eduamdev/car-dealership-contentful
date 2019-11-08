@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import theme from '../styles/theme';
-import viewport from '../styles/media';
+import { viewport } from './Breakpoints';
 import { ripple } from '../styles/animation';
 
 const StyledLink = styled(Link)`

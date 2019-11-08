@@ -7,178 +7,106 @@ import styled from 'styled-components';
 import { VehicleContext } from '../context';
 import Wrapper from '../components/Wrapper';
 import defaultBcg from '../assets/images/placeholder.jpg';
-import viewport from '../styles/media';
-import theme from '../styles/theme';
 import { formatMoney } from '../utils/utils';
+import Section from '../components/Section';
+import { viewport } from '../components/Breakpoints';
+import P from '../components/Paragraph';
 
-const ImageContainer = styled.div`
-  display: grid;
-  grid-template-rows: 1fr;
-  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
-  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
-  grid-column-gap: 1em;
-  grid-row-gap: 0.75em;
-  padding: 3em 0 1.5em 0;
+const StyledSection = styled(Section)`
+  & > .vehicle-wrapper {
+    padding: 0;
+    & > .vehicle-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        'photos'
+        'details'
+        'info'
+        'extras';
+      grid-gap: 2em;
 
-  @media ${viewport[7]} {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-
-  @media ${viewport[9]} {
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  }
-
-  & .image {
-    width: 100%;
-    /* height: 17em; */
-    height: 250px;
-    border: 1px solid ${theme.colors.darkGrey};
-    border-radius: 2px;
-    background-color: black; /* fallback color */
-    background-position: center;
-    background-size: cover;
-
-    /* @media ${viewport[7]} {
-      height: 25em;
-    } */
-
-    @media ${viewport[7]} {
-    height: 300px;
-  }
-
-  @media ${viewport[9]} {
-    height: 390px;
-  }
-  }
-`;
-
-const GridContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: stretch;
-  justify-content: center;
-  grid-template-areas:
-    'info'
-    'details'
-    'extras';
-
-  @media ${viewport[7]} {
-    grid-template-columns: 1fr 1.3fr;
-    grid-template-areas:
-      'info details'
-      'extras extras';
-  }
-
-  @media ${viewport[9]} {
-    grid-template-columns: 1fr 2fr;
-  }
-`;
-
-const Title = styled.h3`
-  font-size: 1.5em;
-  padding: 0.3em 0;
-  border-bottom: 2px solid ${theme.colors.myrtleGreen};
-
-  @media ${viewport[7]} {
-    font-size: 2em;
-  }
-`;
-
-const Details = styled.section`
-  grid-area: details;
-  color: ${theme.colors.lightGrey};
-  padding: 2em 1em;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 1em;
-  grid-template-rows: max-content 1fr;
-
-  @media ${viewport[7]} {
-    padding: 2em 0em 2em 3em;
-  }
-
-  & p {
-    line-height: 1.5;
-    font-weight: 200;
-    padding: 2em 0;
-    font-size: 0.95em;
-
-    @media ${viewport[7]} {
-      font-size: 1.05em;
-      line-height: 1.65;
-    }
-  }
-`;
-
-const Info = styled.section`
-  grid-area: info;
-  background: ${theme.colors.matteBlack};
-  color: ${theme.colors.lightGrey};
-  font-weight: 200;
-  padding: 2em;
-  border-radius: 2px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 1em;
-  grid-template-rows: max-content 1fr;
-
-  & ul {
-    display: grid;
-    align-items: baseline;
-    justify-content: stretch;
-    grid-row-gap: 1em;
-    width: 100%;
-    height: 100%;
-    padding: 2em 0;
-
-    & li {
-      border-bottom: 1px solid ${theme.colors.darkGrey};
-      font-size: 0.95em;
-      letter-spacing: 0.5px;
-
-      @media ${viewport[7]} {
-        font-size: 1em;
-        letter-spacing: 0.3px;
-        grid-gap: 0;
+      @media ${viewport[9]} {
+        grid-template-areas:
+          'photos details'
+          'photos info'
+          'photos extras';
+        grid-template-columns: 1fr 400px;
       }
 
-      & span {
-        color: #ddd;
-        font-weight: 400;
-        font-size: 1.05em;
-        letter-spacing: 0.3px;
+      & > .vehicle-grid__photos,
+      & > .vehicle-grid__info,
+      & > .vehicle-grid__details,
+      & > .vehicle-grid__extras {
+        padding: 1em;
+      }
 
-        @media ${viewport[7]} {
-          font-weight: 700;
+      & > .vehicle-grid__photos {
+        grid-area: photos;
+
+        & > .vehicle-grid__photos-image {
+          width: 100%;
+          height: 250px;
+          background-color: black; /* fallback color */
+          background-position: center;
+          background-size: cover;
+          margin-bottom: 1.5em;
+          border-radius: 2px;
+
+          &:last-child {
+            margin: 0;
+          }
+
+          @media ${viewport[9]} {
+            height: 450px;
+            margin-bottom: 3em;
+          }
         }
       }
-    }
-  }
-`;
 
-const Extras = styled.section`
-  grid-area: extras;
-  color: ${theme.colors.lightGrey};
-  padding: 2em 1em;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-column-gap: 1em;
-  grid-template-rows: max-content 1fr;
+      & > .vehicle-grid__info {
+        grid-area: info;
 
-  & ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    grid-column-gap: 2rem;
-    grid-row-gap: 1rem;
-    padding: 2em 0;
+        & > .vehicle-grid__info-list {
+          & > .vehicle-grid__info-list__item {
+            border-bottom: 1px solid #444;
+            padding: 1.5em 0;
 
-    & li {
-      margin: 0 2em;
-      font-size: 0.95em;
-      font-weight: 200;
+            &:last-child {
+              border: none;
+            }
 
-      @media ${viewport[7]} {
-        font-size: 1.05em;
+            & p {
+              margin: 0;
+            }
+
+            & span {
+            }
+          }
+        }
+      }
+
+      & > .vehicle-grid__details {
+        grid-area: details;
+
+        & p {
+          line-height: 1.75;
+        }
+      }
+
+      & > .vehicle-grid__extras {
+        grid-area: extras;
+
+        & > .vehicle-grid__extras__title {
+          color: #fff;
+          font-size: 1.1em;
+          margin-bottom: 2em;
+        }
+
+        & > .vehicle-grid__extras-list {
+          & > .vehicle-grid__extras-list__item {
+          }
+        }
       }
     }
   }
@@ -230,65 +158,80 @@ export default class Home extends Component {
           <Header />
           <Banner title={`${name}`} />
         </Hero>
-        <section>
-          <Wrapper>
-            <ImageContainer>
-              {defaultImg.map((item, index) => {
-                return (
-                  <div
-                    className='image'
-                    key={index}
-                    style={{ backgroundImage: `url(${item || defaultBcg})` }}
-                  />
-                );
-              })}
-            </ImageContainer>
-            <GridContainer>
-              <Details>
-                <Title>Details</Title>
-                <p>{description}</p>
-              </Details>
-              <Info>
-                <Title>Info</Title>
-                <ul>
-                  <li>
-                    Price: <span>${formatMoney(price)}</span>
+        <StyledSection>
+          <Wrapper className='vehicle-wrapper'>
+            <div className='vehicle-grid'>
+              <div className='vehicle-grid__photos'>
+                {defaultImg.map((item, index) => {
+                  return (
+                    <div
+                      className='vehicle-grid__photos-image'
+                      key={index}
+                      style={{ backgroundImage: `url(${item || defaultBcg})` }}
+                    />
+                  );
+                })}
+              </div>
+              <div className='vehicle-grid__info'>
+                <ul className='vehicle-grid__info-list'>
+                  <li className='vehicle-grid__info-list__item'>
+                    <P>
+                      Price: <span>${formatMoney(price)}</span>
+                    </P>
                   </li>
-                  <li>
-                    Type: <span>{type}</span>
+                  <li className='vehicle-grid__info-list__item'>
+                    <P>
+                      Type: <span>{type}</span>
+                    </P>
                   </li>
-                  <li>
-                    Brand: <span>{brand}</span>
+                  <li className='vehicle-grid__info-list__item'>
+                    <P>
+                      Brand: <span>{brand}</span>
+                    </P>
                   </li>
-                  <li>
-                    Model: <span>{model}</span>
+                  <li className='vehicle-grid__info-list__item'>
+                    <P>
+                      Model: <span>{model}</span>
+                    </P>
                   </li>
-                  <li>
-                    Max Capacity:{' '}
-                    <span>
-                      {capacity > 1
-                        ? `${capacity} people`
-                        : `${capacity} person`}
-                    </span>
+                  <li className='vehicle-grid__info-list__item'>
+                    <P>
+                      Max Capacity:{' '}
+                      <span>
+                        {capacity > 1
+                          ? `${capacity} people`
+                          : `${capacity} person`}
+                      </span>
+                    </P>
                   </li>
                   {rental && (
-                    <li>
-                      <span>Can be rented</span>
+                    <li className='vehicle-grid__info-list__item'>
+                      <P>Available for rent</P>
                     </li>
                   )}
                 </ul>
-              </Info>
-              <Extras>
-                <Title>Extras</Title>
-                <ul>
+              </div>
+              <div className='vehicle-grid__details'>
+                <P>{description}</P>
+              </div>
+              <div className='vehicle-grid__extras'>
+                <P className='vehicle-grid__extras__title'>Extras</P>
+                <ul className='vehicle-grid__extras-list'>
                   {extras.map((item, index) => {
-                    return <li key={index}>- {item}</li>;
+                    return (
+                      <li
+                        key={index}
+                        className='vehicle-grid__extras-list__item'
+                      >
+                        <P>- {item}</P>
+                      </li>
+                    );
                   })}
                 </ul>
-              </Extras>
-            </GridContainer>
+              </div>
+            </div>
           </Wrapper>
-        </section>
+        </StyledSection>
         <Footer className='footer' />
       </>
     );

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import theme from '../styles/theme';
-import Vehicle from '../components/Vehicle';
-import viewport from '../styles/media';
+import Vehicle from './Vehicle';
+import { viewport } from './Breakpoints';
 
 const GridSection = styled.section`
   display: grid;

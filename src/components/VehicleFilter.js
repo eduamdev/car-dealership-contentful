@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { VehicleContext } from '../context';
 import styled from 'styled-components';
 import { Modal, BackDrop } from './Modal';
-import viewport from '../styles/media';
+import { viewport } from './Breakpoints';
 import { formatMoney, getUnique } from '../utils/utils';
 import { filter, arrowD } from './svg';
 import Button from './Button';
@@ -131,6 +131,7 @@ const StyledSection = styled.section`
         }
 
         & .filter-grid__checkbox-container__checkbox-input {
+          margin-right: 10px;
         }
       }
     }
@@ -309,7 +310,7 @@ const VehicleFilter = ({ vehicles }) => {
                 className='filter-grid__checkbox-container__checkbox-label'
                 htmlFor='rental'
               >
-                Rental
+                Available for Rent
               </label>
             </div>
           </div>

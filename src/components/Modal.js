@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import viewport from '../styles/media';
+import { viewport } from './Breakpoints';
 import theme from '../styles/theme';
 import { close as closeSvg } from './svg';
 

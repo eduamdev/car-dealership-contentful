@@ -10,7 +10,6 @@ import Section from './Section';
 import { viewport } from './Breakpoints';
 
 const StyledSection = styled(Section)`
-  /* margin: 0 0 3em; */
   margin-top: 0;
 
   & .vehicleContainer__wrapper {

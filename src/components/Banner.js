@@ -39,9 +39,10 @@ const StyledSection = styled(Section)`
     }
 
     & .banner-flex__link {
-      font-weight: 400;
+      font-weight: 700;
       padding: 0.6em 1.25em;
       border-radius: 4px;
+      color: #fff;
 
       & svg {
         vertical-align: middle;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import viewport from '../styles/media';
+import { viewport } from './Breakpoints';
 
 const Icon = styled.span`
   width: 18px;

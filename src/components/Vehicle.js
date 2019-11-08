@@ -1,8 +1,8 @@
 import React from 'react';
 import theme from '../styles/theme';
 import styled from 'styled-components';
-import viewport from '../styles/media';
-import Link from '../components/Link';
+import { viewport } from './Breakpoints';
+import Link from './Link';
 import defaultImg from '../assets/images/placeholder.jpg';
 import PropTypes from 'prop-types';
 import { formatMoney } from '../utils/utils';
@@ -29,7 +29,6 @@ const Item = styled.article`
   &:focus .photo {
     transform: scale(1.15);
     transition: all 0.35s;
-    /* opacity: 0.2; */
     filter: brightness(0.5);
   }
 
@@ -61,13 +60,12 @@ const Item = styled.article`
   }
 
   & a {
-    /* visibility: hidden; */
-    transition: none;
+    /* transition: none; */
+    transition: all 0.1s;
   }
 
   &:focus a,
   &:hover a {
-    /* visibility: visible; */
     transition: all 0.1s;
   }
 
