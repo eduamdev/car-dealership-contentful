@@ -4,7 +4,7 @@
 
 Demo site is here: [Vehicle Dealership](https://vehicle-dealership.netlify.com/)
 
-![screenshot of site](./src/assets/images/og.png 'Vehicle Dealership Site')
+![screenshot of site](./src/assets/images/mockup.png 'Vehicle Dealership site mockup')
 
 ## Build Setup
 
