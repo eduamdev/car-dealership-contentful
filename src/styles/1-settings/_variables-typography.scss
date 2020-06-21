@@ -1,0 +1,13 @@
+/*  ============================================================================================================
+    Typography/font Variables
+    ============================================================================================================ */
+
+// IMPORTANT NOTE:
+// Make sure you use helpers like ".bold" (helpers/helpers-typography.scss)
+// instead of this file's variables
+
+/* Fallback fonts */
+$fallback: --apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+  Arial, sans-serif;
+
+/* Primary fonts */

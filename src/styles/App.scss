@@ -1,0 +1,12 @@
+/*  ============================================================================================================
+    METHODOLOGIES:
+    ITCSS, BEM
+    ============================================================================================================ */
+
+@import "./0-vendor"; // Files for third party code. At the top to be the most easily overridden
+@import "./1-settings"; // Preprocessors, fonts, variables (doesn’t generate any style output)
+@import "./2-tools"; // Mixins, functions (doesn’t generate any style output)
+@import "./3-generic"; // Resets or normalizing files
+@import "./4-elements"; // Bare HTML elements (H1, a, p, etc…)
+@import "./5-components"; // Majority of code goes here to style specific UI components
+@import "./6-helpers"; // Utilities and helper classes that have the most authority (show/hide, color helpers, etc…)
