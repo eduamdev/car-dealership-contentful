@@ -4,7 +4,7 @@ import { Layout } from "./../components";
 const Home = () => {
   return (
     <Layout>
-      <h1>Welcome home!</h1>;
+      <h1 className="text-4xl">Welcome home!</h1>
     </Layout>
   );
 };

@@ -1,0 +1,304 @@
+/*  ============================================================================================================
+    Background Utilities
+    ============================================================================================================ */
+
+/* Background colors */
+.bg-transparent {
+  background-color: transparent;
+}
+.bg-current {
+  background-color: currentColor;
+}
+.bg-black {
+  background-color: #000;
+}
+.bg-white {
+  background-color: #fff;
+}
+.bg-gray-100 {
+  background-color: $gray-100;
+}
+.bg-gray-200 {
+  background-color: $gray-200;
+}
+.bg-gray-300 {
+  background-color: $gray-300;
+}
+.bg-gray-400 {
+  background-color: $gray-400;
+}
+.bg-gray-500 {
+  background-color: $gray-500;
+}
+.bg-gray-600 {
+  background-color: $gray-600;
+}
+.bg-gray-700 {
+  background-color: $gray-700;
+}
+.bg-gray-800 {
+  background-color: $gray-800;
+}
+.bg-gray-900 {
+  background-color: $gray-900;
+}
+.bg-red-100 {
+  background-color: $red-100;
+}
+.bg-red-200 {
+  background-color: $red-200;
+}
+.bg-red-300 {
+  background-color: $red-300;
+}
+.bg-red-400 {
+  background-color: $red-400;
+}
+.bg-red-500 {
+  background-color: $red-500;
+}
+.bg-red-600 {
+  background-color: $red-600;
+}
+.bg-red-700 {
+  background-color: $red-700;
+}
+.bg-red-800 {
+  background-color: $red-800;
+}
+.bg-red-900 {
+  background-color: $red-900;
+}
+.bg-orange-100 {
+  background-color: $orange-100;
+}
+.bg-orange-200 {
+  background-color: $orange-200;
+}
+.bg-orange-300 {
+  background-color: $orange-300;
+}
+.bg-orange-400 {
+  background-color: $orange-400;
+}
+.bg-orange-500 {
+  background-color: $orange-500;
+}
+.bg-orange-600 {
+  background-color: $orange-600;
+}
+.bg-orange-700 {
+  background-color: $orange-700;
+}
+.bg-orange-800 {
+  background-color: $orange-800;
+}
+.bg-orange-900 {
+  background-color: $orange-900;
+}
+.bg-yellow-100 {
+  background-color: $yellow-100;
+}
+.bg-yellow-200 {
+  background-color: $yellow-200;
+}
+.bg-yellow-300 {
+  background-color: $yellow-300;
+}
+.bg-yellow-400 {
+  background-color: $yellow-400;
+}
+.bg-yellow-500 {
+  background-color: $yellow-500;
+}
+.bg-yellow-600 {
+  background-color: $yellow-600;
+}
+.bg-yellow-700 {
+  background-color: $yellow-700;
+}
+.bg-yellow-800 {
+  background-color: $yellow-800;
+}
+.bg-yellow-900 {
+  background-color: $yellow-900;
+}
+.bg-green-100 {
+  background-color: $green-100;
+}
+.bg-green-200 {
+  background-color: $green-200;
+}
+.bg-green-300 {
+  background-color: $green-300;
+}
+.bg-green-400 {
+  background-color: $green-400;
+}
+.bg-green-500 {
+  background-color: $green-500;
+}
+.bg-green-600 {
+  background-color: $green-600;
+}
+.bg-green-700 {
+  background-color: $green-700;
+}
+.bg-green-800 {
+  background-color: $green-800;
+}
+.bg-green-900 {
+  background-color: $green-900;
+}
+.bg-teal-100 {
+  background-color: $teal-100;
+}
+.bg-teal-200 {
+  background-color: $teal-200;
+}
+.bg-teal-300 {
+  background-color: $teal-300;
+}
+.bg-teal-400 {
+  background-color: $teal-400;
+}
+.bg-teal-500 {
+  background-color: $teal-500;
+}
+.bg-teal-600 {
+  background-color: $teal-600;
+}
+.bg-teal-700 {
+  background-color: $teal-700;
+}
+.bg-teal-800 {
+  background-color: $teal-800;
+}
+.bg-teal-900 {
+  background-color: $teal-900;
+}
+.bg-blue-100 {
+  background-color: $blue-100;
+}
+.bg-blue-200 {
+  background-color: $blue-200;
+}
+.bg-blue-300 {
+  background-color: $blue-300;
+}
+.bg-blue-400 {
+  background-color: $blue-400;
+}
+.bg-blue-500 {
+  background-color: $blue-500;
+}
+.bg-blue-600 {
+  background-color: $blue-600;
+}
+.bg-blue-700 {
+  background-color: $blue-700;
+}
+.bg-blue-800 {
+  background-color: $blue-800;
+}
+.bg-blue-900 {
+  background-color: $blue-900;
+}
+.bg-indigo-100 {
+  background-color: $indigo-100;
+}
+.bg-indigo-200 {
+  background-color: $indigo-200;
+}
+.bg-indigo-300 {
+  background-color: $indigo-300;
+}
+.bg-indigo-400 {
+  background-color: $indigo-400;
+}
+.bg-indigo-500 {
+  background-color: $indigo-500;
+}
+.bg-indigo-600 {
+  background-color: $indigo-600;
+}
+.bg-indigo-700 {
+  background-color: $indigo-700;
+}
+.bg-indigo-800 {
+  background-color: $indigo-800;
+}
+.bg-indigo-900 {
+  background-color: $indigo-900;
+}
+.bg-purple-100 {
+  background-color: $purple-100;
+}
+.bg-purple-200 {
+  background-color: $purple-200;
+}
+.bg-purple-300 {
+  background-color: $purple-300;
+}
+.bg-purple-400 {
+  background-color: $purple-400;
+}
+.bg-purple-500 {
+  background-color: $purple-500;
+}
+.bg-purple-600 {
+  background-color: $purple-600;
+}
+.bg-purple-700 {
+  background-color: $purple-700;
+}
+.bg-purple-800 {
+  background-color: $purple-800;
+}
+.bg-purple-900 {
+  background-color: $purple-900;
+}
+.bg-pink-100 {
+  background-color: $pink-100;
+}
+.bg-pink-200 {
+  background-color: $pink-200;
+}
+.bg-pink-300 {
+  background-color: $pink-300;
+}
+.bg-pink-400 {
+  background-color: $pink-400;
+}
+.bg-pink-500 {
+  background-color: $pink-500;
+}
+.bg-pink-600 {
+  background-color: $pink-600;
+}
+.bg-pink-700 {
+  background-color: $pink-700;
+}
+.bg-pink-800 {
+  background-color: $pink-800;
+}
+.bg-pink-900 {
+  background-color: $pink-900;
+}
+
+/* Background opacity */
+.bg-opacity-100 {
+  opacity: 1;
+}
+.bg-opacity-75 {
+  opacity: 0.75;
+}
+.bg-opacity-50 {
+  opacity: 0.5;
+}
+.bg-opacity-25 {
+  opacity: 0.25;
+}
+.bg-opacity-0 {
+  opacity: 0;
+}

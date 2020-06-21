@@ -1,0 +1,244 @@
+/* Font sizes */
+.text-sm {
+  font-size: $text-xs;
+}
+.text-sm {
+  font-size: $text-sm;
+}
+.text-base {
+  font-size: $text-base;
+}
+.text-lg {
+  font-size: $text-lg;
+}
+.text-xl {
+  font-size: $text-xl;
+}
+.text-2xl {
+  font-size: $text-2xl;
+}
+.text-3xl {
+  font-size: $text-3xl;
+}
+.text-4xl {
+  font-size: $text-4xl;
+}
+.text-5xl {
+  font-size: $text-5xl;
+}
+.text-6xl {
+  font-size: $text-6xl;
+}
+
+/* Font style */
+.italic {
+  font-style: italic;
+}
+.not-italic {
+  font-style: normal;
+}
+
+/* Font weight */
+.font-hairline {
+  font-weight: 100;
+}
+.font-thin {
+  font-weight: 200;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-normal {
+  font-weight: 400;
+}
+.font-medium {
+  font-weight: 500;
+}
+.font-semibold {
+  font-weight: 600;
+}
+.font-bold {
+  font-weight: 700;
+}
+.font-extrabold {
+  font-weight: 800;
+}
+.font-black {
+  font-weight: 900;
+}
+
+/* Letter spacing */
+.tracking-tighter {
+  letter-spacing: $tracking-tighter;
+}
+.tracking-tight {
+  letter-spacing: $tracking-tight;
+}
+.tracking-normal {
+  letter-spacing: $tracking-normal;
+}
+.tracking-wide {
+  letter-spacing: $tracking-wide;
+}
+.tracking-wider {
+  letter-spacing: $tracking-wider;
+}
+.tracking-widest {
+  letter-spacing: $tracking-widest;
+}
+
+/* Line height */
+.leading-none {
+  line-height: $leading-none;
+}
+.leading-tight {
+  line-height: $leading-tight;
+}
+.leading-snug {
+  line-height: $leading-snug;
+}
+.leading-normal {
+  line-height: $leading-normal;
+}
+.leading-relaxed {
+  line-height: $leading-relaxed;
+}
+.leading-loose {
+  line-height: $leading-loose;
+}
+.leading-3 {
+  line-height: $leading-3;
+}
+.leading-4 {
+  line-height: $leading-4;
+}
+.leading-5 {
+  line-height: $leading-5;
+}
+.leading-6 {
+  line-height: $leading-6;
+}
+.leading-7 {
+  line-height: $leading-7;
+}
+.leading-8 {
+  line-height: $leading-8;
+}
+.leading-9 {
+  line-height: $leading-9;
+}
+.leading-10 {
+  line-height: $leading-10;
+}
+
+/* List style type */
+.list-none {
+  list-style-type: none;
+}
+.list-disc {
+  list-style-type: disc;
+}
+.list-decimal {
+  list-style-type: decimal;
+}
+
+/* List style position */
+.list-inside {
+  list-style-position: inside;
+}
+.list-outside {
+  list-style-position: outside;
+}
+
+/* Text align */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+
+/* Text decoration */
+.underline {
+  text-decoration: underline;
+}
+.line-through {
+  text-decoration: line-through;
+}
+.no-underline {
+  text-decoration: none;
+}
+
+/* Text transform */
+.uppercase {
+  text-transform: uppercase;
+}
+.lowercase {
+  text-transform: lowercase;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.normal-case {
+  text-transform: none;
+}
+
+/* Vertical align */
+.align-baseline {
+  vertical-align: baseline;
+}
+.align-top {
+  vertical-align: top;
+}
+.align-middle {
+  vertical-align: middle;
+}
+.align-bottom {
+  vertical-align: bottom;
+}
+.align-text-top {
+  vertical-align: text-top;
+}
+.align-text-bottom {
+  vertical-align: text-bottom;
+}
+
+/* Whitespace */
+.whitespace-normal {
+  white-space: normal;
+}
+.whitespace-no-wrap {
+  white-space: nowrap;
+}
+.whitespace-pre {
+  white-space: pre;
+}
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+/* Word break */
+.break-normal {
+  word-break: normal;
+  overflow-wrap: normal;
+}
+.break-words {
+  overflow-wrap: break-word;
+}
+.break-all {
+  word-break: break-all;
+}
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
