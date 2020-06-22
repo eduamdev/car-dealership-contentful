@@ -3,7 +3,7 @@
     ============================================================================================================ */
 
 // IMPORTANT NOTE:
-// Make sure you use helpers like ".bold" (helpers/helpers-typography.scss)
+// Make sure you use helpers like ".font-bold" (helpers/helpers-typography.scss)
 // instead of this file's variables
 
 /* Fallback fonts */
@@ -12,6 +12,9 @@ $fallback: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
 /* Primary fonts */
+$font-sans: "Inter", $fallback;
+$font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+$font-mono: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 /* Font sizes */
 $text-xs: 0.75rem;

@@ -1,3 +1,14 @@
+/* Font family */
+.font-sans {
+  font-family: $font-sans;
+}
+.font-serif {
+  font-family: $font-serif;
+}
+.font-mono {
+  font-family: $font-mono;
+}
+
 /* Font sizes */
 .text-sm {
   font-size: $text-xs;

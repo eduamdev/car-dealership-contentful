@@ -45,3 +45,9 @@ object {
   display: block;
   vertical-align: middle;
 }
+
+body,
+html {
+  text-rendering: optimizeLegibility;
+  font-family: $font-sans;
+}
