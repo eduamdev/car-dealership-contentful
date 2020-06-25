@@ -492,6 +492,9 @@
 .m-64 {
   margin: $margin-64;
 }
+.m-auto {
+  margin: auto;
+}
 .m-px {
   margin: 1px;
 }
@@ -566,6 +569,10 @@
 .my-64 {
   margin-top: $margin-64;
   margin-bottom: $margin-64;
+}
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .my-px {
   margin-top: 1px;
@@ -643,6 +650,10 @@
   margin-right: $margin-64;
   margin-left: $margin-64;
 }
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
 .mx-px {
   margin-right: 1px;
   margin-left: 1px;
@@ -701,6 +712,9 @@
 .mt-64 {
   margin-top: $margin-64;
 }
+.mt-auto {
+  margin-top: auto;
+}
 .mt-px {
   margin-top: 1px;
 }
@@ -757,6 +771,9 @@
 }
 .mr-64 {
   margin-right: $margin-64;
+}
+.mr-auto {
+  margin-right: auto;
 }
 .mr-px {
   margin-right: 1px;
@@ -815,6 +832,9 @@
 .mb-64 {
   margin-bottom: $margin-64;
 }
+.mb-auto {
+  margin-bottom: auto;
+}
 .mb-px {
   margin-bottom: 1px;
 }
@@ -871,6 +891,9 @@
 }
 .ml-64 {
   margin-left: $margin-64;
+}
+.ml-auto {
+  margin-left: auto;
 }
 .ml-px {
   margin-left: 1px;

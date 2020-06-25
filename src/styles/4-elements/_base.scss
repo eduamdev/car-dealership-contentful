@@ -51,3 +51,10 @@ html {
   text-rendering: optimizeLegibility;
   font-family: $font-sans;
 }
+
+*,
+*::before,
+*::after {
+  border-width: 0;
+  border-style: solid;
+}

@@ -476,6 +476,31 @@
   opacity: 0;
 }
 
+.text-accents-8 {
+  color: $accents-8;
+}
+.text-accents-7 {
+  color: $accents-7;
+}
+.text-accents-6 {
+  color: $accents-6;
+}
+.text-accents-5 {
+  color: $accents-5;
+}
+.text-accents-4 {
+  color: $accents-4;
+}
+.text-accents-3 {
+  color: $accents-3;
+}
+.text-accents-2 {
+  color: $accents-2;
+}
+.text-accents-1 {
+  color: $accents-1;
+}
+
 /* Placeholder color */
 .placeholder-transparent::placeholder {
   color: transparent;
@@ -758,6 +783,31 @@
 }
 .placeholder-pink-900::placeholder {
   color: $pink-900;
+}
+
+.placeholder-accents-8::placeholder {
+  color: $accents-8;
+}
+.placeholder-accents-7::placeholder {
+  color: $accents-7;
+}
+.placeholder-accents-6::placeholder {
+  color: $accents-6;
+}
+.placeholder-accents-5::placeholder {
+  color: $accents-5;
+}
+.placeholder-accents-4::placeholder {
+  color: $accents-4;
+}
+.placeholder-accents-3::placeholder {
+  color: $accents-3;
+}
+.placeholder-accents-2::placeholder {
+  color: $accents-2;
+}
+.placeholder-accents-1::placeholder {
+  color: $accents-1;
 }
 
 /* Text decoration */

@@ -1,3 +1,24 @@
+/* Container */
+.container {
+  max-width: 100%;
+  padding-left: $padding-4;
+  padding-right: $padding-4;
+
+  @include sm {
+    max-width: $screen-sm;
+    padding: 0;
+  }
+  @include md {
+    max-width: $screen-md;
+  }
+  @include lg {
+    max-width: $screen-lg;
+  }
+  @include xl {
+    max-width: $screen-xl;
+  }
+}
+
 /* Box sizing */
 .box-border {
   box-sizing: border-box;
