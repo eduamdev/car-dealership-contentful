@@ -7,12 +7,13 @@ import hero5 from "../images/hero_5.jpg";
 
 const Hero = () => {
   return (
-    <div className="">
+    <div className="relative">
       <img
-        className="w-full object-cover object-bottom"
+        className="w-full object-cover"
         style={{ height: `32rem` }}
         src={hero4}
       ></img>
+      <div></div>
     </div>
   );
 };

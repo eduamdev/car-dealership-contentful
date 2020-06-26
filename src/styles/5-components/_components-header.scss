@@ -1,0 +1,13 @@
+.header {
+  @extend .h-16, .bg-black;
+
+  &__nav {
+    @extend .h-full,
+      .flex,
+      .justify-between,
+      .items-center,
+      .container,
+      .mx-auto,
+      .text-white;
+  }
+}
