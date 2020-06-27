@@ -96,30 +96,30 @@ const SvgToyota = (
 
 const CarBrands = () => {
   return (
-    <div className="bg-accents-1 border-t border-accents-2 py-12">
-      <div className="container mx-auto grid items-center justify-between grid-cols-7">
-        <span className="mx-auto inline-flex justify-center items-center">
-          <span className="mr-1">{SvgTesla}</span>
-          <span>{SvgTeslaText}</span>
-        </span>
-        <span className="mx-auto inline-flex justify-center items-center">
-          <span>{SvgSuzuki}</span>
-        </span>
-        <span className="mx-auto inline-flex justify-center items-center">
-          <span>{SvgHonda}</span>
-        </span>
-        <span className="mx-auto inline-flex justify-center items-center">
-          <span>{SvgSubaru}</span>
-        </span>
-        <span className="mx-auto inline-flex justify-center items-center">
-          <span>{SvgJeep}</span>
-        </span>
-        <span className="mx-auto inline-flex justify-center items-center">
-          <span>{SvgVolkswagen}</span>
-        </span>
-        <span className="mx-auto inline-flex justify-center items-center">
-          <span>{SvgToyota}</span>
-        </span>
+    <div className="bg-black py-24">
+      <div className="container mx-auto flex items-center justify-between">
+        <div className="inline-flex items-center justify-between">
+          <div className="mr-1">{SvgTesla}</div>
+          <div>{SvgTeslaText}</div>
+        </div>
+        <div className="inline-block">
+          <div>{SvgSuzuki}</div>
+        </div>
+        <div className="inline-block">
+          <div>{SvgHonda}</div>
+        </div>
+        <div className="inline-block">
+          <div>{SvgSubaru}</div>
+        </div>
+        <div className="inline-block">
+          <div>{SvgJeep}</div>
+        </div>
+        <div className="inline-block">
+          <div>{SvgVolkswagen}</div>
+        </div>
+        <div className="inline-block">
+          <div>{SvgToyota}</div>
+        </div>
       </div>
     </div>
   );

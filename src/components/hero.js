@@ -1,19 +1,38 @@
 import React from "react";
 import hero from "../images/hero.jpg";
-import hero2 from "../images/hero_2.jpg";
-import hero3 from "../images/hero_3.jpg";
 import hero4 from "../images/hero_4.jpg";
-import hero5 from "../images/hero_5.jpg";
+import hero10 from "../images/hero_10.jpg";
 
 const Hero = () => {
   return (
-    <div className="relative">
+    <div className="relative" style={{ height: `36rem` }}>
       <img
-        className="w-full object-cover"
-        style={{ height: `32rem` }}
-        src={hero4}
+        className="h-full w-full object-cover"
+        style={{ objectPosition: `center 80%` }}
+        src={hero10}
       ></img>
-      <div></div>
+      <div
+        className="absolute h-full w-full top-0 left-0 z-10"
+        style={{
+          background: `linear-gradient(to right, rgba(0,0,0,0.5) 30%, transparent 75%)`,
+        }}
+      >
+        <div className="container h-full mx-auto">
+          <div className="h-full max-w-xl flex flex-col items-start justify-center">
+            <h1 className="text-white text-7xl font-bold inline-block mb-12">
+              Find your <br></br> Right Car
+            </h1>
+            <div className="grid grid-cols-2 gap-6">
+              <button className="w-48 py-4 border border-red-600 rounded-md bg-red-600 text-white shadow-2xl text-lg">
+                Search
+              </button>
+              <button className="w-48 py-4 border border-white rounded-md bg-transparent text-white shadow-2xl text-lg">
+                Contact Sales
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -52,6 +52,10 @@ html {
   font-family: $font-sans;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 *,
 *::before,
 *::after {
