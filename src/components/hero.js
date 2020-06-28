@@ -26,7 +26,7 @@ const Hero = () => {
               <button className="w-48 py-4 border border-red-600 rounded-md bg-red-600 text-white shadow-2xl text-lg">
                 Search
               </button>
-              <button className="w-48 py-4 border border-white rounded-md bg-transparent text-white shadow-2xl text-lg">
+              <button className="w-48 py-4 border border-gray-100 rounded-md bg-transparent text-accents-7 shadow-2xl text-lg">
                 Contact Sales
               </button>
             </div>

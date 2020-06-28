@@ -1,5 +1,11 @@
 import React from "react";
-import { Layout, Hero, CarBrands, Services } from "./../components";
+import {
+  Layout,
+  Hero,
+  CarBrands,
+  Services,
+  Testimonial,
+} from "./../components";
 
 const Home = () => {
   return (
@@ -7,6 +13,7 @@ const Home = () => {
       <Hero></Hero>
       <CarBrands></CarBrands>
       <Services></Services>
+      <Testimonial></Testimonial>
     </Layout>
   );
 };
