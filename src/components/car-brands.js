@@ -96,7 +96,7 @@ const SvgToyota = (
 
 const CarBrands = () => {
   return (
-    <div className="bg-black py-24">
+    <div className="bg-accents-1 py-24">
       <div className="container mx-auto flex items-center justify-between">
         <div className="inline-flex items-center justify-between">
           <div className="mr-1">{SvgTesla}</div>
