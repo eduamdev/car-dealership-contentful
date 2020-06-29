@@ -1,6 +1,6 @@
 import React from "react";
 
-const SvgTesla = (
+const SvgTeslaLogo = (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 48 48"
@@ -19,7 +19,7 @@ const SvgTesla = (
   </svg>
 );
 
-const SvgTeslaText = (
+const SvgTesla = (
   <svg
     className="text-accents-7 fill-current w-24"
     xmlns="http://www.w3.org/2000/svg"
@@ -94,35 +94,43 @@ const SvgToyota = (
   </svg>
 );
 
-const CarBrands = () => {
-  return (
-    <div className="bg-accents-1 py-24">
-      <div className="container mx-auto flex items-center justify-between">
-        <div className="inline-flex items-center justify-between">
-          <div className="mr-1">{SvgTesla}</div>
-          <div>{SvgTeslaText}</div>
-        </div>
-        <div className="inline-block">
-          <div>{SvgSuzuki}</div>
-        </div>
-        <div className="inline-block">
-          <div>{SvgHonda}</div>
-        </div>
-        <div className="inline-block">
-          <div>{SvgSubaru}</div>
-        </div>
-        <div className="inline-block">
-          <div>{SvgJeep}</div>
-        </div>
-        <div className="inline-block">
-          <div>{SvgVolkswagen}</div>
-        </div>
-        <div className="inline-block">
-          <div>{SvgToyota}</div>
-        </div>
-      </div>
-    </div>
-  );
-};
+const SvgClose = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+    className="text-accents-7 fill-current w-6"
+  >
+    <path
+      fill="none"
+      stroke="#000"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="32"
+      d="M368 368L144 144M368 144L144 368"
+    />
+  </svg>
+);
 
-export default CarBrands;
+const SvgLogo = (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+    className="text-accents-7 fill-current w-8 mr-3"
+  >
+    <path d="M336 336H32a16 16 0 01-14-23.81l152-272a16 16 0 0127.94 0l152 272A16 16 0 01336 336z" />
+    <path d="M336 160a161.07 161.07 0 00-32.57 3.32l74.47 133.27A48 48 0 01336 368H183.33A160 160 0 10336 160z" />
+  </svg>
+);
+
+export {
+  SvgTeslaLogo,
+  SvgTesla,
+  SvgHonda,
+  SvgJeep,
+  SvgSubaru,
+  SvgSuzuki,
+  SvgToyota,
+  SvgVolkswagen,
+  SvgClose,
+  SvgLogo,
+};

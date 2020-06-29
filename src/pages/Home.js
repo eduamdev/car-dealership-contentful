@@ -1,11 +1,35 @@
 import React from "react";
-import { Layout, Hero, CarBrands, Service, Testimonial } from "./../components";
+import { Layout, Hero, BrandLogo, Service, Testimonial } from "./../components";
+import {
+  SvgTeslaLogo,
+  SvgTesla,
+  SvgHonda,
+  SvgJeep,
+  SvgSubaru,
+  SvgSuzuki,
+  SvgToyota,
+  SvgVolkswagen,
+} from "./../components/svg";
 
 const Home = () => {
   return (
     <Layout>
       <Hero></Hero>
-      <CarBrands></CarBrands>
+      {/* Brand logo Section */}
+      <div className="bg-accents-1 py-24">
+        <div className="container mx-auto flex items-center justify-between">
+          <BrandLogo>
+            <div className="mr-1">{SvgTeslaLogo}</div>
+            <div>{SvgTesla}</div>
+          </BrandLogo>
+          <BrandLogo logo={SvgSuzuki}></BrandLogo>
+          <BrandLogo logo={SvgHonda}></BrandLogo>
+          <BrandLogo logo={SvgSubaru}></BrandLogo>
+          <BrandLogo logo={SvgJeep}></BrandLogo>
+          <BrandLogo logo={SvgVolkswagen}></BrandLogo>
+          <BrandLogo logo={SvgToyota}></BrandLogo>
+        </div>
+      </div>
       {/* Services Section */}
       <div className="bg-black border-t border-accents-2">
         <div className="container mx-auto py-12">
@@ -138,7 +162,7 @@ const Home = () => {
           <div class="py-12">
             <div class="max-w-screen-xl mx-auto px-8">
               <Testimonial
-                quote="Vinfy is the best experience I have had when buying a car. I got my new
+                quote="Vinfy is the best experience I have had when buying a car. I got my dream
         car in record time at an unbeatable price. They took care of everything."
                 author={{
                   name: "Bernard Lane",
