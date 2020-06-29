@@ -1,6 +1,9 @@
 export { default as Header } from "./header";
 export { default as Hero } from "./hero";
-export { default as BrandLogo } from "./brand-logo";
+export { default as BrandLogo } from "./brandLogo";
+export { default as BrandLogoSection } from "./brandLogoSection";
+export { default as ServicesSection } from "./servicesSection";
+export { default as TestimonialSection } from "./testimonialSection";
 export { default as Service } from "./service";
 export { default as Testimonial } from "./testimonial";
 export { default as SearchBox } from "./searchbox";
