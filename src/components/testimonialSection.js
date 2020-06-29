@@ -13,8 +13,8 @@ const BrandLogoSection = () => {
         }}
       ></div>
       <div className="container mx-auto pt-12 pb-20">
-        <div class="py-12">
-          <div class="max-w-screen-xl mx-auto px-8">
+        <div className="py-12">
+          <div className="max-w-screen-xl mx-auto px-8">
             <Testimonial
               quote="Vinfy is the best experience I have had when buying a car. I got my dream
         car in record time at an unbeatable price. They took care of everything."

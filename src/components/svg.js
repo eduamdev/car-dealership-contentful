@@ -7,14 +7,14 @@ const SvgTeslaLogo = (
     className="text-accents-7 fill-current h-12 w-12"
   >
     <path
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="M5.271 10.155c4.896-1.983 12.974-2.241 16.483-2.109L24 10.93l2.247-2.884c3.509-.132 11.587.125 16.482 2.109-.676 1.284-3.617 3.11-5.233 3.516-.092-2.523-3.658-3.049-7.079-3.049L23.999 45.04l-6.417-34.419c-3.425 0-6.991.526-7.083 3.049-1.614-.405-4.553-2.231-5.228-3.515z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />
     <path
-      fill-rule="evenodd"
+      fillRule="evenodd"
       d="M3 6.734l1.253 1.839c4.753-1.668 10.394-2.47 16.347-2.65 2.253-.069 4.547-.069 6.798 0 5.953.179 11.595.981 16.348 2.65L45 6.734c-5.613-1.902-11.577-2.536-17.532-2.69-2.307-.059-4.63-.059-6.933 0-5.96.154-11.921.788-17.535 2.69z"
-      clip-rule="evenodd"
+      clipRule="evenodd"
     />
   </svg>
 );
@@ -103,9 +103,9 @@ const SvgClose = (
     <path
       fill="none"
       stroke="#000"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="32"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="32"
       d="M368 368L144 144M368 144L144 368"
     />
   </svg>
@@ -123,45 +123,65 @@ const SvgLogo = (
 );
 
 const SvgWorld = (
-  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
     <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
       d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"
     />
   </svg>
 );
 
 const SvgNoFees = (
-  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
     <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
       d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"
     />
   </svg>
 );
 
 const SvgLightning = (
-  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <svg
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
     <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
       d="M13 10V3L4 14h7v7l9-11h-7z"
     />
   </svg>
 );
 
-const SvgNotifications = (
-  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+const SvgAward = (
+  <svg
+    className="h-6 w-6"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
     <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M13 10V3L4 14h7v7l9-11h-7z"
     />
   </svg>
 );
@@ -180,5 +200,5 @@ export {
   SvgWorld,
   SvgNoFees,
   SvgLightning,
-  SvgNotifications,
+  SvgAward,
 };
