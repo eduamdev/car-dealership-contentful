@@ -16,8 +16,7 @@ const BrandLogoSection = () => {
         <div className="py-12">
           <div className="max-w-screen-xl mx-auto px-8">
             <Testimonial
-              quote="Vinfy is the best experience I have had when buying a car. I got my dream
-        car in record time at an unbeatable price. They took care of everything."
+              quote="VinCar is the best experience I have had when buying a car. I got mine in record time at an unbeatable price. They took care of everything."
               author={{
                 name: "Bernard Lane",
                 position: "Head of Ocado Technology, Barcelona",

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Service = ({ title, text, icon }) => {
+const ServiceItem = ({ title, text, icon }) => {
   return (
     <div className="flex">
       <div className="flex-shrink-0">
@@ -16,4 +16,4 @@ const Service = ({ title, text, icon }) => {
   );
 };
 
-export default Service;
+export default ServiceItem;

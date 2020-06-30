@@ -4,6 +4,7 @@ import {
   Hero,
   ServicesSection,
   TestimonialSection,
+  FeaturedSection,
   BrandLogoSection,
 } from "./../components";
 
@@ -14,6 +15,7 @@ const Home = () => {
       <BrandLogoSection></BrandLogoSection>
       <ServicesSection></ServicesSection>
       <TestimonialSection></TestimonialSection>
+      <FeaturedSection></FeaturedSection>
     </Layout>
   );
 };

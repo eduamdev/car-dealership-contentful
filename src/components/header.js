@@ -1,12 +1,11 @@
 import React from "react";
-import { SvgLogo } from "./svg";
 
 const Header = () => {
   return (
     <div className="header">
       <nav className="header__nav">
         <a className="text-white inline-flex items-center">
-          {SvgLogo} <span className="tracking-wider text-lg">Vinfy</span>
+          <span className="tracking-wider text-lg">VinCar</span>
         </a>
         <ul
           className="grid justify-between items-center gap-8"

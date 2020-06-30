@@ -14,13 +14,14 @@ const Hero = () => {
       <div
         className="absolute h-full w-full top-0 left-0 z-10"
         style={{
-          background: `linear-gradient(to right, rgba(0,0,0,0.5) 30%, transparent 75%)`,
+          background: `linear-gradient(to right, rgba(0, 0, 0, 0.65) 24rem, transparent 100%)`,
         }}
       >
         <div className="container h-full mx-auto">
           <div className="h-full max-w-xl flex flex-col items-start justify-center">
-            <h1 className="text-white text-7xl font-bold inline-block mb-12">
-              Find your <br></br> Right Car
+            <h1 className="text-white text-7xl font-extrabold inline-block mb-12">
+              Find your <br></br> <span className="text-red-500">Right</span>{" "}
+              Car
             </h1>
             <div className="grid grid-cols-2 gap-6">
               <button className="w-48 py-4 border border-red-600 rounded-md bg-red-600 text-white shadow-2xl text-lg">

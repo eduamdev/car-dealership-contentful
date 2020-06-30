@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
           top priority.
         </span>
         {/* <span>
-          Health and safety is our top priority.
+          Your safety is our top priority.
         </span> */}
         <span>Learn More →</span>
         <span className="absolute cursor-pointer" style={{ right: `20px` }}>
