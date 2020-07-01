@@ -1,7 +1,7 @@
 import React from "react";
-import { Header, Footer } from "./";
+import Header from "../components/header";
+import Footer from "../components/footer";
 import { motion } from "framer-motion";
-import { SvgClose } from "./svg";
 
 const Layout = ({ children }) => {
   return (
@@ -20,7 +20,20 @@ const Layout = ({ children }) => {
         </span> */}
         <span>Learn More →</span>
         <span className="absolute cursor-pointer" style={{ right: `20px` }}>
-          {SvgClose}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+            className="text-accents-7 fill-current w-6"
+          >
+            <path
+              fill="none"
+              stroke="#000"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="32"
+              d="M368 368L144 144M368 144L144 368"
+            />
+          </svg>
         </span>
       </div>
       <Header></Header>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const FeaturedSection = () => {
+const Featured = () => {
   return (
     <div className="bg-black border-t border-accents-2 text-white">
       <div className="container mx-auto py-12">
@@ -68,4 +68,4 @@ const FeaturedSection = () => {
   );
 };
 
-export default FeaturedSection;
+export default Featured;
