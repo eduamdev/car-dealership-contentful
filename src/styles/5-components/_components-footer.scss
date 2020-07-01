@@ -1,0 +1,9 @@
+.footer-item::after {
+  color: #b7b5bd;
+  content: "•";
+  padding: 0.75rem;
+}
+
+.footer-item:last-child:after {
+  content: "";
+}

@@ -14,7 +14,7 @@ const Featured = () => {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-3 gap-5 items-center justify-between py-12">
+        <div className="w-full grid grid-cols-3 gap-5 items-center justify-between pt-12 pb-32">
           <div>
             <div className="h-64 rounded-lg overflow-hidden">
               <img
@@ -22,9 +22,9 @@ const Featured = () => {
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="pt-6 text-white">
+            <div className="leading-5 pt-6 text-white">
               <h4 className="">Ford Mustang</h4>
-              <p className="text-base text-accents-6 tracking-wide mt-3">
+              <p className="text-base text-accents-6 tracking-wide mt-2">
                 $20,543
               </p>
             </div>
@@ -36,9 +36,9 @@ const Featured = () => {
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="pt-6 text-white">
+            <div className="leading-5 pt-6 text-white">
               <h4 className="">Ford Mustang</h4>
-              <p className="text-base text-accents-6 tracking-wide mt-3">
+              <p className="text-base text-accents-6 tracking-wide mt-2">
                 $20,543
               </p>
             </div>
@@ -50,18 +50,13 @@ const Featured = () => {
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="pt-6 text-white">
+            <div className="leading-5 pt-6 text-white">
               <h4 className="">Ford Mustang</h4>
-              <p className="text-base text-accents-6 tracking-wide mt-3">
+              <p className="text-base text-accents-6 tracking-wide leading-5 mt-2">
                 $20,543
               </p>
             </div>
           </div>
-        </div>
-        <div className="text-center mb-12 pt-6">
-          <a className="inline-block mx-auto border-b-2 border-white bg-transparent text-white text-base tracking-wide">
-            Explore all vehicles →
-          </a>
         </div>
       </div>
     </div>
