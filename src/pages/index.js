@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Services from "../components/services";
 import Testimonials from "../components/testimonials";
-import Featured from "../components/featured";
+import FeaturedCars from "../components/featured-cars";
 import Brands from "../components/brands";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
       <Brands></Brands>
       <Services></Services>
       <Testimonials></Testimonials>
-      <Featured></Featured>
+      <FeaturedCars></FeaturedCars>
     </Layout>
   );
 };

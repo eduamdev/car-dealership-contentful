@@ -14,7 +14,7 @@ const Hero = () => {
       <div
         className="absolute h-full w-full top-0 left-0 z-10"
         style={{
-          background: `linear-gradient(to right, rgba(0, 0, 0, 0.65) 24rem, transparent 100%)`,
+          background: `linear-gradient(to right, rgba(0, 0, 0, 0.65) 24rem, rgba(255, 255, 255, 0.1) 100%)`,
         }}
       >
         <div className="container h-full mx-auto">

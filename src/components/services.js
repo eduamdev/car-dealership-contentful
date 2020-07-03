@@ -24,15 +24,14 @@ const Services = () => {
           <div className="max-w-screen-xl mx-auto px-8">
             <div className="text-center">
               <h3 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-white">
-                A better way to send money
+                Why VinCar
               </h3>
               <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
-                Lorem ipsum dolor sit amet consect adipisicing elit. Possimus
-                magnam voluptatum cupiditate veritatis in accusamus quisquam.
+                Lorem ipsum dolor sit amet consect adipisicing elit.
               </p>
             </div>
 
-            <div className="mt-10">
+            <div className="mt-20">
               <ul className="grid grid-cols-2 col-gap-8 row-gap-10">
                 <li>
                   <ServiceItem

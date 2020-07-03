@@ -1,9 +1,9 @@
 import React from "react";
 
-const Featured = () => {
+const FeaturedCars = () => {
   return (
     <div className="bg-black border-t border-accents-2 text-white">
-      <div className="container mx-auto py-12">
+      <div className="mx-auto py-12 px-12">
         <div className="py-12">
           <div className="max-w-screen-xl mx-auto px-8">
             <div className="text-center">
@@ -14,7 +14,7 @@ const Featured = () => {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-3 gap-5 items-center justify-between pt-12 pb-32">
+        <div className="w-full grid grid-cols-4 gap-5 items-center justify-between pt-12 pb-32">
           <div>
             <div className="h-64 rounded-lg overflow-hidden">
               <img
@@ -24,7 +24,7 @@ const Featured = () => {
             </div>
             <div className="leading-5 pt-6 text-white">
               <h4 className="">Ford Mustang</h4>
-              <p className="text-base text-accents-6 tracking-wide mt-2">
+              <p className="text-base text-red-400 tracking-wide mt-2">
                 $20,543
               </p>
             </div>
@@ -38,7 +38,7 @@ const Featured = () => {
             </div>
             <div className="leading-5 pt-6 text-white">
               <h4 className="">Ford Mustang</h4>
-              <p className="text-base text-accents-6 tracking-wide mt-2">
+              <p className="text-base text-red-400 tracking-wide mt-2">
                 $20,543
               </p>
             </div>
@@ -52,7 +52,21 @@ const Featured = () => {
             </div>
             <div className="leading-5 pt-6 text-white">
               <h4 className="">Ford Mustang</h4>
-              <p className="text-base text-accents-6 tracking-wide leading-5 mt-2">
+              <p className="text-base text-red-400 tracking-wide mt-2">
+                $20,543
+              </p>
+            </div>
+          </div>
+          <div>
+            <div className="h-64 rounded-lg overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+                className="w-full h-full object-cover"
+              ></img>
+            </div>
+            <div className="leading-5 pt-6 text-white">
+              <h4 className="">Ford Mustang</h4>
+              <p className="text-base text-red-400 tracking-wide leading-5 mt-2">
                 $20,543
               </p>
             </div>
@@ -63,4 +77,4 @@ const Featured = () => {
   );
 };
 
-export default Featured;
+export default FeaturedCars;
