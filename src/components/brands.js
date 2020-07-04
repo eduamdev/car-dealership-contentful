@@ -11,7 +11,7 @@ const BrandItem = ({ logo, children }) => {
 
 const Brands = () => {
   return (
-    <section className="brands py-20">
+    <section className="brands bg-accents-8 py-20 border-t border-accents-7">
       <div className="container mx-auto flex items-center justify-between">
         {/* Tesla */}
         <BrandItem>

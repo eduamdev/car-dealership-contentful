@@ -2,10 +2,49 @@
     METHODOLOGIES: ITCSS
     ============================================================================================================ */
 
-@import "./0-vendor"; // Files for third party code. At the top to be the most easily overridden
-@import "./1-settings"; // Preprocessors, fonts, variables (doesn’t generate any style output)
-@import "./2-tools"; // Mixins, functions (doesn’t generate any style output)
-@import "./3-generic/normalize"; // Resets or normalizing files
-@import "./4-elements/base"; // Bare HTML elements (H1, a, p, etc…)
-@import "./5-components"; // Majority of code goes here to style specific UI components
-@import "./6-helpers"; // Utilities and helper classes that have the most authority (show/hide, color helpers, etc…)
+/* 0-Vendor. Files for third party code. At the top to be the most easily overridden */
+@import "./0-vendor";
+
+/* 1-Settings. Preprocessors, fonts, variables (doesn’t generate any style output) */
+@import "./1-settings/variables-screen";
+@import "./1-settings/variables-colors";
+@import "./1-settings/variables-effects";
+@import "./1-settings/variables-grid";
+@import "./1-settings/variables-borders";
+@import "./1-settings/variables-sizing";
+@import "./1-settings/variables-spacing";
+@import "./1-settings/variables-transitions";
+@import "./1-settings/variables-typography";
+
+/* 2-Tools. Mixins, functions (doesn’t generate any style output) */
+@import "./2-tools/tools-functions";
+@import "./2-tools/tools-mixins";
+
+/* 3-Generic. Resets or normalizing files */
+@import "./3-generic/normalize";
+
+/* 4-Elements. Bare HTML elements (H1, a, p, etc…) */
+@import "./4-elements/base";
+
+/* 5-components. Majority of code goes here to style specific UI components */
+@import "./5-components/components-header";
+@import "./5-components/components-brands";
+@import "./5-components/components-testimonials";
+@import "./5-components/components-searchbox";
+@import "./5-components/components-footer";
+
+/* 6-Helpers. Utilities and helper classes that have the most authority (show/hide, color helpers, etc…) */
+@import "./6-helpers/helpers-accessibility";
+@import "./6-helpers/helpers-backgrounds";
+@import "./6-helpers/helpers-borders";
+@import "./6-helpers/helpers-effects";
+@import "./6-helpers/helpers-flexbox";
+@import "./6-helpers/helpers-grid";
+@import "./6-helpers/helpers-interactivity";
+@import "./6-helpers/helpers-layout";
+@import "./6-helpers/helpers-sizing";
+@import "./6-helpers/helpers-spacing";
+@import "./6-helpers/helpers-svg";
+@import "./6-helpers/helpers-tables";
+@import "./6-helpers/helpers-transitions";
+@import "./6-helpers/helpers-typography";

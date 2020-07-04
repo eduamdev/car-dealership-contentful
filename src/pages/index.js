@@ -12,8 +12,8 @@ const Home = () => {
       <Hero></Hero>
       <Brands></Brands>
       <Services></Services>
-      <FeaturedCars></FeaturedCars>
       <Testimonials></Testimonials>
+      <FeaturedCars></FeaturedCars>
     </Layout>
   );
 };

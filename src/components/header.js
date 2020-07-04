@@ -5,7 +5,7 @@ const Header = () => {
     <div className="header">
       <nav className="header__nav">
         <a className="text-black inline-flex items-center">
-          <span className="text-2xl font-black">Vincar</span>
+          <span className="text-2xl font-bold">Vincar</span>
         </a>
         <ul
           className="grid justify-between items-center gap-8 text-sm"
@@ -61,7 +61,7 @@ const Header = () => {
           <li className="">
             <a className="">Login</a>
           </li>
-          <li className="border border-red-600 px-3 py-2 rounded-md bg-red-600 text-white">
+          <li className="px-3 py-2 rounded-md bg-red-600 text-white shadow-md">
             <a>Sign In</a>
           </li>
         </ul>
