@@ -9,8 +9,8 @@ const ServiceItem = ({ title, text, icon }) => {
         </div>
       </div>
       <div className="ml-4">
-        <h4 className="text-lg leading-6 font-medium text-white">{title}</h4>
-        <p className="mt-2 text-base leading-6 text-gray-500">{text}</p>
+        <h4 className="text-lg leading-6 font-medium text-black">{title}</h4>
+        <p className="mt-2 text-base leading-6 text-gray-600">{text}</p>
       </div>
     </div>
   );
@@ -18,15 +18,20 @@ const ServiceItem = ({ title, text, icon }) => {
 
 const Services = () => {
   return (
-    <section className="bg-black border-t border-accents-2">
+    <section
+      className="border-t border-b border-accents-7"
+      style={{
+        background: `radial-gradient(70% 70% at 50% 100%, rgb(232, 232, 232) 0px, rgb(250, 250, 250) 100%)`,
+      }}
+    >
       <div className="container mx-auto py-12">
         <div className="py-12">
           <div className="max-w-screen-xl mx-auto px-8">
             <div className="text-center">
-              <h3 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-white">
-                Why VinCar
+              <h3 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-black">
+                Why Vincar
               </h3>
-              <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-500 mx-auto">
+              <p className="mt-4 max-w-2xl text-xl leading-7 text-gray-600 mx-auto">
                 Lorem ipsum dolor sit amet consect adipisicing elit.
               </p>
             </div>

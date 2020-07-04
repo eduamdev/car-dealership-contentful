@@ -54,11 +54,11 @@ const TestimonialItem = ({ quote, author, align = "left" }) => {
 
 const Testimonials = () => {
   return (
-    <section className="relative bg-black border-t border-accents-2">
+    <section className="relative bg-accents-1">
       <div
         className="absolute bottom-0 left-0"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #4c4c4c 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, #565656 1px, transparent 0)`,
           backgroundSize: `25px 25px`,
           height: `20rem`,
           width: `40rem`,
@@ -67,7 +67,7 @@ const Testimonials = () => {
       <div
         className="absolute top-0 right-0"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #4c4c4c 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, #565656 1px, transparent 0)`,
           backgroundSize: `25px 25px`,
           height: `20rem`,
           width: `40rem`,

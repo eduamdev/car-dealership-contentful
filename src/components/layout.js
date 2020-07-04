@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       animate={{ opacity: 1 }}
       className="w-full h-full overflow-auto m-0 p-0"
     >
-      <div className="relative w-full h-10 bg-gray-300 border-b border-accents-2 text-center flex justify-center items-center text-sm space-x-4">
+      <div className="relative w-full h-10 bg-black text-gray-200 border-b border-accents-7 text-center flex justify-center items-center text-sm space-x-4 font-light">
         <span>
           The health and safety of our staff, customers, and community is our
           top priority.
@@ -23,11 +23,10 @@ const Layout = ({ children }) => {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
-            className="text-accents-7 fill-current w-6"
+            className="text-gray-200 stroke-current w-6"
           >
             <path
               fill="none"
-              stroke="#000"
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth="32"

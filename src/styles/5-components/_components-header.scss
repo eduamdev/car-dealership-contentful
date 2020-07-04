@@ -1,5 +1,5 @@
 .header {
-  @extend .h-16, .bg-accents-1, .border-b, .border-accents-2;
+  @extend .h-16, .bg-white, .border-b, .border-gray-400;
 
   &__nav {
     @extend .h-full,
@@ -8,6 +8,6 @@
       .items-center,
       .container,
       .mx-auto,
-      .text-accents-6;
+      .text-accents-4;
   }
 }

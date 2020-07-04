@@ -2,12 +2,16 @@ import React from "react";
 
 const FeaturedCars = () => {
   return (
-    <div className="bg-black border-t border-accents-2 text-white">
+    <div
+      style={{
+        background: `radial-gradient(70% 70% at 50% 100%, rgb(232, 232, 232) 0px, rgb(250, 250, 250) 100%)`,
+      }}
+    >
       <div className="mx-auto py-12 px-12">
         <div className="py-12">
           <div className="max-w-screen-xl mx-auto px-8">
             <div className="text-center">
-              <h3 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-white">
+              <h3 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-black">
                 The most searched cars
               </h3>
             </div>
@@ -22,9 +26,9 @@ const FeaturedCars = () => {
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="leading-5 pt-6 text-white">
+            <div className="leading-5 pt-6 text-black">
               <h4 className="">Ford Mustang</h4>
-              <p className="text-base text-red-400 tracking-wide mt-2">
+              <p className="text-base text-red-600 tracking-wide mt-2">
                 $20,543
               </p>
             </div>
@@ -36,9 +40,9 @@ const FeaturedCars = () => {
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="leading-5 pt-6 text-white">
+            <div className="leading-5 pt-6 text-black">
               <h4 className="">Ford Mustang</h4>
-              <p className="text-base text-red-400 tracking-wide mt-2">
+              <p className="text-base text-red-600 tracking-wide mt-2">
                 $20,543
               </p>
             </div>
@@ -50,9 +54,9 @@ const FeaturedCars = () => {
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="leading-5 pt-6 text-white">
+            <div className="leading-5 pt-6 text-black">
               <h4 className="">Ford Mustang</h4>
-              <p className="text-base text-red-400 tracking-wide mt-2">
+              <p className="text-base text-red-600 tracking-wide mt-2">
                 $20,543
               </p>
             </div>
@@ -64,9 +68,9 @@ const FeaturedCars = () => {
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="leading-5 pt-6 text-white">
+            <div className="leading-5 pt-6 text-black">
               <h4 className="">Ford Mustang</h4>
-              <p className="text-base text-red-400 tracking-wide leading-5 mt-2">
+              <p className="text-base text-red-600 tracking-wide leading-5 mt-2">
                 $20,543
               </p>
             </div>
