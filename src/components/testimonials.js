@@ -13,7 +13,7 @@ const TestimonialItem = ({ quote, author, align = "left" }) => {
 
   return (
     <div className={`max-w-2xl ${margin}`}>
-      <p className="quote relative mt-3 text-lg leading-7 text-white italic font-thin tracking-wide z-10">
+      <p className="quote relative mt-3 text-xl leading-7 text-black italic font-serif tracking-wide z-10">
         {quote}
       </p>
       <div className="inline-flex items-center mt-8">
@@ -21,10 +21,12 @@ const TestimonialItem = ({ quote, author, align = "left" }) => {
           <img className="h-10 w-10 rounded-full" src={photo} alt="" />
         </div>
         <div className="ml-4">
-          <div className=" leading-5 font-medium text-white text-left">
+          <div className=" leading-5 font-medium text-black text-left">
             {name}
           </div>
-          <div className=" leading-5 text-gray-500 text-left">{position}</div>
+          <div className=" leading-5 font-medium text-red-600 text-left">
+            {position}
+          </div>
         </div>
       </div>
     </div>
@@ -33,30 +35,30 @@ const TestimonialItem = ({ quote, author, align = "left" }) => {
 
 const Testimonials = () => {
   return (
-    <section className="relative bg-accents-1">
+    <section className="relative bg-gray-100 border-b border-accents-7">
       <div
         className="absolute bottom-0 left-0"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #565656 1px, transparent 0)`,
+          background: `linear-gradient(90deg, #f7fafc 22px, transparent 1%) center, linear-gradient(#f7fafc 22px, transparent 1%) center, #cbd5e0`,
           backgroundSize: `25px 25px`,
-          height: `20rem`,
-          width: `40rem`,
+          height: `15rem`,
+          width: `35rem`,
         }}
       ></div>
       <div
         className="absolute top-0 right-0"
         style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, #565656 1px, transparent 0)`,
+          background: `linear-gradient(90deg, #f7fafc 22px, transparent 1%) center, linear-gradient(#f7fafc 22px, transparent 1%) center, #cbd5e0`,
           backgroundSize: `25px 25px`,
-          height: `20rem`,
-          width: `40rem`,
+          height: `15rem`,
+          width: `35rem`,
         }}
       ></div>
       <div className="relative container mx-auto pt-12 pb-20">
         <div className="py-12">
           <div className="max-w-screen-xl mx-auto px-8">
             <div className="text-center">
-              <h3 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-white">
+              <h3 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-black">
                 What our costumers have to say
               </h3>
             </div>

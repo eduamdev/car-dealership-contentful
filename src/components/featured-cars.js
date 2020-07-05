@@ -2,13 +2,9 @@ import React from "react";
 
 const FeaturedCars = () => {
   return (
-    <div
-      style={{
-        background: `radial-gradient(70% 70% at 50% 100%, rgb(232, 232, 232) 0px, rgb(250, 250, 250) 100%)`,
-      }}
-    >
+    <div className="bg-white">
       <div className="mx-auto py-12 px-12">
-        <div className="py-12">
+        <div className="pt-12">
           <div className="max-w-screen-xl mx-auto px-8">
             <div className="text-center">
               <h3 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-black">
@@ -18,7 +14,7 @@ const FeaturedCars = () => {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-4 gap-5 items-center justify-between pt-12 pb-32">
+        <div className="w-full grid grid-cols-4 gap-5 items-center justify-between pt-12 pb-16">
           <div>
             <div className="h-64 rounded-lg overflow-hidden">
               <img

@@ -19,10 +19,10 @@ const ServiceItem = ({ title, text, icon }) => {
 const Services = () => {
   return (
     <section
-      className="border-t border-b border-accents-7"
-      style={{
-        background: `radial-gradient(70% 70% at 50% 100%, rgb(232, 232, 232) 0px, rgb(250, 250, 250) 100%)`,
-      }}
+      className="border-t bg-gray-100 border-b border-accents-7"
+      // style={{
+      //   background: `radial-gradient(70% 70% at 50% 100%, rgb(232, 232, 232) 0px, rgb(250, 250, 250) 100%)`,
+      // }}
     >
       <div className="container mx-auto py-12">
         <div className="py-12">
@@ -36,7 +36,7 @@ const Services = () => {
               </p>
             </div>
 
-            <div className="mt-20">
+            <div className="mt-10">
               <ul className="grid grid-cols-2 col-gap-8 row-gap-10">
                 <li>
                   <ServiceItem

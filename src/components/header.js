@@ -5,7 +5,7 @@ const Header = () => {
     <div className="header">
       <nav className="header__nav">
         <a className="text-black inline-flex items-center">
-          <span className="text-2xl font-bold">Vincar</span>
+          <span className="text-xl font-extrabold">Vincar</span>
         </a>
         <ul
           className="grid justify-between items-center gap-8 text-sm"
