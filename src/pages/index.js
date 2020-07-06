@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout";
 import Hero from "../components/hero";
 import Services from "../components/services";
-import GetStarted from "../components/get-started";
+import Community from "../components/community";
 import Testimonials from "../components/testimonials";
 import FeaturedCars from "../components/featured-cars";
 import Brands from "../components/brands";
@@ -13,7 +13,7 @@ const Home = () => {
       <Hero></Hero>
       <Brands></Brands>
       <Services></Services>
-      <GetStarted></GetStarted>
+      <Community></Community>
       <Testimonials></Testimonials>
       <FeaturedCars></FeaturedCars>
     </Layout>

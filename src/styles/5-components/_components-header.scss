@@ -9,5 +9,27 @@
       .container,
       .mx-auto,
       .text-accents-4;
+
+    &__logo {
+      @extend .text-black,
+        .inline-flex,
+        .items-center,
+        .text-xl,
+        .font-extrabold;
+    }
+
+    &__mainList {
+      @extend .grid, .justify-between, .items-center, .gap-8, .text-sm;
+      grid-template-columns: repeat(4, auto);
+    }
+
+    &__loginList {
+      @extend .grid, .justify-between, .items-center, .gap-8, .text-sm;
+      grid-template-columns: repeat(2, auto);
+
+      &__btn {
+        @extend .px-3, .py-2, .rounded-md, .bg-red-600, .text-white, .shadow-md;
+      }
+    }
   }
 }

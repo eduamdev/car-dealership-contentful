@@ -1,0 +1,37 @@
+.community {
+  @extend .border-t, .border-b, .border-accents-7, .bg-white;
+
+  &__wrapper {
+    @extend .container, .mx-auto, .py-24;
+
+    &__container {
+      @extend .max-w-screen-xl, .mx-auto, .px-8;
+
+      &__content {
+        @extend .text-center;
+
+        &__title {
+          @extend .mt-2,
+            .text-4xl,
+            .leading-8,
+            .font-extrabold,
+            .tracking-tight,
+            .text-black;
+        }
+
+        &__subtitle {
+          @extend .mt-4,
+            .max-w-2xl,
+            .text-xl,
+            .leading-7,
+            .text-gray-600,
+            .mx-auto;
+        }
+      }
+
+      &__button {
+        @extend .mt-10, .flex, .items-center, .justify-center;
+      }
+    }
+  }
+}

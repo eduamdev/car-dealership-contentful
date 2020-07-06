@@ -1,11 +1,36 @@
-.footer-item::after {
-  color: #b7b5bd;
-  content: "•";
-  padding: 0.75rem;
-  font-size: 6px;
-  vertical-align: middle;
-}
+.footer {
+  @extend .bg-accents-8, .border-t, .border-accents-7, .text-accents-5;
 
-.footer-item:last-child:after {
-  content: "";
+  &__wrapper {
+    @extend .container,
+      .mx-auto,
+      .pt-12,
+      .pb-16,
+      .flex,
+      .items-center,
+      .justify-center;
+
+    &__list {
+      @extend .h-12,
+        .max-w-lg,
+        .mx-auto,
+        .inline-flex,
+        .items-center,
+        .justify-center,
+        .text-center,
+        .text-sm;
+
+      &__item::after {
+        color: #b7b5bd;
+        content: "•";
+        padding: 0.75rem;
+        font-size: 8px;
+        vertical-align: middle;
+      }
+
+      &__item:last-child:after {
+        content: "";
+      }
+    }
+  }
 }

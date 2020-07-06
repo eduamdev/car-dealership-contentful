@@ -4,14 +4,9 @@ const Header = () => {
   return (
     <div className="header">
       <nav className="header__nav">
-        <a className="text-black inline-flex items-center">
-          <span className="text-xl font-extrabold">Vincar</span>
-        </a>
-        <ul
-          className="grid justify-between items-center gap-8 text-sm"
-          style={{ gridTemplateColumns: `repeat(4, auto)` }}
-        >
-          <li className="">
+        <a className="header__nav__logo">Vincar</a>
+        <ul className="header__nav__mainList">
+          <li>
             <a>
               Inventory{" "}
               <svg
@@ -29,7 +24,7 @@ const Header = () => {
               </svg>
             </a>
           </li>
-          <li className="">
+          <li>
             <a>
               Services{" "}
               <svg
@@ -47,21 +42,18 @@ const Header = () => {
               </svg>
             </a>
           </li>
-          <li className="">
+          <li>
             <a>About Us</a>
           </li>
-          <li className="">
+          <li>
             <a>FAQ</a>
           </li>
         </ul>
-        <ul
-          className="grid justify-between items-center gap-8 text-sm"
-          style={{ gridTemplateColumns: `repeat(2, auto)` }}
-        >
-          <li className="">
-            <a className="">Login</a>
+        <ul className="header__nav__loginList">
+          <li>
+            <a>Login</a>
           </li>
-          <li className="px-3 py-2 rounded-md bg-red-600 text-white shadow-md">
+          <li className="header__nav__loginList__btn">
             <a>Sign In</a>
           </li>
         </ul>

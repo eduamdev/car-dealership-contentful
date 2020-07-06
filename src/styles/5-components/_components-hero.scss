@@ -1,0 +1,49 @@
+.hero {
+  @extend .relative, .bg-accents-8;
+  height: 36rem;
+
+  &__grid {
+    @extend .grid, .grid-cols-2, .h-full;
+
+    &__wrapper {
+      @extend .absolute, .w-full, .h-full;
+
+      &__content {
+        @extend .container,
+          .h-full,
+          .flex,
+          .flex-col,
+          .items-start,
+          .justify-center,
+          .mx-auto;
+
+        &__title {
+          @extend .text-black,
+            .text-5xl,
+            .font-extrabold,
+            .inline-block,
+            .mb-5,
+            .tracking-tight;
+
+          &--highlight {
+            @extend .text-red-600;
+          }
+        }
+
+        &__subtitle {
+          @extend .mb-10, .text-base, .leading-6, .text-gray-600;
+        }
+
+        &__buttons {
+          @extend .inline-grid, .grid-cols-2, .gap-4;
+        }
+      }
+    }
+  }
+
+  &__img {
+    @extend .h-full, .w-full, .object-cover;
+    object-position: center center;
+    grid-area: 1/2;
+  }
+}
