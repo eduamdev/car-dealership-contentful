@@ -3,12 +3,14 @@
 
   &__wrapper {
     @extend .container,
-      .mx-auto,
       .pt-12,
       .pb-16,
       .flex,
       .items-center,
-      .justify-center;
+      .justify-center,
+      .max-w-screen-xl,
+      .mx-auto,
+      .px-8;
 
     &__list {
       @extend .h-12,

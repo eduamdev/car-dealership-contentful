@@ -5,7 +5,7 @@ const Header = () => {
     <div className="header">
       <nav className="header__nav">
         <a className="header__nav__logo">Vincar</a>
-        <ul className="header__nav__mainList">
+        <ul className="header__nav__menu">
           <li>
             <a>
               Inventory{" "}
@@ -49,11 +49,11 @@ const Header = () => {
             <a>FAQ</a>
           </li>
         </ul>
-        <ul className="header__nav__loginList">
+        <ul className="header__nav__account">
           <li>
             <a>Login</a>
           </li>
-          <li className="header__nav__loginList__btn">
+          <li className="header__nav__account__btn">
             <a>Sign In</a>
           </li>
         </ul>

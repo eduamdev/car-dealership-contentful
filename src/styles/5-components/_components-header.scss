@@ -8,7 +8,10 @@
       .items-center,
       .container,
       .mx-auto,
-      .text-accents-4;
+      .text-accents-4,
+      .max-w-screen-xl,
+      .mx-auto,
+      .px-8;
 
     &__logo {
       @extend .text-black,
@@ -18,12 +21,12 @@
         .font-extrabold;
     }
 
-    &__mainList {
+    &__menu {
       @extend .grid, .justify-between, .items-center, .gap-8, .text-sm;
       grid-template-columns: repeat(4, auto);
     }
 
-    &__loginList {
+    &__account {
       @extend .grid, .justify-between, .items-center, .gap-8, .text-sm;
       grid-template-columns: repeat(2, auto);
 

@@ -14,7 +14,7 @@ const FeaturedCars = () => {
           </div>
         </div>
 
-        <div className="w-full grid grid-cols-4 gap-5 items-center justify-between pt-12 pb-16">
+        <div className="w-full grid grid-cols-4 gap-5 items-center justify-between pt-12 pb-16 ">
           <div>
             <div className="h-64 rounded-lg overflow-hidden">
               <img

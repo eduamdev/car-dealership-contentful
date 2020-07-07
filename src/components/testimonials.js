@@ -1,18 +1,10 @@
 import React from "react";
 
-const TestimonialItem = ({ quote, author, align = "left" }) => {
+const TestimonialItem = ({ area, quote, author }) => {
   const { photo, name, position } = author;
 
-  const marginClasses = {
-    left: `mr-auto`,
-    center: `mx-auto`,
-    right: `ml-auto`,
-  };
-
-  const margin = marginClasses[align];
-
   return (
-    <div className={`max-w-2xl ${margin}`}>
+    <div className="" style={{ gridArea: `${area}` }}>
       <p className="quote relative mt-3 text-xl leading-7 text-black italic font-serif tracking-wide z-10">
         {quote}
       </p>
@@ -63,8 +55,17 @@ const Testimonials = () => {
               </h3>
             </div>
           </div>
-          <div className="grid gap-3 mt-16">
+          <div
+            className="grid gap-3 mt-16 max-w-screen-xl mx-auto px-8"
+            style={{
+              gridTemplateAreas: `
+              "quote1 ."
+              ". quote2"
+              `,
+            }}
+          >
             <TestimonialItem
+              area="quote1"
               quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et pharetra pharetra."
               author={{
                 name: "Bernard Lane",
@@ -74,6 +75,7 @@ const Testimonials = () => {
               }}
             ></TestimonialItem>
             <TestimonialItem
+              area="quote2"
               quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et pharetra pharetra."
               author={{
                 name: "Bernard Lane",

@@ -3,7 +3,8 @@
   height: 36rem;
 
   &__grid {
-    @extend .grid, .grid-cols-2, .h-full;
+    @extend .grid, .h-full;
+    grid-template-columns: minmax(42rem, 1.5fr) 1fr;
 
     &__wrapper {
       @extend .absolute, .w-full, .h-full;
@@ -15,7 +16,9 @@
           .flex-col,
           .items-start,
           .justify-center,
-          .mx-auto;
+          .max-w-screen-xl,
+          .mx-auto,
+          .px-8;
 
         &__title {
           @extend .text-black,
@@ -43,7 +46,7 @@
 
   &__img {
     @extend .h-full, .w-full, .object-cover;
-    object-position: center center;
+    object-position: center right;
     grid-area: 1/2;
   }
 }

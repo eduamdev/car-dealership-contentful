@@ -2,7 +2,14 @@
   @extend .bg-accents-8, .py-20, .border-t, .border-accents-7;
 
   &__container {
-    @extend .container, .mx-auto, .flex, .items-center, .justify-between;
+    @extend .container,
+      .mx-auto,
+      .flex,
+      .items-center,
+      .justify-between,
+      .max-w-screen-xl,
+      .mx-auto,
+      .px-8;
   }
 }
 
