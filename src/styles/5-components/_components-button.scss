@@ -1,0 +1,16 @@
+.btn {
+  @extend .shadow-md, .rounded-md, .w-40, .py-4, .bg-white, .text-accents-4;
+
+  &.xs {
+    @extend .px-3, .py-2;
+    width: unset;
+  }
+
+  &.lg {
+    @extend .w-56, .py-4;
+  }
+
+  &.primary {
+    @extend .bg-red-600, .text-white;
+  }
+}

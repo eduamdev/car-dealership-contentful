@@ -5,7 +5,7 @@ const TestimonialItem = ({ area, quote, author }) => {
 
   return (
     <div className="" style={{ gridArea: `${area}` }}>
-      <p className="quote relative mt-3 text-xl leading-7 text-black italic font-serif tracking-wide z-10">
+      <p className="quote relative mt-3 text-xl leading-7 text-black italic font-serif tracking-normal z-10">
         {quote}
       </p>
       <div className="inline-flex items-center mt-8">
@@ -16,7 +16,7 @@ const TestimonialItem = ({ area, quote, author }) => {
           <div className=" leading-5 font-medium text-black text-left">
             {name}
           </div>
-          <div className=" leading-5 font-medium text-red-600 text-left">
+          <div className=" leading-5 font-medium text-red-700 text-left ">
             {position}
           </div>
         </div>

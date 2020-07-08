@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./button";
 
 const Header = () => {
   return (
@@ -53,8 +54,13 @@ const Header = () => {
           <li>
             <a>Login</a>
           </li>
-          <li className="header__nav__account__btn">
-            <a>Sign In</a>
+          <li>
+            <Button
+              tag="link"
+              text="Sign In"
+              color="primary"
+              size="xs"
+            ></Button>
           </li>
         </ul>
       </nav>

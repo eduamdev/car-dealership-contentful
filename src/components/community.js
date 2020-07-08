@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./button";
 
 const Community = () => {
   return (
@@ -14,9 +15,7 @@ const Community = () => {
             </p>
           </div>
           <div className="community__wrapper__container__button">
-            <button className="w-56 py-4 shadow-md rounded-md bg-red-600 text-white">
-              Get Started
-            </button>
+            <Button text="Get Started" size="lg" color="primary"></Button>
           </div>
         </div>
       </div>

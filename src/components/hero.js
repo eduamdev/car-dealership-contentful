@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./button";
 import hero from "../images/hero.jpg";
 import hero4 from "../images/hero_4.jpg";
 import hero10 from "../images/hero_10.jpg";
@@ -22,12 +23,8 @@ const Hero = () => {
                 Rhoncus mattis rhoncus urna neque viverra justo.
               </p>
               <div className="hero__grid__wrapper__content__buttons">
-                <button className="w-40 py-4 shadow-md rounded-md bg-red-600 text-white">
-                  Search
-                </button>
-                <button className="w-40 py-4 shadow-md rounded-md bg-white text-accents-4">
-                  Contact Sales
-                </button>
+                <Button text="Search" color="primary"></Button>
+                <Button text="Contact Sales"></Button>
               </div>
             </div>
           </div>
