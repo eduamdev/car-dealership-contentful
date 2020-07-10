@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "./button";
-import hero from "../images/hero.jpg";
-import hero4 from "../images/hero_4.jpg";
-import hero10 from "../images/hero_10.jpg";
+import hero from "../img/hero.jpg";
+import hero4 from "../img/hero_4.jpg";
+import hero10 from "../img/hero_10.jpg";
 
 const Hero = () => {
   return (

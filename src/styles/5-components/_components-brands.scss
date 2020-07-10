@@ -1,5 +1,5 @@
 .brands {
-  @extend .bg-accents-8, .py-20, .border-t, .border-accents-7;
+  @extend .bg-white, .py-20, .border-t, .border-accents-7;
 
   &__container {
     @extend .container,
