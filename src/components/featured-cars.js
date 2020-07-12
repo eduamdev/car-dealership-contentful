@@ -24,7 +24,7 @@ const FeaturedCars = () => {
             </div>
             <div className="leading-5 pt-6 text-black">
               <h4 className="">Tesla Model 3</h4>
-              <p className="text-lg text-red-600 font-extrabold tracking-wide mt-2">
+              <p className="text-lg text-primary font-extrabold tracking-wide mt-2">
                 $20,543
               </p>
             </div>
@@ -38,7 +38,7 @@ const FeaturedCars = () => {
             </div>
             <div className="leading-5 pt-6 text-black">
               <h4 className="">Tesla Model 3</h4>
-              <p className="text-lg text-red-600 font-extrabold tracking-wide mt-2">
+              <p className="text-lg text-primary font-extrabold tracking-wide mt-2">
                 $20,543
               </p>
             </div>
@@ -52,7 +52,7 @@ const FeaturedCars = () => {
             </div>
             <div className="leading-5 pt-6 text-black">
               <h4 className="">Tesla Model 3</h4>
-              <p className="text-lg text-red-600 font-extrabold tracking-wide mt-2">
+              <p className="text-lg text-primary font-extrabold tracking-wide mt-2">
                 $20,543
               </p>
             </div>
@@ -66,7 +66,7 @@ const FeaturedCars = () => {
             </div>
             <div className="leading-5 pt-6 text-black">
               <h4 className="">Tesla Model 3</h4>
-              <p className="text-lg text-red-600 font-extrabold tracking-wide leading-5 mt-2">
+              <p className="text-lg text-primary font-extrabold tracking-wide leading-5 mt-2">
                 $20,543
               </p>
             </div>

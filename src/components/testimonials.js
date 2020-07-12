@@ -4,8 +4,8 @@ const TestimonialItem = ({ area, quote, author }) => {
   const { photo, name, position } = author;
 
   return (
-    <div className="" style={{ gridArea: `${area}` }}>
-      <p className="quote relative mt-3 text-xl leading-7 text-black italic font-serif tracking-normal z-10">
+    <div style={{ gridArea: `${area}` }}>
+      <p className="quote relative mt-3 text-xl leading-7 text-gray-700 italic font-serif tracking-normal z-10">
         {quote}
       </p>
       <div className="inline-flex items-center mt-8">
@@ -13,10 +13,10 @@ const TestimonialItem = ({ area, quote, author }) => {
           <img className="h-10 w-10 rounded-full" src={photo} alt="" />
         </div>
         <div className="ml-4">
-          <div className=" leading-5 font-medium text-black text-left">
+          <div className=" leading-5 font-medium text-black text-left mb-1">
             {name}
           </div>
-          <div className=" leading-5 font-medium text-red-700 text-left ">
+          <div className=" leading-5 font-medium text-left text-primary">
             {position}
           </div>
         </div>
@@ -71,7 +71,7 @@ const Testimonials = () => {
                 name: "Bernard Lane",
                 position: "Head of Ocado Technology, Barcelona",
                 photo:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
               }}
             ></TestimonialItem>
             <TestimonialItem
@@ -81,7 +81,7 @@ const Testimonials = () => {
                 name: "Bernard Lane",
                 position: "Head of Ocado Technology, Barcelona",
                 photo:
-                  "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+                  "https://images.unsplash.com/photo-1554384645-13eab165c24b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
               }}
               align="right"
             ></TestimonialItem>

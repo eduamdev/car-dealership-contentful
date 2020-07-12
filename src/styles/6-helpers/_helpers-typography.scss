@@ -179,6 +179,12 @@
 }
 
 /* Text colors */
+.text-primary {
+  color: $primary-color;
+}
+.text-secondary {
+  color: $secondary-color;
+}
 .text-transparent {
   color: transparent;
 }

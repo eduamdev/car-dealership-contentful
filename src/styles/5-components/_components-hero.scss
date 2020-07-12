@@ -29,7 +29,7 @@
             .tracking-tight;
 
           &--highlight {
-            @extend .text-red-600;
+            @extend .text-primary;
           }
         }
 
@@ -46,7 +46,7 @@
 
   &__img {
     @extend .h-full, .w-full, .object-cover;
-    object-position: center right;
+    object-position: center;
     grid-area: 1/2;
   }
 }

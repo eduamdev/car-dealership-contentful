@@ -1,5 +1,5 @@
 .quote:before {
-  @extend .absolute, .block, .h-10, .w-10, .bg-red-200;
+  @extend .absolute, .block, .h-10, .w-10, .bg-secondary;
   content: "";
   mask: url("data:image/svg+xml;charset=UTF-8, <svg
 xmlns='http://www.w3.org/2000/svg'

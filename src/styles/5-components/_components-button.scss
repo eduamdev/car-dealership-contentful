@@ -11,6 +11,6 @@
   }
 
   &.primary {
-    @extend .bg-red-600, .text-white;
+    @extend .bg-primary, .text-white;
   }
 }
