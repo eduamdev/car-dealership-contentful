@@ -16,57 +16,57 @@ const FeaturedCars = () => {
 
         <div className="w-full grid grid-cols-4 gap-5 items-center justify-between pt-12 pb-16 ">
           <div>
-            <div className="h-64 rounded-lg overflow-hidden">
+            <div className="h-56 rounded-lg overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="leading-5 pt-6 text-black">
+            <div className="leading-5 pt-3 pb-4 text-black">
               <h4 className="">Tesla Model 3</h4>
-              <p className="text-lg text-primary font-extrabold tracking-wide mt-2">
+              <p className=" text-primary font-extrabold tracking-wide mt-2">
                 $20,543
               </p>
             </div>
           </div>
           <div>
-            <div className="h-64 rounded-lg overflow-hidden">
+            <div className="h-56 rounded-lg overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="leading-5 pt-6 text-black">
+            <div className="leading-5 pt-3 pb-4 text-black">
               <h4 className="">Tesla Model 3</h4>
-              <p className="text-lg text-primary font-extrabold tracking-wide mt-2">
+              <p className=" text-primary font-extrabold tracking-wide mt-2">
                 $20,543
               </p>
             </div>
           </div>
           <div>
-            <div className="h-64 rounded-lg overflow-hidden">
+            <div className="h-56 rounded-lg overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="leading-5 pt-6 text-black">
+            <div className="leading-5 pt-3 pb-4 text-black">
               <h4 className="">Tesla Model 3</h4>
-              <p className="text-lg text-primary font-extrabold tracking-wide mt-2">
+              <p className=" text-primary font-extrabold tracking-wide mt-2">
                 $20,543
               </p>
             </div>
           </div>
           <div>
-            <div className="h-64 rounded-lg overflow-hidden">
+            <div className="h-56 rounded-lg overflow-hidden">
               <img
                 src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
                 className="w-full h-full object-cover"
               ></img>
             </div>
-            <div className="leading-5 pt-6 text-black">
+            <div className="leading-5 pt-3 pb-4 text-black">
               <h4 className="">Tesla Model 3</h4>
-              <p className="text-lg text-primary font-extrabold tracking-wide leading-5 mt-2">
+              <p className=" text-primary font-extrabold tracking-wide leading-5 mt-2">
                 $20,543
               </p>
             </div>

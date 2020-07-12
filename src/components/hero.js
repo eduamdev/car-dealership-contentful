@@ -23,7 +23,7 @@ const Hero = () => {
                 Rhoncus mattis rhoncus urna neque viverra justo.
               </p>
               <div className="hero__grid__wrapper__content__buttons">
-                <Button text="Search" color="primary"></Button>
+                <Button text="Start now" color="primary"></Button>
                 <Button text="Contact Sales"></Button>
               </div>
             </div>
