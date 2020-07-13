@@ -19,7 +19,7 @@ const Brands = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 48 48"
-              className="text-accents-5 fill-current h-12 w-12"
+              className="text-accents-5 fill-current h-12 w-12 mx-auto"
             >
               <path
                 fillRule="evenodd"
