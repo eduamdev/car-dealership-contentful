@@ -1,5 +1,7 @@
 import React from "react";
 
+// NEED REWORK
+
 const TestimonialItem = ({ area, quote, author }) => {
   const { photo, name, position } = author;
 

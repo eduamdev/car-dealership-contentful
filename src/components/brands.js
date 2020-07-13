@@ -2,7 +2,7 @@ import React from "react";
 
 const Brand = ({ logo, children }) => {
   return (
-    <div className="inline-flex items-center justify-between">
+    <div className="inline-grid justify-center xl:inline-flex items-center xl:justify-between">
       {logo && <div>{logo}</div>}
       {children}
     </div>
@@ -12,7 +12,7 @@ const Brand = ({ logo, children }) => {
 const Brands = () => {
   return (
     <section className="bg-white py-20 border-t border-accents-7">
-      <div className="container mx-auto flex items-center justify-between max-w-screen-xl mx-auto px-8">
+      <div className="container mx-auto grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 row-gap-16 xl:flex items-center justify-between max-w-screen-xl px-8">
         {/* Tesla */}
         <Brand>
           <div className="mr-1">
