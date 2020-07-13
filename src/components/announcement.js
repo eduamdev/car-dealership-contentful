@@ -2,15 +2,13 @@ import React from "react";
 
 const Announcement = () => {
   return (
-    <div className="relative w-full h-10 bg-black text-gray-200 border-b border-accents-7 text-center text-sm font-light">
+    <div className="relative w-full h-10 bg-black text-gray-200 border-b border-accents-7 text-center text-sm">
       <div className="h-full flex justify-center items-center space-x-4 max-w-screen-xl mx-auto px-8">
-        <span>
+        <span className="hidden md:block">
           The health and safety of our staff, customers, and community is our
           top priority.
         </span>
-        {/* <span>
-          Your safety is our top priority.
-        </span> */}
+        <span className="md:hidden">Your safety is our top priority.</span>
         <span>Learn More →</span>
         <span className="absolute cursor-pointer" style={{ right: `20px` }}>
           <svg

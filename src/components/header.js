@@ -6,13 +6,15 @@ const Header = () => {
   return (
     <>
       <Announcement></Announcement>
-      <div className="header">
+      <div className="h-16 bg-white border-b border-gray-400">
         <div className="h-full flex justify-between items-center container mx-auto text-accents-4 max-w-screen-xl mx-auto px-8">
-          <a className="header__logo">Vincar</a>
-          <div class="header__menu">
+          <a className="text-black inline-flex items-center text-2xl font-black tracking-tight">
+            Vincar
+          </a>
+          <div class="-mr-2 -my-2 md:hidden">
             <button
               type="button"
-              class="appearance-none bg-transparent inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out"
+              class="appearance-none bg-transparent inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-600 transition duration-150 ease-in-out"
             >
               <svg
                 class="h-6 w-6"
@@ -29,17 +31,17 @@ const Header = () => {
               </svg>
             </button>
           </div>
-          <nav className="header__nav">
+          <nav className="hidden md:flex md:space-x-6">
             <div className="relative">
-              {/* Item active: "text-gray-900", Item inactive: "text-gray-500"  */}
+              {/* Item active: "text-gray-900", Item inactive: "text-gray-600"  */}
               <button
                 type="button"
-                class="appearance-none bg-transparent text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+                class="appearance-none bg-transparent text-gray-600 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
               >
                 <span>Inventory</span>
-                {/* Item active: "text-gray-600", Item inactive: "text-gray-400" */}
+                {/* Item active: "text-gray-600", Item inactive: "text-gray-500" */}
                 <svg
-                  class="text-gray-400 h-5 w-5 group-hover:text-gray-500 group-focus:text-gray-500 transition ease-in-out duration-150"
+                  class="text-gray-500 h-5 w-5 group-hover:text-gray-600 group-focus:text-gray-600 transition ease-in-out duration-150"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                 >
@@ -52,43 +54,56 @@ const Header = () => {
               </button>
             </div>
             <div className="relative">
-              <a>
-                Services{" "}
+              {/* Item active: "text-gray-900", Item inactive: "text-gray-600"  */}
+              <button
+                type="button"
+                class="appearance-none bg-transparent text-gray-600 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+              >
+                <span>Services</span>
+                {/* Item active: "text-gray-600", Item inactive: "text-gray-500" */}
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
-                  className="inline-block stroke-current w-5"
+                  class="text-gray-500 h-5 w-5 group-hover:text-gray-600 group-focus:text-gray-600 transition ease-in-out duration-150"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
                 >
                   <path
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="48"
-                    d="M112 184l144 144 144-144"
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
                   />
                 </svg>
-              </a>
+              </button>
             </div>
-            <div className="relative">
-              <a>Offers</a>
-            </div>
-            <div className="relative">
-              <a>About Us</a>
-            </div>
-          </nav>
-          <div className="header__account">
+
             <a
               href="#"
-              className="whitespace-no-wrap text-base leading-6 font-medium text-gray-500"
+              class="text-base leading-6 font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+            >
+              Offers
+            </a>
+            <a
+              href="#"
+              class="text-base leading-6 font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+            >
+              About Us
+            </a>
+          </nav>
+          <div className="hidden md:flex items-center justify-end space-x-8">
+            <a
+              href="#"
+              className="whitespace-no-wrap text-base leading-6 font-medium text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900"
             >
               Login
             </a>
-            <Button
-              tag="link"
-              text="Sign In"
-              color="primary"
-              size="xs"
-            ></Button>
+            <span class="inline-flex rounded-md shadow-sm">
+              <Button
+                href="#"
+                tag="link"
+                text="Sign In"
+                color="primary"
+                size="xs"
+              ></Button>
+            </span>
           </div>
         </div>
       </div>

@@ -66,7 +66,7 @@ const Testimonials = () => {
           >
             <TestimonialItem
               area="quote1"
-              quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et pharetra pharetra."
+              quote='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et pharetra pharetra."'
               author={{
                 name: "Bernard Lane",
                 position: "Head of Ocado Technology, Barcelona",
@@ -76,7 +76,7 @@ const Testimonials = () => {
             ></TestimonialItem>
             <TestimonialItem
               area="quote2"
-              quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et pharetra pharetra."
+              quote='"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas sed tempus urna et pharetra pharetra."'
               author={{
                 name: "Bernard Lane",
                 position: "Head of Ocado Technology, Barcelona",

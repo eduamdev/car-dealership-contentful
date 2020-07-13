@@ -1,5 +1,6 @@
 import React from "react";
-import "./styles/App.scss";
+// import "./styles/App.scss";
+import "./styles/main.css";
 import Index from "./pages";
 import Search from "./pages/search";
 import Car from "./pages/car";

@@ -1,0 +1,26 @@
+@tailwind base;
+
+@tailwind components;
+
+.footer__item::after {
+  color: #b7b5bd;
+  content: "•";
+  padding: 0.75rem;
+  font-size: 8px;
+  vertical-align: middle;
+}
+
+.footer__item:last-child:after {
+  content: "";
+}
+
+.quote:before {
+  content: "";
+  @apply absolute block h-10 w-10 bg-secondary;
+  mask-size: cover;
+  z-index: -1;
+  top: -1rem;
+  left: -2rem;
+}
+
+@tailwind utilities;
