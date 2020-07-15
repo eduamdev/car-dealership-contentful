@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./button";
 import hero from "../img/hero.jpg";
+import hero1 from "../img/hero1.jpg";
 import hero4 from "../img/hero_4.jpg";
 import hero10 from "../img/hero_10.jpg";
 
@@ -14,7 +15,7 @@ const Hero = () => {
         <div className="absolute w-full h-full">
           <div className="container h-full flex flex-col items-start justify-center max-w-screen-xl mx-auto px-8">
             <div className="max-w-xl">
-              <h1 className="text-black text-5xl font-extrabold inline-block mb-5 tracking-tight">
+              <h1 className="text-black text-5xl font-extrabold inline-block mb-6 tracking-tight leading-none">
                 Best way to find your{" "}
                 <span className="text-primary">right car</span>
               </h1>
@@ -33,7 +34,7 @@ const Hero = () => {
         <img
           className="h-full w-full object-cover object-center"
           style={{ gridArea: `1/2` }}
-          src={hero4}
+          src={hero1}
         ></img>
       </div>
     </div>

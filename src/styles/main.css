@@ -606,11 +606,11 @@ video {
   }
 }
 
-.footer__item::after {
+.footer__item:after {
   color: #b7b5bd;
   content: "•";
   padding: 0.75rem;
-  font-size: 8px;
+  font-size: 0.85rem;
   vertical-align: middle;
 }
 

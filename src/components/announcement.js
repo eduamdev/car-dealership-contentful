@@ -2,8 +2,11 @@ import React from "react";
 
 const Announcement = () => {
   return (
-    <div className="relative w-full h-10 bg-black text-gray-200 border-b border-accents-7 text-center text-sm">
-      <div className="h-full flex justify-center items-center space-x-4 max-w-screen-xl mx-auto px-8">
+    <div className="w-full h-10 bg-black text-gray-200 border-b border-accents-7 text-center text-sm">
+      <div
+        className="relative h-full flex justify-center items-center space-x-4 mx-auto px-8"
+        style={{ maxWidth: `1920px` }}
+      >
         <span className="hidden md:block">
           The health and safety of our staff, customers, and community is our
           top priority.

@@ -8,7 +8,10 @@ const Header = () => {
       <Announcement></Announcement>
       <div className="h-20 bg-white border-b border-gray-400">
         <div className="h-full flex justify-between items-center container mx-auto text-accents-4 max-w-screen-xl mx-auto px-8">
-          <a className="text-black inline-flex items-center text-2xl font-black tracking-tight">
+          <a
+            href="/"
+            className="text-black inline-flex items-center text-2xl font-black tracking-tight"
+          >
             Vincar
           </a>
           <div className="-mr-2 -my-2 md:hidden">
