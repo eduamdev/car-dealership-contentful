@@ -2,8 +2,8 @@ import React from "react";
 
 const sizes = {
   xs: "px-3 py-1",
-  default: "w-40 py-3",
-  lg: "w-56 py-3",
+  default: "w-40 py-4",
+  lg: "w-56 py-4",
 };
 
 const colors = {

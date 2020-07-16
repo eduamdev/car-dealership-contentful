@@ -29,11 +29,11 @@ const TestimonialItem = ({ area, quote, author }) => {
 
 const Testimonials = () => {
   return (
-    <section className="relative bg-gray-100 border-b border-accents-7">
+    <section className="relative bg-white">
       <div
         className="absolute bottom-0 left-0"
         style={{
-          background: `linear-gradient(90deg, #f7fafc 22px, transparent 1%) center, linear-gradient(#f7fafc 22px, transparent 1%) center, #cbd5e0`,
+          background: `linear-gradient(90deg, #fff 22px, transparent 1%) center, linear-gradient(#fff 22px, transparent 1%) center, #cbd5e0`,
           backgroundSize: `25px 25px`,
           height: `15rem`,
           width: `35rem`,
@@ -42,7 +42,7 @@ const Testimonials = () => {
       <div
         className="absolute top-0 right-0"
         style={{
-          background: `linear-gradient(90deg, #f7fafc 22px, transparent 1%) center, linear-gradient(#f7fafc 22px, transparent 1%) center, #cbd5e0`,
+          background: `linear-gradient(90deg, #fff 22px, transparent 1%) center, linear-gradient(#fff 22px, transparent 1%) center, #cbd5e0`,
           backgroundSize: `25px 25px`,
           height: `15rem`,
           width: `35rem`,
@@ -52,7 +52,7 @@ const Testimonials = () => {
         <div className="py-12">
           <div className="max-w-screen-xl mx-auto px-8">
             <div className="text-center">
-              <h3 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-black">
+              <h3 className="text-5xl leading-8 font-bold tracking-tight text-black">
                 What our costumers have to say
               </h3>
             </div>

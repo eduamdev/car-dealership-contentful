@@ -11,7 +11,11 @@ const Brand = ({ logo, children }) => {
 
 const Brands = () => {
   return (
-    <section className="bg-white border-t border-accents-7">
+    <section
+      style={{
+        backgroundImage: `radial-gradient(70% 70% at 50% 100%, rgb(232, 232, 232) 0px, rgb(250, 250, 250) 100%)`,
+      }}
+    >
       <div className="container mx-auto py-24">
         <div className="max-w-screen-xl mx-auto px-8">
           <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 row-gap-20 xl:flex items-center justify-between">

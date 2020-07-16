@@ -3,10 +3,10 @@ import React from "react";
 const FeaturedCars = () => {
   return (
     <div className="bg-white">
-      <div className="mx-auto py-24" style={{ maxWidth: `1920px` }}>
+      <div className="mx-auto py-24" style={{ maxWidth: `1600px` }}>
         <div className="max-w-screen-xl mx-auto px-8">
           <div className="text-center">
-            <h3 className="mt-2 text-4xl leading-8 font-extrabold tracking-tight text-black">
+            <h3 className="text-5xl leading-8 font-bold tracking-tight text-black">
               The most searched cars
             </h3>
           </div>
@@ -21,8 +21,8 @@ const FeaturedCars = () => {
               ></img>
             </div>
             <div className="leading-5 pt-3 pb-4 text-black">
-              <h4 className="">Tesla Model 3</h4>
-              <p className=" text-primary font-extrabold tracking-wide mt-2">
+              <h4 className="font-medium tracking-wide">Tesla Model 3</h4>
+              <p className=" text-primary font-extrabold tracking-wide leading-5 text-lg mt-2">
                 $20,543
               </p>
             </div>
@@ -35,8 +35,8 @@ const FeaturedCars = () => {
               ></img>
             </div>
             <div className="leading-5 pt-3 pb-4 text-black">
-              <h4 className="">Tesla Model 3</h4>
-              <p className=" text-primary font-extrabold tracking-wide mt-2">
+              <h4 className="font-medium tracking-wide">Tesla Model 3</h4>
+              <p className=" text-primary font-extrabold tracking-wide leading-5 text-lg mt-2">
                 $20,543
               </p>
             </div>
@@ -49,8 +49,8 @@ const FeaturedCars = () => {
               ></img>
             </div>
             <div className="leading-5 pt-3 pb-4 text-black">
-              <h4 className="">Tesla Model 3</h4>
-              <p className=" text-primary font-extrabold tracking-wide mt-2">
+              <h4 className="font-medium tracking-wide">Tesla Model 3</h4>
+              <p className=" text-primary font-extrabold tracking-wide leading-5 text-lg mt-2">
                 $20,543
               </p>
             </div>
@@ -63,8 +63,8 @@ const FeaturedCars = () => {
               ></img>
             </div>
             <div className="leading-5 pt-3 pb-4 text-black">
-              <h4 className="">Tesla Model 3</h4>
-              <p className=" text-primary font-extrabold tracking-wide leading-5 mt-2">
+              <h4 className="font-medium tracking-wide">Tesla Model 3</h4>
+              <p className=" text-primary font-extrabold tracking-wide leading-5 text-lg mt-2">
                 $20,543
               </p>
             </div>
